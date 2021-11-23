@@ -6,15 +6,13 @@ sidebar_position: 7
 
 # Discovering User Devices
 
-This is for mapping usernames to MAC addresses via IP address.
-It requires multiple points of integration and captures data from Windows Domains.
+This is for mapping usernames to MAC addresses via IP address. It requires multiple points of integration and captures data from Windows Domains.
 
-* We use [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) for IP address filtering
+* We use [CIDR notation](https://en.wikipedia.org/wiki/Classless\_Inter-Domain\_Routing) for IP address filtering
 
 ## Remote Event Query
 
-This grabs user device details that are interacting with the domain controller.
-It takes five minutes worth of details, so should run every five minutes.
+This grabs user device details that are interacting with the domain controller. It takes five minutes worth of details, so should run every five minutes.
 
 * [Event result code details](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768)
 * [Event details](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4768)
@@ -167,13 +165,11 @@ if ($resultArr.length -gt 0) {
 } else {
     Write-Host "No results found...";
 }
-
 ```
 
 ### Querying a MS Network Policy Server (RADIUS)
 
-This allows us to grab MAC addresses of BYOD devices.
-Useful if tracking mobile phones on the Wi-Fi is desirable.
+This allows us to grab MAC addresses of BYOD devices. Useful if tracking mobile phones on the Wi-Fi is desirable.
 
 ```powershell
 # Required for reliable Resolve-DnsName.
@@ -279,20 +275,15 @@ if ($resultArr.length -gt 0) {
 } else {
     Write-Host "No results found...";
 }
-
 ```
-
 
 ## Workstation Monitoring
 
-This is for when users log onto a shared resource and we want to know who is sitting at which workstation.
-We should attach an event to particular events using the filter below. More details on how to set this up [are here](https://docs.google.com/document/d/14XIJbnvJBg23Qc_oc3JN5Ub0geETTSmTWr8Sd8YryLM/edit?usp=sharing)
-<!-- This page should be brought onto doc site & updated -->
+This is for when users log onto a shared resource and we want to know who is sitting at which workstation. We should attach an event to particular events using the filter below. More details on how to set this up [are here](https://docs.google.com/document/d/14XIJbnvJBg23Qc\_oc3JN5Ub0geETTSmTWr8Sd8YryLM/edit?usp=sharing)
 
 * [Event Type Details](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4624)
 
 ```xml
-
   <Triggers>
     <EventTrigger>
       <ValueQueries>
@@ -304,13 +295,11 @@ We should attach an event to particular events using the filter below. More deta
     </EventTrigger>
   </Triggers>
 
-
 ```
 
 This catches log off events and marks the workstation as free.
 
 ```powershell
-
 param (
     [Parameter(Mandatory=$false)][string]$username,
     [Parameter(Mandatory=$false)][string]$domain
@@ -329,16 +318,13 @@ if ([string]::IsNullOrWhiteSpace($ip) -Or ($ip -eq "-") -Or [string]::IsNullOrWh
 # Post to details to server
 $postParams = ConvertTo-Json @(,@($ip,$username,$domain))
 Invoke-WebRequest -UseBasicParsing -Uri https://placeos.server.com/api/engine/v2/webhook/trig-98UC/notify?secret=046856ff816d49f26261d3c9c9789da&exec=true&mod=LocationServices&method=ip_mappings -Method POST -Body $postParams -ContentType "application/json"
-
 ```
-
 
 ## Untrusted or Self Signed Certificates
 
 Add this to ignore certificate errors
 
 ```powershell
-
 add-type @"
     using System.Net;
     using System.Security.Cryptography.X509Certificates;
@@ -351,7 +337,6 @@ add-type @"
     }
 "@
 [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
-
 ```
 
 ## Protocol violation errors
@@ -359,7 +344,6 @@ add-type @"
 Add this to ignore errors, see this thread on [Powershell wget protocol violation](https://stackoverflow.com/questions/35260354/powershell-wget-protocol-violation)
 
 ```powershell
-
 function Set-UseUnsafeHeaderParsing
 {
     param(
@@ -396,5 +380,4 @@ function Set-UseUnsafeHeaderParsing
 
 # Call this before Invoke-WebRequest
 Set-UseUnsafeHeaderParsing -Enable
-
 ```

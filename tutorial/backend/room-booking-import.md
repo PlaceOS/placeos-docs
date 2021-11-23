@@ -4,35 +4,35 @@ description: Steps required to import existing rooms into PlaceOS
 sidebar_position: 2
 ---
 
+# Import Bookable Rooms
+
 The PlaceOS room bookings module performs the following roles:
-  * A cache of upcoming bookings for staff apps
-  * Data for real-time analytics (room booked, in-use, empty, etc)
-  * Data for room booking panel displays
-  * Data for maps
+
+* A cache of upcoming bookings for staff apps
+* Data for real-time analytics (room booked, in-use, empty, etc)
+* Data for room booking panel displays
+* Data for maps
 
 A typical configuration consists of:
-  * A system with a resource email addresses defined
-  * A unique instance of the PlaceOS Bookings module for that room (logic module)
-  * A shared instance of the PlaceOS Calendar module, for making requests to the calendaring system
+
+* A system with a resource email addresses defined
+* A unique instance of the PlaceOS Bookings module for that room (logic module)
+* A shared instance of the PlaceOS Calendar module, for making requests to the calendaring system
 
 The script below runs through the level zones and updates any systems with a resource email address to the standard configuration.
 
+### Prerequisites
 
-## Prerequisites
+The client ID and secret from the domains tab in Backoffice. You can use any valid administration account credentials for that domain.
 
-The client ID and secret from the domains tab in Backoffice.
-You can use any valid administration account credentials for that domain.
+* Create a calendar module that will be shared between all systems, note the module ID
+* Add the Bookings driver to the system and note the driver ID
 
-  * Create a calendar module that will be shared between all systems, note the module ID
-  * Add the Bookings driver to the system and note the driver ID
-
-
-## Room bookings import script
+### Room bookings import script
 
 The only dependency is the PlaceOS crystal client.
 
 ```yml
-
 name: bookings-import
 version: 1.0.0
 
@@ -42,14 +42,11 @@ dependencies:
     github: placeos/crystal-client
     branch: master
 
-
 ```
 
-The script below supports redistribution and customization via the command-line options.
-You can also update the defaults and run it without any options.
+The script below supports redistribution and customization via the command-line options. You can also update the defaults and run it without any options.
 
 ```ruby
-
 require "option_parser"
 require "placeos"
 
@@ -106,9 +103,12 @@ class OpenSSL::SSL::Context::Client
     super(method)
 
     self.verify_mode = OpenSSL::SSL::VerifyMode::NONE
-    {% if compare_versions(LibSSL::OPENSSL_VERSION, "1.0.2") >= 0 %}
+    <div data-gb-custom-block data-tag="if" data-0='1.0.2' data-1='1.0.2' data-2='1.0.2' data-3='1.0.2' data-4='1.0.2' data-5='1.0.2' data-6='0' data-7='0' data-8='0' data-9='0'>
+
       self.default_verify_param = "ssl_server"
-    {% end %}
+    
+
+</div>
   end
 end
 
@@ -193,5 +193,4 @@ if errors == 0
 else
   puts "#{errors} errors"
 end
-
 ```
