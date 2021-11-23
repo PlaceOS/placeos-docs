@@ -24,9 +24,9 @@ All interaction is via Backoffice and encompasses effort to structure, integrate
 
 **PlaceOS Specific Knowledge**
 
-* Core platform concepts - [drivers](../overview/drivers.md), [modules](../overview/modules.md), [zones](../overview/zones.md), [systems](../overview/systems.md)
+* Core platform concepts - [drivers](../overview/key-concepts/drivers.md), [modules](../overview/key-concepts/modules.md), [zones](../overview/key-concepts/zones.md), [systems](../overview/key-concepts/systems.md)
 * Backoffice User Interface and how to configure the above concepts
-* [Triggers](../overview/triggers.md)
+* [Triggers](../overview/key-concepts/triggers.md)
 * Driver monitoring - comfort with and ability to watch a driver and debug connectivity or configuration issues
 
 ### Platform Deployment and Infrastructure
@@ -51,7 +51,7 @@ Deployment and provisioning of infrastructure for a PlaceOS instance within a cl
 
 ### Driver Development
 
-Further information can on driver development is in the [driver development tutorial](../tutorial/backend/write-a-driver.md).
+Further information can on driver development is in the [driver development tutorial](../tutorials/backend/write-a-driver.md).
 
 **External knowledge:**
 
@@ -60,7 +60,7 @@ Further information can on driver development is in the [driver development tuto
 
 **PlaceOS Specific Knowledge:**
 
-* Core platform concepts - [drivers](../overview/drivers.md), [modules](../overview/modules.md), [zones](../overview/zones.md), [systems](../overview/systems.md)
+* Core platform concepts - [drivers](../overview/key-concepts/drivers.md), [modules](../overview/key-concepts/modules.md), [zones](../overview/key-concepts/zones.md), [systems](../overview/key-concepts/systems.md)
 * Driver monitoring - comfort with and ability to watch a driver and debug connectivity or configuration issues
 
 ### Interface Development
