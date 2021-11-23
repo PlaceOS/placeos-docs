@@ -24,13 +24,13 @@ PlaceOS is a [software platform](https://place.technology/solutions/platform) wh
 
 The documentation for PlaceOS is split into 4 categories.
 
-See the [overview](overview/drivers/) for high-level coverage of topic areas.
+See the [overview](broken-reference) for high-level coverage of topic areas.
 
-Try a [tutorial](tutorial/backend/write-a-driver/) to learn in more detail about a process or feature.
+Try a [tutorial](broken-reference) to learn in more detail about a process or feature.
 
-Read a [how-to guide](how-to/authentication/configure-saml/) for docs to help you with a specific task.
+Read a [how-to guide](broken-reference) for docs to help you with a specific task.
 
-See the [reference material](reference/api/) for detailed technical docs.
+See the [reference material ](broken-reference)for detailed technical docs.
 
 ### Videos and Demonstration Apps
 
