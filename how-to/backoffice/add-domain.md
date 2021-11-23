@@ -10,7 +10,7 @@ sidebar_position: 10
 
 This guide will step through the process of creating a domain and the associated application(s) that will exist on it.
 
-You must create a domain before adding authentication sources (such as [SAML](../authentication/configure-saml.md)) to it.
+You must create a domain before adding authentication sources (such as [SAML](../authentication/configure-saml/)) to it.
 
 ### Prerequisites
 
