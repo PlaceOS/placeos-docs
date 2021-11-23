@@ -25,6 +25,7 @@
 * [Analytics](how-to/analytics/README.md)
   * [MQTT Integration](how-to/analytics/mqtt-integration.md)
 * [Authentication](how-to/authentication/README.md)
+  * [X-API Keys](how-to/authentication/x-api-keys.md)
   * [Configure PlaceOS for SAML](how-to/authentication/configure-saml.md)
   * [Configure SAML2 with AD FS](how-to/authentication/saml2-adfs.md)
   * [Configure SAML2 with Auth0](how-to/authentication/saml2-auth0.md)
