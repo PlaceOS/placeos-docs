@@ -22,7 +22,6 @@
 
 ## How To
 
-* [Add a Domain to PlaceOS](how-to/add-domain.md)
 * [Analytics](how-to/analytics/README.md)
   * [MQTT Integration](how-to/analytics/mqtt-integration.md)
 * [Authentication](how-to/authentication/README.md)
@@ -36,6 +35,7 @@
   * [Configure Staff API](how-to/backoffice/configure-staff-api.md)
   * [Bookings Driver](how-to/backoffice/placeos-bookings.md)
   * [Calendar Driver](how-to/backoffice/placeos-calendar.md)
+  * [Add a Domain to PlaceOS](how-to/backoffice/add-domain.md)
 * [Deployment](how-to/deployment/README.md)
   * [Deploy AWS Fargate on Modular CloudFormation Stacks](how-to/deployment/fargate-modular.md)
   * [Deploy AWS Fargate on Nested CloudFormation Stacks](how-to/deployment/fargate-nested.md)
