@@ -28,10 +28,10 @@ The API keys can be used for:
    [![Select API Keys from Admin Menu](https://github.com/PlaceOS/docs/raw/generate-api-key/how-to/backoffice/assets/add-api-key.png)](https://github.com/PlaceOS/docs/blob/generate-api-key/how-to/backoffice/assets/add-api-key.png)
 7. Enter the required information:
    * Name: Suitable name for the API Key
-   * Description: What the key will be used for (useful for other adminnistrators)
-   * Scopes: Select from available scopes (see available scopes [below](https://github.com/PlaceOS/docs/blob/generate-api-key/how-to/backoffice/api-keys.md#available-scopes))
+   * Description: What the key will be used for (useful for other administrators)
+   * Scopes: Select from available scopes (see available scopes below)
    * User: The user in which the API Key will emulate
-   * Permissions: Permission level assigned to the API Key (see permission details [below](https://github.com/PlaceOS/docs/blob/generate-api-key/how-to/backoffice/api-keys.md#available-permissions))\
+   * Permissions: Permission level assigned to the API Key (see permission details below)\
      [![Add new API Key Form](https://github.com/PlaceOS/docs/raw/generate-api-key/how-to/backoffice/assets/add-new-key.png)](https://github.com/PlaceOS/docs/blob/generate-api-key/how-to/backoffice/assets/add-new-key.png)
 8. Click Save
 9. The new API Key will be shown once after it is saved, you will not be able to view it again\
@@ -41,9 +41,29 @@ The API keys can be used for:
 
 Available Scopes for API Keys are:
 
-//TODO
+* `api_keys`
+* `ldap_authentication`
+* `saml_authentication`
+* `o_auth_authentication`
+* `brokers`
+* `cluster`
+* `domains`
+* `drivers`
+* `settings`
+* `modules`
+* `systems`
+* `guests`
+* `control`
+* `edges`
+* `metadata`
+* `o_auth_applications`
+* `repositories`
 
 #### Available Permissions
+
+* `scope.read`
+* `scope.write`
+* `systems.control` (used to executing system methods)
 
 ### Using the API Key
 
