@@ -25,7 +25,7 @@
 * [Analytics](how-to/analytics/README.md)
   * [MQTT Integration](how-to/analytics/mqtt-integration.md)
 * [Authentication](how-to/authentication/README.md)
-  * [Configure PlaceOS for SAML](how-to/authentication/configure-saml/README.md)
+  * [Configure PlaceOS for SAML](how-to/authentication/configure-saml.md)
     * [Configure SAML2 with AD FS](how-to/authentication/configure-saml/saml2-adfs.md)
     * [Configure SAML2 with Auth0](how-to/authentication/configure-saml/saml2-auth0.md)
     * [Configure SAML2 with Azure AD](how-to/authentication/configure-saml/saml2-azure.md)

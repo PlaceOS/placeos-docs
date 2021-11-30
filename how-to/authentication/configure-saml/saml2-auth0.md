@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # Configure SAML2 with Auth0
 
-Use this page in tandem with [Configuring PlaceOS for SAML2](./) if you are using Auth0 domains for SSO. You should follow [Auth0 instructions](https://auth0.com/docs/dashboard/guides/applications/register-app-spa) to a register a single-page-app for SAML SSO using Auth0.
+Use this page in tandem with [Configuring PlaceOS for SAML2](../configure-saml.md) if you are using Auth0 domains for SSO. You should follow [Auth0 instructions](https://auth0.com/docs/dashboard/guides/applications/register-app-spa) to a register a single-page-app for SAML SSO using Auth0.
 
 ### Configuration
 

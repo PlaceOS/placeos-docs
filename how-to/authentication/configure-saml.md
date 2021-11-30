@@ -1,10 +1,7 @@
 ---
-id: configure-saml
-title: Configure PlaceOS for SAML
 description: >-
   Steps required for enabling SAML sign on for users logging in to PlaceOS web
   apps
-sidebar_position: 1
 ---
 
 # Configure PlaceOS for SAML
@@ -98,10 +95,10 @@ This XML file contains the above information and can be fed into to some configu
 
 This process will vary by provider, see the below guides for common options:
 
-* [Azure AD](saml2-azure.md)
-* [AD FS](saml2-adfs.md)
-* [Auth0](saml2-auth0.md)
-* [Google Workspace](../saml2-google/)
+* [Azure AD](configure-saml/saml2-azure.md)
+* [AD FS](configure-saml/saml2-adfs.md)
+* [Auth0](configure-saml/saml2-auth0.md)
+* [Google Workspace](saml2-google/)
 
 ### Configure default redirects for the PlaceOS Domain
 

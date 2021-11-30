@@ -15,10 +15,10 @@ This page will help you if you are using Azure Active Directory for SSO. You wil
 2. Locate the existing app created for o365 Graph API access. If there isn't one yet, create a new app registration now. You can use this app for both SSO and o365 Graph API access
    * To create a **new** app registration:
      * Name it and select the appropriate "Support Account types" (typically "Single tenant")
-     * Paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](./)) into the **Reply URL** field. Leave the type as "Web". Click **Register** to finish
+     * Paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](../configure-saml.md)) into the **Reply URL** field. Leave the type as "Web". Click **Register** to finish
    * To configure an **existing** app registration:
      * Navigate to Overview -> Redirect URIs
-     * Paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](./)) into the **Redirect URI** field. Leave the type as "Web". Click **Save** to finish
+     * Paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](../configure-saml.md)) into the **Redirect URI** field. Leave the type as "Web". Click **Save** to finish
 3. Confirm that you have access to the [SAML2 Federation Metadata URL](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-federation-metadata) for your Azure Tenant. You will need data from this XML file later in Step 3, OR if you configure advanced custom claims. The file URL is generally in the format: `https://login.microsoftonline.com/<Tenant_ID_or_Domain_Name>/FederationMetadata/2007-06/FederationMetadata.xml`
 
 ### Step 2 - Edit the App Manifest
@@ -60,7 +60,7 @@ In the app Manifest, you need to edit `groupMembershipClaims` and `optionalClaim
 
 ### Step 3 - Collect data required by Backoffice
 
-The App Registration is now configured for PlaceOS. You now need to enter two pieces of information into Backoffice (Step 3 of [Configuring PlaceOS for SAML2](./)):
+The App Registration is now configured for PlaceOS. You now need to enter two pieces of information into Backoffice (Step 3 of [Configuring PlaceOS for SAML2](../configure-saml.md)):
 
 #### **Issuer**
 
