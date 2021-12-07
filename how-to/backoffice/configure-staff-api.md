@@ -49,7 +49,9 @@ If not, you will need to create a new App Registration on Azure.
 4. Select New Registration
 5. Enter the required information
    * Name it and select the appropriate "Support Account types" (typically "Single tenant")
-   * Optionally paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](../authentication/configure-saml.md) ![New App Registration](assets/new-app-registration.png)
+   *   Optionally paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](../authentication/configure-saml.md)
+
+       &#x20;![New App Registration](assets/new-app-registration.png)
 6. Register the app
 
 **Grant Graph API Permissions**
@@ -57,31 +59,46 @@ If not, you will need to create a new App Registration on Azure.
 You will now need to grant Graph API Permissions on your App.
 
 1. Select the app you would like to give permissions
-2. Click API Permissions ![API Permissions](assets/api-permissions.png)
-3. Click Add Permission ![Add Permission](assets/add-permissions.png)
-4. Click Microsoft Graph ![Graph](assets/graph-api.png)
-5. Select Application permissions ![Graph Application Permissions](assets/graph-app-permissions.png)
-6. Grant API Access to the following resources:
-   * `Calendars.ReadWrite`
-   * `Calendars.ReadWrite.Shared`
-   * `Contacts.Read`
-   * `Group.Read.All`
-   * `User.Read.All`
-   * `Place.Read.All` ![Graph Application Grants](assets/grants.png)
+2.  Click API Permissions
+
+    &#x20;![API Permissions](assets/api-permissions.png)
+3.  Click Add Permission
+
+    &#x20;![Add Permission](assets/add-permissions.png)
+4.  Click Microsoft Graph
+
+    &#x20;![Graph](assets/graph-api.png)
+5.  Select Application permissions
+
+    &#x20;![Graph Application Permissions](assets/graph-app-permissions.png)
+6.  Grant API Access to the following resources:
+
+    * `Calendars.ReadWrite`
+    * `Calendars.ReadWrite.Shared`
+    * `Contacts.Read`
+    * `Group.Read.All`
+    * `User.Read.All`
+    * `Place.Read.All`&#x20;
+
+    ![Graph Application Grants](assets/grants.png)
 7. Click Add Permissions
 
 **Generate Azure API Secret**
 
 You will now need to create the secret to allow PlaceOS Staff API to Authenticate.
 
-1. Navigate to Certificates & Secrets ![Graph Application Grants](assets/certificates.png)
-2. Select New client secret ![New Secret](assets/new-secret.png)
+1.  Navigate to Certificates & Secrets
+
+    &#x20;![Graph Application Grants](assets/certificates.png)
+2.  Select New client secret
+
+    &#x20;![New Secret](assets/new-secret.png)
 3. Give your secret a description e.g. `PlaceOS Prod App Secret` and click Add
 4. Copy and Save the Secret Value (you will need this in the next step) ![New Secret](assets/secret.png)
 5. Return to the App Overview
 6. Copy and Save the `Client ID` and `Tenant ID` (you will need these in the next step) ![Client ID and Tenant](assets/client\_tenant.png)
 
-## Google Workspace
+### Google Workspace
 
 To use Google APIs you will need a server to server OAuth2 application configured.
 
@@ -109,9 +126,13 @@ For further information see [Creating and Managing Service Accounts](https://clo
 
 **Configure the Service Account**
 
-1. Under APIs & Services, navigate to Credentials ![Google API Credentials](assets/google-credentials.png)
+1.  Under APIs & Services, navigate to Credentials
+
+    &#x20;![Google API Credentials](assets/google-credentials.png)
 2. Click on the Create Credentials and select Service Account Key ![Google Service API Key](assets/google-service-key.png)
-3. Create a new Service Account ![Google New Service Account](assets/google-new-service-acc.png)
+3.  Create a new Service Account
+
+    &#x20;![Google New Service Account](assets/google-new-service-acc.png)
 4. You can ignore the next steps in the wizard, click `Done` to return to the list of service accounts
 5. Click the service account you created and select the `Keys` tab to create an access key ![Google JSON Key](assets/google-json-key.png)
 6. This will save a JSON File to your computer, you will need this information to configure the service.
@@ -120,12 +141,16 @@ For further information see [Creating and Managing Service Accounts](https://clo
 
 **Configure Service Account Permissions**
 
-:::tip If you want to configure this application for use in a subset of the organization, ignore this step.
+{% hint style="success" %}
+If you want to configure this application for use in a subset of the organization, ignore this step.
 
-Continue with the steps to “Create a marketplace application”. :::
+Continue with the steps to “Create a marketplace application”
+{% endhint %}
 
 1. Open the JSON File that we saved in the previous step
-2. Copy the `client_id` ![Google Client ID](assets/google-client-id.png)
+2.  Copy the `client_id`
+
+    &#x20;![Google Client ID](assets/google-client-id.png)
 3. Navigate to [Google Workspace Admin](https://admin.google.com)
 4. Select `Security`
 5. Scroll down to `API Controls`
@@ -137,21 +162,29 @@ Continue with the steps to “Create a marketplace application”. :::
    * `https://www.googleapis.com/auth/drive.file` ![Google Scopes](assets/add-new-client-id.png)
 9. Click `Authorize`
 10. Ensure you enable API Access by going to `Security -> API Controls`
-11. Select `Trust internal, domain owned apps` ![Google Trust Internal Apps](assets/google-trust-apps.png)
+11. Select `Trust internal, domain owned apps`
 
-:::caution The scope `https://www.googleapis.com/auth/drive.file` allows the application to add attachments to calendar events, such as QR codes.
+    &#x20;![Google Trust Internal Apps](assets/google-trust-apps.png)
 
-It does not allow for reading or modifying any files not created by the application. :::
+{% hint style="warning" %}
+The scope `https://www.googleapis.com/auth/drive.file` allows the application to add attachments to calendar events, such as QR codes.
+
+It does not allow for reading or modifying any files not created by the application.
+{% endhint %}
 
 **Creating a Marketplace Application**
 
-:::tip This step applies to organizations where a specific region or department (OU) will be using the application.
+{% hint style="success" %}
+This step applies to organizations where a specific region or department (OU) will be using the application.
 
-This step is not applicable to most organizations. :::
+This step is not applicable to most organizations.
+{% endhint %}
 
 1. On [Google Cloud Console](http://console.cloud.google.com) navigate to the API Services Dashboard
 2. Select the G Suite or Google Workspace Marketplace SDK ![Google G Suite Marketplace](assets/google-gsuite-marketplace.png)
-3. Select the `Configuration` tab ![Google G Suite Config Tab](assets/google-gsuite-config.png)
+3.  Select the `Configuration` tab
+
+    &#x20;![Google G Suite Config Tab](assets/google-gsuite-config.png)
 4. Fill in the app name and description, un-check `Enable individual install` ![Google G Suite App](assets/google-gsuite-app.png)
 5. Upload icons as required
 6. A Terms of Service URL is also required, you can set this to your companies homepage
@@ -162,7 +195,9 @@ This step is not applicable to most organizations. :::
 8. Enable drive extension and click `Configure drive SDK` ![Google Drive Extension](assets/google-drive-ext.png)
 9. Fill in the details and icons for the Drive Application
 10. Once completed, return to the marketplace application form
-11. Ensure you set visibility to `My Domain` ![Google Visibility](assets/google-visibility.png)
+11. Ensure you set visibility to `My Domain`
+
+    &#x20;![Google Visibility](assets/google-visibility.png)
 12. Click `Save Changes`
 
 Deploy the marketplace application to the organizational unit that will be using the application.
@@ -190,9 +225,13 @@ To complete this step, you will need the following information:
 1. Open PlaceOS Backoffice and login as an administrator
 2. Navigate to the Admin Tab
 3. Select Staff API
-4. Select the Domain you want to configure ![Staff API Admin](assets/staff\_api\_admin.png)
+4.  Select the Domain you want to configure
+
+    &#x20;![Staff API Admin](assets/staff\_api\_admin.png)
 5. Click Add Tenant
-6. Enter the information required ![Add Tenant Information](assets/add\_tenant.png)
+6.  Enter the information required
+
+    &#x20;![Add Tenant Information](assets/add\_tenant.png)
 7. Save
 
 ### Test Staff API Configuration
@@ -220,5 +259,3 @@ error fetching token UNAUTHORIZED (401)
     "error_uri": "https://login.microsoftonline.com/error?code=7000215"
 }
 ```
-
-\*\[OU]: Organizational Unit \*\[SDK]: Software Development Kit

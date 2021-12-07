@@ -54,6 +54,15 @@
   * [Configure Endpoint Auto Login](how-to/user-interfaces/panel-login.md)
   * [SVG Map Creation](how-to/user-interfaces/svg-map-creation.md)
 
+## Tutorials
+
+* [Backend](tutorials/backend/README.md)
+  * [Troubleshooting Backend Failures](tutorials/backend/failure-domains.md)
+  * [Import Bookable Rooms](tutorials/backend/room-booking-import.md)
+  * [Writing A Driver](tutorials/backend/write-a-driver.md)
+* [Backoffice](tutorials/backoffice/README.md)
+  * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
+
 ## Reference
 
 * [API](reference/api.md)
@@ -69,15 +78,6 @@
   * [FAQ](reference/security-compliance/faq.md)
   * [GDPR](reference/security-compliance/gdpr.md)
   * [Security](reference/security-compliance/security.md)
-
-## Tutorials
-
-* [Backend](tutorials/backend/README.md)
-  * [Troubleshooting Backend Failures](tutorials/backend/failure-domains.md)
-  * [Import Bookable Rooms](tutorials/backend/room-booking-import.md)
-  * [Writing A Driver](tutorials/backend/write-a-driver.md)
-* [Backoffice](tutorials/backoffice/README.md)
-  * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 
 ***
 
