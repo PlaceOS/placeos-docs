@@ -26,5 +26,3 @@ Use this page in tandem with [Configuring PlaceOS for SAML2](../configure-saml.m
       }
     }
     ```
-
-\*\[SSO]: Single Sign On

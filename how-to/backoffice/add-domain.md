@@ -6,18 +6,18 @@ sidebar_position: 10
 
 # Add a Domain to PlaceOS
 
-### Overview
+## Overview
 
 This guide will step through the process of creating a domain and the associated application(s) that will exist on it.
 
 You must create a domain before adding authentication sources (such as [SAML](../authentication/configure-saml.md)) to it.
 
-### Prerequisites
+## Prerequisites
 
 1. PlaceOS has been deployed
 2. You know the domain(s) required for the deployment and the applications on them
 
-### Step 1: Create the New Domain
+## Step 1: Create the New Domain
 
 1. Log in to Backoffice on the domain created during deployment and select the Domains tab
 2. Select the `+` button to bring up the New Domain form
@@ -31,7 +31,7 @@ You must create a domain before adding authentication sources (such as [SAML](..
 
 ![Add Domain](../assets/add\_domain.png)
 
-### Step 2: Add an Application to the Domain
+## Step 2: Add an Application to the Domain
 
 1. Select the Applications tab
 2. Choose New Application
@@ -45,7 +45,7 @@ You must create a domain before adding authentication sources (such as [SAML](..
 
 ![Add Application](../assets/add\_application.png)
 
-### Step 3: Add a User to the Domain
+## Step 3: Add a User to the Domain
 
 1. Select the Users tab
 2. Select the New User button

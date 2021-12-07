@@ -69,5 +69,3 @@ You will need the "Application (client) ID" found on the Overview page of your A
 #### **IDP Target URL**
 
 Also known as **SAML2 sign-on endpoint.** This is the URL that PlaceOS redirects users to, so they can login with your SAML2 ID provider. For Azure AD, the URL is: `https://login.microsoftonline.com/<TENANT-ID>/saml2`. The "Directory (tenant) ID" can is in the Overview tab of your Azure App Registration. Paste this into the IDP Target URL field of the SAML2 authentication object you created in PlaceOS
-
-\*\[SSO]: Single Sign On

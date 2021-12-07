@@ -20,18 +20,18 @@ To show room status on floor maps, the [PlaceOS Calendar driver must also be con
 
 To enable room bookings, the [PlaceOS Bookings driver must be also configured](placeos-bookings.md).
 
-### Prerequisites
+## Prerequisites
 
 * Access on Microsoft Azure or Google Cloud Console & Workspace to create apps and API permissions
 * Administrator access to your PlaceOS Backoffice
 
-### Configure Providers
+## Configure Providers
 
 To enable Staff API you must complete the necessary configuration in your cloud provider.
 
 Instructions for Microsoft 365 and Google Workspace are below.
 
-### Microsoft Azure (365)
+## Microsoft Azure (365)
 
 To use Staff API with 365 you will need to create an Application in App Registration.
 
@@ -41,7 +41,7 @@ If you have already created an app, you ca skip to Grant Graph API Permissions.
 
 If not, you will need to create a new App Registration on Azure.
 
-**Create Azure App**
+### **Create Azure App**
 
 1. Navigate to the [Azure Portal](https://portal.azure.com)
 2. Log in and select the correct Subscription for your application
@@ -54,7 +54,7 @@ If not, you will need to create a new App Registration on Azure.
        &#x20;![New App Registration](assets/new-app-registration.png)
 6. Register the app
 
-**Grant Graph API Permissions**
+### Grant Graph API Permissions
 
 You will now need to grant Graph API Permissions on your App.
 
@@ -83,7 +83,7 @@ You will now need to grant Graph API Permissions on your App.
     ![Graph Application Grants](assets/grants.png)
 7. Click Add Permissions
 
-**Generate Azure API Secret**
+### **Generate Azure API Secret**
 
 You will now need to create the secret to allow PlaceOS Staff API to Authenticate.
 
@@ -98,7 +98,7 @@ You will now need to create the secret to allow PlaceOS Staff API to Authenticat
 5. Return to the App Overview
 6. Copy and Save the `Client ID` and `Tenant ID` (you will need these in the next step) ![Client ID and Tenant](assets/client\_tenant.png)
 
-### Google Workspace
+## Google Workspace
 
 To use Google APIs you will need a server to server OAuth2 application configured.
 
@@ -124,7 +124,7 @@ For further information see [Creating and Managing Service Accounts](https://clo
    * Marketplace SDK (not Marketplace API)
    * Drive API
 
-**Configure the Service Account**
+### **Configure the Service Account**
 
 1.  Under APIs & Services, navigate to Credentials
 
@@ -139,7 +139,7 @@ For further information see [Creating and Managing Service Accounts](https://clo
 7. Once the key has saved, return to the `Details` tab and enable Domain Wide Delegation ![Google Domain Wide Delegation](assets/google-domain-delegation.png)
 8. Click Save
 
-**Configure Service Account Permissions**
+### **Configure Service Account Permissions**
 
 {% hint style="success" %}
 If you want to configure this application for use in a subset of the organization, ignore this step.
@@ -172,7 +172,7 @@ The scope `https://www.googleapis.com/auth/drive.file` allows the application to
 It does not allow for reading or modifying any files not created by the application.
 {% endhint %}
 
-**Creating a Marketplace Application**
+### **Creating a Marketplace Application**
 
 {% hint style="success" %}
 This step applies to organizations where a specific region or department (OU) will be using the application.
@@ -204,7 +204,7 @@ Deploy the marketplace application to the organizational unit that will be using
 
 Follow the steps to [Install a Google Workspace Marketplace App in your Domain](https://support.google.com/a/answer/172482?hl=en).
 
-### Configure Staff API on PlaceOS
+## Configure Staff API on PlaceOS
 
 You will now need to enter the information obtained from the App Registration and API Permissions.
 

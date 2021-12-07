@@ -6,12 +6,12 @@ This will enable custom zone capacity and enhanced capacity reporting via the zo
 
 The Sensor Management User Interface is able to plot the following types of sensors:
 
-### Prerequisites
+## Prerequisites
 
 * Administrator access to your PlaceOS Backoffice
 * A Valid Org, Building and Zone Configuration
 
-### Enable the Sensor Extension
+## Enable the Sensor Extension
 
 The first step is to enable the sensor extension.
 
@@ -41,7 +41,7 @@ The Extension is now enabled.
 After completing this step you will need to refresh Backoffice to enable the extension.&#x20;
 {% endhint %}
 
-### Using The Sensor Manager
+## Using The Sensor Manager
 
 Once enabled, you can place sensors on the floor maps of Level Zones.
 

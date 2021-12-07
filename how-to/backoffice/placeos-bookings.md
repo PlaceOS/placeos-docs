@@ -9,13 +9,13 @@ The primary purpose of the Bookings Driver is to enable room booking panels, kio
 
 Best practice is to add the Bookings Driver to every system on PlaceOS that supports room booking.
 
-### Prerequisites
+## Prerequisites
 
 * Administrator access to your PlaceOS Backoffice
 * PlaceOS Drivers Repository Configured in Backoffice
 * Systems have a valid calendar resource address from Microsoft 365 or Google Workspace
 
-### Add Driver
+## Add Driver
 
 Before we can use the PlaceOS Bookings Driver we must instantiate it as a driver.
 
@@ -27,7 +27,7 @@ Before we can use the PlaceOS Bookings Driver we must instantiate it as a driver
 6. Click Save\
    ![Add Bookings Driver](assets/add-bookings-driver.png)
 
-### Add to Systems
+## Add to Systems
 
 You need to instantiate a single instance of the PlaceOS Bookings Driver in each system that has a bookable space.
 
@@ -42,7 +42,7 @@ You need to instantiate a single instance of the PlaceOS Bookings Driver in each
     &#x20;![Save Bookings Driver](assets/save-bookings.png)
 6. Click the Black Dot next to the Module to start it
 
-### Test Module
+## Test Module
 
 You can test by creating a booking and inspecting the state of the Bookings Driver.
 

@@ -11,13 +11,13 @@ The Calendar Driver and the [Bookings Driver](placeos-bookings.md) work together
 
 The Calendar Driver can also make ad-hoc bookings from kiosks or room booking panels.
 
-### Prerequisites
+## Prerequisites
 
 * Administrator access to your PlaceOS Backoffice
 * PlaceOS Drivers Repository Configured in Backoffice
 * Systems have a valid calendar resource address from Microsoft 365 or Google Workspace
 
-### Add Driver
+## Add Driver
 
 Before we can use the PlaceOS Calendar Driver we must instantiate it as a driver.
 
@@ -30,7 +30,7 @@ Before we can use the PlaceOS Calendar Driver we must instantiate it as a driver
 
     &#x20;![Add Calendar Driver](assets/add-calendar-driver.png)
 
-### Add to System
+## Add to System
 
 You need to instantiate a single instance of the PlaceOS Calendar Driver.
 
@@ -38,7 +38,7 @@ We recommend instantiating the driver in a generic system e.g. `*Tracking`.
 
 That module is then added to each system that requires booking or calendar functionality.
 
-#### Instantiate the Driver
+### Instantiate the Driver
 
 1. Navigate to the system you will instantiate the driver in
 2. Select the `Modules` tab
@@ -53,7 +53,7 @@ That module is then added to each system that requires booking or calendar funct
     ![Save Calendar Driver](assets/save-cal-driver.png)
 6. Enable the driver by clicking the black dot, it should turn green ![Start Calendar Driver](assets/driver-started.png)
 
-#### Configure Driver
+### Configure Driver
 
 {% hint style="success" %}
 For Google Integration, we recommend creating a Service User on Google Workspace.
@@ -90,7 +90,7 @@ The driver is now instantiated as a module, we need to configure the API Credent
     ```
 7. Enter your API information for Microsoft Azure or Google Workspace replacing placeholder text ![Calendar Driver Config](assets/calendar-driver-config.png)
 
-#### Add Module to Systems
+### Add Module to Systems
 
 You can now add the module to other systems as required.
 

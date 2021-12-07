@@ -1,9 +1,5 @@
 # X-API Keys
 
-
-
-### Overview
-
 PlaceOS can generate API Keys for authenticated access.
 
 The API keys can be used for:
