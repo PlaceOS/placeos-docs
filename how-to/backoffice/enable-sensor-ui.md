@@ -37,7 +37,9 @@ The first step is to enable the sensor extension.
 
 The Extension is now enabled.
 
-:::tip After completing this step you will need to refresh Backoffice to enable the extension. :::
+{% hint style="success" %}
+After completing this step you will need to refresh Backoffice to enable the extension.&#x20;
+{% endhint %}
 
 ### Using The Sensor Manager
 

@@ -4,6 +4,8 @@ description: Everything you need to know about writing drivers for PlaceOS
 sidebar_position: 1
 ---
 
+# Writing A Driver
+
 There are three main uses of drivers:
 
 * Streaming IO (TCP, SSH, UDP, Multicast etc.)
@@ -13,10 +15,11 @@ There are three main uses of drivers:
 From a driver structure standpoint there is no difference between these types.
 
 * The same driver works over a TCP, UDP or SSH transport
-* All drivers support HTTP methods with a defined URI endpoint 
+* All drivers support HTTP methods with a defined URI endpoint
 * All drivers have access to logic helpers when associated with a System
 
-## Queue
+### Queue
+
 The queue is a list of potentially asynchronous tasks that should be performed in a sequence.
 
 * Each task has a priority (defaults to `50`) - higher priority tasks run first
@@ -48,13 +51,13 @@ end
 
 In most cases you won't need to use the queue explicitly, but it's good to understand that how it functions.
 
+### Transport
 
-## Transport
 The transport loaded is defined by settings in the database.
 
-### Streaming IO
-You should always tokenize your streams.
-You can do this automatically with the [built-in tokenizer](https://github.com/spider-gazelle/tokenizer)
+#### Streaming IO
+
+You should always tokenize your streams. You can do this automatically with the [built-in tokenizer](https://github.com/spider-gazelle/tokenizer)
 
 ```crystal
 def on_load
@@ -88,7 +91,7 @@ def received(data, task)
 end
 ```
 
-2. Send and callback
+1. Send and callback
 
 ```crystal
 def perform_action
@@ -104,7 +107,7 @@ def perform_action
 end
 ```
 
-3. Send immediately (no queuing)
+1. Send immediately (no queuing)
 
 ```crystal
 def perform_action_now!
@@ -112,9 +115,7 @@ def perform_action_now!
 end
 ```
 
-You can also add a pre-processor to data coming in. 
-This can be useful if you want to strip away a protocol layer.
-For example, if you are using Telnet and want to remove the telnet signals leaving the raw data for tokenizing
+You can also add a pre-processor to data coming in. This can be useful if you want to strip away a protocol layer. For example, if you are using Telnet and want to remove the telnet signals leaving the raw data for tokenizing
 
 ```crystal
 def on_load
@@ -129,7 +130,8 @@ def received(data, task)
 end
 ```
 
-### HTTP Client
+#### HTTP Client
+
 All drivers have built-in methods for performing HTTP requests.
 
 * For streaming IO devices this defaults to `http://device.ip.address` (`https` if the transport is using TLS / SSH)
@@ -155,9 +157,9 @@ def perform_action
 end
 ```
 
-### Special SSH methods
-SSH connections will attempt to open a shell to the remote device. 
-Sometimes you may be able to execute operations independently.
+#### Special SSH methods
+
+SSH connections will attempt to open a shell to the remote device. Sometimes you may be able to execute operations independently.
 
 ```crystal
 def perform_action
@@ -167,9 +169,9 @@ def perform_action
 end
 ```
 
-### Logic drivers
-Logic drivers belong to a System and cannot be shared, which makes them different from other transports. 
-All other drivers can appear in any number of systems.
+#### Logic drivers
+
+Logic drivers belong to a System and cannot be shared, which makes them different from other transports. All other drivers can appear in any number of systems.
 
 You can access remote modules in the system via the `system` helper
 
@@ -213,9 +215,7 @@ end
 bind :power, :power_changed
 ```
 
-It's also possible to create shortcuts to other modules.
-This is powerful as these shortcuts are exposed as metadata.
-It allows Backoffice to perform system verification.
+It's also possible to create shortcuts to other modules. This is powerful as these shortcuts are exposed as metadata. It allows Backoffice to perform system verification.
 
 For example, consider the following video conference system:
 
@@ -242,7 +242,8 @@ sys.name #=> "Name of remote system"
 sys[:Display_2][:power] #=> true
 ```
 
-## Subscriptions
+### Subscriptions
+
 You can dynamically bind to state of interest in remote modules
 
 ```crystal
@@ -274,8 +275,9 @@ end
 publish(:channel_name, "some event")
 ```
 
-## Scheduler
-There is a [built-in scheduler](HTTP://github.com/spider-gazelle/tasker)
+### Scheduler
+
+There is a [built-in scheduler](http://github.com/spider-gazelle/tasker)
 
 ```crystal
 def connected
@@ -288,16 +290,16 @@ def disconnected
 end
 ```
 
-## Settings
-Settings are stored as JSON and then extracted as required, serializing to the specified type.
-There are two types:
+### Settings
+
+Settings are stored as JSON and then extracted as required, serializing to the specified type. There are two types:
 
 * Required settings - raise an error if the setting is unavailable
 * Optional settings - return `nil` if the setting is unavailable
 
-:::note 
+{% hint style="info" %}
 All settings will raise an error if they exist but fail to serialize (due to incorrect formatting etc.)
-:::
+{% endhint %}
 
 ```crystal
 # Required settings
@@ -316,16 +318,15 @@ def on_update
 end
 ```
 
-You can update the local settings of a module, persisting them to the database. 
-Settings must be JSON serializable
+You can update the local settings of a module, persisting them to the database. Settings must be JSON serializable
 
 ```crystal
 define_setting(:my_setting_name, "some JSON serialisable data")
 ```
 
-## Logger
+### Logger
+
 There is a [logger available](https://crystal-lang.org/api/master/Log.html)
-<!-- verify this is the same -->
 
 * `warn` and above are written to disk
 * `debug` and `info` are only available when there is an open debugging session
@@ -337,7 +338,8 @@ logger.debug { "function called with #{value}" }
 
 The logging format has been pre-configured so all logging from PlaceOS is uniform and parsed as-is
 
-## Metadata
+### Metadata
+
 Many components use metadata to simplify configuration.
 
 * `generic_name` => the name that a system should use to access the module
@@ -368,9 +370,9 @@ class MyDevice < PlaceOS::Driver
 end
 ```
 
-## Security
-By default all public functions are exposed for execution.
-You can limit who is able to execute sensitive functions.
+### Security
+
+By default all public functions are exposed for execution. You can limit who is able to execute sensitive functions.
 
 ```crystal
 @[Security(Level::Administrator)]
@@ -379,41 +381,37 @@ def perform_task(name : String | Int32)
 end
 ```
 
-Use the `Security` annotation to define the access level of the function.
-The options are:
+Use the `Security` annotation to define the access level of the function. The options are:
 
 * Administrator `Level::Administrator`
 * Support `Level::Support`
 
+### Interfaces
 
-## Interfaces
-Drivers can expose any methods that make sense for the device, service or logic they encapsulate.
-Across these there are often core sets of similar functionality.
-Interfaces provide a standard way of implementing and interacting with this.
+Drivers can expose any methods that make sense for the device, service or logic they encapsulate. Across these there are often core sets of similar functionality. Interfaces provide a standard way of implementing and interacting with this.
 
 Though optional, they're recommended as they make drivers more modular and less complex.
 
-A full list of interfaces is [available in the driver framework](https://github.com/PlaceOS/driver/tree/master/src/placeos-driver/interface). 
-This will expand over time to cover common, repeated patterns as they emerge.
+A full list of interfaces is [available in the driver framework](https://github.com/PlaceOS/driver/tree/master/src/placeos-driver/interface). This will expand over time to cover common, repeated patterns as they emerge.
 
-### Implementing an Interface
+#### Implementing an Interface
+
 Each interface is a module containing abstract methods, types and functionality built from these.
 
 First include the module within the driver body.
+
 ```crystal
 include Interface::Powerable
 ```
-You will then need to provide implementations of the abstract methods.
-The compiler will guide you in this.
 
-Some interfaces will also provide default implementation for other methods.
-These may be overridden if the device or service provides a more efficient way to do the same thing.
-To keep compatibility, overridden methods must maintain feature and functional parity with the original.
+You will then need to provide implementations of the abstract methods. The compiler will guide you in this.
 
-### Using an Interface
-You can use the `system.implementing` method from any logic module. 
-It returns a list of all drivers in the system which implement the Interface.
+Some interfaces will also provide default implementation for other methods. These may be overridden if the device or service provides a more efficient way to do the same thing. To keep compatibility, overridden methods must maintain feature and functional parity with the original.
+
+#### Using an Interface
+
+You can use the `system.implementing` method from any logic module. It returns a list of all drivers in the system which implement the Interface.
 
 The `accessor` macro provides a way to declare a dependency on a sibling driver for a specific function.
 
-For more information on these and for usage examples, see [logic drivers](#logic-drivers).
+For more information on these and for usage examples, see [logic drivers](write-a-driver.md#logic-drivers).
