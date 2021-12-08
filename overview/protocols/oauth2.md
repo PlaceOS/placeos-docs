@@ -30,5 +30,3 @@ PlaceOS also offers OAuth Access to our Staff and Booking API.
 
 * [OAuth2 Official Site](https://oauth.net/2/)
 * [OAuth2 RFC](https://datatracker.ietf.org/doc/html/rfc6749)
-
-\*\[HTTP]: Hypertext Transfer Protocol

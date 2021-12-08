@@ -26,5 +26,3 @@ PlaceOS uses two types of message sent over MQTT: State Changes and Metadata. Fo
 
 * [MQTT Website](https://mqtt.org)
 * [PlaceOS State Source Service](https://github.com/PlaceOS/source)
-
-\*\[MQTT]: Message Queuing Telemetry Transport

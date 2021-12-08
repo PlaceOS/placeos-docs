@@ -81,6 +81,7 @@
 
 ***
 
+* [Glossary](glossary.md)
 * [🎯 PlaceOS Roadmap](https://portal.productboard.com/placeos/1-placeos-roadmap)
 * [🆘 PlaceOS Support](https://support.place.technology)
 * [👩💻 PlaceOS Github](https://github.com/placeos)

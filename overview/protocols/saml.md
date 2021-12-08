@@ -32,5 +32,3 @@ Authentication providers can be associated with [Domains](../../how-to/backoffic
 ### Resources
 
 * [Security Assertion Markup Language (SAML) V2.0 Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html)
-
-\*\[IdP]: Identity Provider \*\[SAML]: Security Assertion Markup Language \*\[SSO]: Single Sign-On
