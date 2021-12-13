@@ -3,38 +3,40 @@ title: Supported Integrations
 description: Devices and services which are ready to integrate with PlaceOS
 ---
 
-<!-- Do not remove deprecated integrations, move them to the last category. Jon's request. -->
+# Supported Integrations
 
-PlaceOS has a range of pre-built drivers for integrating with third party services and devices. 
-Drivers are written in [Crystal Lang](https://crystal-lang.org/) and based on our [Framework](https://github.com/PlaceOS/driver).
-<!-- consider the explain page for Crystal Lang -->
+PlaceOS has a range of pre-built drivers for integrating with third party services and devices. Drivers are written in [Crystal Lang](https://crystal-lang.org) and based on our [Framework](https://github.com/PlaceOS/driver).
 
-If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk.
-Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-driver) guide to write your own.
+If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk. Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-driver/) guide to write your own.
 
-## Authentication
+### Authentication
+
 * OAuth2 (JWT)
 * SAML2
-* Azure AD B2C for external 
+* Azure AD B2C for external
 
-## Directory Services
+### Directory Services
+
 * Azure AD (via MS Graph API)
 * Hybrid on-premise Active Directory (via MS Graph API)
 * Google Workspace (GSuite)
 
-## Messaging
+### Messaging
+
 * Email (MS Graph, Google Workspace, SMTP, Amazon SES)
 * SMS (MessageMedia, Whispir, Amazon SNS)
 * MQTT
 * Webhooks
 * Node-RED
 
-## Resource Booking
+### Resource Booking
+
 * Microsoft 365
 * Google Workspace (GSuite)
 * Native PlaceOS resource booking
 
-## Common Protocols/Standards
+### Common Protocols/Standards
+
 * HTTPS REST / JSON
 * HTTPS Webhook (post and receive)
 * TCP/IP
@@ -44,35 +46,42 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * BACnet (via IP Gateway)
 * Modbus TCP
 
-## Real Time Location
+### Real Time Location
+
 * Cisco DNA Spaces
 * Cisco Meraki RTLS
 * Cisco CMX
 * HP Aruba ALE
 
-## Sensors
+### Sensors
+
 * Vergesense
 * Floorsense
 * XY Sense
 * Xovis
 
-## Network
+### Network
+
 * Cisco Meraki
 * Cisco CMX
 * Cisco ISE
 * Cisco Switches
+* Juniper Mist
 
-## Building Access
+### Building Access
+
 * Lenel
 * Gallagher
 
-## Video Conferencing / Unified Collaboration
+### Video Conferencing / Unified Collaboration
+
 * Cisco Collaboration Endpoints (via Webex API)
 * Microsoft Teams (via MS Graph)
 * Pexip Management API
 * Polycom RealPresence Group Series
 
-## Displays
+### Displays
+
 * LG (Displays)
 * NEC (Displays/Projectors)
 * Panasonic (Displays/Projectors)
@@ -82,7 +91,8 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * Screen Technics (Screens/Lifts)
 * PJLink projectors
 
-## Video
+### Video
+
 * Extron (Switchers)
 * Atlona (Video over IP)
 * Lightware Switchers
@@ -98,7 +108,8 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * Wolfvision Document Cameras
 * Lumens Document Cameras
 
-## Audio
+### Audio
+
 * QSC Q-SYS
 * Biamp
 * Shure
@@ -110,7 +121,8 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * Symmetrix
 * ClearOne
 
-## Lighting
+### Lighting
+
 * KNX
 * C-Bus
 * DynaLite
@@ -118,11 +130,13 @@ Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-dri
 * DALI
 * Helvar
 
-## Other
+### Other
+
 * Global Cache
 * Kentix Sensors
 * Foxtel Set Top Box
 * Gantner Relaxx Lockers
 
-## Legacy or deprecated integrations
-* IBM Domino 
+### Legacy or deprecated integrations
+
+* IBM Domino
