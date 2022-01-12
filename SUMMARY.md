@@ -72,7 +72,7 @@
 * [Supported Integrations](reference/supported-integrations.md)
 * [System Architecture](reference/system-architecture.md)
 * [System Functionality & Requirements](reference/system-functionality.md)
-* [System Requirements](reference/system-requirements.md)
+* [Infrastructure Requirements](reference/system-requirements.md)
 * [Real-time Websocket](reference/websocket.md)
 * [Security Compliance](reference/security-compliance/README.md)
   * [FAQ](reference/security-compliance/faq.md)
