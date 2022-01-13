@@ -62,9 +62,10 @@ Available Scopes for API Keys are:
 
 ### Using the API Key
 
-API Keys are passed in the header of the request:
+API Keys are typically passed in the header of the request, however can be used in the following ways
 
-`X-API-Key: <token>`
+1. HTTP Header: `X-API-Key: <token>`
+2. URL param: `?api-key=<token>`
 
 ### Removing an API Key
 
