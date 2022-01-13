@@ -78,7 +78,7 @@ response = HTTP::Client.get authorize_uri, HTTP::Headers{"Cookie" => auth_cookie
 # the location header will be the redirect URI with a code parameter
 # example: `https://localhost:8443/backoffice/oauth-resp.html?code=tB2AUQQ8KXm`
 location = response.headers["Location"]
-code = loc.split("code=").last
+code = location.split("code=").last
 
 # Obtain the bearer token
 token_uri = "http://localhost:8443/auth/oauth/token?grant_type=authorization_code&code=#{code}&client_id=#{client_id}&redirect_uri=#{redirect_uri}"
