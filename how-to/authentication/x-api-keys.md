@@ -59,7 +59,6 @@ Available Scopes for API Keys are:
 
 * `scope.read`
 * `scope.write`
-* `systems.control` (used to executing system methods)
 
 ### Using the API Key
 
