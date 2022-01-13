@@ -66,6 +66,7 @@ API Keys are typically passed in the header of the request, however can be used 
 
 1. HTTP Header: `X-API-Key: <token>`
 2. URL param: `?api-key=<token>`
+3. A HTTP Cookie: `api-key=<token>`
 
 ### Removing an API Key
 
