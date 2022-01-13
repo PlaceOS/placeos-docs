@@ -31,6 +31,7 @@
     * [Configure SAML2 with Azure AD](how-to/authentication/configure-saml/saml2-azure.md)
     * [Configure SAML2 with Google Workspace](how-to/authentication/configure-saml/saml2-google.md)
   * [X-API Keys](how-to/authentication/x-api-keys.md)
+  * [Bearer tokens](how-to/authentication/bearer-tokens.md)
 * [Backoffice](how-to/backoffice/README.md)
   * [Add a Domain to PlaceOS](how-to/backoffice/add-domain.md)
   * [Backoffice File Upload](how-to/backoffice/backoffice-uploads.md)
