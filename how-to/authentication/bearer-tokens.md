@@ -40,6 +40,14 @@ This will return a new token
 }
 ```
 
+### Making Requests
+
+There are three ways to make an authenticated request with a bearer token:
+
+1. A HTTP Header: `Authorization: Bearer <token>`
+2. A URL Param: `?bearer_token=<token>`
+3. A HTTP Cookie: `bearer_token=<token>`
+
 ### Inspect an existing token
 
 GET `/api/engine/v2/api_keys/inspect?bearer_token=yourtoken`
