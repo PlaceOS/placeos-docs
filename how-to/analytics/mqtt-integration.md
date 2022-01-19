@@ -120,4 +120,18 @@ PlaceOS can integrate with MQTT Brokers including the major service providers li
 * [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
 * [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
-\*\[MQTT]: Message Queuing Telemetry Transport \*\[VC]: Video Conferencing
+\*\[MQTT]: Message Queuing Telemetry Transport\
+\*\[VC]: Video Conferencing
+
+### Websocket MQTT API
+
+PlaceOS provides an out of the box MQTT solution via the API, delivered over websockets using standard JWTs or X-API-keys for authentication.
+
+Secure WSS available at the route `/api/mqtt/` it expects the following MQTT authentication message details:
+
+* Username: **users JWT token or X-API-Key**
+* Password: **users JWT token or X-API-Key**
+
+Example: MQTT Websocket Client ([hivemq.com](http://www.hivemq.com/demos/websocket-client/))
+
+Regular users have read and subscribe permissions.
