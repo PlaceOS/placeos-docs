@@ -61,6 +61,7 @@
   * [Troubleshooting Backend Failures](tutorials/backend/failure-domains.md)
   * [Import Bookable Rooms](tutorials/backend/room-booking-import.md)
   * [Writing A Driver](tutorials/backend/write-a-driver.md)
+  * [Testing Internal Builds](tutorials/backend/testing-internal-builds.md)
 * [Backoffice](tutorials/backoffice/README.md)
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 
