@@ -9,4 +9,11 @@ Access is restricted to the outside world to help prevent accidental use. To aut
 
 Dev builds will now be available by prefixing the image name with `ghcr.io`. For example, if you would like to test branch `foo` from `core`, the image tag is `ghcr.io/placeos/core:foo`.
 
+1. edit the `.env` file in your [development environment](https://github.com/place-labs/partner-environment/blob/master/.env)
+2. replace `${PLACEOS_TAG}` with the test branch, i.e. `ghcr.io/placeos/core:foo`
+3. pull down the internal image `docker-compose pull`
+4. run the new image `docker-compose up -d`
+
+
+
 These _must not_ be used on external infrastructure, but are suitable for internal testing and experimentation. For external development use, platform `nightly` builds are available on Docker Hub. Extending the example above, `core` can be accessed there via `placeos/core:nightly`. Similarly the latest stable build can be found simply as `placeos/core`.
