@@ -8,13 +8,13 @@ description: >-
 
 By default, PlaceOS uses local authentication. An admin account is generated upon initial deployment. The administrator can manually create user accounts in Backoffice (on the Users tab). We recommend switching to federated authentication.
 
-### Prerequisites
+## Prerequisites
 
 1. Confirm the final UAT and PROD URLs of the web apps
 2. Ensure that the **DNS** entries for these URLs are active and forwarding to the server(s)
 3. Ensure that the SSL certificates for the above domains are signed and recognized as secure
 
-### Step 1: Adding Authentication
+## Step 1: Adding Authentication
 
 1. Login as an admin to Backoffice
 2. On the **Domains** tab, select the Domain that represents the URL where you wish to enable SAML
@@ -67,7 +67,7 @@ This will open up the SAML form. Here is a description of each field:
 
 Once you click save, it will generate an authentication ID. You can find it in the `/saml_auths` response on the Authentication tab.
 
-#### URL configuration
+### URL configuration
 
 1. Set the following fields to the corresponding URLs, replacing `adfs-XXXXX` with the generated ID:
    * Assertion URL (Reply URL / Callback URL): _`https://staffapp.placeos/auth/adfs/callback?id=adfs-XXXXX`_
@@ -82,7 +82,7 @@ Once you click save, it will generate an authentication ID. You can find it in t
 
 Once the client has configured their side, they’ll often ask you to change some information. This could be the Issuer, or some request attributes.
 
-### Step 2: Register a new service in your authentication provider
+## Step 2: Register a new service in your authentication provider
 
 You will need to configure your SAML Identity provider dashboard. From the above steps you will need:
 
@@ -100,15 +100,17 @@ This process will vary by provider, see the below guides for common options:
 * [Auth0](configure-saml/saml2-auth0.md)
 * [Google Workspace](saml2-google/)
 
-### Configure default redirects for the PlaceOS Domain
+## Step 3: Configure default redirects for the PlaceOS Domain
 
 Once you have tested the Login URL above you can update the default login page for the domain.
 
-* Click the edit icon for the Domain (above the authentication tab)
-* Set the login URL to `/auth/login?provider=adfs&id=[ADFS-ID-HERE]&continue={{url}}`, replacing the `[ADFS-ID-HERE]` and leaving the `{{url}}` as is
-* Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout
+1. Click the edit icon for the Domain (above the authentication tab)
+2. Set the login URL to `/auth/login?provider=adfs&id=[ADFS-ID-HERE]&continue={{url}}`, replacing the `[ADFS-ID-HERE]` and leaving the `{{url}}` as is
+3. Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout
 
-### Debugging
+![](../../.gitbook/assets/image.png)
+
+## Debugging
 
 The first step in this process should be to get the raw request.\
 Often you can see if a request attribute is not lining up to an attribute statement by inspecting the XML.
@@ -122,7 +124,7 @@ There are two methods of getting SSO data, described below:
 1. If you have an account you can use to test
 2. If the client is logging in and you have access to logs
 
-#### Self Check
+### Self Check
 
 1. Open the Chrome or Firefox inspection tool
 2. Go to the network tab
@@ -135,8 +137,6 @@ Assertion URL: `/auth/adfs/callback?id=[ADFS-ID-HERE]`
 
 Copy and paste the SAML response into the SAML decoder.
 
-#### Docker logs
+### Docker logs
 
 Look for the text **"Callback phase initiated"** and the SAML response data is nearby.
-
-\*\[AD FS]: Active Directory Federation Services \*\[OKTA]: `OKTA` Authentication Service \*\[IDP]: Identity Provider
