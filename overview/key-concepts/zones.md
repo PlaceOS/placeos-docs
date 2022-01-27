@@ -6,6 +6,8 @@ sidebar_position: 5
 
 # Zones
 
+![](<../../.gitbook/assets/Jon's general slide deck.png>)
+
 _Zones_ are collections of [systems](systems.md). A system can have tags marking it as a member of any number of zones.
 
 ### Purpose

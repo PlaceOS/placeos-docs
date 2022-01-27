@@ -3,25 +3,21 @@ title: Systems
 description: Systems are collections of modules
 sidebar_position: 4
 ---
-<!-- # Systems -->
 
-A *system* is the main logical building blocks within PlaceOS. 
-They contain three components:
-- A collection of [modules](modules.md)
-- [Settings](settings.md) which will apply to the system and modules in it
-- Basic metadata (name, description etc)
+# Systems
 
-<!-- images pending asset folder or mermaid.js -->
-<!-- ![Systems have settings and a collection of modules.](../.gitbook/assets/concepts-system.svg) -->
+![](<../../.gitbook/assets/Jon's general slide deck.png>)
 
-## Purpose
+A _system_ is the main logical building blocks within PlaceOS. They contain three components:
 
-Systems often represent physical spaces, such as meeting rooms.
-They can also represent connected items which run across physical spaces, such as a range of digital signage. 
-Otherwise, they can represent a non-physical system with data inputs and outputs, such as a payment portal.
+* A collection of [modules](modules.md)
+* [Settings](settings.md) which will apply to the system and modules in it
+* Basic metadata (name, description etc)
 
-## Systems and Zones
+### Purpose
 
-[Zones](zones.md) are groups of systems which can reflect their physical or conceptual groupings.
-Systems can belong to zero or more zones.
-<!-- not sure about zero -->
+Systems often represent physical spaces, such as meeting rooms. They can also represent connected items which run across physical spaces, such as a range of digital signage. Otherwise, they can represent a non-physical system with data inputs and outputs, such as a payment portal.
+
+### Systems and Zones
+
+[Zones](zones.md) are groups of systems which can reflect their physical or conceptual groupings. Systems can belong to zero or more zones.

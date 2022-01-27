@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Drivers
 
+![](<../../.gitbook/assets/Jon's general slide deck.png>)
+
 _Drivers_ are the core components of the PlaceOS platform. They combine to help different parts of the digital ecosystem interact with each other. PlaceOS has drivers that fall into one of two categories:
 
 ### Integration Drivers
