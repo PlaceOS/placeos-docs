@@ -52,13 +52,16 @@ If a driver for your device is not available, you can raise a request to have th
 * Cisco Meraki RTLS
 * Cisco CMX
 * HP Aruba ALE
+* [(Juniper) Mist](https://www.mist.com)
+* [Kontakt.io](https://kontakt.io)
 
 ### Sensors
 
-* Vergesense
-* Floorsense
+* [Vergesense](https://vergesense.com)
+* [Floorsense](https://floorsen.se)
 * XY Sense
 * Xovis
+* [Steinel](https://www.steinel.com.au)
 * SecureOS Auto ANPR
 
 ### Network
