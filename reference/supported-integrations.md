@@ -59,6 +59,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Floorsense
 * XY Sense
 * Xovis
+* SecureOS Auto ANPR
 
 ### Network
 
@@ -72,6 +73,7 @@ If a driver for your device is not available, you can raise a request to have th
 
 * Lenel
 * Gallagher
+* SecurOS & SecurOS Auto for Automatic Number Plate Recognition
 
 ### Video Conferencing / Unified Collaboration
 
