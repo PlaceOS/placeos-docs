@@ -414,4 +414,4 @@ You can use the `system.implementing` method from any logic module. It returns a
 
 The `accessor` macro provides a way to declare a dependency on a sibling driver for a specific function.
 
-For more information on these and for usage examples, see [logic drivers](write-a-driver.md#logic-drivers).
+For more information on these and for usage examples, see [logic drivers](./#logic-drivers).

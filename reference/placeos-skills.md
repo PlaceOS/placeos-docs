@@ -51,7 +51,7 @@ Deployment and provisioning of infrastructure for a PlaceOS instance within a cl
 
 ### Driver Development
 
-Further information can on driver development is in the [driver development tutorial](../tutorials/backend/write-a-driver.md).
+Further information can on driver development is in the [driver development tutorial](../tutorials/backend/write-a-driver/).
 
 **External knowledge:**
 
