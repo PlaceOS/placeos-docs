@@ -65,6 +65,8 @@
   * [Testing Internal Builds](tutorials/backend/testing-internal-builds.md)
 * [Backoffice](tutorials/backoffice/README.md)
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
+* [Common Configurations](tutorials/common-configurations/README.md)
+  * [Desk booking](tutorials/common-configurations/desk-booking.md)
 
 ## Reference
 
