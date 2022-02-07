@@ -415,3 +415,52 @@ You can use the `system.implementing` method from any logic module. It returns a
 The `accessor` macro provides a way to declare a dependency on a sibling driver for a specific function.
 
 For more information on these and for usage examples, see [logic drivers](./#logic-drivers).
+
+### Handling errors
+
+Where multiple functions are likely to raise similar errors, the errors can be handled generically using the `rescue_from` helper.
+
+```crystal
+class MyDevice < PlaceOS::Driver
+  rescue_from JSON::ParseException do |error|
+    logger.warn(exception: error) { "error parsing JSON payload" }
+    {} of String => JSON::Any
+  end
+
+  # any external call to this function will result in the empty hash above
+  # being returned to the caller. Internally in the driver the error will
+  # be raised as normal.
+  def no_error_externally
+    JSON.parse %({invalid: 'json')
+  end
+end
+```
+
+Alternatively this can be handled via an explicit function. Useful if it's desirable to use the same code in the received function.
+
+```crystal
+class MyDevice < PlaceOS::Driver
+  rescue_from JSON::ParseException, :handle_parse_error
+
+  protected def handle_parse_error(error)
+    logger.warn(exception: error) { "error parsing JSON payload" }
+    {} of String => JSON::Any
+  end
+  
+  # The above might be used as follows:
+  
+  def no_error_externally
+    # externally returns {}
+    JSON.parse %({invalid: 'json')
+  end
+  
+  # Keep error parsing DRY
+  def received(data, task)
+    result = JSON.parse(String.new data)
+    task.try &.success(result)
+  rescue error : JSON::ParseException
+    result = handle_parse_error(error)
+    task.try &.success(result)
+  end
+end
+```
