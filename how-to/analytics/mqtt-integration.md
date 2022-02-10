@@ -135,3 +135,14 @@ Secure WSS available at the route `/api/mqtt/` it expects the following MQTT aut
 Example: MQTT Websocket Client ([hivemq.com](http://www.hivemq.com/demos/websocket-client/))
 
 Regular users have read and subscribe permissions.
+
+### MQTT Clients
+
+We've found the following clients useful
+
+* JS: [https://github.com/mqttjs/MQTT.js](https://github.com/mqttjs/MQTT.js)
+* Explorer: [https://mqtt-explorer.com/](https://mqtt-explorer.com)
+
+Example configuration for explorer
+
+![MQTT Client Configuration](<../../.gitbook/assets/image (6).png>)

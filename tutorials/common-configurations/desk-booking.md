@@ -61,7 +61,7 @@ To complete the configuration you'll need the following datapoints
 * Client ID: `5217b4fd2f06` (example)
 * Redirect URI: [https://poc.placeos.com/workplace/oauth-resp.html](https://poc.placeos.com/workplace/oauth-resp.html)
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 ### Configuring a service account
 
