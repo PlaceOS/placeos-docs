@@ -68,10 +68,12 @@ The link will look something like:
 Clients will need to perform the following steps for PlaceOS integration
 
 1. **Client** to generate a [Meraki Dashboard API Key](https://documentation.meraki.com/General\_Administration/Other\_Topics/Cisco\_Meraki\_Dashboard\_API) for the PlaceOS driver to use, read only permissions
+   * We use Version 1 of the API
 2. Integrator to enter the API key into the Dashboard module settings
-3. **Client** to enable the [Meraki Location Services Scanning API](https://developer.cisco.com/meraki/scanning-api/#!enable-scanning-api)\
-   \* provide the webhook URL generated above\
-   \* provide the validator code, this can be anything, like `correcthorsebatterystaple`
+3. **Client** to enable the [Meraki Location Services Scanning API](https://developer.cisco.com/meraki/scanning-api/#!enable-scanning-api)
+   * Integrator to provide the webhook URL generated above
+   * Integrator to provide the validator code, this can be anything, like `correcthorsebatterystaple`
+   * Use Version 3 of the API
 4. **Client** to provide the Scanning API secret
 5. Integrator to enter the secret into the Dashboard module settings
 
@@ -111,6 +113,8 @@ floorplan_mappings:
   N_627126248111343:
     building: zone-HlczU_ONm2E
     level: zone-HDvg9XMV0Jr
+    
+    # level_name is here for readability, not used.
     level_name: BUILDING - L2
 ```
 

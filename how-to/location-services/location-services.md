@@ -4,25 +4,23 @@ description: Overview on Location Services Integration on PlaceOS
 sidebar_position: 1
 ---
 
-## Location services
+# Location Services
+
+### Location services
 
 Location services are any driver that support the [Locatable Interface](https://github.com/PlaceOS/driver/blob/master/src/placeos-driver/interface/locatable.cr)
 
-The [Location Service](https://github.com/PlaceOS/drivers/blob/master/drivers/place/location_services.cr) driver collects the responses of locatable modules in the same system and returns this as the result of a location search.
+The [Location Service](https://github.com/PlaceOS/drivers/blob/master/drivers/place/location\_services.cr) driver collects the responses of locatable modules in the same system and returns this as the result of a location search.
 
+### Response types
 
-## Response types
+The frontend translates the search responses into a pin on a map. These are the supported formats:
 
-The frontend translates the search responses into a pin on a map.
-These are the supported formats:
-
-
-### X,Y Location
+#### X,Y Location
 
 Such as a location calculated by a wireless network
 
 ```yaml
-
 {
   "location": "wireless",
   "coordinates_from": "bottom-left",
@@ -42,16 +40,13 @@ Such as a location calculated by a wireless network
   "meraki_floor_id": "g_727894289736675",
   "meraki_floor_name": "BUILDING Name - L2"
 }
-
 ```
 
-
-### Map Feature
+#### Map Feature
 
 Such as a desk
 
 ```yaml
-
 {
   "location": "desk",
   # the count of people at the location, desks will typically be 0 or 1
@@ -67,16 +62,13 @@ Such as a desk
   # provided if known
   "capacity": 1
 }
-
 ```
 
-
-### Booking
+#### Booking
 
 Such as an event in a meeting room
 
 ```yaml
-
 [{
   "location": "meeting",
   "mac": "meeting2.city1@resource.org.com",
@@ -105,10 +97,8 @@ Such as an event in a meeting room
   "staff_email": "bob@tmart",
   "staff_name": "Bob Jane"
 }]
-
 ```
 
+### Configuring Cisco Meraki
 
-## Configuring Cisco Meraki
-
-See the [Cisco Meraki Wireless Tracking](meraki-tracking.md) guide.
+See the [Cisco Meraki Wireless Tracking](../../tutorials/common-configurations/sensor-data-collection/configuring-meraki.md) guide.
