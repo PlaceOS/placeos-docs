@@ -69,6 +69,7 @@
   * [Desk booking](tutorials/common-configurations/desk-booking.md)
   * [Sensor Data Collection](tutorials/common-configurations/sensor-data-collection/README.md)
     * [Configuring Meraki](tutorials/common-configurations/sensor-data-collection/configuring-meraki.md)
+    * [Configuring DNA Spaces](tutorials/common-configurations/sensor-data-collection/configuring-dna-spaces.md)
 
 ## Reference
 

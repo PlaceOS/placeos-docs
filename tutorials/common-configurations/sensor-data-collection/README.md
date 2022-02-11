@@ -49,7 +49,7 @@ If the sensors have just been configured, perform the following actions in backo
    1. AreaManagement\_1 -> synchronize\_all\_levels
    2. AreaManagement\_1 -> write\_sensor\_discovery
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 This saves building level metadata: `sensor-discovered`
 
@@ -91,7 +91,7 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/sensor-map/#/editor/{{map_id}}`](https://editor.place.tech/sensor-map/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1).png>)
 
 #### Region mapping
 
