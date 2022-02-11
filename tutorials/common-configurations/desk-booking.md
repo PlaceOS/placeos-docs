@@ -17,16 +17,16 @@ This guide will cover the following steps
 A typical zone structure is organisation -> building -> level\
 A location services system should be are configured for each building.
 
-![](<../../.gitbook/assets/image (2) (1).png>)\
+![](<../../.gitbook/assets/image (2) (1) (1).png>)\
 Create a building zone with a `building` tag
 
-![](<../../.gitbook/assets/image (3) (1).png>)\
+![](<../../.gitbook/assets/image (3) (1) (1).png>)\
 Create level zones with the `level` tag and the appropriate parent zones. The structure is important.
 
 #### Level zone metadata
 
 For each level desk metadata should be configured\
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (1).png>)
 
 ```yaml
 [
@@ -61,7 +61,7 @@ To complete the configuration you'll need the following datapoints
 * Client ID: `5217b4fd2f06` (example)
 * Redirect URI: [https://poc.placeos.com/workplace/oauth-resp.html](https://poc.placeos.com/workplace/oauth-resp.html)
 
-![](<../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 ### Configuring a service account
 
@@ -76,7 +76,7 @@ The account needs to be configured on the same domain as the redirect URI above 
 Staff API needs to be configured for each domain that intends to use it.\
 It provides the Google or Office365 / MS Graph API configuration required for an organisation, however this is not a requirement for pure desk booking and dummy config can be provided.
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 Add a tenant for the required domain, if dummy data is going to be used - configure for Office365
 
@@ -134,4 +134,4 @@ booking_type: desk
 
 Once the modules are started you should find the list of desk IDs and any bookings now appear in AreaManagement if you view the state
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)

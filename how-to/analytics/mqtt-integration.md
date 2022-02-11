@@ -145,4 +145,4 @@ We've found the following clients useful
 
 Example configuration for explorer
 
-![MQTT Client Configuration](<../../.gitbook/assets/image (6) (1).png>)
+![MQTT Client Configuration](<../../.gitbook/assets/image (6) (1) (1).png>)

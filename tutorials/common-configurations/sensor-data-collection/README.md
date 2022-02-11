@@ -11,7 +11,7 @@ There are two modes that location services can function in
 * Building search\
   Sensors can exist in any system, as well as locally, and the building is searched for modules implementing the sensor interface
 
-Before going further, see the guide on configuring [desk bookings](desk-booking.md) and follow all steps, the desk booking driver is optional.
+Before going further, see the guide on configuring [desk bookings](../desk-booking.md) and follow all steps, the desk booking driver is optional.
 
 ### Local only configuration
 
@@ -25,7 +25,7 @@ Some examples include
 
 ### Building search configuration
 
-Where sensors are communicated with directly, not via a 3rd party platform, they will be configured in [PlaceOS Systems](../../overview/key-concepts/systems.md) that represent their physical location.
+Where sensors are communicated with directly, not via a 3rd party platform, they will be configured in [PlaceOS Systems](../../../overview/key-concepts/systems.md) that represent their physical location.
 
 To enable building search, add the following setting to the buildings location services system
 
@@ -49,7 +49,7 @@ If the sensors have just been configured, perform the following actions in backo
    1. AreaManagement\_1 -> synchronize\_all\_levels
    2. AreaManagement\_1 -> write\_sensor\_discovery
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 This saves building level metadata: `sensor-discovered`
 
@@ -60,11 +60,11 @@ Level zones have a `Sensors` tab that allows placement of sensor data on a map
 * Data coming from local only configuration is listed when selecting any level
 * Data coming from building search will only show on matching levels
 
-![Sensor placement UI](<../../.gitbook/assets/image (6).png>)
+![Sensor placement UI](<../../../.gitbook/assets/image (6) (1).png>)
 
 Remember to click save!
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
 Sensor locations are stored in level metadata called `sensor-locations`
 
@@ -83,7 +83,7 @@ Region metadata is stored in `map_regions` - you can edit this for fine tuned ad
 Both Sensor Placement and Map Regions UIs are backoffice extensions.\
 The following will enable the tabs if they are not available
 
-![Backoffice extension UI](<../../.gitbook/assets/image (3).png>)
+![Backoffice extension UI](<../../../.gitbook/assets/image (3) (1).png>)
 
 #### Sensor placement
 
@@ -91,7 +91,7 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/sensor-map/#/editor/{{map_id}}`](https://editor.place.tech/sensor-map/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (1).png>)
 
 #### Region mapping
 
@@ -99,4 +99,4 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/map-regions/#/editor/{{map_id}}`](https://editor.place.tech/map-regions/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)

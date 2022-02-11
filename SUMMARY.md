@@ -67,7 +67,8 @@
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 * [Common Configurations](tutorials/common-configurations/README.md)
   * [Desk booking](tutorials/common-configurations/desk-booking.md)
-  * [Sensor Data Collection](tutorials/common-configurations/sensor-data-collection.md)
+  * [Sensor Data Collection](tutorials/common-configurations/sensor-data-collection/README.md)
+    * [Configuring Meraki](tutorials/common-configurations/sensor-data-collection/configuring-meraki.md)
 
 ## Reference
 
