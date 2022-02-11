@@ -4,9 +4,8 @@ description: Cisco DNA Spaces location services configuration
 
 # Configuring DNA Spaces
 
-### Prerequisites
-
-Add the Cisco DNA Spaces driver from our [standard repository](https://github.com/PlaceOS/drivers).
+Before going further, see the guide on configuring [desk bookings](../desk-booking.md) and follow all steps.\
+Then add the Cisco DNA Spaces module to your location services system.
 
 ### Configure Cisco DNA Spaces
 
@@ -34,20 +33,11 @@ If PlaceOS and Cisco DNA Spaces Portal are not connected or configured correctly
 5. Inspect the response, if this fails it will report the failure reason.\
    ![](<../../../.gitbook/assets/image (5).png>)
 
-### Configuring location services
-
-1. Add `PlaceOS Staff API` driver
-   * configure a service account for this to query the API with
-2. Add `PlaceOS Location Services`
-   * https://github.com/PlaceOS/docs/blob/location-services/faq/location-services.md
-3. Add `PlaceOS Area Management`
-   * https://github.com/PlaceOS/docs/blob/area-management/faq/area-management.md
-
-#### Mapping Cisco DNA Spaces Maps to PlaceOS Zones
+### Mapping Cisco DNA Spaces Maps to PlaceOS Zones
 
 To configure a map id to a zone
 
-1. in Backoffice execute `DNA_Spaces.seen_locations`
+* in Backoffice execute `DNA_Spaces.seen_locations`
 
 this will return a list of space ids against space names that DNA spaces has sent so far
 
@@ -62,7 +52,7 @@ this will return a list of space ids against space names that DNA spaces has sen
 }
 ```
 
-1. configure the following settings in the Cisco DNA Spaces driver:
+* configure the following settings in the Cisco DNA Spaces driver:
 
 ```yaml
 floorplan_mappings:
