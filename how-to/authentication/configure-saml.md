@@ -1,10 +1,10 @@
 ---
 description: >-
-  Steps required for enabling SAML sign on for users logging in to PlaceOS web
-  apps
+  Steps required for enabling SAML single sign on for users logging in to
+  PlaceOS web apps
 ---
 
-# Configure PlaceOS for SAML
+# Configure SAML SSO
 
 By default, PlaceOS uses local authentication. An admin account is generated upon initial deployment. The administrator can manually create user accounts in Backoffice (on the Users tab). We recommend switching to federated authentication.
 

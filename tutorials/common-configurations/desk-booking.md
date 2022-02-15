@@ -20,7 +20,7 @@ A location services system should be are configured for each building.
 ![](<../../.gitbook/assets/image (2) (1) (1).png>)\
 Create a building zone with a `building` tag
 
-![](<../../.gitbook/assets/image (3) (1) (1).png>)\
+![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)\
 Create level zones with the `level` tag and the appropriate parent zones. The structure is important.
 
 #### Level zone metadata

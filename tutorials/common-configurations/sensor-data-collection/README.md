@@ -83,7 +83,7 @@ Region metadata is stored in `map_regions` - you can edit this for fine tuned ad
 Both Sensor Placement and Map Regions UIs are backoffice extensions.\
 The following will enable the tabs if they are not available
 
-![Backoffice extension UI](<../../../.gitbook/assets/image (3) (1).png>)
+![Backoffice extension UI](<../../../.gitbook/assets/image (3) (1) (1).png>)
 
 #### Sensor placement
 
