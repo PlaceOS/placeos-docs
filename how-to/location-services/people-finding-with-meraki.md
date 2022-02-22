@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # People Finding with Cisco Meraki on PlaceOS
 
-### Wireless
+## Wireless
 
 Cisco Meraki provides two interfaces for locating users:
 
@@ -15,7 +15,7 @@ Cisco Meraki provides two interfaces for locating users:
 2. [Scanning API](https://developer.cisco.com/meraki/scanning-api/#!introduction/scanning-api)
    * Version 3 of the API is required
 
-#### Data Collected
+### Data Collected
 
 Ideally you collect the following:
 
@@ -27,10 +27,11 @@ Ideally you collect the following:
    * Cisco Meraki uses a webhook to post data to PlaceOS
    * PlaceOS must be accessible on the public internet with valid TLS certificates
 
-**Device Certificates**
+### **Device Certificates**
 
-::: note\
+{% hint style="info" %}
 If devices authenticate against the network using certificates, the username is unknown to Cisco Meraki. In this case, you need to determine usernames another way.
+{% endhint %}
 
 1. Username to IP address
    * You may have an established method for this process, which you may use
@@ -45,7 +46,7 @@ If devices authenticate against the network using certificates, the username is 
 
 If you use device certificates, you will need to have Step 1 in near-real-time to match usernames to MAC addresses
 
-#### Integration Requirements
+### Integration Requirements
 
 1. Cisco Meraki must be on **Firmware R26** or higher
 2. Cisco Meraki must be able to connect to PlaceOS [rest-api](https://github.com/PlaceOS/rest-api) microservice
@@ -58,7 +59,7 @@ If you use device certificates, you will need to have Step 1 in near-real-time t
 6. PlaceOS integrator to provide a webhook for posting logs
    * [Example script](capturing\_user\_devices.md)
 
-### Wired
+## Wired
 
 For locating users plugged into a wired network, possibly via a docking station.
 
@@ -68,7 +69,7 @@ For locating users plugged into a wired network, possibly via a docking station.
    * PlaceOS requires Link Up and Link Down traps
    * PlaceOS requires SNMP access to switches directly
 
-#### Data Collected
+### Data Collected
 
 1. Username to IP address
    * You may have an established method for this process, which you may use
@@ -81,7 +82,7 @@ For locating users plugged into a wired network, possibly via a docking station.
    * SNMP Traps allow you to detect changes in real time
    * PlaceOS must be able to receive traps originating from the public internet
 
-#### Integration Requirements
+### Integration Requirements
 
 1. Cisco Meraki must be able to connect to PlaceOS
 2. PlaceOS must be able to connect to Cisco Meraki
