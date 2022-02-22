@@ -17,7 +17,7 @@ You can also augment this with sensors as required. Sensors show desk usage and 
 3. Check if any of those devices are plugged in to a switch port (or have a desk reserved)
 4. If not, fall back to wireless lookup of username, email or wireless MAC address
 
-### **Desk Locating Requirements** <a href="#desk-locating-requirements" id="desk-locating-requirements"></a>
+## **Desk Locating Requirements** <a href="#desk-locating-requirements" id="desk-locating-requirements"></a>
 
 * Switch IP addresses
 * SNMP or SSH service enabled on the switch (SSH preferred as it's easier to troubleshoot and secure)
@@ -26,7 +26,7 @@ You can also augment this with sensors as required. Sensors show desk usage and 
 
 Most switches expose a SNMP service for locating details of port usage and the devices connected to each port. This is an [industry standard](https://tools.ietf.org/html/rfc4293) common to most network hardware manufacturers. CISCO switches support SSH and PlaceOS supports [SSHv2](http://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/4145-ssh.html) for secure data transfer.
 
-**Laptop Docking Stations**
+### **Laptop Docking Stations**
 
 Desk locating relies on device MAC addresses to identify staff as they move around a building. Docking stations often sit between the laptop and the switch. We need to ensure that the MAC address exposed by the docking station is unique to each staff member.
 
@@ -90,7 +90,7 @@ DHCP snooping is a [security feature](http://packetpushers.net/five-things-to-kn
 
 If DHCP snooping is undesirable, **DHCP Gleaning** can be used instead.
 
-### **Example PowerShell Scripts** <a href="#example-powershell-scripts" id="example-powershell-scripts"></a>
+## **Example PowerShell Scripts** <a href="#example-powershell-scripts" id="example-powershell-scripts"></a>
 
 This covers the basics of user discovery using a domain controller. A third-party machine can be configured to query server logs remotely - [see the detailed scripts](capturing\_user\_devices.md) for how this is achieved
 
@@ -98,7 +98,7 @@ It's possible to use additional events and modify scripts as required for securi
 
 For more details on how this is implemented please see our detailed [configuration guide](https://docs.google.com/document/d/1WJOAMgs8ZppFrIVzlkTWDiV8vgZ\_KJf766XSpv9nnzw/edit#heading=h.nocikac03i2d).
 
-### **Wireless Location** <a href="#wireless-location" id="wireless-location"></a>
+## **Wireless Location** <a href="#wireless-location" id="wireless-location"></a>
 
 There are many methods for locating users on the wireless network and PlaceOS has integrations for various systems.
 
@@ -115,18 +115,21 @@ Depending on the wireless solution in place and it’s level of integration we m
 * Microsoft FindMe will always provide a username
 * Huawei provides raw RSSI values, IP and MAC addresses. PlaceOS manages floor fingerprinting and estimating location based on these values
 
-### **Shared Desktop Configuration** <a href="#shared-desktop-configuration" id="shared-desktop-configuration"></a>
+## **Shared Desktop Configuration** <a href="#shared-desktop-configuration" id="shared-desktop-configuration"></a>
 
 For monitoring desktop computer usage, such as locating a computer in a call center, you need to capture log-off events. You can only get these from the machine itself.
 
-::: note\
+{% hint style="info" %}
 This is a simplified overview of data extraction from auditing events
+{% endhint %}
 
 #### **Enable Auditing In** <a href="#enable-auditing-in" id="enable-auditing-in"></a>
 
 #### **User Notification Script** <a href="#user-notification-script" id="user-notification-script"></a>
 
-::: note This script can be modified to filter notifications for a subset of users, such as those in a specific domain or IP range.
+{% hint style="info" %}
+This script can be modified to filter notifications for a subset of users, such as those in a specific domain or IP range.
+{% endhint %}
 
 Filename: `user_ip.ps1`
 
