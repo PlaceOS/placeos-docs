@@ -56,6 +56,7 @@
 
 ## Tutorials
 
+* [Setup a dev environment](tutorials/setup-a-dev-environment.md)
 * [Backend](tutorials/backend/README.md)
   * [Troubleshooting Backend Failures](tutorials/backend/failure-domains.md)
   * [Import Bookable Rooms](tutorials/backend/room-booking-import.md)
