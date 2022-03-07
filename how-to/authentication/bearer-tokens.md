@@ -12,20 +12,7 @@ Bearer tokens are tied to client applications. You can find the list of configur
 
 NOTE:: this flow is not recommended and only works for services accounts, it can be useful to obtain a token simply for testing.
 
-POST `/auth/oauth/token`
-
-```yaml
-{ # body content
-  "grant_type"    : "password",
-  "username"      : "service@account.com",
-  "password"      : "developer",
-  "client_id"     : "797688520xxxxxxxxxxxxxxx617a25be",
-  # Optional, you can specify more than one scope - defaults to `public`
-  # the scopes selected here must be a subset of those configured on the
-  # client application represented by the above id
-  "scope"         : "public.read metadata"
-}
-```
+POST `/auth/oauth/token?grant_type=password&username=<service@account.com>&password=<password>&client_id=<client_id>&scope=<public.read metadata>`
 
 This will return a new token
 
@@ -39,6 +26,8 @@ This will return a new token
     "created_at": 1642051911
 }
 ```
+
+you can specify more than one scope - defaults to `public` the scopes selected here must be a subset of those configured on the client application
 
 ### Making Requests
 
