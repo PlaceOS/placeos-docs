@@ -43,7 +43,7 @@ On the triggers tab, add a new trigger for handling the webhook.
 1. Enable webhook functionality
 2. Select GET and POST methods
 
-![Webhook trigger](<../../../.gitbook/assets/image (4).png>)
+![Webhook trigger](<../../../.gitbook/assets/image (4) (1).png>)
 
 Add the trigger to your location services system
 
@@ -53,7 +53,7 @@ Once added, edit the webhook to enable tunnelling the data directly to the modul
 
 ![Enable action execution](<../../../.gitbook/assets/image (8) (1).png>)
 
-Click `Save` and copy the webhook link ![](<../../../.gitbook/assets/image (5) (1).png>)
+Click `Save` and copy the webhook link ![](<../../../.gitbook/assets/image (5) (1) (1).png>)
 
 The link will look something like:
 

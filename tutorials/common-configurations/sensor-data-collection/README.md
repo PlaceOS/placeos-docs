@@ -99,4 +99,4 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/map-regions/#/editor/{{map_id}}`](https://editor.place.tech/map-regions/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)

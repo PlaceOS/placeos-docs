@@ -49,6 +49,7 @@
   * [Discovering User Devices](how-to/location-services/capturing\_user\_devices.md)
   * [Locating Users on a Network](how-to/location-services/locating-users.md)
   * [People Finding with Cisco Meraki on PlaceOS](how-to/location-services/people-finding-with-meraki.md)
+  * [People Finding with Juniper Mist on PlaceOS](how-to/location-services/people-finding-with-juniper-mist-on-placeos.md)
 * [User Interfaces](how-to/user-interfaces/README.md)
   * [Deploy a Frontend Interface](how-to/user-interfaces/deploy-frontend.md)
   * [Configure Endpoint Auto Login](how-to/user-interfaces/panel-login.md)

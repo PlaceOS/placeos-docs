@@ -31,7 +31,7 @@ If PlaceOS and Cisco DNA Spaces Portal are not connected or configured correctly
 3. Under Execute Command, Select Cisco DNA Spaces
 4. Under Select Function, Execute `Activate`
 5. Inspect the response, if this fails it will report the failure reason.\
-   ![](<../../../.gitbook/assets/image (5).png>)
+   ![](<../../../.gitbook/assets/image (5) (1).png>)
 
 ### Mapping Cisco DNA Spaces Maps to PlaceOS Zones
 
