@@ -22,6 +22,7 @@ Some examples include
 * [Vergesense API](https://github.com/PlaceOS/drivers/blob/master/drivers/vergesense/vergesense\_api.cr) and corresponding [Vergesense Location Service](https://github.com/PlaceOS/drivers/blob/master/drivers/vergesense/location\_service.cr)
 * [BACnet](https://github.com/PlaceOS/drivers/blob/master/drivers/ashrae/bacnet.cr) is a two in one
 * [Cisco Meraki Dashboard](https://github.com/PlaceOS/drivers/blob/master/drivers/cisco/meraki/dashboard.cr) and [Meraki Location Services](https://github.com/PlaceOS/drivers/blob/master/drivers/cisco/meraki/meraki\_locations.cr)
+* [Juniper Mist Location Services](../../../how-to/location-services/people-finding-with-juniper-mist-on-placeos.md)
 
 ### Building search configuration
 
