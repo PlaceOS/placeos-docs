@@ -12,7 +12,18 @@ Bearer tokens are tied to client applications. You can find the list of configur
 
 NOTE:: this flow is not recommended and only works for services accounts, it can be useful to obtain a token simply for testing.
 
-POST `/auth/oauth/token?grant_type=password&username=<service@account.com>&password=<password>&client_id=<client_id>&scope=<public.read metadata>`
+POST `/auth/oauth/token`
+
+```yaml
+{
+  "grant_type"    : "password",
+  "username"      : "<user@email.com>",
+  "password"      : "<password>",
+  "client_id"     : "7976...a25be",
+  # space seperated scope list
+  "scope"         : "public mqtt.read"
+}
+```
 
 This will return a new token
 
