@@ -54,6 +54,7 @@
   * [Deploy a Frontend Interface](how-to/user-interfaces/deploy-frontend.md)
   * [Configure Endpoint Auto Login](how-to/user-interfaces/panel-login.md)
   * [SVG Map Creation](how-to/user-interfaces/svg-map-creation.md)
+  * [Configuring a default UI](how-to/user-interfaces/configuring-a-default-ui.md)
 
 ## Tutorials
 
