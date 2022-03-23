@@ -38,7 +38,7 @@ Driver development can be performed with a [lightweight spec runner](https://git
 
 Once up you can browse to [http://localhost:8085/](http://localhost:8085) to start running specs against drivers.
 
-![Developing drivers](<../.gitbook/assets/image (9) (1).png>)
+![Developing drivers](<../.gitbook/assets/image (9).png>)
 
 #### Private / 3rd party repositories
 

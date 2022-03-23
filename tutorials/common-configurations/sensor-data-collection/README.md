@@ -50,7 +50,7 @@ If the sensors have just been configured, perform the following actions in backo
    1. AreaManagement\_1 -> synchronize\_all\_levels
    2. AreaManagement\_1 -> write\_sensor\_discovery
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 This saves building level metadata: `sensor-discovered`
 

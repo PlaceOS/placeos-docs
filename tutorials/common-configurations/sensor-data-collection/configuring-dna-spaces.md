@@ -10,7 +10,7 @@ Then add the Cisco DNA Spaces module to your location services system.
 ### Configure Cisco DNA Spaces
 
 1. Install the PlaceOS app via your [Cisco DNA Spaces Portal](https://dnaspaces.io/partner/app/details/app-A575390EA4DD4915B863D6CA4F283F38) \
-   ![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+   ![](<../../../.gitbook/assets/image (9) (1).png>)
 2. On PlaceOS Backoffice Navigate to the Drivers tab
 3. Select the Cisco DNA Spaces Driver
 4. In the driver settings, Add your Activation key from DNA Spaces Portal as `dna_spaces_activation_key: 'your-key-here'` \

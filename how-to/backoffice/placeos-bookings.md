@@ -51,3 +51,39 @@ Inspecting the state will return a JSON response of all bookings for that system
 In the example below, you will see a positive response with a calendar booking.
 
 ![Bookings State](assets/bookings-view-state.png)
+
+## Status Variables
+
+| Status            | Values                    | Function                                                                                                                             |
+| ----------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `booked`          | (Bool)                    | `true` when there is a current (start time < current time < end time)                                                                |
+| `next_pending`    | (Bool)                    | `true` from `pending_before` mins before an event start time or until `checkin` is executed.                                         |
+| `current_pending` | (Bool)                    | `true` from the event start time til `pending_period` mins after the event start time or until `checkin` is executed.                |
+| `pending`         | (Bool)                    | `true` when either current\_pending or next\_pending is true                                                                         |
+| `in_use`          | (Bool)                    | `true` when `booked` AND NOT `pending` (means that the current event has been checked in via `checkin` OR `start_meeting` functions) |
+| `status`          | `free`, `pending`, `busy` |                                                                                                                                      |
+|                   |                           |                                                                                                                                      |
+|                   |                           |                                                                                                                                      |
+
+## Settings
+
+List of settings can be found in the driver source: [https://github.com/PlaceOS/drivers/blob/master/drivers/place/bookings.cr#L12](https://github.com/PlaceOS/drivers/blob/master/drivers/place/bookings.cr#L12)
+
+
+
+| Setting               | Default Value |                                                                                                                                                                                                                   |
+| --------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pending_period`      | `5` (mins)    | Number of minutes AFTER the Booking start time until the current event is truncated and `status` changes from `pending` to `free`                                                                                 |
+| `pending_before`      | `5` (mins)    | Number of minutes before the Booking start time until the `status` changes from `free`  to `pending`                                                                                                              |
+| `disable_end_meeting` | `false`       | Exposes a `disable_end_meeting` status variable such that frontends like PlaceOS template Bookings can detect it and enable/disable it's auto event cancellation functionality (frontend will exec `end_meeting`) |
+
+### Example config
+
+```
+pending_before: 5,
+pending_period: 0,
+disable_end_meeting: false,
+```
+
+This will make `status` change to `pending` 5 mins before the booking start time. Then change to `busy` at the booking start time.
+
