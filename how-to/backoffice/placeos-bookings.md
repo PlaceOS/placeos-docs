@@ -69,11 +69,11 @@ List of settings can be found in the driver source: [https://github.com/PlaceOS/
 
 
 
-| Setting               | Default Value |                                                                                                                                                                                                                   |
-| --------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pending_period`      | `5` (mins)    | Number of minutes AFTER the Booking start time until the current event is truncated and `status` changes from `pending` to `free`                                                                                 |
-| `pending_before`      | `5` (mins)    | Number of minutes before the Booking start time until the `status` changes from `free`  to `pending`                                                                                                              |
-| `disable_end_meeting` | `false`       | Exposes a `disable_end_meeting` status variable such that frontends like PlaceOS template Bookings can detect it and enable/disable it's auto event cancellation functionality (frontend will exec `end_meeting`) |
+| Setting               | Default Value |                                                                                                                                                                                                                                                                                                                            |
+| --------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pending_period`      | `5` (mins)    | Number of minutes AFTER the Booking start time until `status` changes from `pending` to `free`                                                                                                                                                                                                                             |
+| `pending_before`      | `5` (mins)    | Number of minutes BEFORE the Booking start time until the `status` changes from `free`  to `pending`                                                                                                                                                                                                                       |
+| `disable_end_meeting` | `false`       | Exposes a `disable_end_meeting` status variable such that frontends like PlaceOS template Bookings can detect it and enable/disable it's auto event cancellation functionality (frontend will exec `end_meeting` causing the current event to be truncated to the current time, freeing up the room (in case of no shows). |
 
 ### Example config
 
