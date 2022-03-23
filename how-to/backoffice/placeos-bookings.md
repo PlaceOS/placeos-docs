@@ -54,16 +54,14 @@ In the example below, you will see a positive response with a calendar booking.
 
 ## Status Variables
 
-| Status            | Values                    | Function                                                                                                                             |
-| ----------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `booked`          | (Bool)                    | `true` when there is a current (start time < current time < end time)                                                                |
-| `next_pending`    | (Bool)                    | `true` from `pending_before` mins before an event start time or until `checkin` is executed.                                         |
-| `current_pending` | (Bool)                    | `true` from the event start time til `pending_period` mins after the event start time or until `checkin` is executed.                |
-| `pending`         | (Bool)                    | `true` when either current\_pending or next\_pending is true                                                                         |
-| `in_use`          | (Bool)                    | `true` when `booked` AND NOT `pending` (means that the current event has been checked in via `checkin` OR `start_meeting` functions) |
-| `status`          | `free`, `pending`, `busy` |                                                                                                                                      |
-|                   |                           |                                                                                                                                      |
-|                   |                           |                                                                                                                                      |
+| Status            | Values                    | Function                                                                                                                                  |
+| ----------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `booked`          | (Bool)                    | `true` when there is a current (start time < current time < end time)                                                                     |
+| `next_pending`    | (Bool)                    | `true` from `pending_before` mins before an event start time until the event start time OR until `checkin` / `start_meeting` is executed. |
+| `current_pending` | (Bool)                    | `true` from the event start time until `pending_period` mins after the event start time OR until `checkin` / `start_meeting` is executed. |
+| `pending`         | (Bool)                    | `true` when either `current_pending` or `next_pending` is true                                                                            |
+| `in_use`          | (Bool)                    | `true` when `booked` AND NOT `pending` (means that the current event has been checked in via `checkin` OR `start_meeting` functions)      |
+| `status`          | `free`, `pending`, `busy` | Describes the current status of the room                                                                                                  |
 
 ## Settings
 
