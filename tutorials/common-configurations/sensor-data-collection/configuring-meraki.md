@@ -99,7 +99,7 @@ default_network_id: "N_627126248111343"
 
 Obtain the list of floorplans for that network
 
-![](<../../../.gitbook/assets/image (9) (1) (1).png>) Copy the result into a text editor
+![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>) Copy the result into a text editor
 
 Then for each floor plan find the matching PlaceOS building and level zone IDs and add the following setting
 

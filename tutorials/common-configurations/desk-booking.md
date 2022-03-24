@@ -135,3 +135,11 @@ booking_type: desk
 Once the modules are started you should find the list of desk IDs and any bookings now appear in AreaManagement if you view the state
 
 ![](<../../.gitbook/assets/image (1) (1).png>)
+
+### Configuring automatic desk assignment
+
+Where a user doesn't have the option to select a desk and are placed near others in their department.
+
+In the zone metadata for the `workplace_app` you can edit the `desks` configuration adding the `auto_allocation` configuration option.
+
+![](<../../.gitbook/assets/image (11).png>)
