@@ -88,7 +88,7 @@ The following system level settings are important:
 
 To collect this information you can execute the following functions in backoffice:
 
-* ![](<../../../.gitbook/assets/image (6).png>) Make note of the organisations ID
+* ![](<../../../.gitbook/assets/image (6) (1).png>) Make note of the organisations ID
 * ![](<../../../.gitbook/assets/image (3) (1).png>) make note of the network ID from the list
 
 Configure the network ID in the location services system
@@ -99,7 +99,7 @@ default_network_id: "N_627126248111343"
 
 Obtain the list of floorplans for that network
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>) Copy the result into a text editor
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>) Copy the result into a text editor
 
 Then for each floor plan find the matching PlaceOS building and level zone IDs and add the following setting
 

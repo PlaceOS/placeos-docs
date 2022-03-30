@@ -18,4 +18,4 @@ To override this behaviour:
 }
 ```
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)

@@ -29,6 +29,20 @@ Set your default terminal in VS Code to your linux shell
 2. Type `Terminal: Select Default Profile`
 3. select your WSL2 terminal from the dropdown
 
+#### Map a network drive for GUI access
+
+In windows it's better that GUI editors are remotely accessing the linux filesystem, versus linux being mapped to windows as the file permissions will prevent some posix actions.
+
+1. In Windows Explorer you can browse to `\\wsl$\`
+2. Then you should see the available Linux environments i.e. `\\wsl$\Ubuntu`
+3. You can then map this to a drive letter in windows
+
+![Map a network drive](<../.gitbook/assets/image (9).png>)
+
+![](<../.gitbook/assets/image (6).png>)
+
+Once mapped, place all your crystal lang projects in your Linux home folder
+
 ### Configure the partner environment
 
 If you are only looking to develop drivers then you probably don't need the full partner environment and can skip to the next section.\
@@ -54,7 +68,7 @@ Driver development can be performed with a [lightweight spec runner](https://git
 
 Once up you can browse to [http://localhost:8085/](http://localhost:8085) to start running specs against drivers.
 
-![Developing drivers](<../.gitbook/assets/image (9) (1).png>)
+![Developing drivers](<../.gitbook/assets/image (9) (1) (1).png>)
 
 #### Private / 3rd party repositories
 
