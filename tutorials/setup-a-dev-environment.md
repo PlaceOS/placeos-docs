@@ -29,6 +29,10 @@ Set your default terminal in VS Code to your linux shell
 2. Type `Terminal: Select Default Profile`
 3. select your WSL2 terminal from the dropdown
 
+You will then want to ensure there enough resources allocated to the Linux VM
+
+[https://docs.microsoft.com/en-us/windows/wsl/wsl-config#example-wslconfig-file](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#example-wslconfig-file)
+
 #### Map a network drive for GUI access
 
 In windows it's better that GUI editors are remotely accessing the linux filesystem, versus linux being mapped to windows as the file permissions will prevent some posix actions.
