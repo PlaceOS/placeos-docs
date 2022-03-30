@@ -51,7 +51,7 @@ Add the trigger to your location services system
 
 Once added, edit the webhook to enable tunnelling the data directly to the module
 
-![Enable action execution](<../../../.gitbook/assets/image (8) (1).png>)
+![Enable action execution](<../../../.gitbook/assets/image (8) (1) (1).png>)
 
 Click `Save` and copy the webhook link ![](<../../../.gitbook/assets/image (5) (1) (1).png>)
 

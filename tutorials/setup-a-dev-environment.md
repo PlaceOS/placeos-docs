@@ -8,10 +8,26 @@ description: >-
 
 ### Prerequisites
 
-* WSL2 if running Windows
+* [WSL2](https://www.windowscentral.com/how-install-wsl2-windows-10) if running Windows
 * [GIT installed](https://git-scm.com)
 * [Docker installed](https://docs.docker.com/get-docker/)
 * [Crystal lang](https://crystal-lang.org/install/)
+
+#### Windows
+
+When running on windows ensure docker desktop is linked to your WSL2 shell
+
+![Docker WSL2 integration](<../.gitbook/assets/image (8).png>)
+
+Ensure git is using unix line endings. In powershell you can run the following command:
+
+`git config --global core.autocrlf false`
+
+Set your default terminal in VS Code to your linux shell
+
+1. Press `control -> shift -> P`
+2. Type `Terminal: Select Default Profile`
+3. select your WSL2 terminal from the dropdown
 
 ### Configure the partner environment
 

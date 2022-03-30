@@ -92,7 +92,7 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/sensor-map/#/editor/{{map_id}}`](https://editor.place.tech/sensor-map/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 #### Region mapping
 

@@ -22,7 +22,7 @@ If the Cisco DNA Spaces Driver is configured correctly:
 * You will see a positive connection status on the Cisco DNA Spaces Portal
 * The Cisco DNA Spaces Driver in PlaceOS will be green
 * The Cisco DNA Spaces Driver in PlaceOS will not have any errors when inspecting state\
-  ![](<../../../.gitbook/assets/image (8).png>)
+  ![](<../../../.gitbook/assets/image (8) (1).png>)
 
 If PlaceOS and Cisco DNA Spaces Portal are not connected or configured correctly:
 
