@@ -56,6 +56,10 @@ Edit your code in windows but run extensions on linux (such as your crystal tool
 3. run the following command: `code .`
 4. This will launch VS code in windows, however the bulk of operations are occurring in linux
 
+#### Other minor issues when working with WSL2
+
+Windows doesn't recognise git symbolic links, since the development is occurring primarily in Linux this is safe to ignore: `git update-index --assume-unchanged symbolic_link`
+
 ### Configure the partner environment
 
 If you are only looking to develop drivers then you probably don't need the full partner environment and can skip to the next section.\
