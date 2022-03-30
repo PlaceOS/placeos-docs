@@ -47,6 +47,15 @@ In windows it's better that GUI editors are remotely accessing the linux filesys
 
 Once mapped, place all your crystal lang projects in your Linux home folder
 
+#### Launch VS Code from linux
+
+Edit your code in windows but run extensions on linux (such as your crystal tool formatter)
+
+1. Install the [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension in VS Code
+2. In a linux terminal, browse to the folder with your project files
+3. run the following command: `code .`
+4. This will launch VS code in windows, however the bulk of operations are occurring in linux
+
 ### Configure the partner environment
 
 If you are only looking to develop drivers then you probably don't need the full partner environment and can skip to the next section.\
