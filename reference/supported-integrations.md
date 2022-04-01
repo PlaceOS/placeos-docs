@@ -63,6 +63,8 @@ If a driver for your device is not available, you can raise a request to have th
 * Xovis
 * [Steinel](https://www.steinel.com.au)
 * SecureOS Auto ANPR
+* [CMS Engage](https://cmselectra.com/au/product-category/cms-engage-smart-workplace-technology/)
+* SenseStudio
 
 ### Network
 
