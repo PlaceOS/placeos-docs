@@ -115,6 +115,12 @@ If a driver for your device is not available, you can raise a request to have th
 * Wolfvision Document Cameras
 * Lumens Document Cameras
 
+### Video over IP
+
+* QSC Q-SYS&#x20;
+* Crestron NVX&#x20;
+* Extron NAV
+
 ### Audio
 
 * QSC Q-SYS
@@ -144,6 +150,4 @@ If a driver for your device is not available, you can raise a request to have th
 * Foxtel Set Top Box
 * Gantner Relaxx Lockers
 
-### Legacy or deprecated integrations
-
-* IBM Domino
+###
