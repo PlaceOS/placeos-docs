@@ -68,6 +68,7 @@
 * [Backoffice](tutorials/backoffice/README.md)
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 * [Common Configurations](tutorials/common-configurations/README.md)
+  * [Webex Instant Connect](tutorials/common-configurations/webex-instant-connect.md)
   * [Desk booking](tutorials/common-configurations/desk-booking.md)
   * [Sensor Data Collection](tutorials/common-configurations/sensor-data-collection/README.md)
     * [Configuring Meraki](tutorials/common-configurations/sensor-data-collection/configuring-meraki.md)
