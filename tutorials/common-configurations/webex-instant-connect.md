@@ -2,7 +2,7 @@
 
 Cisco Webex Instant Connect is a supported integration to enable Virtual Care telehealth functionality in the PlaceOS VirtualCare platform.
 
-To use the VirtualCare platform with Cisco Webex Instant Connect, you must have an existing Webex Account with required licensing. Administrator access to the Webex Domain is required to configure Instant Connect.
+To use the VirtualCare platform with Cisco Webex Instant Connect, you must have an existing Webex Account with Basic Suite licensing as a minimum. Administrator access to the Webex Domain is required to configure Instant Connect.
 
 ## Configure Instant Connect
 
