@@ -73,7 +73,6 @@ You will now need to grant Graph API Permissions on your App.
     &#x20;
 6.  Grant API Access to the following resources (or whichever resources are approved by the Azure administrator):
 
-    * `Calendars.ReadWrite`
     * `Calendars.ReadWrite.Shared`
     * `Contacts.Read`
     * `Group.Read.All`
