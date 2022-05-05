@@ -68,10 +68,10 @@ You will now need to grant Graph API Permissions on your App.
 4.  Click Microsoft Graph
 
     &#x20;![Graph](assets/graph-api.png)
-5.  Select Application permissions
+5.  Select **Delegated permissions**
 
-    &#x20;![Graph Application Permissions](assets/graph-app-permissions.png)
-6.  Grant API Access to the following resources:
+    &#x20;
+6.  Grant API Access to the following resources (or whichever resources are approved by the Azure administrator):
 
     * `Calendars.ReadWrite`
     * `Calendars.ReadWrite.Shared`
