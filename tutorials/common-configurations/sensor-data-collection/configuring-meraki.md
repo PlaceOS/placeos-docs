@@ -89,7 +89,7 @@ The following system level settings are important:
 To collect this information you can execute the following functions in backoffice:
 
 * ![](<../../../.gitbook/assets/image (6) (1).png>) Make note of the organisations ID
-* ![](<../../../.gitbook/assets/image (3) (1).png>) make note of the network ID from the list
+* <img src="../../../.gitbook/assets/image (3) (1).png" alt="" data-size="original"> make note of the network ID from the list
 
 Configure the network ID in the location services system
 

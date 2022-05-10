@@ -1,26 +1,14 @@
 ---
-description: Single Sign On for PlaceOS using an OAuth2 provider
+description: Steps required for enabling OAuth2 sign on for PlaceOS with Google
 ---
 
-# Configure OAuth2 SSO
-
-One advantage of using OAuth2 over SAML is that it is possible to require individuals to authorise access to certain resources. Thus users grant access to PlaceOS which can maintain a refresh token for offline access as needed.
-
-### Prerequisites
-
-1. Confirm the final UAT and PROD URLs of the web apps
-2. Ensure that the **DNS** entries for these URLs are active and forwarding to the server(s)
-3. Ensure that the SSL certificates for the above domains are signed and recognized as secure
-
-### Google OAuth2 SSO
-
-For this guide we'll use Google as the provider as it's the most common.
+# Google OAuth2
 
 Before configuring PlaceOS, add a [new client application](https://support.google.com/cloud/answer/6158849) to your Google account and obtain the client id and secret.
 
 ### Create a new authentication source in PlaceOS
 
-![New authentication source on the selected domain](<../../.gitbook/assets/image (3).png>)
+![New authentication source on the selected domain](<../../../.gitbook/assets/image (3).png>)
 
 #### Configuring fields
 
@@ -71,24 +59,6 @@ An example configuration that works with Google
 The above stores a refresh token against each user for scoped directory access.\
 A simpler version if token based access isn't required could be:
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 With scopes: `profile email`&#x20;
-
-### User Access Tokens
-
-User tokens obtained from the OAuth2 flow are stored in the database and can be used for making requests on behalf of the users logging in.
-
-You can obtain a token via `POST /api/engine/v2/users/resource_token`\
-It will return a JSON payload
-
-```yaml
-{
-  # a valid bearer token for the current user
-  token:   "1234567",
-  # optional unix timestamp (seconds)
-  expires: 122345
-}
-```
-
-If the OAuth2 service returned a refresh token then this API will always return a valid token, refreshed as required (there is never direct access to the refresh token)
