@@ -108,7 +108,7 @@ Once you have tested the Login URL above you can update the default login page f
 2. Set the login URL to `/auth/login?provider=adfs&id=[ADFS-ID-HERE]&continue={{url}}`, replacing the `[ADFS-ID-HERE]` and leaving the `{{url}}` as is
 3. Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout
 
-![](<../../.gitbook/assets/image (5) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
 ## Debugging
 

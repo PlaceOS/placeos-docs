@@ -53,7 +53,7 @@ Once added, edit the webhook to enable tunnelling the data directly to the modul
 
 ![Enable action execution](<../../../.gitbook/assets/image (8) (1) (1).png>)
 
-Click `Save` and copy the webhook link ![](<../../../.gitbook/assets/image (5) (1) (1).png>)
+Click `Save` and copy the webhook link ![](<../../../.gitbook/assets/image (5) (1) (1) (1).png>)
 
 The link will look something like:
 

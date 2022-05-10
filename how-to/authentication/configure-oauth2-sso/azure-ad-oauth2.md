@@ -8,6 +8,14 @@ description: Steps required for enabling OAuth2 sign on for PlaceOS with Azure
 
 ![New authentication source on the selected domain](<../../../.gitbook/assets/image (3).png>)
 
+#### Overview of steps
+
+1. Add an Azure Authentication (Web platform)
+2. Create a new auth source in PlaceOS with the details below
+3. Grab the generated ID and place it in the following URL:\
+   https://{your-placeos-domain}/auth/oauth2/callback?id={generated-id}
+4. Add the above redirect URI to the Azure Authentication configuration
+
 #### Configuring fields
 
 These fields are specific to the OAuth2 provider and tend to differ slightly between providers.
@@ -54,3 +62,5 @@ Modify scopes based on the [permissions required](https://docs.microsoft.com/en-
   * refresh\_token -> refresh\_token
   * expires -> expires
   * expires\_at -> expires\_at
+
+NOTE: If you plan to use the `resource_token` API then remember to [configure which OAuth strategy to use](./#user-access-tokens).

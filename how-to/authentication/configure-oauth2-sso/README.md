@@ -29,3 +29,7 @@ It will return a JSON payload
 ```
 
 If the OAuth2 service returned a refresh token then this API will always return a valid token, refreshed as required (there is never direct access to the refresh token)
+
+With multiple authentication sources you may have to specify which source to use for OAuth configuration:
+
+![For each domain, specify the authentication strategy to use](<../../../.gitbook/assets/image (5).png>)
