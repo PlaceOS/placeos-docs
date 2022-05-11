@@ -61,6 +61,8 @@ Locations services such as:
 * Cisco DNA Spaces
 * Cisco Meraki RTLS
 * HP Aruba
+* Juniper Mist
+* RUCKUS SPoT
 
 ### Analytics for connected integrations
 
