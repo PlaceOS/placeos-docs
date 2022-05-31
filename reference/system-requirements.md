@@ -30,11 +30,6 @@ See [PlaceOS Kubernetes Terraform](https://github.com/place-labs/k8s-terraform/)
   * 10 x 1 GB
   * 1x 20GB
   * 1x 100GB
-* `docker-compose`
-* Minimum node size:
-  * 4 cores
-  * 8 GB RAM
-  * 50 GB storage
 
 ### Non-Production Environment
 
