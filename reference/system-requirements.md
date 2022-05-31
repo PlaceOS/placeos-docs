@@ -27,11 +27,9 @@ See [PlaceOS Kubernetes Terraform](https://github.com/place-labs/k8s-terraform/)
   * 4 cores
   * 8 GB RAM
 * Persistent Volumes utilized:
-  * 8 x 10 GB
-  * 1 x 100 MB
-
-#### Linux VM based Deployment
-
+  * 10 x 1 GB
+  * 1x 20GB
+  * 1x 100GB
 * `docker-compose`
 * Minimum node size:
   * 4 cores
@@ -47,16 +45,17 @@ See [PlaceOS Kubernetes Terraform](https://github.com/place-labs/k8s-terraform/)
 * Availability Zones: 1 or more
 * Nodes: 3 or more
 * Minimum node size:
-  * 2 cores
+  * 4 cores
   * 8 GB RAM
 * Persistent Volumes utilized:
-  * 8 x 10 GB
-  * 1 x 100 MB
+  * 10 x 1 GB
+  * 1x 20GB
+  * 1x 100GB
 
-#### Linux VM based Deployment
+#### OR Linux VM based Deployment
 
 * `docker-compose`
 * Minimum node size:
-  * 4 cores
-  * 8 GB RAM
-  * 50 GB storage
+  * 8 cores
+  * 16 GB RAM
+  * 100 GB storage
