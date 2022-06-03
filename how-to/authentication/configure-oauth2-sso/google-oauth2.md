@@ -59,6 +59,6 @@ An example configuration that works with Google
 The above stores a refresh token against each user for scoped directory access.\
 A simpler version if token based access isn't required could be:
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 With scopes: `profile email`&#x20;

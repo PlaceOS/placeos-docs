@@ -2,6 +2,24 @@
 
 * [PlaceOS Documentation](README.md)
 
+## Overview
+
+* [Key Concepts](overview/key-concepts/README.md)
+  * [Drivers](overview/key-concepts/drivers.md)
+  * [Interfaces](overview/key-concepts/interfaces.md)
+  * [Modules](overview/key-concepts/modules.md)
+  * [Settings](overview/key-concepts/settings.md)
+  * [Systems](overview/key-concepts/systems.md)
+  * [Triggers](overview/key-concepts/triggers.md)
+  * [Zones](overview/key-concepts/zones.md)
+* [Languages](overview/languages/README.md)
+  * [Crystal](overview/Languages/crystal.md)
+  * [TypeScript](overview/languages/typescript.md)
+* [Protocols](overview/protocols/README.md)
+  * [MQTT](overview/Protocols/mqtt.md)
+  * [SAML](overview/protocols/saml.md)
+  * [OAuth2](overview/protocols/oauth2.md)
+
 ## How To
 
 * [Deployment](how-to/deployment/README.md)
@@ -36,27 +54,10 @@
   * [People Finding with Juniper Mist on PlaceOS](how-to/location-services/people-finding-with-juniper-mist-on-placeos.md)
 * [User Interfaces](how-to/user-interfaces/README.md)
   * [Deploy a Frontend Interface](how-to/user-interfaces/deploy-frontend.md)
+  * [Microsoft Outlook Plugin](how-to/user-interfaces/microsoft-outlook-plugin.md)
   * [Configure Endpoint Auto Login](how-to/user-interfaces/panel-login.md)
   * [SVG Map Creation](how-to/user-interfaces/svg-map-creation.md)
   * [Configuring a default UI](how-to/user-interfaces/configuring-a-default-ui.md)
-
-## Overview
-
-* [Key Concepts](overview/key-concepts/README.md)
-  * [Drivers](overview/key-concepts/drivers.md)
-  * [Interfaces](overview/key-concepts/interfaces.md)
-  * [Modules](overview/key-concepts/modules.md)
-  * [Settings](overview/key-concepts/settings.md)
-  * [Systems](overview/key-concepts/systems.md)
-  * [Triggers](overview/key-concepts/triggers.md)
-  * [Zones](overview/key-concepts/zones.md)
-* [Languages](overview/languages/README.md)
-  * [Crystal](overview/Languages/crystal.md)
-  * [TypeScript](overview/languages/typescript.md)
-* [Protocols](overview/protocols/README.md)
-  * [MQTT](overview/Protocols/mqtt.md)
-  * [SAML](overview/protocols/saml.md)
-  * [OAuth2](overview/protocols/oauth2.md)
 
 ## Tutorials
 
