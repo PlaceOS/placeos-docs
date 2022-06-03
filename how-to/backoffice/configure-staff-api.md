@@ -111,7 +111,7 @@ For further information see [Creating and Managing Service Accounts](https://clo
 
 **Configure Google Cloud API Project**
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com)
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Configure an existing API Project or Create a New API Project ![Google API Project](assets/google-api-project.png) ![Google New API Project](assets/google-new-project.png)
 3. Open your API Project and select `APIs & Services` followed by `Dashboard` ![Google API Service](assets/google-api-service.png)
 4. Select `Enable APIs and Services`
@@ -179,7 +179,7 @@ This step applies to organizations where a specific region or department (OU) wi
 This step is not applicable to most organizations.
 {% endhint %}
 
-1. On [Google Cloud Console](http://console.cloud.google.com) navigate to the API Services Dashboard
+1. On [Google Cloud Console](http://console.cloud.google.com/) navigate to the API Services Dashboard
 2. Select the G Suite or Google Workspace Marketplace SDK ![Google G Suite Marketplace](assets/google-gsuite-marketplace.png)
 3.  Select the `Configuration` tab
 

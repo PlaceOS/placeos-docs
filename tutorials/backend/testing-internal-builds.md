@@ -1,6 +1,6 @@
 # Testing Internal Builds
 
-Internal builds for all product service images are available on [ghcr.io](http://ghcr.io). These publish on every push to our service repos on GitHub and are tagged with the associated branch name.
+Internal builds for all product service images are available on [ghcr.io](http://ghcr.io/). These publish on every push to our service repos on GitHub and are tagged with the associated branch name.
 
 Access is restricted to the outside world to help prevent accidental use. To authenticate:
 

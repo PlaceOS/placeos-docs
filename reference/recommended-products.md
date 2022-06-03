@@ -37,7 +37,7 @@ Here you will find a list of compatible products that have been fully tested wit
 
 | Platform                                                                                                     | Target OS       | Cloud/On-Premises |
 | ------------------------------------------------------------------------------------------------------------ | --------------- | ----------------- |
-| [Moki](https://moki.com)                                                                                     | Android and iOS | Cloud SaaS        |
+| [Moki](https://moki.com/)                                                                                    | Android and iOS | Cloud SaaS        |
 | [Google CDM](https://cloud.google.com/chrome-enterprise/os/)                                                 | ChromeOS        | Cloud SaaS        |
 | [_MobileIron_](https://www.mobileiron.com/en/unified-endpoint-management/solutions/mobile-device-management) | iOS             |                   |
 
@@ -56,6 +56,6 @@ Here you will find a list of compatible products that have been fully tested wit
 
 | OS                                                                                                  | version   |
 | --------------------------------------------------------------------------------------------------- | --------- |
-| [CentOS](https://www.centos.org)                                                                    | 7+        |
+| [CentOS](https://www.centos.org/)                                                                   | 7+        |
 | [Ubuntu server](https://ubuntu.com/server)                                                          | 18.04 LTS |
 | [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) | 7+        |

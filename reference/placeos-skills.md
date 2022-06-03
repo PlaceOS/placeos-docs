@@ -67,7 +67,7 @@ Further information can on driver development is in the [driver development tuto
 
 #### Mobile Application Development
 
-No PlaceOS specific tooling exists in this space, the platform does expose a [RESTful API](api.md) and WebSocket endpoint for usage within native apps.
+No PlaceOS specific tooling exists in this space, the platform does expose a [RESTful API](api/) and WebSocket endpoint for usage within native apps.
 
 #### Browser-based Application Development
 

@@ -61,6 +61,8 @@ Locations services such as:
 * Cisco DNA Spaces
 * Cisco Meraki RTLS
 * HP Aruba
+* Juniper Mist
+* RUCKUS SPoT
 
 ### Analytics for connected integrations
 
@@ -78,3 +80,5 @@ All cloud services integration via API require Port 443.
 Integration with Audio Visual and other Bespoke hardware may require additional ports, these will be scoped in the solution design.&#x20;
 
 The PlaceOS Servers will require access to https://github.com for routine code updates and frontend deployments. PlaceOS connects to Github via the SSH Protocol.&#x20;
+
+Where devices or services are on secure networks we can deploy edge devices that communicate locally

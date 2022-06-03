@@ -5,8 +5,8 @@ PlaceOS can generate API Keys for authenticated access.
 The API keys can be used for:
 
 * [Unattended Panel Access](../user-interfaces/panel-login.md)
-* Accessing the [PlaceOS API](../../reference/api.md)
-* Using the [Real-time Websocket](../../reference/websocket.md)
+* Accessing the [PlaceOS API](../../reference/api/)
+* Using the [Real-time Websocket](../../reference/api/websocket.md)
 
 ### Prerequisites
 

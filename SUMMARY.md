@@ -2,24 +2,6 @@
 
 * [PlaceOS Documentation](README.md)
 
-## Overview
-
-* [Key Concepts](overview/key-concepts/README.md)
-  * [Drivers](overview/key-concepts/drivers.md)
-  * [Interfaces](overview/key-concepts/interfaces.md)
-  * [Modules](overview/key-concepts/modules.md)
-  * [Settings](overview/key-concepts/settings.md)
-  * [Systems](overview/key-concepts/systems.md)
-  * [Triggers](overview/key-concepts/triggers.md)
-  * [Zones](overview/key-concepts/zones.md)
-* [Languages](overview/languages/README.md)
-  * [Crystal](overview/Languages/crystal.md)
-  * [TypeScript](overview/languages/typescript.md)
-* [Protocols](overview/protocols/README.md)
-  * [MQTT](overview/Protocols/mqtt.md)
-  * [SAML](overview/protocols/saml.md)
-  * [OAuth2](overview/protocols/oauth2.md)
-
 ## How To
 
 * [Deployment](how-to/deployment/README.md)
@@ -58,6 +40,24 @@
   * [SVG Map Creation](how-to/user-interfaces/svg-map-creation.md)
   * [Configuring a default UI](how-to/user-interfaces/configuring-a-default-ui.md)
 
+## Overview
+
+* [Key Concepts](overview/key-concepts/README.md)
+  * [Drivers](overview/key-concepts/drivers.md)
+  * [Interfaces](overview/key-concepts/interfaces.md)
+  * [Modules](overview/key-concepts/modules.md)
+  * [Settings](overview/key-concepts/settings.md)
+  * [Systems](overview/key-concepts/systems.md)
+  * [Triggers](overview/key-concepts/triggers.md)
+  * [Zones](overview/key-concepts/zones.md)
+* [Languages](overview/languages/README.md)
+  * [Crystal](overview/Languages/crystal.md)
+  * [TypeScript](overview/languages/typescript.md)
+* [Protocols](overview/protocols/README.md)
+  * [MQTT](overview/Protocols/mqtt.md)
+  * [SAML](overview/protocols/saml.md)
+  * [OAuth2](overview/protocols/oauth2.md)
+
 ## Tutorials
 
 * [Setup a dev environment](tutorials/setup-a-dev-environment.md)
@@ -78,7 +78,19 @@
 
 ## Reference
 
-* [API](reference/api.md)
+* [API](reference/api/README.md)
+  * [Rest API](reference/api/rest-api/README.md)
+    * [Modules](reference/api/rest-api/modules.md)
+    * [Zones](reference/api/rest-api/zones.md)
+    * [Systems](reference/api/rest-api/systems.md)
+  * [Real-time Websocket](reference/api/websocket.md)
+  * [Staff API](reference/api/staff-api/README.md)
+    * [Tenants](reference/api/staff-api/tenants.md)
+    * [Bookings](reference/api/staff-api/bookings.md)
+    * [Staff](reference/api/staff-api/staff.md)
+    * [Guests](reference/api/staff-api/guests.md)
+    * [Events](reference/api/staff-api/events.md)
+    * [Calendars](reference/api/staff-api/calendars.md)
 * [PlaceOS Skills](reference/placeos-skills.md)
 * [Privacy Policy](reference/privacy-policy.md)
 * [Recommended Products](reference/recommended-products.md)
@@ -86,7 +98,6 @@
 * [System Architecture](reference/system-architecture.md)
 * [System Functionality & Requirements](reference/system-functionality.md)
 * [Infrastructure Requirements](reference/system-requirements.md)
-* [Real-time Websocket](reference/websocket.md)
 * [Security Compliance](reference/security-compliance/README.md)
   * [FAQ](reference/security-compliance/faq.md)
   * [GDPR](reference/security-compliance/gdpr.md)

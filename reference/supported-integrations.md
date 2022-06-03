@@ -5,7 +5,7 @@ description: Devices and services which are ready to integrate with PlaceOS
 
 # Supported Integrations
 
-PlaceOS has a range of pre-built drivers for integrating with third party services and devices. Drivers are written in [Crystal Lang](https://crystal-lang.org) and based on our [Framework](https://github.com/PlaceOS/driver).
+PlaceOS has a range of pre-built drivers for integrating with third party services and devices. Drivers are written in [Crystal Lang](https://crystal-lang.org/) and based on our [Framework](https://github.com/PlaceOS/driver).
 
 If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk. Or, you can refer to the [How to Write A Driver](../tutorial/backend/write-a-driver/) guide to write your own.
 
@@ -52,16 +52,16 @@ If a driver for your device is not available, you can raise a request to have th
 * Cisco Meraki RTLS
 * Cisco CMX
 * HP Aruba ALE
-* [(Juniper) Mist](https://www.mist.com)
-* [Kontakt.io](https://kontakt.io)
+* [(Juniper) Mist](https://www.mist.com/)
+* [Kontakt.io](https://kontakt.io/)
 
 ### Sensors
 
-* [Vergesense](https://vergesense.com)
-* [Floorsense](https://floorsen.se)
+* [Vergesense](https://vergesense.com/)
+* [Floorsense](https://floorsen.se/)
 * XY Sense
 * Xovis
-* [Steinel](https://www.steinel.com.au)
+* [Steinel](https://www.steinel.com.au/)
 * SecureOS Auto ANPR
 * [CMS Engage](https://cmselectra.com/au/product-category/cms-engage-smart-workplace-technology/)
 * SenseStudio

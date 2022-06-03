@@ -9,7 +9,7 @@ description: >-
 ### Prerequisites
 
 * [WSL2](https://www.windowscentral.com/how-install-wsl2-windows-10) if running Windows
-* [GIT installed](https://git-scm.com)
+* [GIT installed](https://git-scm.com/)
 * [Docker installed](https://docs.docker.com/get-docker/)
 * [Crystal lang](https://crystal-lang.org/install/)
 
@@ -83,7 +83,7 @@ Driver development can be performed with a [lightweight spec runner](https://git
 3. `./harness up` (starts the testing UI)
 4. `./harness down` (to terminate the docker containers)
 
-Once up you can browse to [http://localhost:8085/](http://localhost:8085) to start running specs against drivers.
+Once up you can browse to [http://localhost:8085/](http://localhost:8085/) to start running specs against drivers.
 
 ![Developing drivers](<../.gitbook/assets/image (9) (1) (1).png>)
 
