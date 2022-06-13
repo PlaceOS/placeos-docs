@@ -43,15 +43,15 @@ On the triggers tab, add a new trigger for handling the webhook.
 1. Enable webhook functionality
 2. Select GET and POST methods
 
-![Webhook trigger](<../../../.gitbook/assets/image (4) (1) (1).png>)
+![Webhook trigger](<../../../.gitbook/assets/image (4) (1).png>)
 
 Add the trigger to your location services system
 
-![Adding webhook trigger](<../../../.gitbook/assets/image (7) (1) (1).png>)
+![Adding webhook trigger](<../../../.gitbook/assets/image (7) (1).png>)
 
 Once added, edit the webhook to enable tunnelling the data directly to the module
 
-![Enable action execution](<../../../.gitbook/assets/image (8) (1) (1) (1).png>)
+![Enable action execution](<../../../.gitbook/assets/image (8) (1) (1).png>)
 
 Click `Save` and copy the webhook link ![](<../../../.gitbook/assets/image (5) (1) (1) (1).png>)
 
@@ -88,7 +88,7 @@ The following system level settings are important:
 
 To collect this information you can execute the following functions in backoffice:
 
-* ![](<../../../.gitbook/assets/image (6) (1) (1).png>) Make note of the organisations ID
+* ![](<../../../.gitbook/assets/image (6) (1).png>) Make note of the organisations ID
 * <img src="../../../.gitbook/assets/image (3) (1).png" alt="" data-size="original"> make note of the network ID from the list
 
 Configure the network ID in the location services system
@@ -99,7 +99,7 @@ default_network_id: "N_627126248111343"
 
 Obtain the list of floorplans for that network
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>) Copy the result into a text editor
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>) Copy the result into a text editor
 
 Then for each floor plan find the matching PlaceOS building and level zone IDs and add the following setting
 

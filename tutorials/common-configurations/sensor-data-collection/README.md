@@ -50,7 +50,7 @@ If the sensors have just been configured, perform the following actions in backo
    1. AreaManagement\_1 -> synchronize\_all\_levels
    2. AreaManagement\_1 -> write\_sensor\_discovery
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
 
 This saves building level metadata: `sensor-discovered`
 
@@ -61,7 +61,7 @@ Level zones have a `Sensors` tab that allows placement of sensor data on a map
 * Data coming from local only configuration is listed when selecting any level
 * Data coming from building search will only show on matching levels
 
-![Sensor placement UI](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
+![Sensor placement UI](<../../../.gitbook/assets/image (6) (1) (1).png>)
 
 Remember to click save!
 
@@ -92,7 +92,7 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/sensor-map/#/editor/{{map_id}}`](https://editor.place.tech/sensor-map/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 #### Region mapping
 
@@ -100,4 +100,4 @@ The following will enable the tabs if they are not available
 * URL: [`https://editor.place.tech/map-regions/#/editor/{{map_id}}`](https://editor.place.tech/map-regions/#/editor/\{{map\_id\}})``
 * Add Condition: `map_id` truthy
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)

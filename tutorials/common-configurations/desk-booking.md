@@ -61,7 +61,7 @@ To complete the configuration you'll need the following datapoints
 * Client ID: `5217b4fd2f06` (example)
 * Redirect URI: [https://poc.placeos.com/workplace/oauth-resp.html](https://poc.placeos.com/workplace/oauth-resp.html)
 
-![](<../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 
 ### Configuring a service account
 
@@ -76,7 +76,7 @@ The account needs to be configured on the same domain as the redirect URI above 
 Staff API needs to be configured for each domain that intends to use it.\
 It provides the Google or Office365 / MS Graph API configuration required for an organisation, however this is not a requirement for pure desk booking and dummy config can be provided.
 
-![](<../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 Add a tenant for the required domain, if dummy data is going to be used - configure for Office365
 
@@ -142,4 +142,4 @@ Where a user doesn't have the option to select a desk and are placed near others
 
 In the zone metadata for the `workplace_app` you can edit the `desks` configuration adding the `auto_allocation` configuration option.
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11).png>)

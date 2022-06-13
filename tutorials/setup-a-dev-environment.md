@@ -9,7 +9,7 @@ description: >-
 ### Prerequisites
 
 * [WSL2](https://www.windowscentral.com/how-install-wsl2-windows-10) if running Windows
-* [GIT installed](https://git-scm.com/)
+* [GIT installed](https://git-scm.com)
 * [Docker installed](https://docs.docker.com/get-docker/)
 * [Crystal lang](https://crystal-lang.org/install/)
 
@@ -17,7 +17,7 @@ description: >-
 
 When running on windows ensure docker desktop is linked to your WSL2 shell
 
-![Docker WSL2 integration](<../.gitbook/assets/image (8) (1).png>)
+![Docker WSL2 integration](<../.gitbook/assets/image (8).png>)
 
 Ensure git is using unix line endings. In powershell you can run the following command:
 
@@ -41,9 +41,9 @@ In windows it's better that GUI editors are remotely accessing the linux filesys
 2. Then you should see the available Linux environments i.e. `\\wsl$\Ubuntu`
 3. You can then map this to a drive letter in windows
 
-![Map a network drive](<../.gitbook/assets/image (9) (1).png>)
+![Map a network drive](<../.gitbook/assets/image (9).png>)
 
-![](<../.gitbook/assets/image (6) (1).png>)
+![](<../.gitbook/assets/image (6).png>)
 
 Once mapped, place all your crystal lang projects in your Linux home folder
 
@@ -83,9 +83,9 @@ Driver development can be performed with a [lightweight spec runner](https://git
 3. `./harness up` (starts the testing UI)
 4. `./harness down` (to terminate the docker containers)
 
-Once up you can browse to [http://localhost:8085/](http://localhost:8085/) to start running specs against drivers.
+Once up you can browse to [http://localhost:8085/](http://localhost:8085) to start running specs against drivers.
 
-![Developing drivers](<../.gitbook/assets/image (9) (1) (1) (1).png>)
+![Developing drivers](<../.gitbook/assets/image (9) (1) (1).png>)
 
 #### Private / 3rd party repositories
 

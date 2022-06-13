@@ -112,11 +112,11 @@ PlaceOS can integrate with MQTT Brokers including the major service providers li
 
 ![MQTT brokers' logos](../assets/mqtt-brokers-logos.png)
 
-* [Cloud MQTT](https://www.cloudmqtt.com/)
+* [Cloud MQTT](https://www.cloudmqtt.com)
 * [Google Cloud](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
 * [MyQTTHub](https://myqtthub.com/en)
 * [Heroku CloudMQTT](https://elements.heroku.com/addons/cloudmqtt)
-* [HiveMQ](https://www.hivemq.com/)
+* [HiveMQ](https://www.hivemq.com)
 * [Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support)
 * [AWS](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
@@ -141,8 +141,8 @@ Regular users have read and subscribe permissions.
 We've found the following clients useful
 
 * JS: [https://github.com/mqttjs/MQTT.js](https://github.com/mqttjs/MQTT.js)
-* Explorer: [https://mqtt-explorer.com/](https://mqtt-explorer.com/)
+* Explorer: [https://mqtt-explorer.com/](https://mqtt-explorer.com)
 
 Example configuration for explorer
 
-![MQTT Client Configuration](<../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![MQTT Client Configuration](<../../.gitbook/assets/image (6) (1) (1) (1).png>)

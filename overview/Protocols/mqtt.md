@@ -1,7 +1,7 @@
 ---
 title: MQTT
-sidebar_position: 2
 description: MQTT messaging protocol for IoT
+sidebar_position: 2
 ---
 
 # MQTT
@@ -12,7 +12,7 @@ MQTT is an [OASIS](https://www.oasis-open.org/committees/tc\_home.php?wg\_abbrev
 
 Its versatility makes it suitable for a wide variety of industries. These include automotive, manufacturing, telecommunications, oil and gas, etc.
 
-MQTT allows for messaging between device-to-cloud and cloud-to-device. This simplifies broadcasting messages to groups of receivers. Further information is available from the [MQTT Website](https://mqtt.org/)
+MQTT allows for messaging between device-to-cloud and cloud-to-device. This simplifies broadcasting messages to groups of receivers. Further information is available from the [MQTT Website](https://mqtt.org)
 
 ### MQTT in PlaceOS
 
@@ -24,5 +24,5 @@ PlaceOS uses two types of message sent over MQTT: State Changes and Metadata. Fo
 
 ### Resources
 
-* [MQTT Website](https://mqtt.org/)
+* [MQTT Website](https://mqtt.org)
 * [PlaceOS State Source Service](https://github.com/PlaceOS/source)

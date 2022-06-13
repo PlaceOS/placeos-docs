@@ -81,6 +81,7 @@ You will now need to grant Graph API Permissions on your App.
 
     ![Graph Application Grants](assets/grants.png)
 7. Click Add Permissions
+8. Grant Admin Consent for all the new permissions
 
 ### **Generate Azure API Secret**
 

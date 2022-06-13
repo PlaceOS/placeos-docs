@@ -1,7 +1,7 @@
 ---
 title: Configure Endpoint Auto Login
-sidebar_position: 2
 description: Allow automatic or unatteded authentication for PlaceOS Frontend Applications
+sidebar_position: 2
 ---
 
 # Configure Endpoint Auto Login
@@ -30,7 +30,7 @@ When PlaceOS uses an external Identity Provider with unattended device login, it
 
 ### Step 2: Encode Username and Password
 
-In this step, you will encode the touch panel users email address and password into a base64 string. Use a base64 encoding service such as [base64 Encoder](https://www.base64encode.net/).
+In this step, you will encode the touch panel users email address and password into a base64 string. Use a base64 encoding service such as [base64 Encoder](https://www.base64encode.net).
 
 1. Encode the users email and password in the following format: `u=touchpanel@placeos.com&p=123456`
 2. Once encoded, the above example will be: `dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
@@ -45,7 +45,7 @@ To allow the endpoint auto login to work, construct the URL using the encoded cr
 
 #### Escaping Characters
 
-If there are more query parameters in the URL after `#` then they will need to be [URL encoded](https://www.urlencoder.org/).
+If there are more query parameters in the URL after `#` then they will need to be [URL encoded](https://www.urlencoder.org).
 
 This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces.
 
