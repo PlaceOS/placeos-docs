@@ -73,11 +73,14 @@ You will now need to grant Graph API Permissions on your App.
     &#x20;
 6.  Grant API Access to the following resources (or whichever resources are approved by the Azure administrator):
 
+    * `openid`
+    * `offline_access`
     * `Calendars.ReadWrite`
     * `Calendars.ReadWrite.Shared`
-    * `Contacts.Read`
     * `Group.Read.All`
+    * `User.Read`
     * `User.Read.All`
+    * `Contacts.Read`
     * `Place.Read.All`&#x20;
 
     ![Graph Application Grants](assets/grants.png)
