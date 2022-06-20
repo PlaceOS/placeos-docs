@@ -28,7 +28,7 @@ Details on how [Azure handles OAuth2](https://docs.microsoft.com/en-us/graph/aut
 * `site`: this should be set to:
   * `https://login.microsoftonline.com`
 * `scope`: the scopes, space separated, for the APIs that are intended to be accessed
-  * `offline_access calendars.readwrite.shared contacts.read.shared group.read.all place.read.all user.read.all`
+  * `openid offline_access calendars.readwrite calendars.readwrite.shared contacts.read.shared group.read.all place.read.all user.read.all`
 * `token_method`: Azure uses a POST to obtain a token
 * `authentication_scheme`: do we use request params or request body to obtain a token, Azure uses the body
 * `token_url`: the URL to obtain a token from, Azures is
@@ -47,7 +47,7 @@ Modify scopes based on the [permissions required](https://docs.microsoft.com/en-
 * client\_secret: as above
 * site: this should be set to:
   * `https://login.microsoftonline.com`
-* scope: `offline_access calendars.readwrite.shared contacts.read.shared group.read.all place.read.all user.read.all`
+* scope: `openid offline_access calendars.readwrite calendars.readwrite.shared contacts.read.shared group.read.all place.read.all user.read.all`
 * token method: `POST`
 * Auth Scheme: `Request Body`
 * Token URL: `https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token`
