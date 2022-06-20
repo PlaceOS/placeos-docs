@@ -6,7 +6,7 @@ description: How to deploy a frontend interface and add to PlaceOS
 
 # Deploy a Frontend Interface
 
-### CI/CD
+## CI/CD
 
 To work with PlaceOS frontend repositories must have build artifacts committed to a standalone repository or branch.
 
