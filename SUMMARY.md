@@ -22,6 +22,16 @@
 
 ## How To
 
+* [Configure PlaceOS for Microsoft 365](how-to/configure-placeos-for-microsoft-365/README.md)
+  * [Calendar Access](how-to/configure-placeos-for-microsoft-365/calendar-access/README.md)
+    * [Azure App Registration](how-to/configure-placeos-for-microsoft-365/calendar-access/azure-app-registration.md)
+    * [Exchange Calendar Group](how-to/configure-placeos-for-microsoft-365/calendar-access/exchange-calendar-group.md)
+    * [Limit Application Permissions](how-to/configure-placeos-for-microsoft-365/calendar-access/limit-application-permissions.md)
+    * [Configure PlaceOS Calendar Driver](how-to/configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver.md)
+  * [User Authentication](how-to/configure-placeos-for-microsoft-365/user-authentication/README.md)
+    * [Create a PlaceOS Authentication Source](how-to/configure-placeos-for-microsoft-365/user-authentication/create-a-placeos-authentication-source.md)
+    * [Create Microsoft Azure App Registration](how-to/configure-placeos-for-microsoft-365/user-authentication/create-microsoft-azure-app-registration.md)
+    * [Configure PlaceOS Authentication Source](how-to/configure-placeos-for-microsoft-365/user-authentication/configure-placeos-authentication-source.md)
 * [Deployment](how-to/deployment/README.md)
   * [Deploy AWS Fargate on Modular CloudFormation Stacks](how-to/deployment/fargate-modular.md)
   * [Deploy AWS Fargate on Nested CloudFormation Stacks](how-to/deployment/fargate-nested.md)
@@ -42,7 +52,6 @@
     * [Configure SAML2 with Google Workspace](how-to/authentication/configure-saml/saml2-google.md)
   * [Configure OAuth2 SSO](how-to/authentication/configure-oauth2-sso/README.md)
     * [Google OAuth2](how-to/authentication/configure-oauth2-sso/google-oauth2.md)
-    * [Azure AD OAuth2](how-to/authentication/configure-oauth2-sso/azure-ad-oauth2.md)
   * [X-API Keys](how-to/authentication/x-api-keys.md)
   * [Bearer tokens](how-to/authentication/bearer-tokens.md)
 * [Location Services](how-to/location-services/README.md)
@@ -103,6 +112,7 @@
   * [FAQ](reference/security-compliance/faq.md)
   * [GDPR](reference/security-compliance/gdpr.md)
   * [Security](reference/security-compliance/security.md)
+* [Microsoft Azure Permissions](reference/microsoft-azure-permissions.md)
 
 ***
 

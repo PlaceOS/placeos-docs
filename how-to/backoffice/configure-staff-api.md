@@ -35,7 +35,7 @@ Instructions for Microsoft 365 and Google Workspace are below.
 
 To use Staff API with 365 you will need to create an Application in App Registration.
 
-You may have already completed this step if you have configured [SAML for Azure](../authentication/configure-saml.md).
+You may have already completed this step if you have configured [PlaceOS for Microsoft 365 User Authentication.](../configure-placeos-for-microsoft-365/)
 
 If you have already created an app, you ca skip to Grant Graph API Permissions.
 
@@ -49,7 +49,7 @@ If not, you will need to create a new App Registration on Azure.
 4. Select New Registration
 5. Enter the required information
    * Name it and select the appropriate "Support Account types" (typically "Single tenant")
-   *   Optionally paste the PlaceOS `Assertion URL` (generated in Step 1 of [Configuring PlaceOS for SAML2](../authentication/configure-saml.md)
+   *   Optionally paste the PlaceOS `Assertion URL`&#x20;
 
        &#x20;![New App Registration](assets/new-app-registration.png)
 6. Register the app
@@ -233,10 +233,11 @@ To complete this step, you will need the following information:
 
     &#x20;![Staff API Admin](assets/staff\_api\_admin.png)
 5. Click Add Tenant
-6.  Enter the information required
+6. Enter the information required
+7.  If you are configuring access for Microsoft 365 ensure you tick 'Delegated Access'.
 
     &#x20;![Add Tenant Information](assets/add\_tenant.png)
-7. Save
+8. Save
 
 ### Test Staff API Configuration
 

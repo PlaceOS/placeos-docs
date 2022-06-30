@@ -22,7 +22,7 @@ To add the plugin, you will require administrator access to PlaceOS. You can fol
 9. You should now be able to pull the repository and reference it in domains as `outlookplugin` i.e. `https://company.placeos.com/outlookplugin/`
 10. If configured correctly, the URL should load the frontend and redirect to Microsoft Authentication.
 
-![Outlook Plugin displayed in Web Browser after following configuration steps.](<../../.gitbook/assets/image (17).png>)
+![Outlook Plugin displayed in Web Browser after following configuration steps.](<../../.gitbook/assets/image (17) (1).png>)
 
 ## Register Plugin with Exchange 365
 
@@ -33,14 +33,14 @@ To complete these steps you will require administrator access to Exchange 365.
 ### Register the Custom App&#x20;
 
 1. In Exchange 365 Admin navigate to Settings -> Integrated Apps.\
-   ![](<../../.gitbook/assets/image (15).png>)
+   ![](<../../.gitbook/assets/image (15) (1).png>)
 2. Select Upload Custom Apps.\
    ![](<../../.gitbook/assets/image (10).png>)
 3. PlaceOS provide a `manifest.xml` file with the user interface, in the Custom App settings select the Provide Link to Manifest file option and enter your manifest.xml URL.
 4. The Manifest URL will be per the configuration, following the example used in Adding the Outlook Plugin in this case the manifest file is located at: `https://company.placeos.com/outlookplugin/manifest.xml`\
-   ![](<../../.gitbook/assets/image (14).png>)
+   ![](<../../.gitbook/assets/image (14) (1).png>)
 5. Click Validate. The Manifest File should validate successfully.\
-   ![](<../../.gitbook/assets/image (18).png>)
+   ![](<../../.gitbook/assets/image (18) (1).png>)
 6. You can click Next and Finish the Wizard.
 
 ### Update the Custom App
@@ -66,4 +66,4 @@ If the instructions are followed correctly, shortly after registering the custom
    ![](<../../.gitbook/assets/image (4).png>)
 4. Select the Room Booking Add-in tile.&#x20;
 5. Once installed, users will need to sign into the add-in with their corporate credentials.\
-   ![](<../../.gitbook/assets/image (16).png>)
+   ![](<../../.gitbook/assets/image (16) (1).png>)
