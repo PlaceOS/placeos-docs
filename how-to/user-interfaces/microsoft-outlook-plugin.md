@@ -35,7 +35,7 @@ To complete these steps you will require administrator access to Exchange 365.
 1. In Exchange 365 Admin navigate to Settings -> Integrated Apps.\
    ![](<../../.gitbook/assets/image (15) (1).png>)
 2. Select Upload Custom Apps.\
-   ![](<../../.gitbook/assets/image (10).png>)
+   ![](<../../.gitbook/assets/image (10) (1).png>)
 3. PlaceOS provide a `manifest.xml` file with the user interface, in the Custom App settings select the Provide Link to Manifest file option and enter your manifest.xml URL.
 4. The Manifest URL will be per the configuration, following the example used in Adding the Outlook Plugin in this case the manifest file is located at: `https://company.placeos.com/outlookplugin/manifest.xml`\
    ![](<../../.gitbook/assets/image (14) (1).png>)

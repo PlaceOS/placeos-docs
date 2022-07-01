@@ -1,16 +1,20 @@
----
-description: Steps required for enabling OAuth2 sign on for PlaceOS with Google
----
+# Configure PlaceOS Auth Source for Google
 
-# Google OAuth2
+## Prerequisites
 
-Before configuring PlaceOS, add a [new client application](https://support.google.com/cloud/answer/6158849) to your Google account and obtain the client id and secret.
+* PlaceOS BAckoffice Administrator Access
+* `client_id` and `secret` obtained from Google.
 
-### Create a new authentication source in PlaceOS
+## Procedure
 
-![New authentication source on the selected domain](<../../../.gitbook/assets/image (3).png>)
+1. In PlaceOS Backoffice navigate to the Domains tab.
+2. Select the domain you would like to add Microsoft Authentication to.
+3. Click the Authentication Tab.
+4. Identify the OAuth Source previously created.
+5. Click the Edit Icon.
+6. Update missing fields per the table below
 
-#### Configuring fields
+### Configuring fields
 
 These fields are specific to the OAuth2 provider and tend to differ slightly between providers.
 
@@ -59,6 +63,5 @@ An example configuration that works with Google
 The above stores a refresh token against each user for scoped directory access.\
 A simpler version if token based access isn't required could be:
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (1).png>)
 
-With scopes: `profile email`&#x20;

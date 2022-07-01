@@ -19,12 +19,12 @@ If you have already added the calendar driver, you can skip this step.
 
 1. In PlaceOS Backoffice navigate to the Drivers tab.
 2. Click New Driver.\
-   ![](<../../../.gitbook/assets/image (14).png>)
+   ![](<../../../.gitbook/assets/image (15).png>)
 3. Select the Drivers Repository.
 4. Search for `Microsoft Graph API`
 5. Select the most recent commit.
 6. Click Save. \
-   ![](<../../../.gitbook/assets/image (15).png>)
+   ![](<../../../.gitbook/assets/image (16).png>)
 
 ## Configure Calendar Driver
 
@@ -35,7 +35,7 @@ If you have already added the calendar driver, you can skip this step.
 5. Search for the Microsoft Graph API Driver.
 6. Enter the domain your users will use to access PlaceOS eg. `https://yourcompany.placeos.run`
 7. Click Save.\
-   ![](<../../../.gitbook/assets/image (16).png>)
+   ![](<../../../.gitbook/assets/image (17).png>)
 8. Click the Microsoft Graph API Module in the Module list to go to the module settings.
 9. Click the Unencrypted tab.
 10. Enter the following configuration, noting your application ID, tenant ID and secret.

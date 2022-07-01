@@ -11,13 +11,12 @@ You may supply the `client_id` and `client_secret` to PlaceOS or your PlaceOS In
 
 ## Procedure
 
-In PlaceOS Backoffice navigate to the Domains tab.
-
-1. Select the domain you would like to add Microsoft Authentication to.
-2. Click the Authentication Tab.
-3. Identify the OAuth Source previously created.
-4. Click the Edit Icon.
-5. Update missing fields per the table below.&#x20;
+1. In PlaceOS Backoffice navigate to the Domains tab.
+2. Select the domain you would like to add Microsoft Authentication to.
+3. Click the Authentication Tab.
+4. Identify the OAuth Source previously created.
+5. Click the Edit Icon.
+6. Update missing fields per the table below.&#x20;
 
 These fields are specific to the OAuth2 provider and tend to differ slightly between providers.
 
