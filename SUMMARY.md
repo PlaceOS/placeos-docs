@@ -33,6 +33,8 @@
     * [Create Microsoft Azure App Registration](how-to/configure-placeos-for-microsoft-365/user-authentication/create-microsoft-azure-app-registration.md)
     * [Configure PlaceOS Authentication Source](how-to/configure-placeos-for-microsoft-365/user-authentication/configure-placeos-authentication-source.md)
     * [Add User Login Redirects](how-to/configure-placeos-for-microsoft-365/user-authentication/add-user-login-redirects.md)
+  * [Troubleshooting](how-to/configure-placeos-for-microsoft-365/troubleshooting/README.md)
+    * [Blocked or Blacklisted IP Error](how-to/configure-placeos-for-microsoft-365/troubleshooting/blocked-or-blacklisted-ip-error.md)
 * [Configure PlaceOS for Google Workspace](how-to/configure-placeos-for-google-workspace/README.md)
   * [Google Configuration](how-to/configure-placeos-for-google-workspace/google-configuration/README.md)
     * [Create Google Cloud Project & Enable API](how-to/configure-placeos-for-google-workspace/google-configuration/create-google-cloud-project-and-enable-api.md)
