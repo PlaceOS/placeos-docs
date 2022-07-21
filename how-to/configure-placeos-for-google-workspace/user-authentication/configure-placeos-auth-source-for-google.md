@@ -38,7 +38,10 @@ Details on how [Google handles OAuth2](https://developers.google.com/identity/pr
 
 An example configuration that works with Google
 
-* scope: `profile email https://www.googleapis.com/auth/admin.directory.user.readonly https://www.googleapis.com/auth/admin.directory.group.readonly`
+* scope: `profile email`
+  * `https://www.googleapis.com/auth/admin.directory.user.readonly`
+  * `https://www.googleapis.com/auth/admin.directory.group.readonly`
+  * `https://www.googleapis.com/auth/userinfo.email`
 * token method: `POST`
 * Auth Scheme: `Request Body`
 * Token URL: [https://oauth2.googleapis.com/token](https://oauth2.googleapis.com/token)
