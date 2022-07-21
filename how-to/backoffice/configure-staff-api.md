@@ -233,15 +233,15 @@ To complete this step, you will need the following information:
 
     &#x20;![Staff API Admin](assets/staff\_api\_admin.png)
 5. Click Add Tenant
-6. Enter the information required
-7.  If you are configuring access for Microsoft 365 ensure you tick 'Delegated Access'.
+6. Enter the information required\
 
-    &#x20;![Add Tenant Information](assets/add\_tenant.png)
+7. If you are configuring access for Microsoft 365 ensure you tick 'Delegated Access' and enter `teamsForBusiness` in the Conference Type field.\
+   ![](<../../.gitbook/assets/image (16).png>)
 8. Save
 
 ### Test Staff API Configuration
 
-The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](placeos-calendar.md).
+The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](placeos-calendar.md) or [Microsoft API Calendar Driver for 365 Delegation](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver.md).&#x20;
 
 The `staff-api` logs will show any errors in configuration.
 

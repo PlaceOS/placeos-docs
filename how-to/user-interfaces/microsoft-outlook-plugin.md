@@ -66,4 +66,4 @@ If the instructions are followed correctly, shortly after registering the custom
    ![](<../../.gitbook/assets/image (4).png>)
 4. Select the Room Booking Add-in tile.&#x20;
 5. Once installed, users will need to sign into the add-in with their corporate credentials.\
-   ![](<../../.gitbook/assets/image (16) (1).png>)
+   ![](<../../.gitbook/assets/image (16) (1) (1).png>)

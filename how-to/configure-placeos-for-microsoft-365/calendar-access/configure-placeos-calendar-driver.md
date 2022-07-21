@@ -24,7 +24,7 @@ If you have already added the calendar driver, you can skip this step.
 4. Search for `Microsoft Graph API`
 5. Select the most recent commit.
 6. Click Save. \
-   ![](<../../../.gitbook/assets/image (16).png>)
+   ![](<../../../.gitbook/assets/image (16) (1).png>)
 
 ## Configure Calendar Driver
 
