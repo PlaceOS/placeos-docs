@@ -18,7 +18,7 @@
      ![](<../../../.gitbook/assets/image (19).png>)
 6. Once created, navigate to Certificates and Secrets.
 7. Create a New Client Secret called `PlaceOS User Auth Secret` and note down the secret value (you will need to supply this to PlaceOS).\
-   ![](<../../../.gitbook/assets/image (18).png>)
+   ![](<../../../.gitbook/assets/image (18) (1).png>)
 8. Navigate to 'API Permissions'.
 9. Click 'Add Permission'.
 10. Click 'Microsoft Graph'.

@@ -61,7 +61,7 @@ Level zones have a `Sensors` tab that allows placement of sensor data on a map
 * Data coming from local only configuration is listed when selecting any level
 * Data coming from building search will only show on matching levels
 
-![Sensor placement UI](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
+![Sensor placement UI](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 
 Remember to click save!
 

@@ -11,6 +11,10 @@ The Calendar Driver and the [Bookings Driver](placeos-bookings.md) work together
 
 The Calendar Driver can also make ad-hoc bookings from kiosks or room booking panels.
 
+{% hint style="info" %}
+To configure and deploy the Calendar Driver for Microsoft 365 where Delegated Access has been used, please refer to this [page related to configuring PlaceOS Calendar Driver for 365.](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver.md)
+{% endhint %}
+
 ## Prerequisites
 
 * Administrator access to your PlaceOS Backoffice

@@ -47,7 +47,7 @@ On the triggers tab, add a new trigger for handling the webhook.
 
 Add the trigger to your location services system
 
-![Adding webhook trigger](<../../../.gitbook/assets/image (7) (1) (1).png>)
+![Adding webhook trigger](<../../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 Once added, edit the webhook to enable tunnelling the data directly to the module
 
@@ -88,7 +88,7 @@ The following system level settings are important:
 
 To collect this information you can execute the following functions in backoffice:
 
-* ![](<../../../.gitbook/assets/image (6) (1) (1).png>) Make note of the organisations ID
+* ![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>) Make note of the organisations ID
 * <img src="../../../.gitbook/assets/image (3) (1).png" alt="" data-size="original"> make note of the network ID from the list
 
 Configure the network ID in the location services system

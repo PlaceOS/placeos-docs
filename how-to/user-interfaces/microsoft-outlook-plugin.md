@@ -40,7 +40,7 @@ To complete these steps you will require administrator access to Exchange 365.
 4. The Manifest URL will be per the configuration, following the example used in Adding the Outlook Plugin in this case the manifest file is located at: `https://company.placeos.com/outlookplugin/manifest.xml`\
    ![](<../../.gitbook/assets/image (14) (1).png>)
 5. Click Validate. The Manifest File should validate successfully.\
-   ![](<../../.gitbook/assets/image (18) (1).png>)
+   ![](<../../.gitbook/assets/image (18) (1) (1).png>)
 6. You can click Next and Finish the Wizard.
 
 ### Update the Custom App
@@ -51,7 +51,7 @@ Follow the same steps to access the Custom App under Integrated Apps in Exchange
 
 1. Select the Custom Room Booking app.
 2. Select Update App under Actions.\
-   ![](<../../.gitbook/assets/image (7).png>)
+   ![](<../../.gitbook/assets/image (7) (1).png>)
 3. Provide your `manifest.xml` URL Path.
 4. Click Update.
 5. Any changes in the `manifest.xml` will be applied and the plugin will be updated.

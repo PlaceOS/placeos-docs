@@ -43,7 +43,7 @@ In windows it's better that GUI editors are remotely accessing the linux filesys
 
 ![Map a network drive](<../.gitbook/assets/image (9) (1).png>)
 
-![](<../.gitbook/assets/image (6) (1).png>)
+![](<../.gitbook/assets/image (6) (1) (1).png>)
 
 Once mapped, place all your crystal lang projects in your Linux home folder
 
