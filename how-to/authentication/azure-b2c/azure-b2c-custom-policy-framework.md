@@ -1,5 +1,9 @@
 # Azure B2C Custom Policy Framework
 
+{% hint style="info" %}
+This guide provides the steps required to set up a User Journey where users will authenticate with 'local' B2C Accounts. You will need to follow additional Microsoft Documentation if you would like to include Social Sign In on your Azure B2C App.
+{% endhint %}
+
 To use Azure B2C with PlaceOS you will need to configure a Custom Policy Framework, using the existing User Flows provided by Azure B2C is not sufficient for use with OAuth2 as it does not provide a User Info endpoint.
 
 Without a User Info endpoint, PlaceOS is unable to correctly create the user record in our users table.&#x20;
@@ -34,6 +38,12 @@ Custom User Attributes may include additional information such as:
 This information will be stored against the user record in the Azure B2C Directory and can be claimed by PlaceOS where required.&#x20;
 
 Microsoft have prepared extensive documentation to add Custom User Attributes to your B2C Custom Policy, we recommend following this documentation to complete this step: [Microsoft Azure B2C - Add Custom User Attributes](https://docs.microsoft.com/en-us/azure/active-directory-b2c/configure-user-input?pivots=b2c-custom-policy)
+
+## Password Reset Policy
+
+By default, the self serve password reset user flow is not enabled.
+
+You will need to add a custom user sub-journey to your policy to enable self serve password reset facilities, to do this you can follow this guide by Microsoft: [Microsoft Azure B2C - Add Password Reset Journey](https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-password-reset-policy?pivots=b2c-custom-policy)
 
 ## Examples
 
