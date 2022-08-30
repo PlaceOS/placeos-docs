@@ -112,6 +112,7 @@
     * [Systems](reference/api/rest-api/systems.md)
   * [Real-time Websocket](reference/api/websocket.md)
   * [Staff API](reference/api/staff-api/README.md)
+    * [OpenAPI](reference/api/staff-api/openapi.md)
     * [Tenants](reference/api/staff-api/tenants.md)
     * [Bookings](reference/api/staff-api/bookings.md)
     * [Staff](reference/api/staff-api/staff.md)
