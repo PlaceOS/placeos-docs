@@ -114,7 +114,7 @@
   * [Staff API](reference/api/staff-api/README.md)
     * [Tenants](reference/api/staff-api/tenants.md)
     * [Bookings](reference/api/staff-api/bookings.md)
-    * [Staff](reference/api/staff-api/staff.md)
+    * [People (Staff)](reference/api/staff-api/people-staff.md)
     * [Guests](reference/api/staff-api/guests.md)
     * [Events](reference/api/staff-api/events.md)
     * [Calendars](reference/api/staff-api/calendars.md)
