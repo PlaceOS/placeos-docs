@@ -43,7 +43,7 @@ On the triggers tab, add a new trigger for handling the webhook.
 1. Enable webhook functionality
 2. Select GET and POST methods
 
-![Webhook trigger](<../../../.gitbook/assets/image (4) (1) (1).png>)
+![Webhook trigger](<../../../.gitbook/assets/image (4) (1) (1) (2).png>)
 
 Add the trigger to your location services system
 

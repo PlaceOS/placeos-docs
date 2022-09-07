@@ -36,4 +36,4 @@ If the OAuth2 service returned a refresh token then this API will always return 
 
 With multiple authentication sources you may have to specify which source to use for OAuth configuration:
 
-![For each domain, specify the authentication strategy to use](<../../../.gitbook/assets/image (5) (1).png>)
+![For each domain, specify the authentication strategy to use](<../../../.gitbook/assets/image (5) (1) (2).png>)

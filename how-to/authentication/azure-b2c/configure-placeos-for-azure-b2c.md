@@ -17,7 +17,7 @@ These steps are similar to configuring OAuth2 for Google Workspace or Azure Acti
 5. Select OAuth as the auth source type.
 6. Provide a name eg. 'Microsoft Azure B2C'.
 7. Click Save.\
-   ![](<../../../.gitbook/assets/image (1).png>)
+   ![](<../../../.gitbook/assets/image (1) (1).png>)
 8. Copy the Auth Source ID eg. `oauth_strat-Dw9b-5_lO3`
 9. You will require the Auth Source ID to be used as the Azure App Registration Callback URI, for example: `https://placeos-dev.im/auth/oauth2/callback?id=oauth_strat-Dw9b-5_lO3`
 
