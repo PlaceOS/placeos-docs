@@ -35,7 +35,7 @@ Instructions for Microsoft 365 and Google Workspace are below.
 
 To use Staff API with 365 you will need to create an Application in App Registration.
 
-You may have already completed this step if you have configured [PlaceOS for Microsoft 365 User Authentication.](../configure-placeos-for-microsoft-365/)
+You may have already completed this step if you have configured [PlaceOS for Microsoft 365 User Authentication.](../configure-placeos-for-microsoft-365-delegated/)
 
 If you have already created an app, you ca skip to Grant Graph API Permissions.
 
@@ -241,7 +241,7 @@ To complete this step, you will need the following information:
 
 ### Test Staff API Configuration
 
-The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](placeos-calendar.md) or [Microsoft API Calendar Driver for 365 Delegation](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver.md).&#x20;
+The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](placeos-calendar.md) or [Microsoft API Calendar Driver for 365 Delegation](../configure-placeos-for-microsoft-365-delegated/calendar-access/configure-placeos-calendar-driver.md).&#x20;
 
 The `staff-api` logs will show any errors in configuration.
 
