@@ -38,9 +38,9 @@ These instructions are taken directly from Microsoft Documentation: [Configure A
 2. Navigate to Azure Active Directory -> App Registrations.
 3. Select the PlaceOS User Authentication app registration.
 4. Select the Expose an API blade.\
-   ![](<../../.gitbook/assets/image (6).png>)
+   ![](<../../.gitbook/assets/image (6) (2).png>)
 5. Set the App ID URI to your PlaceOS Domain, Azure will automatically add your App ID to the end of the URL. Note down the App ID URI as you will need this for the manifest file.\
-   ![](<../../.gitbook/assets/image (8).png>)
+   ![](<../../.gitbook/assets/image (8) (3).png>)
 6. Add a new scope, configure it with the following details:
    * Scope Name: `access_as_user`
    * Who can consent: Admin & Users.
@@ -49,7 +49,7 @@ These instructions are taken directly from Microsoft Documentation: [Configure A
    * User consent name: Access User and Room Calendars.
    * User consent description: All the app to read the user calendar and calendars of rooms the user has permission to view/book.
    * State: Enable\
-     ![](../../.gitbook/assets/image.png)
+     ![](<../../.gitbook/assets/image (23).png>)
 7. Click Add Client Application
 8. Add the following clients:
    * `d3590ed6-52b3-4102-aeff-aad2292ab01c` (_Microsoft Office_)
@@ -68,7 +68,7 @@ To ensure we can obtain the user token after authentication, you will need to re
 2. Navigate to Azure Active Directory -> App Registrations.
 3. Select the PlaceOS User Authentication app registration.
 4. Select the Authentication Blade.\
-   ![](<../../.gitbook/assets/image (9).png>)
+   ![](<../../.gitbook/assets/image (9) (3).png>)
 5. Add a new Redirect URI and select Web.\
    ![](<../../.gitbook/assets/image (2).png>)
 6. Enter your PlaceOS base domain plus `/outlook/#/book/spaces` for example: `https://placeos.com/outlook/#/book/spaces`\

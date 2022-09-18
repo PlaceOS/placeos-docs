@@ -15,7 +15,7 @@
 5. Note down the:
    * Application (client) ID as this will be required to be provided to PlaceOS.
    * Directory (tenant) ID as this will be required to be provided to PlaceOS.\
-     ![](<../../../.gitbook/assets/image (19).png>)
+     ![](<../../../.gitbook/assets/image (19) (1).png>)
 6. Once created, navigate to Certificates and Secrets.
 7. Create a New Client Secret called `PlaceOS User Auth Secret` and note down the secret value (you will need to supply this to PlaceOS).\
    ![](<../../../.gitbook/assets/image (18) (1).png>)
