@@ -76,7 +76,7 @@ To ensure we can obtain the user token after authentication, you will need to re
 7. Once the Redirect URI is added, ensure Access tokens and ID Token checkboxes are selected. \
    ![](<../../.gitbook/assets/image (11).png>)
 8. Under supported account types, select only accounts in this domain. \
-   ![](<../../.gitbook/assets/image (5).png>)
+   ![](<../../.gitbook/assets/image (5) (2).png>)
 
 ### Update Manifest File
 
@@ -112,10 +112,10 @@ To complete these steps you will require administrator access to Exchange 365.
 1. In Exchange 365 Admin navigate to Settings -> Integrated Apps.\
    ![](<../../.gitbook/assets/image (15) (1).png>)
 2. Select Upload Custom Apps.\
-   ![](<../../.gitbook/assets/image (10) (1).png>)
+   ![](<../../.gitbook/assets/image (10) (1) (2).png>)
 3. PlaceOS provide a `manifest.xml` file with the user interface, in the Custom App settings select the Provide Link to Manifest file option and enter your manifest.xml URL.
 4. The Manifest URL will be per the configuration, following the example used in Adding the Outlook Plugin in this case the manifest file is located at: `https://company.placeos.com/outlookplugin/manifest.xml`\
-   ![](<../../.gitbook/assets/image (14) (1).png>)
+   ![](<../../.gitbook/assets/image (14) (1) (1).png>)
 5. Click Validate. The Manifest File should validate successfully.\
    ![](<../../.gitbook/assets/image (18) (1) (1).png>)
 6. You can click Next and Finish the Wizard.
