@@ -115,6 +115,8 @@
     * [Auth](reference/api/rest-api/auth.md)
     * [Domains](reference/api/rest-api/domains.md)
     * [Drivers](reference/api/rest-api/drivers.md)
+    * [Users](reference/api/rest-api/users.md)
+    * [Triggers](reference/api/rest-api/triggers.md)
     * [Systems](reference/api/rest-api/systems.md)
   * [Real-time Websocket](reference/api/websocket.md)
   * [Staff API](reference/api/staff-api/README.md)
