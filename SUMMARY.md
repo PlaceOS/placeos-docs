@@ -66,6 +66,7 @@
   * [Azure B2C](how-to/authentication/azure-b2c/README.md)
     * [Azure B2C Custom Policy Framework](how-to/authentication/azure-b2c/azure-b2c-custom-policy-framework.md)
     * [Configure PlaceOS for Azure B2C](how-to/authentication/azure-b2c/configure-placeos-for-azure-b2c.md)
+    * [365 Room Resources on Azure B2C](how-to/authentication/azure-b2c/365-room-resources-on-azure-b2c.md)
   * [Configure SAML SSO](how-to/authentication/configure-saml.md)
     * [Configure SAML2 with AD FS](how-to/authentication/configure-saml/saml2-adfs.md)
     * [Configure SAML2 with Auth0](how-to/authentication/configure-saml/saml2-auth0.md)
