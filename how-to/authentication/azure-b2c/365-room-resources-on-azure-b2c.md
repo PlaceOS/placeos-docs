@@ -13,3 +13,13 @@ Once Calendar Access has been configured, you will need to configure room resour
 ```
 Set-CalendarProcessing -ProcessExternalMeetingMessages $true
 ```
+
+For example:
+
+```powershell
+PS> Set-CalendarProcessing -ProcessExternalMeetingMessages $true
+
+cmdlet Set-CalendarProcessing at command pipeline position 1
+Supply values for the following parameters:
+Identity: room01_01l6yy.onmicrosoft.com
+```
