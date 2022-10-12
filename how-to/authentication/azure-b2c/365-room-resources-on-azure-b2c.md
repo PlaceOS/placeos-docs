@@ -10,7 +10,7 @@ Access Control Restrictions are NOT required for 365 Room Resources when using A
 
 Once Calendar Access has been configured, you will need to configure room resources to accept external meeting requests, this is done via PowerShell:
 
-```
+```powershell
 Set-CalendarProcessing -ProcessExternalMeetingMessages $true
 ```
 
