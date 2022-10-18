@@ -24,41 +24,18 @@ When PlaceOS uses an external Identity Provider with unattended device login, it
 2. On the **Users** click **Add new**
 3. Enter the required information, including a descriptive username (e.g. `Touchpanel User`)
 4. Enter an email address (this does not need to be an active address)
-5. Enter a strong password
+5. No password required
 
 ![New User Entry](assets/panel\_login\_new\_user.png)
 
-### Step 2: Encode Username and Password
+### Step 2: Create an X-API-Key for panel authentication
 
-In this step, you will encode the touch panel users email address and password into a base64 string. Use a base64 encoding service such as [base64 Encoder](https://www.base64encode.net/).
-
-1. Encode the users email and password in the following format: `u=touchpanel@placeos.com&p=123456`
-2. Once encoded, the above example will be: `dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
+Follow the [X-API-Key guide](../authentication/x-api-keys.md), specifying the service account created in the previous step
 
 ### Step 3: Construct URL for Applications
 
-To allow the endpoint auto login to work, construct the URL using the encoded credentials.
+Most PlaceOS applications can be passed a the API Key as a query parameter:
 
-1. The first part of the URL will be your PlaceOS domain followed by `login/unattended.html?`, for example: `https://PLACEOS.DOMAIN/login/unattended.html?`
-2. Now add the encoded credentials: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2`
-3. Finally, add the path to the desired application, for an AV control application this would be: `https://PLACEOS.DOMAIN/login/unattended.html?u=dT10b3VjaHBhbmVsQHBsYWNlb3MuY29tJnA9MTIzNDU2&continue=/control/`
+/bookings/#/**?x-api-key=**be2aba8c8bd2be2a5c719339695b5a63.Edm7STXHDbacbsytz4RGvFc51PnBdQtcU9Yo7BSSVHw
 
-#### Escaping Characters
-
-If there are more query parameters in the URL after `#` then they will need to be [URL encoded](https://www.urlencoder.org/).
-
-This is common where you need to enable the interface to go directly a specific zone or system for kiosk interfaces.
-
-`?`, `=`, `&` and `#` are the main characters that need encoding.
-
-For example the following URL will need to escape the `#`:
-
-`https://placeos.domain/login/unattended.html?u=dT1zaWduYWdlQHN5ZG5leS5lZHUuYXUmcD1wbGFjZW9zMTIzdXN5ZCM=&continue=/kiosk/#/SYSTEM_ID_GOES_HERE`
-
-This will become:
-
-`https://placeos.domain/login/unattended.html?u=dT1zaWduYWdlQHN5ZG5leS5lZHUuYXUmcD1wbGFjZW9zMTIzdXN5ZCM=&continue=/kiosk/%23/SYSTEM_ID_GOES_HERE`
-
-Following login, this will redirect to:
-
-`https://placeos.domain/kiosk/#/SYSTEM_ID_GOES_HERE`
+The application will use the API key for authentication and will display a bootstrap page for system selection, unless provided additional params that specify a system.
