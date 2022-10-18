@@ -37,6 +37,7 @@ The API keys can be used for:
 
 Available Scopes for API Keys are:
 
+* `public`
 * `api_keys`
 * `ldap_authentication`
 * `saml_authentication`
