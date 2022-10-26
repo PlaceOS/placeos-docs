@@ -110,6 +110,7 @@
 
 * [API](reference/api/README.md)
   * [Rest API](reference/api/rest-api/README.md)
+    * [Metadata](reference/api/rest-api/metadata.md)
     * [Modules](reference/api/rest-api/modules.md)
     * [Zones](reference/api/rest-api/zones.md)
     * [Edges](reference/api/rest-api/edges.md)
