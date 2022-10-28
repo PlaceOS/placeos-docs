@@ -101,23 +101,6 @@ Example:
       </WebApplicationInfo>
 ```
 
-## Generate the Manifest File
-
-To deploy the plugin to Microsoft Exchange, a Manifest File detailing the location and parameters of the application is required.
-
-PlaceOS is able to automatically generate and serve the manifest file once you have created the API Endpoint in Azure.
-
-To generate the manifest file, follow these steps:
-
-1. Navigate to PlaceOS Backoffice.
-2. Select Manage Instance from the left menu.
-3. Select Staff API.
-4. Use the drop down list to select the domain you are intending to deploy the plugin to.
-5. You should already have a Staff API Registration if you have previously integrated PlaceOS with Microsoft Services. If not you can refer to the documentation on Configuring Staff API.
-6. Edit the Staff API Registration.
-7. Enable the Configure Outlook Plugin checkbox.
-8. Enter the App ID from your Azure API Endpoint.
-
 ## Register Plugin with Exchange 365
 
 In order for the plugin to work effectively with your organisation and to allow users to add the plugin to Outlook, it must be registered in Exchange 365 Admin.&#x20;

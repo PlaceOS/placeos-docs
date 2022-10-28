@@ -72,6 +72,7 @@
     * [Configure SAML2 with Auth0](how-to/authentication/configure-saml/saml2-auth0.md)
     * [Configure SAML2 with Azure AD](how-to/authentication/configure-saml/saml2-azure.md)
     * [Configure SAML2 with Google Workspace](how-to/authentication/configure-saml/saml2-google.md)
+  * [Configure OAuth2 SSO](how-to/authentication/configure-oauth2-sso.md)
   * [X-API Keys](how-to/authentication/x-api-keys.md)
   * [Bearer tokens](how-to/authentication/bearer-tokens.md)
 * [Location Services](how-to/location-services/README.md)
