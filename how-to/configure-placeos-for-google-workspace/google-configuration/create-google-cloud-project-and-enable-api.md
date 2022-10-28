@@ -18,7 +18,7 @@ Follow these steps to configure a Google Cloud Project and Enable API for PlaceO
 3. Click New Project in the Project Modal\
    ![](https://lh4.googleusercontent.com/JF8NqI-UwOm\_2t9eJCwNQD3BcLpb5FxOfpkGYNDKsRNMVtrIjg\_yuuNzfu\_x5XREOfgjlDW3tFvljACsgmR7umAB8KBqHCRIWaJJR6-FPWO7PBsTXfLhm7IeCVlwUgA5pjQqoYvOMHCc0\_Qk)
 4. Name your new project something descriptive eg. 'PlaceOS Integration'\
-   ![](<../../../.gitbook/assets/image (5) (1).png>)
+   ![](<../../../.gitbook/assets/image (5).png>)
 5. Click Create
 
 ### Enable API

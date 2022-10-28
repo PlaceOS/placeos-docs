@@ -21,6 +21,6 @@ This step can be completed by PlaceOS or your PlaceOS Integration Partner.
 5. Select OAuth as the auth source type.
 6. Provide a name eg. 'Microsoft AD'.
 7. Click Save.\
-   ![](<../../../.gitbook/assets/image (1) (1).png>)
+   ![](<../../../.gitbook/assets/image (1) (3).png>)
 8. Copy the Auth Source ID eg. `oauth_strat-Dw9b-5_lO3`
 9. You will require the Auth Source ID to be used as the Azure App Registration Callback URI, for example: \`https://placeos-dev.im/auth/oauth2/callback?id=`oauth_strat-Dw9b-5_lO3`\`&#x20;

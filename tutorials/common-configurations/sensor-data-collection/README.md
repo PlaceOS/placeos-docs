@@ -65,7 +65,7 @@ Level zones have a `Sensors` tab that allows placement of sensor data on a map
 
 Remember to click save!
 
-![](<../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (2).png>)
 
 Sensor locations are stored in level metadata called `sensor-locations`
 

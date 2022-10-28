@@ -30,15 +30,15 @@ You can create a single Concierge security group, noting that all members of thi
 2. In 365 Admin Centre select the Teams & Groups Blade -> Active teams & groups.\
    ![](<../../.gitbook/assets/image (22).png>)
 3. In Active teams & Groups select Add Group.\
-   ![](<../../.gitbook/assets/image (19).png>)
+   ![](<../../.gitbook/assets/image (19) (1).png>)
 4. For Group Type select Mail-enabled Security.\
-   ![](<../../.gitbook/assets/image (7).png>)
+   ![](<../../.gitbook/assets/image (7) (2).png>)
 5. Give your group a relevant name such as PlaceOS Concierge + Office\
    ![](<../../.gitbook/assets/image (26).png>)
 6. Nominate a user (typically a tenant administrator as the group owner).\
-   ![](<../../.gitbook/assets/image (9).png>)
+   ![](<../../.gitbook/assets/image (9) (1).png>)
 7. &#x20;In add members, select your Concierge users for that office location.\
-   ![](<../../.gitbook/assets/image (8).png>)
+   ![](<../../.gitbook/assets/image (8) (2).png>)
 8. Nominate a email address for the group.\
    ![](<../../.gitbook/assets/image (24).png>)
 9. Click Finish followed by Create Group.
@@ -46,7 +46,7 @@ You can create a single Concierge security group, noting that all members of thi
 ### Delegate Room Resources
 
 1. In 365 Admin Centre select the Resources Blade -> Rooms & Equipment.\
-   ![](<../../.gitbook/assets/image (6).png>)
+   ![](<../../.gitbook/assets/image (6) (3).png>)
 2. Select the room you want to provide concierge access to.
 3. Select Edit Exchange Settings.
 4. Select mailbox delegation.

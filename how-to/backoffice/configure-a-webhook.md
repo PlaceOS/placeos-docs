@@ -17,7 +17,7 @@ Once configured this trigger needs to be applied to a system before it's active.
 
 Once you've added the trigger, you can obtain the webhook URL by clicking the link icon
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Obtaining the webhook URI</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption><p>Obtaining the webhook URI</p></figcaption></figure>
 
 #### The webhook URL
 
@@ -33,7 +33,7 @@ If this webhook is intended to provide data to modules in the system, not just a
 2. ensure execute enabled is selected
 3. click save
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Enabling webhook to execute module webhook methods</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Enabling webhook to execute module webhook methods</p></figcaption></figure>
 
 You will have to be aware of the methods that support Webhooks, which might involve looking at the driver code or driver documentation. Examples of webhook methods
 

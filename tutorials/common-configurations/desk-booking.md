@@ -26,7 +26,7 @@ Create level zones with the `level` tag and the appropriate parent zones. The st
 #### Level zone metadata
 
 For each level desk metadata should be configured\
-![](<../../.gitbook/assets/image (1) (1) (2).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 ```yaml
 [
@@ -142,4 +142,4 @@ Where a user doesn't have the option to select a desk and are placed near others
 
 In the zone metadata for the `workplace_app` you can edit the `desks` configuration adding the `auto_allocation` configuration option.
 
-![](<../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)

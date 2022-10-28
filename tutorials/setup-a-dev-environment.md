@@ -41,7 +41,7 @@ In windows it's better that GUI editors are remotely accessing the linux filesys
 2. Then you should see the available Linux environments i.e. `\\wsl$\Ubuntu`
 3. You can then map this to a drive letter in windows
 
-![Map a network drive](<../.gitbook/assets/image (9) (1).png>)
+![Map a network drive](<../.gitbook/assets/image (9) (1) (2).png>)
 
 ![](<../.gitbook/assets/image (6) (1) (1).png>)
 

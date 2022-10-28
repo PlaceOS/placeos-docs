@@ -14,7 +14,7 @@ Once the Authentication Source is configured, we need to ensure PlaceOS Applicat
 4. Click on the Edit icon.
 5. Set the login URL to `/auth/login?provider=adfs&id=[ADFS-ID-HERE]&continue={{url}}`, replacing the `[ADFS-ID-HERE]` with the authentication source ID created in '[Creating a PlaceOS Authentication Source](create-a-placeos-authentication-source-for-google.md)' instructions, leaving the `{{url}}` as is.
 6. Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout.\
-   ![](<../../../.gitbook/assets/image (14) (1).png>)
+   ![](<../../../.gitbook/assets/image (14).png>)
 
 ## Debugging
 
