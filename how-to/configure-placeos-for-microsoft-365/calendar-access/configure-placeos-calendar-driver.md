@@ -56,7 +56,7 @@ In order to test the Calendar Driver with Delegated Access for Microsoft 365 you
 
 1. Navigate to a system configured with the correct modules and a valid room resource address.
 2. Under Modules, execute `poll_events` against the Bookings\_1 module.\
-   ![](<../../../.gitbook/assets/image (6).png>)
+   ![](<../../../.gitbook/assets/image (6) (4).png>)
 3. You should get a successful response.\
    ![](<../../../.gitbook/assets/image (20).png>)
 4. If you enable Debug and open the Console and the room has valid bookings, you will see the module return the next meeting details.\

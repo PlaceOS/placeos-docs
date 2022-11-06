@@ -70,7 +70,7 @@ To ensure we can obtain the user token after authentication, you will need to re
 4. Select the Authentication Blade.\
    ![](<../../.gitbook/assets/image (9) (3).png>)
 5. Add a new Redirect URI and select Web.\
-   ![](<../../.gitbook/assets/image (2) (1).png>)
+   ![](<../../.gitbook/assets/image (2) (1) (2).png>)
 6. Enter your PlaceOS base domain plus `/outlook/#/book/spaces` for example: `https://placeos.com/outlook/#/book/spaces`\
    ![](<../../.gitbook/assets/image (13) (1).png>)
 7. Once the Redirect URI is added, ensure Access tokens and ID Token checkboxes are selected. \
