@@ -83,6 +83,8 @@
   * [People Finding with Cisco Meraki on PlaceOS](how-to/location-services/people-finding-with-meraki.md)
   * [People Finding with Juniper Mist on PlaceOS](how-to/location-services/people-finding-with-juniper-mist-on-placeos.md)
 * [User Interfaces](how-to/user-interfaces/README.md)
+  * [Workplace App](how-to/user-interfaces/workplace-app/README.md)
+    * [Enabling Catering](how-to/user-interfaces/workplace-app/enabling-catering.md)
   * [Native Booking Panel App](how-to/user-interfaces/native-booking-panel-app.md)
   * [Deploy a Frontend Interface](how-to/user-interfaces/deploy-frontend.md)
   * [Microsoft Outlook Plugin](how-to/user-interfaces/microsoft-outlook-plugin.md)
