@@ -45,6 +45,8 @@ For this to work, you must use the correct keys in your configuration schema and
 
 Once the data is received by the device, they will display the custom configuration and ask for the data to be validated. Once this is complete, you can set the appropriate Room System on the device.
 
+<figure><img src="../../.gitbook/assets/WhatsApp Image 2022-11-30 at 01.48.00.jpeg" alt=""><figcaption></figcaption></figure>
+
 ### Dictionary
 
 The following dictionary is required for generating custom configuration:
