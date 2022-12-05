@@ -1,7 +1,7 @@
 ---
 title: Zones
-description: Zones are collections of systems
 sidebar_position: 5
+description: Zones are collections of systems
 ---
 
 # Zones
@@ -21,4 +21,4 @@ They serve two main purposes:
 
 ### Guides
 
-* [Add Zone Structure to Backoffice](../tutorial/backoffice/add-zone-structure.md)
+* [Add Zone Structure to Backoffice](../../tutorials/backoffice/add-zone-structure.md)
