@@ -1,7 +1,7 @@
 ---
 title: Add Zone Structure
-description: This document outlines creating zone structure in Backoffice
 sidebar_position: 1
+description: This document outlines creating zone structure in Backoffice
 ---
 
 # Add Zone Structure
@@ -10,11 +10,19 @@ An important step in setting up PlaceOS is to create your organizations physical
 
 You can think of Zones as creating your digital twin of your physical organization structure.
 
-The three most common zones required are:
+The three required zones required are:
 
 * `org` zone: your parent zone, named after your organization
 * `building` zone: your buildings within your organization
 * `level` zone: the levels (floors) within your buildings
+
+A `region` zone is optional, and may be used to:
+
+* Group buildings in a country
+* Group buildings in a geographic region i.e. Europe
+* Group buildings in a country i.e. NSW
+
+A region zone sits between the `org` zone and `building` zone. In this configuration, the `building` zones belong to a `region` zone and not the `org` zone.&#x20;
 
 In the following steps, we will walkthrough configuring your Zone structure including Organization, Building and Levels.
 
@@ -82,6 +90,8 @@ The remaining fields are optional:
 
 * **Description**: Optional zone description
 * **Location**: GPS Coordinates for the building
+* **Timezone:** The timezone may be set on a building zone to allow users to be automatically located to the correct building.
+* **Image:** An image can be uploaded to display in various apps, or be used as the background on room booking panels.&#x20;
 * **Code**: Cost Center or Building Code
 * **Type**: Code category
 * **Capacity**: Primarily for defining floor/level capacity
@@ -123,6 +133,7 @@ The remaining fields are optional:
 * **Location**: GPS Coordinates for the building
 * **Code**: Cost Center or Building Code
 * **Type**: Code category
+* **Image:** An image can be uploaded to display in various apps, or be used as the background on room booking panels.&#x20;
 * **Capacity**: Total level capacity
 
 ![Add new level zone](../../tutorial/backoffice/assets/new-level-zone.png)
