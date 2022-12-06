@@ -1,14 +1,12 @@
 ---
 title: Area Management
-description: IoT data model for display and analytics
 sidebar_position: 9
+description: IoT data model for display and analytics
 ---
-
 
 # Area Management
 
-This driver provides the bindings for overlaying location data on a map.
-It exposes the following data:
+This driver provides the bindings for overlaying location data on a map. It exposes the following data:
 
 1. Overview of building use and recommended levels based on capacity
 2. A list of Areas on each level and the counts of people in those areas
@@ -17,13 +15,9 @@ It exposes the following data:
 
 Each building needs one of these modules, and they rely on [Location Services](location-services.md) for collecting data.
 
-
 ## Configuration
 
-By default the view updates once a minute, you can increase this batching rate based on requirements. 
-Intervals lower than about 15 seconds are not worth using, as it's still limited by systems which update once per minute.
-Locations Services can also inform Area Management of updates. 
-This increases the batching rate to at most every 3 seconds.
+By default the view updates once a minute, you can increase this batching rate based on requirements. Intervals lower than about 15 seconds are not worth using, as it's still limited by systems which update once per minute. Locations Services can also inform Area Management of updates. This increases the batching rate to at most every 3 seconds.
 
 ```yaml
 # The building this driver is monitoring
@@ -53,19 +47,15 @@ You'll also need to configure the `PlaceOS Staff API` driver for getting zone da
     redirect_uri: ""
 ```
 
-
 ## Data Model
 
-This is the state data that is exposed.
-It's used for display on a real-time interface and for analytics.
-Frontends can binding to the data points described below.
+This is the state data that is exposed. It's used for display on a real-time interface and for analytics. Frontends can binding to the data points described below.
 
 ### Overview
 
 This provides an overview of the building.
 
 ```yaml
-
 # overview is the binding name
 "overview": {
   # The levels are represented by the zone ids
@@ -95,7 +85,6 @@ This provides an overview of the building.
     "recommendation": -6060
   }
 }
-
 ```
 
 ### Desk IDs
@@ -119,11 +108,9 @@ This provides the list of desk IDs in a system as a binding, allowing the fronte
 
 ### Location Data
 
-This binding has all the location data for a level (desks and wireless). 
-It allows for desk highlighting and a point cloud.
+This binding has all the location data for a level (desks and wireless). It allows for desk highlighting and a point cloud.
 
-The data returned doesn't include usernames.
-It returns MAC addresses (if available) which can resolve to a user via the `LocationServices` module.
+The data returned doesn't include usernames. It returns MAC addresses (if available) which can resolve to a user via the `LocationServices` module.
 
 ```yaml
 # The level id is the binding
@@ -173,19 +160,15 @@ It returns MAC addresses (if available) which can resolve to a user via the `Loc
     "pos_level": "zone-FzNYawvBxWD"
   }
 }
-
 ```
 
 Use `LocationServices.check_ownership_of(mac_address)` to determine who is at any of the locations
 
-
 ### Areas
 
-It's possible to have the system count the number of devices in an area on the map. 
-These areas, like desk ids, are defined in metadata using a Backoffice plugin.
+It's possible to have the system count the number of devices in an area on the map. These areas, like desk ids, are defined in metadata using a Backoffice plugin.
 
 ```yaml
-
 # the binding is `level_id:areas`
 "zone-FBkhCVwD3Af:areas": {
   # Array of area counts, the polygon coordinates are in the metadata
@@ -215,9 +198,7 @@ These areas, like desk ids, are defined in metadata using a Backoffice plugin.
     "pos_building": "zone-FzNP2idoAOj"
   }
 }
-
 ```
-
 
 ## Desk ID Metadata
 
@@ -227,7 +208,6 @@ The desk ID metadata is stored in level zone metadata
 * The `id` of the desks are extracted from this data
 
 ```yaml
-
 [
   {
     "bookable": false,
@@ -242,7 +222,6 @@ The desk ID metadata is stored in level zone metadata
     "name": "Desk 003"
   }
 ]
-
 ```
 
 ## Area Metadata
@@ -253,7 +232,6 @@ Area metadata is stored in level zone metadata
 * The `area_id` is extracted from this data
 
 ```yaml
-
 {
   # Map information
   "url": "https://s3-ap-southeast-2.amazonaws.com/os.place.tech/mck-placeos-poc.aca.im/16049826805781672737.svg",
@@ -290,20 +268,17 @@ Area metadata is stored in level zone metadata
     }
   ]
 }
-
 ```
 
 ### Defining Area Metadata
 
-Areas are defined using a Backoffice plugin. 
-To enable the plugin:
+Areas are defined using a Backoffice plugin. To enable the plugin:
 
 1. From the domains tab, select the domain you wish to enable
 2. Select the `config` settings tab for that domain
 3. Enter the following configuration
 
 ```json
-
 {
   "backoffice": {
     "extend": {
@@ -322,7 +297,6 @@ To enable the plugin:
     }
   }
 }
-
 ```
 
 Once configured, there is an extra tab added to zones where you can graphically define areas on the map

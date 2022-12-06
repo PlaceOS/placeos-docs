@@ -26,7 +26,7 @@ Create level zones with the `level` tag and the appropriate parent zones. The st
 #### Level zone metadata
 
 For each level desk metadata should be configured\
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 ```yaml
 [
@@ -134,7 +134,7 @@ booking_type: desk
 
 Once the modules are started you should find the list of desk IDs and any bookings now appear in AreaManagement if you view the state
 
-![](<../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 ### Configuring automatic desk assignment
 
