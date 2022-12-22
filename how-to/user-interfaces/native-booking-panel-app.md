@@ -8,6 +8,8 @@ description: >-
 
 The PlaceOS Native Booking Panel App may be deployed stand-alone from the public Apple App Store and Google Play Store or deployed to a fleet of devices via a Mobile Device Management platform.&#x20;
 
+You can also download the APK, Android App Bundle and iOS IPA directly if required from [here](https://placeos-apps.s3.ap-southeast-2.amazonaws.com/index.html).
+
 The Mobile Device Management platform will provide some added benefits of passing additional pre-configuration to each device to make the set up process easier. End users would need to refer to documentation specific to their MDM for these instructions.&#x20;
 
 ## Configuring The App
@@ -51,11 +53,12 @@ Once the data is received by the device, they will display the custom configurat
 
 The following dictionary is required for generating custom configuration:
 
-| key             | type   | example                                                              |
-| --------------- | ------ | -------------------------------------------------------------------- |
-| `bundleId`      | String | place.technology.bookingPanel                                        |
-| `PlaceOSAPIKey` | String | `2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU` |
-| `PlaceOSDomain` | String | [https://placeos-dev.aca.im](https://placeos-dev.aca.im)             |
+| key             | type   | Required | example                                                              |
+| --------------- | ------ | -------- | -------------------------------------------------------------------- |
+| `bundleId`      | String | Optional | place.technology.bookingPanel                                        |
+| `PlaceOSAPIKey` | String | Required | `2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU` |
+| `PlaceOSDomain` | String | Required | [https://placeos-dev.aca.im](https://placeos-dev.aca.im)             |
+| `SystemID`      | String | Optional | `sys-223fn20n`                                                       |
 
 ```xml
 <?xml version="1.0"?>
@@ -64,7 +67,8 @@ The following dictionary is required for generating custom configuration:
   <bundleId>place.technology.bookingPanel</bundleId>
   <dict>
     <string PlaceOSAPIKey="2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU"></string>
-        <string PlaceOSDomain="https://placeos-dev.aca.im"></string>
+    <string PlaceOSDomain="https://placeos-dev.aca.im"></string>
+    <string SystemID="sys-223fn20n"></string>
   </dict>
 </managedAppConfiguration>
 ```
