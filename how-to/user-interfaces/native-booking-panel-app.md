@@ -53,12 +53,12 @@ Once the data is received by the device, they will display the custom configurat
 
 The following dictionary is required for generating custom configuration:
 
-| key             | type   | Required                                      | example                                                              |
-| --------------- | ------ | --------------------------------------------- | -------------------------------------------------------------------- |
-| `bundleId`      | String | <p>iOS: Required<br>Android: Not Required</p> | place.technology.bookingPanel                                        |
-| `PlaceOSAPIKey` | String | Required                                      | `2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU` |
-| `PlaceOSDomain` | String | Required                                      | [https://placeos-dev.aca.im](https://placeos-dev.aca.im)             |
-| `SystemID`      | String | Optional                                      | `sys-223fn20n`                                                       |
+| key          | type   | Required                                      | example                                                              |
+| ------------ | ------ | --------------------------------------------- | -------------------------------------------------------------------- |
+| `bundleId`   | String | <p>iOS: Required<br>Android: Not Required</p> | place.technology.bookingPanel                                        |
+| `apiKey`     | String | Required                                      | `2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU` |
+| `domainName` | String | Required                                      | [https://placeos-dev.aca.im](https://placeos-dev.aca.im)             |
+| `SystemId`   | String | Optional                                      | `sys-223fn20n`                                                       |
 
 ```xml
 <?xml version="1.0"?>
@@ -66,9 +66,9 @@ The following dictionary is required for generating custom configuration:
   <version>1</version>
   <bundleId>place.technology.bookingPanel</bundleId>
   <dict>
-    <string PlaceOSAPIKey="2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU"></string>
-    <string PlaceOSDomain="https://placeos-dev.aca.im"></string>
-    <string SystemID="sys-223fn20n"></string>
+    <string apiKey="2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU"></string>
+    <string domainName="https://placeos-dev.aca.im"></string>
+    <string systemId="sys-223fn20n"></string>
   </dict>
 </managedAppConfiguration>
 ```
