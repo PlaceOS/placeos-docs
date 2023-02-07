@@ -24,9 +24,9 @@ Configuring the App requires three key pieces of information:
 2. On the second screen, enter your PlaceOS Domain/URL. This is the URL your users use to access existing PlaceOS Apps eg. `https://yourcompany.placeos.run`\
    ``![](<../../.gitbook/assets/image (4).png>)``
 3. Next, enter the API Key you have generated or was provided to you by PlaceOS Support.\
-   ![](<../../.gitbook/assets/image (2).png>)
+   ![](<../../.gitbook/assets/image (2) (3).png>)
 4. Finally select the room you wish the panel to display. If you have multiple systems a drop down will be shown, or you can search for the system by name or ID.\
-   ![](<../../.gitbook/assets/image (1) (1).png>)
+   ![](<../../.gitbook/assets/image (1) (1) (2).png>)
 5. The app will launch and display the room booking panel interface.
 
 ## Configuring Device to Remain On

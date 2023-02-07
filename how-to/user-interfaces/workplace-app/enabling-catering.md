@@ -54,7 +54,7 @@ To configure catering per room, it is advised to create a new zone attached to t
         }
     }
     ```
-6. The zone defined should be the catering zone we just created![](../../../.gitbook/assets/image.png).\
+6. The zone defined should be the catering zone we just created![](<../../../.gitbook/assets/image (11).png>).\
 
 7. Navigate to the Systems tab.
 8. Identify systems you would like to have catering and add them to the \<Building> Catering zone.\

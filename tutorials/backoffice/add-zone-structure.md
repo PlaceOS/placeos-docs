@@ -28,7 +28,7 @@ A region zone sits between the `org` zone and `building` zone. In this configura
 If you are using a `region` zone, it is important to set a timezone or GPS Coordinates on your building zones to allow the app to correctly locate users.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 In the following steps, we will walkthrough configuring your Zone structure including Organization, Building and Levels.
 
