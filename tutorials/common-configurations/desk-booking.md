@@ -12,7 +12,9 @@ This guide will cover the following steps
 4. configuring a tenant for Staff API access
 5. configuring location services: StaffAPI, AreaManagement, LocationServices, DeskBookings
 
-## Configuring Zones
+## Prepare PlaceOS for Desk Booking
+
+### Configuring Zones
 
 A typical zone structure is organisation -> building -> level\
 A location services system should be are configured for each building.
@@ -53,7 +55,7 @@ For each level desk metadata should be configured\
 ]
 ```
 
-## Configuring the Application
+### Configuring the Application
 
 API access is scoped and configured via applications on the domain.\
 To complete the configuration you'll need the following datapoints
@@ -71,7 +73,7 @@ The account needs to be configured on the same domain as the redirect URI above 
 * username: `service-account@placeos.com` (make up an email address it is unimportant)
 * password: `yoursecurepassword`
 
-## Configuring a Staff API tenant
+### Configuring a Staff API tenant
 
 Staff API needs to be configured for each domain that intends to use it.\
 It provides the Google or Office365 / MS Graph API configuration required for an organisation, however this is not a requirement for pure desk booking and dummy config can be provided.
@@ -80,7 +82,7 @@ It provides the Google or Office365 / MS Graph API configuration required for an
 
 Add a tenant for the required domain, if dummy data is going to be used - configure for Office365
 
-## Configure location services
+### Configure location services
 
 A location services System should be created for each building.\
 Add the following PlaceOS modules to that System for Desk Bookings
