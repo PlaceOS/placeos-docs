@@ -143,3 +143,32 @@ Where a user doesn't have the option to select a desk and are placed near others
 In the zone metadata for the `workplace_app` you can edit the `desks` configuration adding the `auto_allocation` configuration option.
 
 ![](<../../.gitbook/assets/image (11) (1).png>)
+
+## Configure Desk Auto Checkin
+
+By default, booked desks will require users to checkin upon arrival at the desk.
+
+The checkin may be manual via QR Code or Workplace App, or more automated via scanning of NFC Badges, Real Time Location etc.
+
+However, it is possible to configure desks to auto-checkin at the start time of the booking. This will remove any required user activity.
+
+{% hint style="info" %}
+This feature may alter your analytics results as all bookings will automatically checkin regardless of weather the user is present or not.
+{% endhint %}
+
+1. In PlaceOS Backoffice, Navigate to Drivers.
+2. Check if the Auto Desk Checkin driver is added, if not add the driver from the PlaceOS Drivers repo.\
+   ![](<../../.gitbook/assets/image (1).png>)
+3. Navigate to your tracking or global config system, this is usually identified by a leading \* and called \*OrgName Services.
+4. Add the Auto Desk Checkin driver as a new module to the system.\
+   ![](../../.gitbook/assets/image.png)
+5. Once the Module is added, enable it and navigate back to the Systems about page.
+6. Select Unencrypted.
+7.  Enter the below configuration where the zone is a single or list of zones you wish to have the auto desk checkin feature enabled for:
+
+    ```yaml
+    check_in_zones:
+      - zone-EDsmY5nNvP
+    ```
+8. Save
+9. You should now be able to test creating a desk booking and observe that it is checked in.&#x20;
