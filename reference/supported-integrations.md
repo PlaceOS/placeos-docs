@@ -48,23 +48,27 @@ If a driver for your device is not available, you can raise a request to have th
 
 ### Real Time Location
 
-* Cisco DNA Spaces
+* Cisco Spaces
 * Cisco Meraki RTLS
 * Cisco CMX
 * HP Aruba ALE
-* [(Juniper) Mist](https://www.mist.com/)
-* [Kontakt.io](https://kontakt.io/)
+* (Juniper) Mist
+* Kontakt.io
 
 ### Sensors
 
-* [Vergesense](https://vergesense.com/)
-* [Floorsense](https://floorsen.se/)
+* Vergesense
+* Floorsense
 * XY Sense
 * Xovis
-* [Steinel](https://www.steinel.com.au/)
+* Steinel
 * SecureOS Auto ANPR
-* [CMS Engage](https://cmselectra.com/au/product-category/cms-engage-smart-workplace-technology/)
+* CMS Engage
 * SenseStudio
+* Kaiterra
+* GoBright
+* FreeSpace
+* Meraki MV
 
 ### Network
 
@@ -74,11 +78,22 @@ If a driver for your device is not available, you can raise a request to have th
 * Cisco Switches
 * Juniper Mist
 
-### Building Access
+### Base Building Systems & Building Access Control
 
 * Lenel
 * Gallagher
 * SecurOS & SecurOS Auto for Automatic Number Plate Recognition
+* Infosilem
+* Rhombus
+* Axiom
+* Siemens Diego
+* Johnsons Control
+* Honeywell
+* Delta
+
+### Energy
+
+* Leviton
 
 ### Video Conferencing / Unified Collaboration
 
@@ -86,6 +101,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Microsoft Teams (via MS Graph)
 * Pexip Management API
 * Polycom RealPresence Group Series
+* Cisco Webex Instant Connect
 
 ### Displays
 
@@ -149,5 +165,6 @@ If a driver for your device is not available, you can raise a request to have th
 * Kentix Sensors
 * Foxtel Set Top Box
 * Gantner Relaxx Lockers
+* Crestron Fusion
 
 ###
