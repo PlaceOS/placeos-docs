@@ -198,6 +198,9 @@ DriverSpecs.mock_driver "Place::LogicExample" do
   # Check that the expected state has updated in you mock device
   system(:Display_1)[:power].should eq(true)
 
+  # manually execute a function on a mock device
+  # need to cast the mock to the appropriate class
+  system(:Display_1).as(Display).power false
 end
 ```
 
