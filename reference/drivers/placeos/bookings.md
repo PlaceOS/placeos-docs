@@ -19,11 +19,11 @@ description: Access this System's Event data, via the Calendar Driver
 
 | Key | Type | Default value | Description |
 | --- | --- | --- | --- |
-|calendar_time_zone| String | Australia/Sydney |  Currently has no impact |
+|`calendar_time_zone`| String | Australia/Sydney |  Currently has no impact |
 
 
 ## Status Variables
-### bookings
+### `bookings`
 Contains an array of Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
 
 #### Schema/Type
@@ -47,7 +47,7 @@ See also: https://github.com/PlaceOS/calendar/blob/master/src/models/event.cr
 ```
 
 ## Commands
-### poll_events
+### `poll_events`
 Query neighbouring calendar driver for Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
 
 #### Parameters
