@@ -8,6 +8,13 @@ description: Access this System's Event data, via the Calendar Driver
 * Dependencies: PlaceOS Calendar Driver
 * Source: https://github.com/PlaceOS/drivers/blob/master/drivers/place/bookings.cr
 
+## Functions
+
+* Regularly fetches this room's Events and exposes them along with the current state of the room's calendar. 
+* Provide checkin, auto cancel and decline functions.
+* Provides status variables for Booking panel app, kiosk and workplace app (explore/map page) to bind to for room availability data
+
+
 ## Settings
 
 | Key | Type | Default value | Description |
