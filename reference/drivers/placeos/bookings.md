@@ -1,0 +1,56 @@
+---
+title: PlaceOS Bookings (Room Events)
+description: Access this System's Event data, via the Calendar Driver
+---
+
+# PlaceOS Bookings (Room Events) Driver
+* Type: Logic Driver
+* Dependencies: PlaceOS Calendar Driver
+* Source: https://github.com/PlaceOS/drivers/blob/master/drivers/place/bookings.cr
+
+## Settings
+
+| Key | Type | Default value | Description |
+| --- | --- | --- | --- |
+|calendar_time_zone| String | Australia/Sydney |  Currently has no impact |
+
+
+## Status Variables
+### bookings
+Contains an array of Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
+
+#### Schema/Type
+
+See also: https://github.com/PlaceOS/calendar/blob/master/src/models/event.cr
+```
+[
+    # todo: move the Event schema to a single dedicated page, that other pages will link to.
+    {
+        event_start: Integer # Linux Epoch
+        id: String
+    }
+]
+```
+
+#### Examples
+
+##### 1. No events
+```
+[]
+```
+
+## Commands
+### poll_events
+Query neighbouring calendar driver for Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| None |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
