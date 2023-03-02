@@ -43,6 +43,103 @@ description: Access this System's Event data, via the Calendar Driver
 
 
 ## Status Variables
+
+### `bookable`
+Write description here
+
+#### Schema/Type
+
+
+
+### `room_name`
+Describe
+
+#### Schema/Type
+
+
+### `room_capacity`
+
+
+#### Schema/Type
+
+
+### `default_title`
+
+#### Schema/Type
+
+
+### `disable_book_now`
+
+#### Schema/Type
+
+
+### `disable_end_meeting`
+
+#### Schema/Type
+
+
+### `pending_period`
+
+#### Schema/Type
+
+
+### `pending_before`
+
+#### Schema/Type
+
+
+### `control_ui`
+
+#### Schema/Type
+
+
+### `catering_ui`
+
+#### Schema/Type
+
+
+### `show_qr_code`
+
+#### Schema/Type
+
+
+### `connected`
+
+#### Schema/Type
+
+
+### `booked`
+
+#### Schema/Type
+
+### `current_pending`
+
+#### Schema/Type#
+
+
+### `next_pending`
+
+#### Schema/Type
+
+
+### `pending`
+
+#### Schema/Type
+
+
+### `in_use`
+
+#### Schema/Type
+
+
+### `status `
+
+#### Schema/Type
+
+
+
+
+
 ### `bookings`
 Contains an array of Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
 
@@ -66,7 +163,92 @@ See also: https://github.com/PlaceOS/calendar/blob/master/src/models/event.cr
 []
 ```
 
+
+
+
+
+
+
+
+
 ## Commands
+
+
+
+### `start_meeting`
+description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| meeting_start_time |  true  |  Int64 | Nil |  The time of the meeting you wish to start, format = ?????????  |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
+### `checkin`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| None |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+### `end_meeting`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| meeting_start_time | true | Int64 | --- | --- |
+| notify | false | Boolean | false | --- |
+| comment | false | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
+### `book_now`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| period_in_seconds | true | Int64 | --- | --- |
+| titles | false | String | nil | --- |
+| owner | false | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
 ### `poll_events`
 Query neighbouring calendar driver for Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
 
@@ -81,3 +263,103 @@ Query neighbouring calendar driver for Events that occur in this System's mailbo
 
 #### Example Responses
 ##### 1. 
+
+
+
+### `locate_user`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| email | --- | String | nil | --- |
+| username | --- | String | nil | If no username matches, it will search for emails that begin with the username |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
+
+### `macs_assigned_to`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| email | --- | String | nil | --- |
+| username | --- | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
+
+
+### `check_ownership_of`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| None |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
+
+
+### `device_locations`
+Descriptions
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| None |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
+
+
+
+
+### `is_stale?`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| None |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. 
+
+
