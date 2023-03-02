@@ -19,7 +19,27 @@ description: Access this System's Event data, via the Calendar Driver
 
 | Key | Type | Default value | Description |
 | --- | --- | --- | --- |
+|`calendar_id`| --- | nil | --- |
 |`calendar_time_zone`| String | Australia/Sydney |  Currently has no impact |
+|`book_now_default_title`| String | Ad Hoc booking |  Title of booking if unchanged |
+|`disable_book_now`| Boolean | false |   |
+|`disable_end_meeting`| Boolean | false |   |
+|`pending_period`|  | 5 |   |
+|`pending_before`|  | 5 |   |
+|`cache_polling_period`|  | 5 |   |
+|`cache_days`|  | 30 |   |
+|`sensor_stale_minutes`|  | 8 | Consider sensor data older than this unreliable  |
+|`change_event_sync_delay`|  | 5 |  As graph API is eventually consistent we want to delay syncing for a moment |
+|`control_ui`| String | https://if.panel/to_be_used_for_control |   |
+|`catering_ui`| String | https://if.panel/to_be_used_for_catering |   |
+|`include_cancelled_bookings`| Boolean | false |   |
+|`hide_qr_code`| Boolean | false |   |
+|`custom_qr_url`| String | https://domain.com/path |   |
+|`custom_qr_color`| String | black |   |
+|`room_image`| String | https://domain.com/room_image.svg | This image is displayed along with the capacity when the room is not bookable  |
+|`sensor_mac`| String | device-mac |   |
+|`hide_meeting_details`| Boolean | false |   |
+|`hide_meeting_title`| Boolean | false |   |
 
 
 ## Status Variables
