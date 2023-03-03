@@ -244,8 +244,97 @@ Description
 ```
 
 #### Example Responses
-##### 1. 
+##### 1. If the owner does not exist:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJeSmse5Z2",
+    "module_name": "Bookings",
+    "index": 1,
+    "message": "module raised: remote exception: Bad Request (PlaceCalendar::Exception) (PlaceOS::Driver::RemoteException) (PlaceOS::Driver::RemoteException)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:213:7 in 'create_event'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'create_event'",
+        "repositories/drivers/drivers/place/calendar_common.cr:322:14 in 'create_event'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
 
+##### 2. If neither optional field is filled out:
+```
+{
+    "event_start": 1677857220,
+    "event_end": 1677862200,
+    "id": "AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0APYixvXoQbkCdlH4poLQWvwAApKB5IQAA",
+    "host": "testroom3@l6yy.onmicrosoft.com",
+    "title": "Ad Hoc booking",
+    "body": "",
+    "attendees": [
+        {
+            "name": "Test Room 3",
+            "email": "testroom3@l6yy.onmicrosoft.com",
+            "response_status": "accepted",
+            "resource": true
+        }
+    ],
+    "location": "Australia/Sydney",
+    "private": false,
+    "all_day": false,
+    "timezone": "Etc/GMT",
+    "recurring": false,
+    "created": "2023-03-03T15:27:39Z",
+    "updated": "2023-03-03T15:27:39Z",
+    "attachments": [],
+    "status": "confirmed",
+    "creator": "testroom3@l6yy.onmicrosoft.com",
+    "ical_uid": "040000008200E00074C5B7101A82E00800000000118850B0E44DD90100000000000000001000000063C844E528259046944E6F6193BE0276",
+    "online_meeting_provider": "unknown",
+    "online_meeting_phones": []
+}
+```
+
+##### 3. If the room is already booked:
+```
+{
+    "event_start": 1677862320,
+    "event_end": 1677868320,
+    "id": "AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0APYixvXoQbkCdlH4poLQWvwAApKCC7wAA",
+    "host": "testroom3@l6yy.onmicrosoft.com",
+    "title": "Ad Hoc booking",
+    "body": "",
+    "attendees": [
+        {
+            "name": "Test Room 3",
+            "email": "testroom3@l6yy.onmicrosoft.com",
+            "response_status": "accepted",
+            "resource": true
+        }
+    ],
+    "location": "Australia/Sydney",
+    "private": false,
+    "all_day": false,
+    "timezone": "Etc/GMT",
+    "recurring": false,
+    "created": "2023-03-03T16:52:09Z",
+    "updated": "2023-03-03T16:52:09Z",
+    "attachments": [],
+    "status": "confirmed",
+    "creator": "testroom3@l6yy.onmicrosoft.com",
+    "ical_uid": "040000008200E00074C5B7101A82E00800000000789AA77EF04DD901000000000000000010000000088E69420B979D46A74BB28B9BFEFBAD",
+    "online_meeting_provider": "unknown",
+    "online_meeting_phones": []
+}
+```
 
 
 
@@ -313,7 +402,7 @@ Description
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| None |
+| mac_address | true | String | N/A | --- |
 
 #### Response Schema
 ```
@@ -333,7 +422,8 @@ Descriptions
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| None |
+| zone_id | true | String | N/A | --- |
+| location | false | String | nil | --- |
 
 #### Response Schema
 ```
@@ -353,7 +443,7 @@ Description
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| None |
+| timestamp | true | Boolean | N/A | --- |
 
 #### Response Schema
 ```
