@@ -19,17 +19,17 @@ description: Access this System's Event data, via the Calendar Driver
 
 | Key | Type | Default value | Description |
 | --- | --- | --- | --- |
-|`calendar_id`| --- | nil | --- |
+|`calendar_id`| String | nil | --- |
 |`calendar_time_zone`| String | Australia/Sydney |  Currently has no impact |
 |`book_now_default_title`| String | Ad Hoc booking |  Title of booking if unchanged |
 |`disable_book_now`| Boolean | false |   |
 |`disable_end_meeting`| Boolean | false |   |
-|`pending_period`|  | 5 |   |
-|`pending_before`|  | 5 |   |
-|`cache_polling_period`|  | 5 |   |
-|`cache_days`|  | 30 |   |
-|`sensor_stale_minutes`|  | 8 | Consider sensor data older than this unreliable  |
-|`change_event_sync_delay`|  | 5 |  As graph API is eventually consistent we want to delay syncing for a moment |
+|`pending_period`| UInt32 | 5 |   |
+|`pending_before`| UInt32 | 5 |   |
+|`cache_polling_period`| UInt32 | 5 |   |
+|`cache_days`| UInt32 | 30 |   |
+|`sensor_stale_minutes`| Int32 | 8 | Consider sensor data older than this unreliable  |
+|`change_event_sync_delay`| UInt32 | 5 |  As graph API is eventually consistent we want to delay syncing for a moment |
 |`control_ui`| String | https://if.panel/to_be_used_for_control |   |
 |`catering_ui`| String | https://if.panel/to_be_used_for_catering |   |
 |`include_cancelled_bookings`| Boolean | false |   |
@@ -52,15 +52,16 @@ Write description here
 
 
 ### `room_name`
-Describe
+The name of the room
 
 #### Schema/Type
+String
 
 
 ### `room_capacity`
 
-
 #### Schema/Type
+Int
 
 
 ### `default_title`
@@ -71,12 +72,12 @@ Describe
 ### `disable_book_now`
 
 #### Schema/Type
-
+Boolean
 
 ### `disable_end_meeting`
 
 #### Schema/Type
-
+Boolean
 
 ### `pending_period`
 
@@ -130,6 +131,7 @@ Describe
 ### `in_use`
 
 #### Schema/Type
+Boolean
 
 
 ### `status `
@@ -181,14 +183,17 @@ description
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| meeting_start_time |  true  |  Int64 | Nil |  The time of the meeting you wish to start, format = ?????????  |
+| meeting_start_time |  true  |  Int64 | Nil |  The time of the meeting you wish to start, format = seconds (Unix time)  |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
-##### 1. 
+##### 1. If successful:
+```
+null
+```
 
 
 
@@ -206,7 +211,10 @@ Description
 ```
 
 #### Example Responses
-##### 1. 
+##### 1. If successful:
+```
+null
+```
 
 
 ### `end_meeting`
@@ -215,7 +223,7 @@ Declines and ends the meeting in the current room with the start time entered.
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| meeting_start_time | true | Int64 | N/A | The start time of the meeting the user wishes to cancel |
+| meeting_start_time | true | Int64 | N/A | The start time of the meeting the user wishes to cancel in seconds (Unix time) |
 | notify | false | Boolean | false | If set to true, this will notify the other meeting participants |
 | comment | false | String | nil | This will be added to the notification |
 
@@ -466,5 +474,12 @@ Returns a Boolean
 
 #### Example Responses
 ##### 1. 
+```
+true
+```
+##### 2.
+```
+null
+```
 
 
