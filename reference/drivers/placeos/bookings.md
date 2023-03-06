@@ -210,14 +210,14 @@ Description
 
 
 ### `end_meeting`
-Description
+Declines and ends the meeting in the current room with the start time entered. 
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| meeting_start_time | true | Int64 | --- | --- |
-| notify | false | Boolean | false | --- |
-| comment | false | String | nil | --- |
+| meeting_start_time | true | Int64 | N/A | The start time of the meeting the user wishes to cancel |
+| notify | false | Boolean | false | If set to true, this will notify the other meeting participants |
+| comment | false | String | nil | This will be added to the notification |
 
 #### Response Schema
 ```
@@ -230,14 +230,14 @@ Description
 
 
 ### `book_now`
-Description
+Books a meeting in the current system which starts immediately and lasts an certain length of time as specified by the user.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| period_in_seconds | true | Int64 | --- | --- |
-| titles | false | String | nil | --- |
-| owner | false | String | nil | --- |
+| period_in_seconds | true | Int64 | N/A | The length of the meeting the user is booking in seconds |
+| titles | false | String | nil | The name of the meeting |
+| owner | false | String | nil | The host of the meeting. Does not work if this is filled in with a host that does not exist. Works if left empty. |
 
 #### Response Schema
 ```
@@ -352,37 +352,43 @@ Query neighbouring calendar driver for Events that occur in this System's mailbo
 
 #### Example Responses
 ##### 1. 
+```
+[]
+```
 
 
 
 ### `locate_user`
-Description
+Searches the calendar for events matching the username or email. Neither the username or email is required but at least one should be used for the command to be useful.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| email | --- | String | nil | --- |
-| username | --- | String | nil | If no username matches, it will search for emails that begin with the username |
+| email | false | String | nil | The email of the user |
+| username | false | String | nil | If no username matches, it will search for emails that begin with the username |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
-##### 1. 
+##### 1. If user has no bookings in the room OR both fields are left blank OR the user and email do not exist:
+```
+[]
+```
 
 
 
 
 
 ### `macs_assigned_to`
-Description
+Uses `locate_user` to find the MAC addresses assigned to users with bookings matching the email and username. Neither the username or email is required but at least one should be used for the command to be useful.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| email | --- | String | nil | --- |
-| username | --- | String | nil | --- |
+| email | false | String | nil | Searches for the MAC address of the user with email entered |
+| username | false | String | nil | Searches for the MAC address of the user with username entered. Will search for emails that begin with the username if none are found |
 
 #### Response Schema
 ```
@@ -397,12 +403,12 @@ Description
 
 
 ### `check_ownership_of`
-Description
+Searches for a user by their MAC address. It will show the user the Mac address is assigned to as well as the meeting they are in.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| mac_address | true | String | N/A | --- |
+| mac_address | true | String | N/A | The MAC address to search for |
 
 #### Response Schema
 ```
@@ -410,20 +416,29 @@ Description
 
 #### Example Responses
 ##### 1. 
-
-
+```
+    {
+        location:    "meeting",
+        assigned_to: host,
+        mac_address: sys_email,
+      }
+```
+##### 2. 
+```
+[]
+```
 
 
 
 
 ### `device_locations`
-Descriptions
+Searches for devices in a specific zone by zone ID or location name
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| zone_id | true | String | N/A | --- |
-| location | false | String | nil | --- |
+| zone_id | true | String | N/A | Zone ID of device search |
+| location | false | String | nil | name of location |
 
 #### Response Schema
 ```
@@ -438,7 +453,7 @@ Descriptions
 
 
 ### `is_stale?`
-Description
+Returns a Boolean
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
