@@ -23,9 +23,9 @@ description: Access this System's Event data, via the Calendar Driver
 |`calendar_time_zone`| String | Australia/Sydney |  Currently has no impact |
 |`book_now_default_title`| String | Ad Hoc booking |  Title of booking if unchanged |
 |`disable_book_now`| Boolean | false |   |
-|`disable_end_meeting`| Boolean | false |   |
-|`pending_period`| UInt32 | 5 |   |
-|`pending_before`| UInt32 | 5 |   |
+|`disable_end_meeting`| Boolean | false | Exposes a disable_end_meeting status variable such that frontends like PlaceOS template Bookings can detect it and enable/disable it's auto event cancellation functionality (frontend will exec end_meeting causing the current event to be truncated to the current time, freeing up the room (in case of no shows).  |
+|`pending_period`| UInt32 | 5 | Number of minutes AFTER the Booking start time until status changes from pending to free   |
+|`pending_before`| UInt32 | 5 | Number of minutes BEFORE the Booking start time until the status changes from free  to pending   |
 |`cache_polling_period`| UInt32 | 5 |   |
 |`cache_days`| UInt32 | 30 |   |
 |`sensor_stale_minutes`| Int32 | 8 | Consider sensor data older than this unreliable  |
@@ -110,34 +110,39 @@ Boolean
 
 
 ### `booked`
-
+true when there is a current (start time < current time < end time)
 #### Schema/Type
+Boolean
+
 
 ### `current_pending`
-
+true from the event start time until pending_period mins after the event start time OR until checkin / start_meeting is executed.
 #### Schema/Type#
+Boolean
 
 
 ### `next_pending`
-
+true from pending_before mins before an event start time until the event start time OR until checkin / start_meeting is executed.
 #### Schema/Type
+Boolean
 
 
 ### `pending`
-
+true when either current_pending or next_pending is true
 #### Schema/Type
+Boolean
 
 
 ### `in_use`
-
+true when booked AND NOT pending (means that the current event has been checked in via checkin OR start_meeting functions)
 #### Schema/Type
 Boolean
 
 
 ### `status `
-
+Describes the current status of the room
 #### Schema/Type
-
+free, pending, busy
 
 
 
