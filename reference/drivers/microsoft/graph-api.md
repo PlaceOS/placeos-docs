@@ -366,18 +366,18 @@ Description
 ```
 [
     {
-        "id": "116849993287607001215",
+        "id": "116847001215",
         "name": "Firstname Lastname",
         "email": "email@place.os"
     },
     {
-        "id": "107883273308461249665",
+        "id": "107849665",
         "name": "First Last",
         "email": "email1@place.os",
         "photo": "https://www.google.com/photos/private/AIbEiAIAAABDCIHpmpHo6cCzGUO0TUcpevl6e27"
     },
     {
-        "id": "101794854964970066277",
+        "id": "1017948066277",
         "name": "Given Last",
         "email": "email2@place.os",
         "department": "Department department",
@@ -388,3 +388,433 @@ Description
 ```
 
 
+
+### `get_user`
+Searches for a user by their user ID
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| user_id | true | String | N/A | The user ID to search for |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If user does not exist:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Forbidden (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:85:7 in 'get_user'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:93:9 in 'get_user_by_email'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'get_user_by_email'",
+        "repositories/drivers/drivers/place/calendar_common.cr:182:14 in 'get_user'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+### `list_calendars`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| user_id | true | String | N/A | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If user does not exist:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:138:7 in 'list_calendars'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'list_calendars'",
+        "repositories/drivers/drivers/place/calendar_common.cr:188:14 in 'list_calendars'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+### `get_user_manager`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| user_id | true | String | N/A | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If user does not exist:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Forbidden (Office365::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/office365/src/client.cr:132:9 in 'graph_request'",
+        "repositories/drivers/lib/office365/src/users.cr:39:22 in 'get_user_manager'",
+        "repositories/drivers/drivers/place/calendar_common.cr:197:9 in 'get_user_manager'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+### `list_groups`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| query | false | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Forbidden (Office365::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/office365/src/client.cr:132:9 in 'graph_request'",
+        "repositories/drivers/lib/office365/src/groups.cr:28:17 in 'list_groups'",
+        "repositories/drivers/drivers/place/calendar_common.cr:208:9 in 'list_groups'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+### `get_group`
+Searches for a group by its group ID
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| group_id | true | String | N/A | The group ID to use in the search |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Bad Request (Office365::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/office365/src/client.cr:132:9 in 'graph_request'",
+        "repositories/drivers/lib/office365/src/groups.cr:41:15 in 'get_group'",
+        "repositories/drivers/drivers/place/calendar_common.cr:219:9 in 'get_group'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+### `list_events`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| calendar_id | true | String | N/A | --- |
+| period_start | true | Int64 | N/A | --- |
+| period_end | true | Int64 | N/A | --- |
+| time_zone | false | String | nil | --- |
+| user_id | false | String | nil | --- |
+| include_cancelled | false | Boolean | false | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:192:7 in 'list_events:period_start:period_end:showDeleted'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'list_events:period_start:period_end:showDeleted'",
+        "repositories/drivers/drivers/place/calendar_common.cr:243:7 in 'list_events'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+### `delete_event`
+Deletes an event from the calendar
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| calendar_id | true | String | N/A | --- |
+| event_id | true | String | N/A | --- |
+| user_id | false | String | nil | --- |
+| notify | false | Boolean | false | --- |
+| comment | false | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:241:7 in 'delete_event:calendar_id:notify'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'delete_event:calendar_id:notify'",
+        "repositories/drivers/drivers/place/calendar_common.cr:275:14 in 'delete_event'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+### `decline_event`
+Deletes an event from the calendar
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| calendar_id | true | String | N/A | --- |
+| event_id | true | String | N/A | --- |
+| user_id | false | String | nil | --- |
+| notify | false | Boolean | false | --- |
+| comment | false | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:251:7 in 'decline_event:calendar_id:notify:comment'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'decline_event:calendar_id:notify:comment'",
+        "repositories/drivers/drivers/place/calendar_common.cr:266:14 in 'decline_event'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### `create_event`
+Creates an event
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| title | true | String | N/A | The title of the event |
+| event_start | true | Int64 | N/A | Start time of the event in Unix time |
+| calendar_id | false | String | N/A | --- |
+| event_id | true | String | N/A | --- |
+| user_id | false | String | nil | --- |
+| notify | false | Boolean | false | --- |
+| comment | false | String | nil | --- |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-EJhU_4DEvQ",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:251:7 in 'decline_event:calendar_id:notify:comment'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'decline_event:calendar_id:notify:comment'",
+        "repositories/drivers/drivers/place/calendar_common.cr:266:14 in 'decline_event'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
