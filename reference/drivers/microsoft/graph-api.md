@@ -220,7 +220,7 @@ Description
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| user_id | false | String | nil | --- |
+| user_id | false | String | nil | email address of the user as registered in BackOffice |
 
 #### Response Schema
 ```
@@ -253,22 +253,44 @@ Description
     ]
 }
 ```
+##### 2. If user exists:
+```
+{
+    "expires": "2023-03-09T12:51:24Z",
+    "token": "eyJ0eXAiOiJKV1QiLCJub25jZSI6IjhkXzJxRVMxb0hoWHFjV2h1cnh1RUlwNWVUQlBvM3A1SjVicTlpaTRxWm8iLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9lMTJkNDlhZi02YWRkLTRlNmQtODNiOS1hZTI4YWJhNmZhYmMvIiwiaWF0IjoxNjc4MzYyMzg1LCJuYwa3Q0ZDFxYlU2RHVhNG9xNmI2dkFNQUFBQUFBQUFBd0FBQUFBQUFBQUJCQUFBLiIsInJvbGVzIjpbIkRpcmVjdG9yeS5SZWFkV3JpdGUuQWxsIiwiQ29udGFjdHMuUmVhZFdyaXRlIiwiVXNlci5SZWFkLkFsbCIsIkNhbGVuZGFycy5SZWFkV3JpdGUiXSwic31uv58xYs4Ul7naaDPJZzDz49q5ZeukN-2qLAoHBP6wBa57Ms55rmFsaijTovYemVIzDpFBVltczZbTVkUSHb0vpbqB3GJAo5yO_qder_U5kugC48RLJxzxSnNZRnjLLbFLuA10uFDFkLJGb4sgQCPAjLvyYxcolu8bdnZYFalMY55-tF2nhEB0aHcCAszs4ikPMxsxXP7RoF8UjBQiYbLayGXhGMN8U_M7LlqRJMOmCd162wQsV31WnMeDSIFC7GQ"
+}
+```
 
 
 ### `get_groups`
-Description
+Shows all the groups a given user belongs to.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| user_id | false | String | nil | --- |
+| user_id | false | String | nil | email address of the user to search |
 
 #### Response Schema
 ```
+[
+{
+"id": <the id of the group,
+"name": <the name of the group>
+}
+]
 ```
 
 #### Example Responses
-##### 1. If user does not exist:
+##### 1. If the user exists and is a member of at least one group:
+```
+[
+    {
+        "id": "668dsfd3c5-fcd4-4dc8-a6bb-335ewerfsb8c5",
+        "name": "All Users"
+    }
+]
+```
+##### 2. If user does not exist:
 ```
 {
     "error": "request failed",
@@ -300,18 +322,34 @@ Description
 
 
 ### `get_members`
-Description
+Shows all the members of a given group.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| group_id | false | String | nil | --- |
+| group_id | false | String | nil | The group ID - can be obtained by running get_groups on a known group member |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
+##### 2. If group exisits:
+```
+[
+    {
+        "id": "9ddsfs04e-ffa3-451f-93cb-dfhsfh74ac70",
+        "name": "On-Premises Directory Synchronization Service Account",
+        "email": "Sync_c7dfgdf2ae9c@company.onmicrosoft.com",
+        "username": "Sync__c7dfgdf2ae9c@company.onmicrosoft.com"
+    },
+    {
+        "id": "a7asdgf8b-ebc1-4843-8479-0ctgsdgfsb2d6",
+        "name": "variant",
+        "email": "variant@company.onmicrosoft.com",
+        "username": "variant@company.com.au"
+    }
+```
 ##### 1. If group does not exist:
 ```
 {
@@ -349,13 +387,13 @@ Description
 
 
 ### `list_users`
-Description
+Lists all users if no paramaters are filled. Can be filtered by name.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| query | false | String | nil | --- |
-| limit | false | Int32 | nil | --- |
+| query | false | String | nil | filters results whose "name" category contains the entered string |
+| limit | false | Int32 | nil | Limits the number of results to the number entered |
 
 #### Response Schema
 ```
@@ -390,18 +428,27 @@ Description
 
 
 ### `get_user`
-Searches for a user by their user ID
+Searches for a user by their email. The user_id is considered their email - this is different from what is returned in the results under "id".
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| user_id | true | String | N/A | The user ID to search for |
+| user_id | true | String | N/A | The user email to search for |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
+##### 2. If user exists:
+```
+{
+    "id": "85348a34-1c88-4ed6-9efd-92gefgddb2daa",
+    "name": "ACA test",
+    "email": "ACA.test@company.com.au",
+    "username": "ACA.test@company.com.au"
+}
+```
 ##### 1. If user does not exist:
 ```
 {
@@ -433,18 +480,30 @@ Searches for a user by their user ID
 
 
 ### `list_calendars`
-Description
+Lists the calendars that belong to a user, specified by their email as registered in BackOffice.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| user_id | true | String | N/A | --- |
+| user_id | true | String | N/A | The email of the user, as shown in BackOffice |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
+##### 2. If user exists:
+```
+[
+    {
+        "id": "ACA.test@company.com.au",
+        "ref": "AAkALgAAAAfdgdfmEc2byACqAC-EWg0ASuIL0BZ9OEGaBdfgdfgKM9wAAAAAhlgAA",
+        "summary": "Calendar",
+        "primary": true,
+        "can_edit": true
+    }
+]
+```
 ##### 1. If user does not exist:
 ```
 {
@@ -479,26 +538,26 @@ Description
 
 
 ### `get_user_manager`
-Description
+Gets the registered manager of a given user
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| user_id | true | String | N/A | --- |
+| user_id | true | String | N/A | The email of the user to search |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
-##### 1. If user does not exist:
+##### 1. If user does not have a registered manager:
 ```
 {
     "error": "request failed",
-    "sys_id": "sys-EJhU_4DEvQ",
+    "sys_id": "sys-Ewmyx8wEF_",
     "module_name": "Calendar",
     "index": 1,
-    "message": "module raised: Forbidden (Office365::Exception)",
+    "message": "module raised: Not Found (Office365::Exception)",
     "backtrace": [
         "repositories/drivers/lib/office365/src/client.cr:132:9 in 'graph_request'",
         "repositories/drivers/lib/office365/src/users.cr:39:22 in 'get_user_manager'",
@@ -528,41 +587,35 @@ Description
 
 
 ### `list_groups`
-Description
+Lists all groups if no parameters entered.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| query | false | String | nil | --- |
+| query | false | String | nil | filters search results by whether the query appears in the "name" |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+##### 1. 
 ```
-{
-    "error": "request failed",
-    "sys_id": "sys-EJhU_4DEvQ",
-    "module_name": "Calendar",
-    "index": 1,
-    "message": "module raised: Forbidden (Office365::Exception)",
-    "backtrace": [
-        "repositories/drivers/lib/office365/src/client.cr:132:9 in 'graph_request'",
-        "repositories/drivers/lib/office365/src/groups.cr:28:17 in 'list_groups'",
-        "repositories/drivers/drivers/place/calendar_common.cr:208:9 in 'list_groups'",
-        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
-        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
-        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
-        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
-        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
-        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
-        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
-        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
-        "???"
-    ]
-}
+[
+    {
+        "id": "0013fdgd63-7bd8-4e8d-92d4-ea3dfgfg7d38",
+        "name": "LaptopUsers-Brisbane"
+    },
+    {
+        "id": "0dfgdfcd-dfg6-462d-aa86-8fcaf2dfgdfdf",
+        "name": "UserAdmins",
+        "description": "Members can manage users in this forest."
+    },
+    {
+        "id": "00dfgfg3ae-9fdgd-4645-9dbc-a4172a4fdg8e",
+        "name": "WebVPN"
+    }
+]
 ```
 
 
@@ -575,23 +628,30 @@ Description
 
 
 ### `get_group`
-Searches for a group by its group ID
+Searches for a group by its group ID, as returned in the "id" section of list_groups UNLIKE with get_user
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| group_id | true | String | N/A | The group ID to use in the search |
+| group_id | true | String | N/A | The group ID to use in the search - can be found by using list_groups |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+##### 1. If id is correct:
+```
+{
+    "id": "0sfdf6063-7bd8-4e8sdfd-92d4-ea3sdfd38",
+    "name": "LaptopUsers-Brisbane"
+}
+```
+##### 2. If group does not exist:
 ```
 {
     "error": "request failed",
-    "sys_id": "sys-EJhU_4DEvQ",
+    "sys_id": "sys-Ewmyx8wEF_",
     "module_name": "Calendar",
     "index": 1,
     "message": "module raised: Bad Request (Office365::Exception)",
@@ -617,27 +677,111 @@ Searches for a group by its group ID
 
 
 
-
-
 ### `list_events`
-Description
+Searches for all events happening on a given calendar within a specified time frame.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| calendar_id | true | String | N/A | --- |
-| period_start | true | Int64 | N/A | --- |
-| period_end | true | Int64 | N/A | --- |
-| time_zone | false | String | nil | --- |
-| user_id | false | String | nil | --- |
-| include_cancelled | false | Boolean | false | --- |
+| calendar_id | true | String | N/A | The EMAIL of the user OR the EMAIL of the room whose calender you want to search |
+| period_start | true | Int64 | N/A | The start of the time period to search in Unix time |
+| period_end | true | Int64 | N/A | The end of the period to search in Unix time |
+| time_zone | false | String | nil | filters results by time zone |
+| user_id | false | String | nil | filters results by user EMAIL (Only necessary if the calendar_id you are looking up belongs to a room) |
+| include_cancelled | false | Boolean | false | if true, includes cancelled events |
 
 #### Response Schema
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+##### 1. If the user or room has no events in the given time frame:
+```
+[]
+```
+##### 4. If the room or user has events within the given time frame:
+```
+[
+    {
+        "event_start": 1671408000,
+        "event_end": 1671410700,
+        "id": "AAkALgAAAAAAHYQDEapmdsfdsm8FgRUSiiZH26Qy2dwAEM3At3gAA",
+        "host": "Person@company.com.au",
+        "title": "Fortnightly Catch-Up",
+        "body": "<html>\r\n<head></head>\r\n<body>html body</body>\r\n</html>\r\n",
+        "attendees": [
+            {
+                "name": "Person Mcfolk",
+                "email": "Person@company.com.au",
+                "response_status": "needsAction",
+                "resource": false
+            },
+            {
+                "name": "Jim Bob",
+                "email": "Jim@company.com.au",
+                "response_status": "accepted",
+                "resource": false
+            },
+            {
+                "name": "Resource - Meeting Room",
+                "email": "meetingroom@company.com.au",
+                "response_status": "accepted",
+                "resource": false
+            }
+        ],
+        "location": "Microsoft Teams Meeting",
+        "private": false,
+        "all_day": false,
+        "timezone": "Australia/Sydney",
+        "recurring": false,
+        "created": "2022-12-18T23:58:18Z",
+        "updated": "2022-12-19T00:08:08Z",
+        "attachments": [],
+        "status": "confirmed",
+        "creator": "person@company.com.au",
+        "ical_uid": "04000000810000000000000000100000001186DAC27148E847BB58B773F3B941A7",
+        "online_meeting_provider": "teamsForBusiness",
+        "online_meeting_phones": [],
+        "online_meeting_url": "https://teams.microsoft.com/l/meetup-join/19%3ameetFkLTliNjMtODQ2NzcwODJkZjQ1%40thread.v2/0?context=%7b%2212d49af-6add-4e6d-83b9-ae28aba6fabc%22%2c%2f-431f-91a1-b893ed3b6dbf%22%7d"
+    },
+    {
+        "event_start": 1671417000,
+        "event_end": 1671420600,
+        "id": "AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0A2oF4m8FgRUSiiZH26Qy2dwAEM3BNNQAA",
+        "host": "person2@company.com.au",
+        "title": "Meeting",
+        "body": "<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<meta name=\"Generator\" content=\"Microsoft Word 15 (filt63C1;\r\n\ttext-decoration:underline}\r\nspan.EmailStyle18\r\n\t{font-family:\"Calibri\",sans-serif;\r\n\tcolor:windowtext}\r\n.MsoChpDefault\r\n\t{font-size:10.0pt}\r\n@page WordSection1\r\n\t{margin:72.0pt 72.0pt 72.0pt 72.0pt}\r\ndiv.WordSection1\r\n\t{}\r\n-->\r\n</style>\r\n</head>\r\n<body lang=\"EN-AU\" link=\"#0563C1\" vlink=\"#954F72\" style=\"word-wrap:break-word\">\r\n<div class=\"WordSection1\">\r\n<p class=\"MsoNormal\">&nbsp;</p>\r\n<div>\r\n<p class=\"MsoNormal\"><span style=\"color:#5F5F5F\">________________________________________________________________________________</span>\r\n</p>\r\n</div>\r\n<div>\r\n<div style=\"margin-top:18.0pt; margin-bottom:15.0pt\">\r\n<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"font-size:18.0pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#252424\">Microsoft Teams meeting</span><span lang=\"EN-US\" style=\"font-family:&quot;Segoe UI&quot;,sans-serif; color:#252424\">\r\n</span></p>\r\n</div>\r\n<div style=\"margin-bottom:15.0pt\">\r\n<div>\r\n<p class=\"MsoNormal\"><b><span lang=\"EN-US\" style=\"font-size:10.52424\">Join with a video conferencing device</span></b><span lang=\"EN-US\" style=\"font-family:&quot;Segoe UI&quot;,sans-serif; color:#252424\">\r\n</span></p>\r\n</div>\r\n</span></a> </span></p>\r\n</div>\r\n<div style=\"margin-top:15.0pt; margin-bottom:18.0pt\">\r\n<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"font-family:&quot;Segoe UI&quot;,sans-serif; color:#252424\"><a href=\"https://aka.ms/JoinTeamsMeeting\"><span style=\"font-size:10.5pt; colorZDdmMzUtNWYzYy00NGJkLWE2N2QtNmYyOTMyMGFjYjRl@thread.v2&amp;messageId=0&amp;language=en-US\">\r\n<span style=\"font-size:10.5pt; color:#6264A7\">Meeting options</span></a> </span></p>\r\n</div>\r\n</div>\r\n<div>\r\n<p class=\"MsoNormal\"><span style=\"color:#5F5F5F\">________________________________________________________________________________</span>\r\n</p>\r\n</div>\r\n<p class=\"MsoNormal\">&nbsp;</p>\r\n</div>\r\n</body>\r\n</html>\r\n",
+        "attendees": [
+            {
+                "name": "Person Two",
+                "email": "person2@company.com.au",
+                "response_status": "needsAction",
+                "resource": false
+            },
+            {
+                "name": "Resource Meeting Room",
+                "email": "meetingroom@company.com.au",
+                "response_status": "accepted",
+                "resource": true
+            }
+        ],
+        "location": "Microsoft Teams Meeting; Resource VIC - Meeting Room 2 (80a Turner St, Port Melb)",
+        "private": false,
+        "all_day": false,
+        "timezone": "Australia/Sydney",
+        "recurring": false,
+        "created": "2022-12-19T02:23:59Z",
+        "updated": "2022-12-19T02:29:40Z",
+        "attachments": [],
+        "status": "confirmed",
+        "creator": "person2@company.com.au",
+        "ical_uid": "040000008200E00074C5B71010010000000B4D1E494FA625B43B2FEE33B578A80A6",
+        "online_meeting_provider": "teamsForBusiness",
+        "online_meeting_phones": [],
+        "online_meeting_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDZlZDdmMzUtNWYzYy00NGJkLWE2N2QtNmYyOTMyMGFjYjRl%40thread.v2/0?context=%7b%22Tid%22%3a%22e50f-a2fe-41c6-af48-4bd90ecc006e%22%7d"
+    }
+```
+##### 3. If calendar_id does not exist:
 ```
 {
     "error": "request failed",
@@ -671,16 +815,16 @@ Description
 
 
 ### `delete_event`
-Deletes an event from the calendar
+Deletes an event from the calendar. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list_events
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| calendar_id | true | String | N/A | --- |
-| event_id | true | String | N/A | --- |
-| user_id | false | String | nil | --- |
-| notify | false | Boolean | false | --- |
-| comment | false | String | nil | --- |
+| calendar_id | true | String | N/A | The user Email OR the room EMAIL |
+| event_id | true | String | N/A | The ID of the event as returned by list_events |
+| user_id | false | String | nil | IF the calendar_id is the email of a ROOM, this filters by the email of a user |
+| notify | false | Boolean | false | notifies attendees if set to true |
+| comment | false | String | nil | adds a comment to the cancellation notification |
 
 #### Response Schema
 ```
@@ -691,13 +835,20 @@ Deletes an event from the calendar
 ```
 {
     "error": "request failed",
-    "sys_id": "sys-EJhU_4DEvQ",
+    "sys_id": "sys-Ewmyx8wEF_",
     "module_name": "Calendar",
     "index": 1,
-    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "message": "module raised: Status 204 should not have a body (ArgumentError)",
     "backtrace": [
-        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
-        "repositories/drivers/lib/place_calendar/src/office365.cr:241:7 in 'delete_event:calendar_id:notify'",
+        "/usr/share/crystal/src/http/client/response.cr:20:11 in 'initialize'",
+        "/usr/share/crystal/src/http/client/response.cr:13:5 in 'new'",
+        "/usr/share/crystal/src/http/client/response.cr:150:22 in 'from_io?'",
+        "/usr/share/crystal/src/http/client.cr:604:5 in 'exec_internal_single'",
+        "/usr/share/crystal/src/http/client.cr:587:18 in 'exec_internal'",
+        "/usr/share/crystal/src/http/client.cr:581:7 in 'exec'",
+        "repositories/drivers/lib/office365/src/client.cr:125:7 in 'graph_request'",
+        "repositories/drivers/lib/office365/src/events.cr:107:16 in 'delete_event:mailbox:calendar_id:id'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:239:7 in 'delete_event:calendar_id:notify'",
         "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'delete_event:calendar_id:notify'",
         "repositories/drivers/drivers/place/calendar_common.cr:275:14 in 'delete_event'",
         "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
@@ -719,16 +870,16 @@ Deletes an event from the calendar
 
 
 ### `decline_event`
-Deletes an event from the calendar
+Declines an event from the calendar. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list_events
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| calendar_id | true | String | N/A | --- |
-| event_id | true | String | N/A | --- |
-| user_id | false | String | nil | --- |
-| notify | false | Boolean | false | --- |
-| comment | false | String | nil | --- |
+| calendar_id | true | String | N/A | The user Email OR the room EMAIL |
+| event_id | true | String | N/A | The ID of the event as returned by list_events |
+| user_id | false | String | nil | IF the calendar_id is the email of a ROOM, this filters by the email of a user |
+| notify | false | Boolean | false | notifies attendees if set to true |
+| comment | false | String | nil | adds a comment to the cancellation notification |
 
 #### Response Schema
 ```
@@ -782,11 +933,79 @@ Creates an event
 | --- | --- | --- | --- | --- |
 | title | true | String | N/A | The title of the event |
 | event_start | true | Int64 | N/A | Start time of the event in Unix time |
-| calendar_id | false | String | N/A | --- |
-| event_id | true | String | N/A | --- |
+| event_end | false | String | N/A | End time of the even in Unix time |
+| description | false | String | N/A | description of the event sent to the attendees |
+| attendees | false | String/Array(String) | nil | --- |
+| location | false | String | nil | --- |
+| timezone | false | String | nil | --- |
 | user_id | false | String | nil | --- |
-| notify | false | Boolean | false | --- |
-| comment | false | String | nil | --- |
+| calendar_id | false | String | nil | The EMAIL of the ROOM |
+| online_meeting_id | false | String | nil | --- |
+| online_meeting_provider | false | String | nil | --- |
+| online_meeting_url | false | String | nil | --- |
+| online_meeting_sip | false | String | nil | --- |
+| online_meeting_phones | false | String | nil | --- |
+| online_meeting_pin | false | String | nil | --- |
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-Ewmyx8wEF_",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:213:7 in 'create_event'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'create_event'",
+        "repositories/drivers/drivers/place/calendar_common.cr:322:14 in 'create_event'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### `send_template`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+
+
 
 #### Response Schema
 ```
@@ -797,15 +1016,74 @@ Creates an event
 ```
 {
     "error": "request failed",
-    "sys_id": "sys-EJhU_4DEvQ",
+    "sys_id": "sys-Ewmyx8wEF_",
     "module_name": "Calendar",
     "index": 1,
     "message": "module raised: Not Found (PlaceCalendar::Exception)",
     "backtrace": [
         "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
-        "repositories/drivers/lib/place_calendar/src/office365.cr:251:7 in 'decline_event:calendar_id:notify:comment'",
-        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'decline_event:calendar_id:notify:comment'",
-        "repositories/drivers/drivers/place/calendar_common.cr:266:14 in 'decline_event'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:213:7 in 'create_event'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'create_event'",
+        "repositories/drivers/drivers/place/calendar_common.cr:322:14 in 'create_event'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
+        "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver.cr:522:1 in 'run_execute'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:262:24 in 'process'",
+        "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:179:7 in '->'",
+        "/usr/share/crystal/src/fiber.cr:146:11 in 'run'",
+        "/usr/share/crystal/src/fiber.cr:98:34 in '->'",
+        "???"
+    ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+### `build_template`
+Description
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+
+
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If request fails:
+```
+{
+    "error": "request failed",
+    "sys_id": "sys-Ewmyx8wEF_",
+    "module_name": "Calendar",
+    "index": 1,
+    "message": "module raised: Not Found (PlaceCalendar::Exception)",
+    "backtrace": [
+        "repositories/drivers/lib/place_calendar/src/office365.cr:420:7 in 'handle_office365_exception'",
+        "repositories/drivers/lib/place_calendar/src/office365.cr:213:7 in 'create_event'",
+        "repositories/drivers/lib/place_calendar/src/place_calendar.cr:23:5 in 'create_event'",
+        "repositories/drivers/drivers/place/calendar_common.cr:322:14 in 'create_event'",
         "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in '->'",
         "repositories/drivers/drivers/microsoft/graph_api.cr:3:1 in 'execute'",
         "repositories/drivers/lib/placeos-driver/src/placeos-driver/driver_manager.cr:164:5 in 'execute'",
