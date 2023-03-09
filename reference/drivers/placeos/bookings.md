@@ -180,6 +180,23 @@ See also: https://github.com/PlaceOS/calendar/blob/master/src/models/event.cr
 
 ## Commands
 
+### `calendar_id`
+Displays the calendar ID - This means the ID of the room, which is the email address assigned to the room in BackOffice, as each room has its own calendar.
+
+#### Parameters
+| Name | Required? | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| None |  |  |  |   |
+
+#### Response Schema
+```
+```
+
+#### Example Responses
+##### 1. If successful:
+```
+meetingroom@company.com
+```
 
 
 ### `start_meeting`
@@ -243,14 +260,14 @@ Declines and ends the meeting in the current room with the start time entered.
 
 
 ### `book_now`
-Books a meeting in the current system which starts immediately and lasts an certain length of time as specified by the user.
+Books a meeting in the current system which starts immediately and lasts an certain length of time in seconds as specified by the user.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
 | period_in_seconds | true | Int64 | N/A | The length of the meeting the user is booking in seconds |
-| titles | false | String | nil | The name of the meeting |
-| owner | false | String | nil | The host of the meeting. Does not work if this is filled in with a host that does not exist. Works if left empty. |
+| title | false | String | nil | The name of the meeting |
+| owner | false | String | nil | The email of the host of the meeting as registered in BackOffice. Does not work if this is filled in with a host that does not exist. Works if left empty. |
 
 #### Response Schema
 ```
@@ -286,16 +303,16 @@ Books a meeting in the current system which starts immediately and lasts an cert
 ##### 2. If neither optional field is filled out:
 ```
 {
-    "event_start": 1677857220,
-    "event_end": 1677862200,
-    "id": "AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0APYixvXoQbkCdlH4poLQWvwAApKB5IQAA",
-    "host": "testroom3@l6yy.onmicrosoft.com",
-    "title": "Ad Hoc booking",
+    "event_start": 1678359840,
+    "event_end": 1678361880,
+    "id": "AAkALgAAAAAAHYQDEapmEEGaBh1ZdOKM9wAEWahNjgAA",
+    "host": "ACA.test@company.com.au",
+    "title": "Test",
     "body": "",
     "attendees": [
         {
-            "name": "Test Room 3",
-            "email": "testroom3@l6yy.onmicrosoft.com",
+            "name": "Resource - Meeting Room  ",
+            "email": "meetingroom@company.com.au",
             "response_status": "accepted",
             "resource": true
         }
@@ -305,12 +322,12 @@ Books a meeting in the current system which starts immediately and lasts an cert
     "all_day": false,
     "timezone": "Etc/GMT",
     "recurring": false,
-    "created": "2023-03-03T15:27:39Z",
-    "updated": "2023-03-03T15:27:39Z",
+    "created": "2023-03-09T11:04:48Z",
+    "updated": "2023-03-09T11:04:48Z",
     "attachments": [],
     "status": "confirmed",
-    "creator": "testroom3@l6yy.onmicrosoft.com",
-    "ical_uid": "040000008200E00074C5B7101A82E00800000000118850B0E44DD90100000000000000001000000063C844E528259046944E6F6193BE0276",
+    "creator": "ACA.test@company.com.au",
+    "ical_uid": "04000000820008000000000E15B0F67652D901000000000000000182B5434CB8A1190D33B69031",
     "online_meeting_provider": "unknown",
     "online_meeting_phones": []
 }
@@ -321,14 +338,14 @@ Books a meeting in the current system which starts immediately and lasts an cert
 {
     "event_start": 1677862320,
     "event_end": 1677868320,
-    "id": "AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0APYixvXoQbkCdlH4poLQWvwAApKCC7wAA",
-    "host": "testroom3@l6yy.onmicrosoft.com",
+    "id": "AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0XoQbkCdlH4poLQWvwAApKCC7wAA",
+    "host": "testroom3@org.com",
     "title": "Ad Hoc booking",
     "body": "",
     "attendees": [
         {
             "name": "Test Room 3",
-            "email": "testroom3@l6yy.onmicrosoft.com",
+            "email": "testroom3@org.com",
             "response_status": "accepted",
             "resource": true
         }
@@ -342,8 +359,8 @@ Books a meeting in the current system which starts immediately and lasts an cert
     "updated": "2023-03-03T16:52:09Z",
     "attachments": [],
     "status": "confirmed",
-    "creator": "testroom3@l6yy.onmicrosoft.com",
-    "ical_uid": "040000008200E00074C5B7101A82E00800000000789AA77EF04DD901000000000000000010000000088E69420B979D46A74BB28B9BFEFBAD",
+    "creator": "testroom3@org.com",
+    "ical_uid": "040000008200E00074C5B7101A82E0080000000071000000000000000010000000088E69420B979D46A74BB28B9BFEFBAD",
     "online_meeting_provider": "unknown",
     "online_meeting_phones": []
 }
