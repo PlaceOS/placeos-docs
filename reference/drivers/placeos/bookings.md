@@ -19,13 +19,13 @@ description: Access this System's Event data, via the Calendar Driver
 
 | Key | Type | Default value | Description |
 | --- | --- | --- | --- |
-|`calendar_id`| String | nil | --- |
+|`calendar_id`| String | nil | The email address of the room the module is in |
 |`calendar_time_zone`| String | Australia/Sydney |  Currently has no impact |
 |`book_now_default_title`| String | Ad Hoc booking |  Title of booking if unchanged |
 |`disable_book_now`| Boolean | false |   |
 |`disable_end_meeting`| Boolean | false | Exposes a disable_end_meeting status variable such that frontends like PlaceOS template Bookings can detect it and enable/disable it's auto event cancellation functionality (frontend will exec end_meeting causing the current event to be truncated to the current time, freeing up the room (in case of no shows).  |
-|`pending_period`| UInt32 | 5 | Number of minutes AFTER the Booking start time until status changes from pending to free   |
-|`pending_before`| UInt32 | 5 | Number of minutes BEFORE the Booking start time until the status changes from free  to pending   |
+|`pending_period`| UInt32 | 5 | Number of minutes AFTER the Booking start time until status changes from pending to free |
+|`pending_before`| UInt32 | 5 | Number of minutes BEFORE the Booking start time until the status changes from free  to pending  |
 |`cache_polling_period`| UInt32 | 5 |   |
 |`cache_days`| UInt32 | 30 |   |
 |`sensor_stale_minutes`| Int32 | 8 | Consider sensor data older than this unreliable  |
@@ -35,7 +35,7 @@ description: Access this System's Event data, via the Calendar Driver
 |`include_cancelled_bookings`| Boolean | false |   |
 |`hide_qr_code`| Boolean | false |   |
 |`custom_qr_url`| String | https://domain.com/path |   |
-|`custom_qr_color`| String | black |   |
+|`custom_qr_color`| String | black | The colour of the QR codes the module generates  |
 |`room_image`| String | https://domain.com/room_image.svg | This image is displayed along with the capacity when the room is not bookable  |
 |`sensor_mac`| String | device-mac |   |
 |`hide_meeting_details`| Boolean | false |   |
@@ -45,28 +45,28 @@ description: Access this System's Event data, via the Calendar Driver
 ## Status Variables
 
 ### `bookable`
-Write description here
-
+true if the room can be directly booked by end users without going through an admin
 #### Schema/Type
+Boolean
 
 
 
 ### `room_name`
 The name of the room
-
 #### Schema/Type
 String
 
 
 ### `room_capacity`
-
+Max number of people that can be booked into a meeting in the room
 #### Schema/Type
 Int
 
 
 ### `default_title`
-
+Title of meetings if none is set
 #### Schema/Type
+String
 
 
 ### `disable_book_now`
@@ -74,39 +74,47 @@ Int
 #### Schema/Type
 Boolean
 
-### `disable_end_meeting`
 
+### `disable_end_meeting`
+Exposes a disable_end_meeting status variable such that frontends like PlaceOS template Bookings can detect it and enable/disable it's auto event cancellation functionality (frontend will exec end_meeting causing the current event to be truncated to the current time, freeing up the room (in case of no shows).
 #### Schema/Type
 Boolean
 
-### `pending_period`
 
+### `pending_period`
+Number of minutes AFTER the Booking start time until status changes from pending to free
 #### Schema/Type
+UInt32
 
 
 ### `pending_before`
-
+Number of minutes BEFORE the Booking start time until the status changes from free  to pending
 #### Schema/Type
+UInt32
 
 
 ### `control_ui`
 
 #### Schema/Type
+String
 
 
 ### `catering_ui`
 
 #### Schema/Type
+String
 
 
 ### `show_qr_code`
 
 #### Schema/Type
+Boolean
 
 
 ### `connected`
 
 #### Schema/Type
+Boolean
 
 
 ### `booked`
@@ -200,12 +208,12 @@ meetingroom@company.com
 
 
 ### `start_meeting`
-description
+Starts a booked current or future meeting in the current room, to prevent automatic cancellation.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| meeting_start_time |  true  |  Int64 | Nil |  The time of the meeting you wish to start, format = seconds (Unix time)  |
+| meeting_start_time |  true  |  Int64 | Nil |  The time of the meeting you wish to start, in Unix time  |
 
 #### Response Schema
 ```
@@ -221,7 +229,7 @@ null
 
 
 ### `checkin`
-Description
+Starts the current meeting in the current room to prevent automatic cancellation.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -240,7 +248,7 @@ null
 
 
 ### `end_meeting`
-Declines and ends the meeting in the current room with the start time entered. 
+Ends the meeting in the current room which has the start time entered. 
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -255,12 +263,14 @@ Declines and ends the meeting in the current room with the start time entered.
 
 #### Example Responses
 ##### 1. 
+```
 
+```
 
 
 
 ### `book_now`
-Books a meeting in the current system which starts immediately and lasts an certain length of time in seconds as specified by the user.
+Books and starts a meeting in the current system which starts immediately and lasts an certain length of time in seconds as specified by the user.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -369,7 +379,7 @@ Books a meeting in the current system which starts immediately and lasts an cert
 
 
 ### `poll_events`
-Query neighbouring calendar driver for Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting.
+Query neighbouring calendar driver for Events that occur in this System's mailbox (see `system.email` property) between the start of the current day (in the timezone of the core service) and the `cache_days` setting. Updates the state with this information, rather than returning it as a response.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -381,7 +391,7 @@ Query neighbouring calendar driver for Events that occur in this System's mailbo
 ```
 
 #### Example Responses
-##### 1. 
+##### 1. If successful:
 ```
 []
 ```
@@ -389,12 +399,12 @@ Query neighbouring calendar driver for Events that occur in this System's mailbo
 
 
 ### `locate_user`
-Searches the calendar for events matching the username or email. Neither the username or email is required but at least one should be used for the command to be useful.
+Used by location services and area management drivers to locate a given user within the building. Not useful as a command on its own, only used by the location drivers. Nothing to do with the specific system the module is in, the location services use this command to poll each room for a specific user. If they are not present in the current room, it returns an empty array. Neither the username or email is required but at least one should be used for the command to be useful. The username is often the same as the username but in some cases is not, which is why there are two fields.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| email | false | String | nil | The email of the user |
+| email | false | String | nil | The email of the user to search for |
 | username | false | String | nil | If no username matches, it will search for emails that begin with the username |
 
 #### Response Schema
@@ -402,7 +412,7 @@ Searches the calendar for events matching the username or email. Neither the use
 ```
 
 #### Example Responses
-##### 1. If user has no bookings in the room OR both fields are left blank OR the user and email do not exist:
+##### 1. If user is not in the room OR the user AND email do not exist:
 ```
 []
 ```
@@ -412,7 +422,7 @@ Searches the calendar for events matching the username or email. Neither the use
 
 
 ### `macs_assigned_to`
-Uses `locate_user` to find the MAC addresses assigned to users with bookings matching the email and username. Neither the username or email is required but at least one should be used for the command to be useful.
+Uses `locate_user` to find the MAC addresses assigned to users matching the email and username. Neither the username or email is required but at least one should be used for the command to be useful. Used by the location services and area management drivers and is not useful on its own.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -425,15 +435,17 @@ Uses `locate_user` to find the MAC addresses assigned to users with bookings mat
 ```
 
 #### Example Responses
-##### 1. 
-
+##### 1. If user is not in the room OR does not exist:
+```
+[]
+```
 
 
 
 
 
 ### `check_ownership_of`
-Searches for a user by their MAC address. It will show the user the Mac address is assigned to as well as the meeting they are in.
+Searches for a user by their MAC address. It will show the user the MAC address is assigned to as well as the meeting they are in. Used by location services and area management drivers and is not useful on its own.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -445,7 +457,7 @@ Searches for a user by their MAC address. It will show the user the Mac address 
 ```
 
 #### Example Responses
-##### 1. 
+##### 1. If the MAC address belongs to a user:
 ```
     {
         location:    "meeting",
@@ -462,7 +474,7 @@ Searches for a user by their MAC address. It will show the user the Mac address 
 
 
 ### `device_locations`
-Searches for devices in a specific zone by zone ID or location name
+Searches for all devices in a specific zone by zone ID or location name. Used by location services and area management drivers, not useful on its own.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -476,19 +488,21 @@ Searches for devices in a specific zone by zone ID or location name
 
 #### Example Responses
 ##### 1. 
-
+```
+[]
+```
 
 
 
 
 
 ### `is_stale?`
-Returns a Boolean
+Checks if the information it has from room sensor data is old or up-to-date. Returns true if the information is old. Used by location services and area management drivers, not useful on its own.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| timestamp | true | Boolean | N/A | --- |
+| timestamp | true | Boolean | N/A | The timestamp it receives from the location drivers to check if its info is old or not - Unix time |
 
 #### Response Schema
 ```
