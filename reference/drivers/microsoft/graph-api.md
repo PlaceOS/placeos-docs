@@ -11,8 +11,10 @@ description: Communicates with the Microsoft Graph API to share information with
 ## Functions
 
 * Groups booking requests and sends them to the Microsoft calendar
-* 
-* 
+* Manages calendar events, groups, and users through Microsoft Graph API
+* Sends emails and notifies invited users
+*Creates email templates for specified responses
+
 
 
 ## Settings
@@ -164,7 +166,7 @@ iVBORw0KGgoAAAANSUhEUgAAAGQAAABkEAYAAAAgckkXAAADrklEQVR4nO2TMZLkMAzE5v+fvqvaumSC
 
 
 ### `send_mail`
-Sends an email to registered addresses in the company. NOTE - ONE of message_plaintext OR message_html IS required.
+Sends an email to any email address NOTE - ONE of message_plaintext OR message_html IS required.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -215,7 +217,7 @@ Sends an email to registered addresses in the company. NOTE - ONE of message_pla
 
 
 ### `access_token`
-Description
+Generates an access token for an admin to log in to Microsoft services as a given user.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -686,7 +688,7 @@ Searches for all events happening on a given calendar within a specified time fr
 | calendar_id | true | String | N/A | The EMAIL of the user OR the EMAIL of the room whose calender you want to search |
 | period_start | true | Int64 | N/A | The start of the time period to search in Unix time |
 | period_end | true | Int64 | N/A | The end of the period to search in Unix time |
-| time_zone | false | String | nil | filters results by time zone |
+| time_zone | false | String | nil | filters results by time zone - format: 2/3 letter timezone code e.g UTC, AU |
 | user_id | false | String | nil | filters results by user EMAIL (Only necessary if the calendar_id you are looking up belongs to a room) |
 | include_cancelled | false | Boolean | false | if true, includes cancelled events |
 
@@ -870,7 +872,7 @@ Deletes an event from the calendar. Requires a calendar ID (the email of the roo
 
 
 ### `decline_event`
-Declines an event from the calendar. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list_events
+Declines an event from the calendar. Event is still shown but crossed out. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list_events
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
@@ -936,16 +938,16 @@ Creates an event
 | event_end | false | String | N/A | End time of the even in Unix time |
 | description | false | String | N/A | description of the event sent to the attendees |
 | attendees | false | String/Array(String) | nil | --- |
-| location | false | String | nil | --- |
-| timezone | false | String | nil | --- |
-| user_id | false | String | nil | --- |
+| location | false | String | nil | Shown on the invitation, human-readable name |
+| timezone | false | String | nil | 2/3 letter timezone code - affects time meeting may appear for all users |
+| user_id | false | String | nil | The SERVER user to create the event AS |
 | calendar_id | false | String | nil | The EMAIL of the ROOM |
-| online_meeting_id | false | String | nil | --- |
-| online_meeting_provider | false | String | nil | --- |
-| online_meeting_url | false | String | nil | --- |
-| online_meeting_sip | false | String | nil | --- |
-| online_meeting_phones | false | String | nil | --- |
-| online_meeting_pin | false | String | nil | --- |
+| online_meeting_id | false | String | nil | Need to generate meeting with provider first, these details will be provided by then |
+| online_meeting_provider | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
+| online_meeting_url | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
+| online_meeting_sip | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
+| online_meeting_phones | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
+| online_meeting_pin | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
 #### Response Schema
 ```
 ```
@@ -991,19 +993,18 @@ Creates an event
 
 
 ### `send_template`
-Description
+Send an email template you have created to given users to get specific responses back from them.
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
+| to | true | String | N/A | email to send the template to |
+| template | true | String | N/A | template to send |
+| args | true | String | N/A | --- |
+| resource_attachments | false | String/Array(string) | [] | --- |
+| attachments | false | String/Array(string) | [] | --- |
+| cc | false | String/Array(string) | [] | --- |
+| bcc | false | String/Array(string) | [] | --- |
+| from | false | String | null | optional email to use as sender |
 
 
 
@@ -1050,19 +1051,12 @@ Description
 
 
 ### `build_template`
-Description
+Generates an email template to be used for questionaires/to generate specific responses
 
 #### Parameters
 | Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
+| string | true | String | N/A | --- |
+| args | true | String | N/A | --- |
 
 
 
