@@ -5,7 +5,7 @@ description: Communicates with the Microsoft Graph API to share information with
 
 # PlaceOS Microsoft Graph API Driver
 * Type: Service Driver
-* Dependencies: PlaceOS Calendar Driver
+* Dependencies: None
 * Source: https://github.com/PlaceOS/drivers/blob/master/drivers/microsoft/graph_api.cr
 
 ## Functions
@@ -13,7 +13,7 @@ description: Communicates with the Microsoft Graph API to share information with
 * Groups booking requests and sends them to the Microsoft calendar
 * Manages calendar events, groups, and users through Microsoft Graph API
 * Sends emails and notifies invited users
-*Creates email templates for specified responses
+* Creates email templates for specified responses
 
 
 
