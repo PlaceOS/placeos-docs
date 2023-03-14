@@ -4,7 +4,7 @@ description: Communicates with the Microsoft Graph API to share information with
 ---
 
 # PlaceOS Microsoft Graph API Driver
-* Type: Logic Driver
+* Type: Service Driver
 * Dependencies: PlaceOS Calendar Driver
 * Source: https://github.com/PlaceOS/drivers/blob/master/drivers/microsoft/graph_api.cr
 
