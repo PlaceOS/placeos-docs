@@ -1,14 +1,14 @@
 ---
 description: >-
-  The following steps will guide you to set up calendar access for PlaceOS to
-  read your room resource calendars.
+  The following steps show how to set up an Azure App Registration to allow 
+  PlaceOS to read Exchange Online Room Resource Calendars
 ---
 
-# Calendar Access
+# Step 1: Room Calendar Access
 
 The PlaceOS Application requires access to read the booking state of room resources within the Microsoft 365 domain.&#x20;
 
-This is achieved by creating a [Microsoft App Registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) with Application Access, configuration of an Exchange Group for Room Resources and applying an Application Restriction Policy to the Exchange Group.
+This is achieved by creating a [Microsoft App Registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) with [Application Permissions](https://learn.microsoft.com/en-us/graph/auth/auth-concepts#access-scenarios), configuration of an Exchange Group for Room Resources and applying an Application Restriction Policy to the Exchange Group.
 
 Complete the following steps to correctly configure calendar access.&#x20;
 

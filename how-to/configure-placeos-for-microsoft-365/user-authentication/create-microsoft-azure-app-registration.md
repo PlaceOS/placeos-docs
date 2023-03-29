@@ -1,4 +1,4 @@
-# Create Microsoft Azure App Registration
+# Create Azure App Registration (Delegated Permissions)
 
 ## Prerequisites
 
@@ -24,10 +24,8 @@
 10. Click 'Microsoft Graph'.
 11. Click 'Delegated Permissions'.
 12. Add the following Permissions:
-    * `Place.Read.All`
     * `Calendars.ReadWrite`
     * `Calendars.ReadWrite.Shared`
-    * `Contacts.Read`
     * `Group.Read.All`
     * `User.Read.All`
     * `offline_access`

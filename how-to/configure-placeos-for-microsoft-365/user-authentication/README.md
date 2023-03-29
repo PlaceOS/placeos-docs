@@ -1,10 +1,12 @@
 ---
-description: Steps required for enabling OAuth2 sign on for PlaceOS with Azure.
+description: >-
+  Steps required for enabling OAuth2 sign and Room Booking for PlaceOS with
+  Azure.
 ---
 
-# User Authentication
+# Step 2: User Authentication & Calendar Access
 
-This steps will configure PlaceOS to use Microsoft Azure Active Directory as a federated authentication provider to allow users to sign in using their corporate credentials.
+These steps will configure PlaceOS to use Microsoft Azure Active Directory as a federated authentication provider to allow users to sign in using their corporate credentials. The same Azure App Registration will be used to allow  users logged in to PlaceOS Apps to book Exchange Online meeting rooms.
 
 PlaceOS prefers to use OAuth2.
 
