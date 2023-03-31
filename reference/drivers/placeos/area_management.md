@@ -140,7 +140,7 @@ Description
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| sensor_data | false |  | nil |   |
+| sensor_data | false | Hash(String, Array(SensorDetail) | nil |   |
 
 #### Response Schema
 ```
@@ -149,7 +149,28 @@ Description
 #### Example Responses
 ##### 1.
 ```
-
+{
+    "zone-Cd-1qEb18O": {
+        "measurement": "level_summary",
+        "desk_count": 116,
+        "desk_usage": 0,
+        "device_capacity": 0,
+        "device_count": 0,
+        "estimated_people": 0,
+        "percentage_use": 100,
+        "recommendation": 0
+    },
+    "zone-Cd-25eIppQ": {
+        "measurement": "level_summary",
+        "desk_count": 120,
+        "desk_usage": 0,
+        "device_capacity": 0,
+        "device_count": 0,
+        "estimated_people": 0,
+        "percentage_use": 100,
+        "recommendation": 0
+    }
+}
 ```
 
 
@@ -163,7 +184,7 @@ Description
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
 | level_id | false | String | nil |  The floor to receive sensor data from  |
-| sensor_data | false |  | nil |   |
+| sensor_data | false | Hash(String, Array(SensorDetail) | nil |   |
 
 #### Response Schema
 ```
@@ -172,7 +193,7 @@ Description
 #### Example Responses
 ##### 1.
 ```
-
+null
 ```
 
 
@@ -185,9 +206,9 @@ Description
 #### Parameters
 | Name | Required? | Type | Default | Description |
 | --- | --- | --- | --- | --- |
-| x | true |  |  |   |
-| y | true |  |  |   |
-| area_id | true |  |  |   |
+| x | true |  | N/A |   |
+| y | true |  | N/A |   |
+| area_id | true |  | N/A |   |
 
 #### Response Schema
 ```
