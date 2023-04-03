@@ -70,13 +70,13 @@ Note that the floor plan walls and outlines do not need the exact thickness of e
 
 To get started on the skeleton, select the "pen tool" and select a point size to outline walls. This can be anywhere from 2px-6px. Begin illustrating the custom map, ignoring any outlines that are not needed. For example, pipes near bathrooms or electrical rooms can have a darker blank color fill.
 
-![Outlining Floors](assets/svg-maps/svg8.png)
+![Outlining Floors](assets/svg-maps/svg9.png)
 
 ### Step 7 - Space Highlights
 
 Next, check the architectural floor plan to see which spaces need signage e.g. rest rooms, stairs or cafe spots. These spaces can have a filled space highlight that compliments the background color of the map.
 
-![Space Highlights](assets/svg-maps/svg-step7.png)
+![Space Highlights](assets/svg-maps/svg10.png)
 
 ### Step 8 - Compare Floor Plans
 
@@ -116,7 +116,7 @@ Once you have labeled each room layer, you can create another layer “text”. 
 
 On the final new layer, add icons to your map. Icons should follow the branding guidelines e.g. style, colors, line weight/thickness etc. Ensure colors chosen for icons also stand out against the map background.
 
-![Adding Icons](assets/svg-maps/svg17.png)
+![Adding Icons](assets/svg-maps/svg18.png)
 
 ### Step 14 - Checking Names/ID
 

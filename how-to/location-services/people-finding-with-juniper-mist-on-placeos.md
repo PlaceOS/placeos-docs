@@ -33,7 +33,7 @@ When you configure the PlaceOS connection to Mist, you'll need the `site_id` for
 2. select the organisation and site (orange arrow below)
 3. Record and save the UUID from the URL (highlighted in orange)
 
-![Org ID (green), Site ID (orange)](<../../.gitbook/assets/image (5) (1) (1).png>)
+![Org ID (green), Site ID (orange)](<../../.gitbook/assets/image (4) (1) (2).png>)
 
 ### Configure Mist Websocket Driver
 

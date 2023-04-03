@@ -40,7 +40,7 @@ These instructions are taken directly from Microsoft Documentation: [Configure A
 4. Select the Expose an API blade.\
    ![](<../../.gitbook/assets/image (6) (2).png>)
 5. Set the App ID URI to your PlaceOS Domain, Azure will automatically add your App ID to the end of the URL. Note down the App ID URI as you will need this for the manifest file.\
-   ![](<../../.gitbook/assets/image (8) (3).png>)
+   ![](<../../.gitbook/assets/image (3) (3).png>)
 6. Add a new scope, configure it with the following details:
    * Scope Name: `access_as_user`
    * Who can consent: Admin & Users.
@@ -72,7 +72,7 @@ To ensure we can obtain the user token after authentication, you will need to re
 5. Add a new Redirect URI and select Web.\
    ![](<../../.gitbook/assets/image (2) (1) (2).png>)
 6. Enter your PlaceOS base domain plus `/outlook/#/book/spaces` for example: `https://placeos.com/outlook/#/book/spaces`\
-   ![](<../../.gitbook/assets/image (13) (1).png>)
+   ![](<../../.gitbook/assets/image (4) (1).png>)
 7. Once the Redirect URI is added, ensure Access tokens and ID Token checkboxes are selected. \
    ![](<../../.gitbook/assets/image (11) (2).png>)
 8. Under supported account types, select only accounts in this domain. \
