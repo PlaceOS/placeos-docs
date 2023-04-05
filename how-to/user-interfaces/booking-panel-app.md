@@ -24,7 +24,7 @@ Enabling Touch to Book provides a button on the user interface that allows users
 Touch to Book will **not** work where PlaceOS is integrated to Microsoft 365 using Delegated Access. Touch to Book will only function where Application Access is used.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Booking Panel showing the Touch to Book button enabled.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (4).png" alt=""><figcaption><p>Booking Panel showing the Touch to Book button enabled.</p></figcaption></figure>
 
 This feature is enabled by adding configuration to modify the PlaceOS Bookings Driver.
 

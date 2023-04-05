@@ -103,6 +103,7 @@
     * [Testing drivers](tutorials/backend/write-a-driver/testing-drivers.md)
   * [Testing Internal Builds](tutorials/backend/testing-internal-builds.md)
 * [Backoffice](tutorials/backoffice/README.md)
+  * [Adding Drivers & Modules](tutorials/backoffice/adding-drivers-and-modules.md)
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 * [Common Configurations](tutorials/common-configurations/README.md)
   * [Webex Instant Connect](tutorials/common-configurations/webex-instant-connect.md)
