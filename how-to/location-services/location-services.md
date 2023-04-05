@@ -1,7 +1,7 @@
 ---
 title: Location Services
-description: Overview on Location Services Integration on PlaceOS
 sidebar_position: 1
+description: Overview on Location Services Integration on PlaceOS
 ---
 
 # Location Services
@@ -97,6 +97,26 @@ Such as an event in a meeting room
   "staff_email": "bob@tmart",
   "staff_name": "Bob Jane"
 }]
+```
+
+### Lockers
+
+Any lockers that are in use on the floor
+
+```yaml
+{
+  "location": "locker",
+  "locker_id": "locker-id",
+  "allocated": true,
+  "building": "zone_1234",
+  "level": "zone_1234",
+
+  # if the locker booking expires
+  "ends_at": 1234567,
+
+  # something we can use to look up the user, might not be available
+  "mac": "bank-id-locker-id-etc"
+}
 ```
 
 ### Configuring Cisco Meraki
