@@ -106,6 +106,7 @@ Any lockers that are in use on the floor
 ```yaml
 {
   "location": "locker",
+  "bank_id": "bank-id",
   "locker_id": "locker-id",
   "allocated": true,
   "building": "zone_1234",
