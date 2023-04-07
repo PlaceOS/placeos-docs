@@ -113,7 +113,7 @@ Any lockers that are in use on the floor
   "level": "zone_1234",
 
   # if the locker booking expires
-  "ends_at": 1234567,
+  expires_at: 1234567,
 
   # something we can use to look up the user, might not be available
   "mac": "bank-id-locker-id-etc"

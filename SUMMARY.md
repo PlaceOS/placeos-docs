@@ -123,6 +123,7 @@
     * [Bookings](reference/drivers/placeos/bookings.md)
     * [Staff API](reference/drivers/placeos/staff\_api.md)
     * [Visitor Mailer](reference/drivers/placeos/visitor-mailer.md)
+    * [Lockers](reference/drivers/placeos/lockers.md)
   * [Microsoft](reference/drivers/microsoft/README.md)
     * [Graph API](reference/drivers/microsoft/graph-api.md)
 * [PlaceOS Skills](reference/placeos-skills.md)
