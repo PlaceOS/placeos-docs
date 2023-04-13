@@ -160,7 +160,7 @@ This feature may alter your analytics results as all bookings will automatically
 
 1. In PlaceOS Backoffice, Navigate to Drivers.
 2. Check if the Auto Desk Checkin driver is added, if not add the driver from the PlaceOS Drivers repo.\
-   ![](<../../.gitbook/assets/image (1).png>)
+   ![](<../../.gitbook/assets/image (1) (5).png>)
 3. Navigate to your tracking or global config system, this is usually identified by a leading \* and called \*OrgName Services.
 4. Add the Auto Desk Checkin driver as a new module to the system.\
    ![](../../.gitbook/assets/image.png)

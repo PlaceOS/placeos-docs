@@ -38,7 +38,7 @@ The API keys can be used for:
 Available Scopes for API Keys are:
 
 * `public`\
-  ``A special scope that can access all routes (supports read and write modifiers)
+  A special scope that can access all routes (supports read and write modifiers)
 * `api_keys`
 * `ldap_authentication`
 * `saml_authentication`
@@ -51,7 +51,7 @@ Available Scopes for API Keys are:
 * `settings`
 * `modules`
 * `guests`\
-  ``A special scope for guests that provides [access to some APIs](https://docs.google.com/document/d/1LyHi1oeuIDE2WIdAmACpNaLhsITB6aALYk52EYVWAVc/edit?usp=sharing)
+  A special scope for guests that provides [access to some APIs](https://docs.google.com/document/d/1LyHi1oeuIDE2WIdAmACpNaLhsITB6aALYk52EYVWAVc/edit?usp=sharing)
 * `systems`
 * `control`\
   `.read`: module class types, function list of a module, module state lookup\

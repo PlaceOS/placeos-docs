@@ -18,10 +18,10 @@ The steps should be completed in the following order:
 The steps in the following pages may need to be performed by different platform administrators in your organisation, so be sure to capture the required information to be passed between each step.
 {% endhint %}
 
-1. ****[**Azure App Registration:**](azure-app-registration.md) Create the Azure App Registration PlaceOS will use to authenticate with the MS Graph API.
+1. [**Azure App Registration:**](azure-app-registration.md) Create the Azure App Registration PlaceOS will use to authenticate with the MS Graph API.
 2. [**Exchange Calendar Group:**](exchange-calendar-group.md) Create an exchange calendar group to provide PlaceOS Access with only the required room resource calendars.
-3. ****[**Limit Application Permissions:** ](limit-application-permissions.md)Apply an application permission to the Exchange Calendar Group.
-4. ****[**Configure PlaceOS Calendar Driver:**](configure-placeos-calendar-driver.md) Apply the required configuration in PlaceOS to allow the platform to connect and read your calendar resources.
+3. [**Limit Application Permissions:** ](limit-application-permissions.md)Apply an application permission to the Exchange Calendar Group.
+4. [**Configure PlaceOS Calendar Driver:**](configure-placeos-calendar-driver.md) Apply the required configuration in PlaceOS to allow the platform to connect and read your calendar resources.
 
 PlaceOS has made the decision to implement our resource calendar visualisation in this method to heavily restrict the application access to organisation calendars.&#x20;
 

@@ -65,7 +65,7 @@ Windows doesn't recognise git symbolic links, since the development is occurring
 If you are only looking to develop drivers then you probably don't need the full partner environment and can skip to the next section.\
 Have a look at the [readme on the repository](https://github.com/place-labs/partner-environment) then run following commands.
 
-1. `git clone` [`https://github.com/place-labs/partner-environment`](https://github.com/place-labs/partner-environment)``
+1. `git clone` [`https://github.com/place-labs/partner-environment`](https://github.com/place-labs/partner-environment)
 2. `cd partner-environment`
 3. `./placeos start`
 4. note the credentials output by the CLI
@@ -78,7 +78,7 @@ This is good for testing drivers end to end or connecting to real devices or ser
 
 Driver development can be performed with a [lightweight spec runner](https://github.com/PlaceOS/drivers#development)
 
-1. `git clone` [`https://github.com/PlaceOS/drivers`](https://github.com/PlaceOS/drivers#development)``
+1. `git clone` [`https://github.com/PlaceOS/drivers`](https://github.com/PlaceOS/drivers#development)
 2. `cd drivers`
 3. `./harness up` (starts the testing UI)
 4. `./harness down` (to terminate the docker containers)

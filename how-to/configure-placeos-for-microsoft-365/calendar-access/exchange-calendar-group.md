@@ -27,7 +27,7 @@ This prevents the PlaceOS Application from reading all calendars in your organis
     ![](https://lh6.googleusercontent.com/0blT69bWnUrRAsGX6tBke\_Y9AIxBU-0fAA6GJotSk3L\_d1pieUshLybfncgYkhTag5TBayG3V6hJ3A4psYsuIfPCiNe1CMFrrAn6Kq\_2-BIAXJOGzi1bfVfCB5vn3YBBABE0CALqrzpWc7QLQg)
 12. Click Next.
 13. Provide a group email address such as `placeosroombooking@yourdomain.com`\
-    ``![](https://lh4.googleusercontent.com/xbv7EXvtjlZOHuHnF9iitO1P668qhh\_hVlglQTSiJqRgaRg-ovpVFGQpaUJN4AJc82wlxyPdsU6vZQihQiYF1rAkPq611aLj1p85LF40JteQykxZymvpupyPP5D\_5TDCfKDn6PuuxIIcODhavA)
+    ![](https://lh4.googleusercontent.com/xbv7EXvtjlZOHuHnF9iitO1P668qhh\_hVlglQTSiJqRgaRg-ovpVFGQpaUJN4AJc82wlxyPdsU6vZQihQiYF1rAkPq611aLj1p85LF40JteQykxZymvpupyPP5D\_5TDCfKDn6PuuxIIcODhavA)
 14. Click Next.
 15. Click Finish.
 16. Note down the group email address as this will be required in the next step.
