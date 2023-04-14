@@ -10,11 +10,11 @@
 1. Login to Microsoft Azure Portal.
 2. Navigate to App Registration blade.
 3. Create a new App Registration called `PlaceOS User Authentication`
-   * See also: [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
    * Supported account types should be ‘Accounts in this organisational directory only’
+   * See also: [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
 4.  Configure a Web Redirect URI with the PlaceOS Redirect URI created in the previous step eg. \`https://placeos-dev.im/auth/oauth2/callback?id=`oauth_strat-Dw9b-5_lO3`\` &#x20;
 
-    <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Paste the PlaceOS Redirect URI into you Azure App Registration</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Paste the PlaceOS Redirect URI into you Azure App Registration</p></figcaption></figure>
 5. Note down the:
    * Application (client) ID as this will be required to be provided to PlaceOS.
    * Directory (tenant) ID as this will be required to be provided to PlaceOS.\

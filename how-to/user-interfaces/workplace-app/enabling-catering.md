@@ -58,7 +58,7 @@ To configure catering per room, it is advised to create a new zone attached to t
 
 7. Navigate to the Systems tab.
 8. Identify systems you would like to have catering and add them to the \<Building> Catering zone.\
-   ![](<../../../.gitbook/assets/image (3) (6).png>)
+   ![](<../../../.gitbook/assets/image (3) (6) (1).png>)
 9. These systems will now have catering enabled, provided a catering menu has been created.
 
 {% hint style="success" %}

@@ -61,7 +61,8 @@ The link will look something like:
 * Modify the link by adding the following parameters\
   `&exec=true&mod=Dashboard&method=scanning_api`
 * So the webhook URL you will provide to the Meraki Dashboard would look something like\
-  https://poc.placeos.com/api/engine/v2/webhook/trig-DHgk0FU1\~p/notify?secret=kfwu5WYc3a1suZ\&exec=true\&mod=Dashboard\&method=scanning\_api
+  `https://poc.placeos.com/api/engine/v2/webhook/trig-DHgk0FU1~p/notify?secret=kfwu5WYc3a1suZ&exec=true&mod=Dashboard&method=scanning_api`
+* This alternate format with no query params can also be provided: `https://poc.placeos.com/api/engine/v2/webhook/trig-DHgk0FU1~p/notify/kfwu5WYc3a1suZ/Dashboard/1/scanning_api` where `1` is the Module number (i.e. Dashboard\_1)
 
 ### Client Integration
 
