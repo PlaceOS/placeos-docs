@@ -19,7 +19,7 @@ This guide will cover the following steps
 A typical zone structure is organisation -> building -> level\
 A location services system should be are configured for each building.
 
-![](<../../.gitbook/assets/image (2) (1) (1).png>)\
+![](<../../.gitbook/assets/image (2) (1) (1) (1).png>)\
 Create a building zone with a `building` tag
 
 ![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)\
@@ -163,7 +163,7 @@ This feature may alter your analytics results as all bookings will automatically
    ![](<../../.gitbook/assets/image (1) (1).png>)
 3. Navigate to your tracking or global config system, this is usually identified by a leading \* and called \*OrgName Services.
 4. Add the Auto Desk Checkin driver as a new module to the system.\
-   ![](<../../.gitbook/assets/image (27).png>)
+   ![](../../.gitbook/assets/image.png)
 5. Once the Module is added, enable it and navigate back to the Systems about page.
 6. Select Unencrypted.
 7.  Enter the below configuration where the zone is a single or list of zones you wish to have the auto desk checkin feature enabled for:

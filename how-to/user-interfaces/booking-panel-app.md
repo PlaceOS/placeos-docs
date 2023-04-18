@@ -41,7 +41,7 @@ This feature is enabled by adding configuration to modify the PlaceOS Bookings D
 6.  Check a Booking Panel to confirm the configuration was set.\
 
 
-    <figure><img src="../../.gitbook/assets/image (3) (6).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Disable Meeting Title
 
@@ -112,4 +112,4 @@ You may decide to show a image on the booking panel, this may be of the room its
 4. Enter configuration: `room_image: absolute_url_to_image`
 5. Save
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
