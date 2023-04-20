@@ -44,13 +44,17 @@ For each level desk metadata should be configured\
         "bookable": true,
 
         # features that can be searched for
-        "features": ["sit_to_stand", "dual_monitor"]
+        "features": ["sit_to_stand", "dual_monitor"],
+        
+        # restrict the desk to user groups
+        "groups": []
     },
     {
         "id": "table-09.B902",
         "name": "B902",
         "bookable": true,
-        "features": []
+        "features": [],
+        "groups": []
     }
 ]
 ```
@@ -163,7 +167,7 @@ This feature may alter your analytics results as all bookings will automatically
    ![](<../../.gitbook/assets/image (1) (1).png>)
 3. Navigate to your tracking or global config system, this is usually identified by a leading \* and called \*OrgName Services.
 4. Add the Auto Desk Checkin driver as a new module to the system.\
-   ![](../../.gitbook/assets/image.png)
+   ![](<../../.gitbook/assets/image (1).png>)
 5. Once the Module is added, enable it and navigate back to the Systems about page.
 6. Select Unencrypted.
 7.  Enter the below configuration where the zone is a single or list of zones you wish to have the auto desk checkin feature enabled for:
@@ -174,3 +178,13 @@ This feature may alter your analytics results as all bookings will automatically
     ```
 8. Save
 9. You should now be able to test creating a desk booking and observe that it is checked in.&#x20;
+
+## Desk Restrictions
+
+Desks can be restricted in PlaceOS through the use of user groups.
+
+User groups may be automatically managed/inherted from the identity management paltform i.e. groups in Azure ActiveDirectory or groups may be manually assigned to a user in PlaceOS User Management.
+
+To restrict a desk to a group of users, simply enter the exact group name in the Groups property of the desk metadata or via the Concierge Desk Manager.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
