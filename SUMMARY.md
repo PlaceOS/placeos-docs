@@ -52,6 +52,7 @@
 * [Deployment](how-to/deployment/README.md)
   * [Deploy AWS Fargate on Modular CloudFormation Stacks](how-to/deployment/fargate-modular.md)
   * [Deploy AWS Fargate on Nested CloudFormation Stacks](how-to/deployment/fargate-nested.md)
+  * [Writing Import Scripts](how-to/deployment/writing-import-scripts.md)
 * [Analytics](how-to/analytics/README.md)
   * [MQTT Integration](how-to/analytics/mqtt-integration.md)
 * [Backoffice](how-to/backoffice/README.md)
