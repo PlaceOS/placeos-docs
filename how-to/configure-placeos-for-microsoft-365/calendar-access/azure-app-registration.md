@@ -1,4 +1,4 @@
-# Azure App Registration
+# Create Azure App Registration (Application Permissions)
 
 ## Prerequisites
 
@@ -26,11 +26,14 @@ After completion of this step, we will apply a policy restriction so the applica
 8. Click 'Add Permission'.
 9. Click 'Microsoft Graph'.
 10. Click 'Application Permissions'.
-11. Search for ‘Calendars.ReadWrite’ and select it.\
+11. Add the following permissions:\
+    \- `Calendars.ReadWrite`\
+    \- `Group.Read.All`\
+    \- `User.Read`\
     ![](https://lh4.googleusercontent.com/XDYxU9SORBoh9sbS-TLeu-RCd0zBGP-4xQjqr7PE2O4a1DQFLj4Az1OXRRVhTPoxLrxjDxrGEd36urvVQIRGmEopr7TAltvIrTsUnewaH8LJumCjrSrYFwb5zTO2FdLkvbqELAYLy8lzZz04Jw)
 12. Click 'Add permissions'.
 13. Click ‘Grant admin consent for xyz’.\
-    ![](https://lh4.googleusercontent.com/0\_pdxgHyIpt2w8becIdycLk-qlFhysR5MQenR0-8qfjileOWDhgPkUj4iuQwEMlWnAJp1Cs0el6iDNX-OBwxAhpFNt35xzr1Gszz8n-qMcjPvAGKW-57pRU6yzBX-YoF1tWHeNLPYaWc\_ASDWA)
+    <img src="../../../.gitbook/assets/image.png" alt="" data-size="original">
 14. Configuration of the Azure App is now complete.
 15. Supply PlaceOS or your integration partner with (be aware that supplying these credentials to PlaceOS prior to configuring the application policy in exchange will allow PlaceOS to see ALL calendars in your organisation):
     * Application ID
