@@ -10,7 +10,7 @@ description: Counts trackable objects, such as laptops, in building areas
 
 ## Functions
 
-* 
+* Used as the top level of a stack including location services and Staff API, which handles all tracking and location services for user devices.
 * 
 * 
 
