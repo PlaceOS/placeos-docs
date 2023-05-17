@@ -164,10 +164,10 @@ This feature may alter your analytics results as all bookings will automatically
 
 1. In PlaceOS Backoffice, Navigate to Drivers.
 2. Check if the Auto Desk Checkin driver is added, if not add the driver from the PlaceOS Drivers repo.\
-   ![](<../../.gitbook/assets/image (1) (1).png>)
+   ![](<../../.gitbook/assets/image (1) (1) (3).png>)
 3. Navigate to your tracking or global config system, this is usually identified by a leading \* and called \*OrgName Services.
 4. Add the Auto Desk Checkin driver as a new module to the system.\
-   ![](<../../.gitbook/assets/image (1).png>)
+   ![](<../../.gitbook/assets/image (1) (1).png>)
 5. Once the Module is added, enable it and navigate back to the Systems about page.
 6. Select Unencrypted.
 7.  Enter the below configuration where the zone is a single or list of zones you wish to have the auto desk checkin feature enabled for:

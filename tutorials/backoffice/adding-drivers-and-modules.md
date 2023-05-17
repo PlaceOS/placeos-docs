@@ -10,7 +10,7 @@ A driver should be considered the parent and only needs to be loaded once.&#x20;
 
 A driver should not have any specific configuration attached, this will be done once the driver is instantiated as a module in a system.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 For More Information you can read the key concepts of [Drivers](../../overview/key-concepts/drivers.md) and [Modules](../../overview/key-concepts/modules.md).
 

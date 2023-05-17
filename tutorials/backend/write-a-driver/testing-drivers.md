@@ -16,6 +16,10 @@ During a test, the loaded module is loaded with a TCP transport, HTTP enabled an
 
 The driver is launched as it would be in production.
 
+### Code documentation
+
+For detailed automatically generated documentation please see the: [Driver Spec API](https://placeos.github.io/driver/DriverSpecs.html)
+
 ## Expectations
 
 Specs have access to Crystal lang [spec expectations](https://crystal-lang.org/api/latest/Spec/Expectations.html). This allows you to confirm expectations.

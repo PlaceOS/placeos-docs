@@ -21,6 +21,10 @@ From a driver structure standpoint there is no difference between these types.
     `transport.http_uri_override = URI.new`
 * All drivers have access to logic helpers when associated with a System
 
+### Code documentation
+
+For detailed automatically generated documentation please see the: [Driver API](https://placeos.github.io/driver/PlaceOS/Driver.html)
+
 ### Queue
 
 The queue is a list of potentially asynchronous tasks that should be performed in a sequence.
