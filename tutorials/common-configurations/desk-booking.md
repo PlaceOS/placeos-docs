@@ -148,7 +148,7 @@ Where a user doesn't have the option to select a desk and are placed near others
 
 In the zone metadata for the `workplace_app` you can edit the `desks` configuration adding the `auto_allocation` configuration option.
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1).png>)
 
 ## Configure Desk Auto Checkin
 

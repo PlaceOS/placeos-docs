@@ -18,7 +18,7 @@ To add the plugin, you will require administrator access to PlaceOS. You can fol
 6. For folder name enter: `outlookplugin`
 7. Ensure repository type is set to `Interface`
 8. Enter GitHub credentials.\
-   ![](<../../.gitbook/assets/image (9).png>)
+   ![](<../../.gitbook/assets/image (9) (2).png>)
 9. You should now be able to pull the repository and reference it in domains as `outlookplugin` i.e. `https://company.placeos.com/outlookplugin/`
 10. If configured correctly, the URL should load the frontend and redirect to Microsoft Authentication.
 
@@ -161,7 +161,7 @@ PlaceOS will either automatically generate the Manifest file or you will be prov
 1. In Outlook, Navigate to the Tools Menu and select Get Add-ins
 2. In the add-in window, select Admin-Managed.
 3. You will see the PlaceOS Room Booking add-in.\
-   ![](<../../.gitbook/assets/image (4) (2).png>)
+   ![](<../../.gitbook/assets/image (4) (2) (1).png>)
 4. Select the Room Booking Add-in tile.&#x20;
 5. Once installed, users will need to sign into the add-in with their corporate credentials.\
    ![](<../../.gitbook/assets/image (16) (1) (1).png>)

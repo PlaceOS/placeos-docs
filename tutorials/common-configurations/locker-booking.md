@@ -98,7 +98,7 @@ This data relates to the locker bank, a locker bank consists of multiple lockers
 
 Configuration of this data will allow the Workplace App to return available locker banks:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -148,7 +148,7 @@ Where L1-01 has a size configuration of:
 ```
 ````
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Enabling the Locker Booking
 

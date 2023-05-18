@@ -102,7 +102,7 @@ As an example, you may want hot and cold drinks available to your staff in all m
 
 #### 3. Check or Uncheck catering items in the list to make them available for that level
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ### Restrict Catering to Rooms
 
@@ -196,3 +196,27 @@ Charge Codes belong to a building, noting each regional building may have a diff
 #### 5. Click on Save Changes
 
 ![Step 5 screenshot](https://images.tango.us/workflows/995cb2f4-1690-433f-9d5b-41390cba5b37/steps/ebd83f19-fcbc-4201-955a-c1b4a7c35e12/cebe9813-654f-4529-9089-572d324c2bc4.png?crop=focalpoint\&fit=crop\&fp-x=0.6382\&fp-y=0.7113\&fp-z=2.3216\&w=1200\&border=2%2CF4F2F7\&border-radius=8%2C8%2C8%2C8\&border-radius-inner=8%2C8%2C8%2C8\&blend-align=bottom\&blend-mode=normal\&blend-x=0\&blend-w=1200\&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n\&mark-x=408\&mark-y=321\&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0zODQmaD0xMDAmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+## Catering Dashboard
+
+The Catering Dashboard is an interface that may be installed in the kitchen or other relevant areas to display catering orders and their status to function/event staff.&#x20;
+
+The catering dashboard can be accessed via Concierge or configured for [unattended access](../panel-login.md) using an API Key.
+
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+### Managing Orders
+
+You can simply click the order row to expand the order and show each individual item.
+
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+The items may be ticked off as they are prepared or delivered.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Order Status
+
+The order Status may be updated via the Catering Dashboard by clicking on the status dropdown and selecting the relevant status.
+
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

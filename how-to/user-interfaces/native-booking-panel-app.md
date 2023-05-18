@@ -22,7 +22,7 @@ Configuring the App requires three key pieces of information:
 
 1. On first launch, the app will provide some brief instructions detailing the required information as above.
 2. On the second screen, enter your PlaceOS Domain/URL. This is the URL your users use to access existing PlaceOS Apps eg. `https://yourcompany.placeos.run`\
-   ![](<../../.gitbook/assets/image (4).png>)
+   ![](<../../.gitbook/assets/image (4) (2).png>)
 3. Next, enter the API Key you have generated or was provided to you by PlaceOS Support.\
    ![](<../../.gitbook/assets/image (2) (3).png>)
 4. Finally select the room you wish the panel to display. If you have multiple systems a drop down will be shown, or you can search for the system by name or ID.\
