@@ -187,4 +187,4 @@ User groups may be automatically managed/inherted from the identity management p
 
 To restrict a desk to a group of users, simply enter the exact group name in the Groups property of the desk metadata or via the Concierge Desk Manager.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (7).png" alt=""><figcaption></figcaption></figure>

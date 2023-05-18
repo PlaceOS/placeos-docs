@@ -19,7 +19,7 @@ The Workplace App is the primary user interface for end users to interact with t
 
 The Workplace app is typically configured at the base route of your PlaceOS Deployment i.e. `https://yourdomain.placeos.run` it may also be accessed via `https://yourdomain.placeos.run/workplace`&#x20;
 
-This is configured by the directory of the application configured for the relevant domain per the [Deploy a Frontend Interface](deploy-frontend.md) guide.
+This is configured by the directory of the application configured for the relevant domain per the [Deploy a Frontend Interface](../deploy-frontend.md) guide.
 
 Some instances may also have a development interface, pulling from the development branch, this is typically configured as `https://yourdomain.placeos.run/workplace-dev`
 
