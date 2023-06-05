@@ -106,6 +106,7 @@
   * [Adding Drivers & Modules](tutorials/backoffice/adding-drivers-and-modules.md)
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 * [Common Configurations](tutorials/common-configurations/README.md)
+  * [Asset Manager](tutorials/common-configurations/asset-manager.md)
   * [Catering](how-to/user-interfaces/workplace-app/enabling-catering.md)
   * [Locker Booking](tutorials/common-configurations/locker-booking.md)
   * [Webex Instant Connect](tutorials/common-configurations/webex-instant-connect.md)
