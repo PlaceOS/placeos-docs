@@ -8,13 +8,7 @@ In a standard deployment, the booking panel app will be deployed at `https://you
 
 The below table lists the available configuration paramters and where they are configured, full details are included below.
 
-| Parameter              | Type     | Config Location | Behaviour                                                   |
-| ---------------------- | -------- | --------------- | ----------------------------------------------------------- |
-| `disable_book_now`     | `bool`   | System or Zone  | Enables the Touch to book function on the booking panel UI. |
-| `hide_meeting_title`   | `bool`   | System or Zone  | Hides the Title of the Meeting                              |
-| `hide_meeting_details` | `bool`   | System or Zone  | Hides the Details of the Meeting                            |
-| `show_qr_code`         | `bool`   | System or Zone  | Hide the QR Code in the UI                                  |
-| `room_image`           | `string` | System or Zone  | Show an image in the top half of the panel UI               |
+<table><thead><tr><th width="249">Parameter</th><th width="95">Type</th><th width="157">Config Location</th><th>Behaviour</th></tr></thead><tbody><tr><td><code>disable_book_now</code></td><td><code>bool</code></td><td>System or Zone</td><td>Enables the Touch to book function on the booking panel UI.</td></tr><tr><td><code>hide_meeting_title</code></td><td><code>bool</code></td><td>System or Zone</td><td>Hides the Title of the Meeting</td></tr><tr><td><code>hide_meeting_details</code></td><td><code>bool</code></td><td>System or Zone</td><td>Hides the Details of the Meeting</td></tr><tr><td><code>show_qr_code</code></td><td><code>bool</code></td><td>System or Zone</td><td>Hide the QR Code in the UI</td></tr><tr><td><code>room_image</code></td><td><code>string</code></td><td>System or Zone</td><td>Show an image in the top half of the panel UI</td></tr></tbody></table>
 
 ## Enable Touch to Book
 
@@ -113,3 +107,22 @@ You may decide to show a image on the booking panel, this may be of the room its
 5. Save
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+
+### Enabling Ms / Google Push events
+
+This allows the panel to update as soon as bookings are modified. Reducing reliance on polling.
+
+````yaml
+```yaml
+# find this id by going to: https://yourdomain.placeos.run/auth/authority
+push_authority: authority-GAdySsf05
+
+# use this for MS events
+push_notification_url: 'https://yourdomain.placeos.run/api/engine/v2/notifications/office365'
+
+# use this for Google events
+push_notification_url: 'https://yourdomain.placeos.run/api/engine/v2/notifications/google'
+```
+````
+
+Once configured, the panels will register for push events and maintain the subscription
