@@ -114,9 +114,6 @@ This allows the panel to update as soon as bookings are modified. Reducing relia
 
 ````yaml
 ```yaml
-# find this id by going to: https://yourdomain.placeos.run/auth/authority
-push_authority: authority-GAdySsf05
-
 # use this for MS events
 push_notification_url: 'https://yourdomain.placeos.run/api/engine/v2/notifications/office365'
 
