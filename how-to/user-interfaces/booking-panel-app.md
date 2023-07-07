@@ -112,7 +112,6 @@ You may decide to show a image on the booking panel, this may be of the room its
 
 This allows the panel to update as soon as bookings are modified. Reducing reliance on polling.
 
-````yaml
 ```yaml
 # use this for MS events
 push_notification_url: 'https://yourdomain.placeos.run/api/engine/v2/notifications/office365'
@@ -120,6 +119,5 @@ push_notification_url: 'https://yourdomain.placeos.run/api/engine/v2/notificatio
 # use this for Google events
 push_notification_url: 'https://yourdomain.placeos.run/api/engine/v2/notifications/google'
 ```
-````
 
 Once configured, the panels will register for push events and maintain the subscription
