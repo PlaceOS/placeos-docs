@@ -62,7 +62,6 @@ If a driver for your device is not available, you can raise a request to have th
 * XY Sense
 * Xovis
 * Steinel
-* SecureOS Auto ANPR
 * CMS Engage
 * SenseStudio
 * Kaiterra
@@ -72,24 +71,28 @@ If a driver for your device is not available, you can raise a request to have th
 
 ### Network
 
+* Cisco DNA Spaces
 * Cisco Meraki
 * Cisco CMX
 * Cisco ISE
-* Cisco Switches
+* Cisco Catalyst Switches
 * Juniper Mist
 
-### Base Building Systems & Building Access Control
+### Building Management Systems&#x20;
 
-* Lenel
+* BACnet Secure Connect
+* Johnson Controls Metasys
+* Siemens Desigo
+* Delta Controls
+
+### Building Access Control Systems
+
 * Gallagher
-* SecurOS & SecurOS Auto for Automatic Number Plate Recognition
-* Infosilem
+* Lenel
 * Rhombus
-* Axiom
-* Siemens Diego
-* Johnsons Control
-* Honeywell
-* Delta
+* AxiomXA
+
+
 
 ### Energy
 
@@ -166,5 +169,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Foxtel Set Top Box
 * Gantner Relaxx Lockers
 * Crestron Fusion
+
+
 
 ###
