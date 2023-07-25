@@ -209,3 +209,13 @@ end
 ```
 
 All status queried in this manner is returned as a `JSON::Any` object
+
+#### Publishing events
+
+Emulating notifications is also possible
+
+```crystal
+DriverSpecs.mock_driver "Place::LogicExample" do
+  publish("channel/path", {payload: "data"}.to_json)
+end
+```
