@@ -78,3 +78,12 @@ API Keys are typically passed in the header of the request, however can be used 
 1. Navigate to the API Key Page in Backoffice located in the Admin Tab.
 2. Click the trash icon to remove the key.\
    [![Remove API Key](https://github.com/PlaceOS/docs/raw/generate-api-key/how-to/backoffice/assets/remove-key.png)](https://github.com/PlaceOS/docs/blob/generate-api-key/how-to/backoffice/assets/remove-key.png)
+
+## Scopes for Common Applications
+
+X-API Keys can be used for unattended panel authentication, scopes are required for these applications to function. The table below outlines common applications that require API Keys and the associated scopes.
+
+| Application   | Scopes                                                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Booking Panel | <p><code>users.read</code> </p><p><code>systems.read</code></p><p><code>control</code> </p><p><code>zones.read</code> (optional)<br>`metadata.read` (optional)</p> |
+| Map Kiosk     | `public.read`                                                                                                                                                      |
