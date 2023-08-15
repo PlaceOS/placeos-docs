@@ -24,6 +24,7 @@ Settings for basic free busy status, where the room indicates a pending meeting 
 ```yaml
 pending_before: 5 # pending 5min before a meeting start
 pending_period: 0 # show the room as busy as soon as it starts
+disable_end_meeting: true
 ```
 
 #### Manual Check-in
