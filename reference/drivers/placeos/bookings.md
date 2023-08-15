@@ -40,7 +40,7 @@ The booking panel itself performs the meeting end, this prevents meetings from b
 
 #### Sensor Based Check-in
 
-Utilises a sensor to check-in the meeting (requires the Check-In Helper driver)
+Utilises a sensor to check-in the meeting (requires the 'Check-In Helper' module in the system)
 
 ```yaml
 pending_before: 5 # pending 5min before a meeting start
