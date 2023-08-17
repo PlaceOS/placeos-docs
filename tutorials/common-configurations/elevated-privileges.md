@@ -8,7 +8,7 @@ description: >-
 
 These are the resources that users can access as privileges are raised
 
-<table><thead><tr><th width="160">Resource</th><th width="154">Standard User</th><th width="218">Manager</th><th>Administrator</th></tr></thead><tbody><tr><td>Assets</td><td>View</td><td>Create, Update, Delete</td><td>Create, Update, Delete</td></tr><tr><td>Metadata</td><td>View</td><td>Create, Update</td><td>Create, Update, Delete</td></tr><tr><td>Zones</td><td>View</td><td>Create, Update</td><td>Create, Update, Delete</td></tr><tr><td>Systems</td><td>View</td><td>Create, Update</td><td>Create, Update, Delete, Add / Remove Module</td></tr><tr><td>Modules</td><td>None</td><td>None</td><td>Create, Update, Delete, Start, Stop (logic only) and View</td></tr><tr><td>Settings</td><td>None</td><td>View</td><td>Create, Update</td></tr></tbody></table>
+<table><thead><tr><th width="160">Resource</th><th width="154">Standard User</th><th width="218">Manager</th><th>Administrator</th></tr></thead><tbody><tr><td>Assets</td><td>View</td><td>Create, Update, Delete</td><td>Create, Update, Delete</td></tr><tr><td>Metadata</td><td>View</td><td>Create, Update</td><td>Create, Update, Delete</td></tr><tr><td>Zones</td><td>View</td><td>Create, Update</td><td>Create, Update, Delete</td></tr><tr><td>Systems</td><td>View</td><td>Create, Update</td><td>Create, Update, Delete, Add / Remove Module</td></tr><tr><td>Modules</td><td>None</td><td>None</td><td>Create, Update, Delete, Start, Stop (logic only) and View all types</td></tr><tr><td>Settings</td><td>None</td><td>View</td><td>Create, Update</td></tr></tbody></table>
 
 This allows a sufficiently privileged individual to perform tasks such as:
 
