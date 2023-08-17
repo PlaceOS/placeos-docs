@@ -53,12 +53,7 @@ Once the data is received by the device, they will display the custom configurat
 
 The following dictionary is required for generating custom configuration:
 
-| key          | type   | Required                                      | example                                                              |
-| ------------ | ------ | --------------------------------------------- | -------------------------------------------------------------------- |
-| `bundleId`   | String | <p>iOS: Required<br>Android: Not Required</p> | place.technology.bookingPanel                                        |
-| `apiKey`     | String | Required                                      | `2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU` |
-| `domainName` | String | Required                                      | [https://placeos-dev.aca.im](https://placeos-dev.aca.im)             |
-| `SystemId`   | String | Optional                                      | `sys-223fn20n`                                                       |
+<table><thead><tr><th width="184">key</th><th width="86.33333333333331">type</th><th width="140">Required</th><th>example</th></tr></thead><tbody><tr><td><code>bundleId</code></td><td>String</td><td>iOS: Required<br>Android: Not Required</td><td>place.technology.bookingPanel</td></tr><tr><td><code>apiKey</code></td><td>String</td><td>Required</td><td><code>2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU</code></td></tr><tr><td><code>domainName</code></td><td>String</td><td>Required</td><td><a href="https://placeos-dev.aca.im">https://placeos-dev.aca.im</a></td></tr><tr><td><code>SystemId</code></td><td>String</td><td>Optional</td><td><code>sys-223fn20n</code></td></tr></tbody></table>
 
 ```xml
 <?xml version="1.0"?>

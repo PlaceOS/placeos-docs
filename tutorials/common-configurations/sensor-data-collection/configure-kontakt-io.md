@@ -146,7 +146,7 @@ These drivers should be added to your services or tracking system, typically den
 
 ## Add Room Sensor Drivers
 
-***
+Each room you would like to leverage occupancy and auto-release functionality will require the Kontakt IO Room Sensor Driver.
 
 #### 1. Click on Systems
 

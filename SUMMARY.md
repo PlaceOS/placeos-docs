@@ -115,6 +115,7 @@
     * [Configure Kontakt IO](tutorials/common-configurations/sensor-data-collection/configure-kontakt-io.md)
     * [Configuring Meraki](tutorials/common-configurations/sensor-data-collection/configuring-meraki.md)
     * [Configuring DNA Spaces](tutorials/common-configurations/sensor-data-collection/configuring-dna-spaces.md)
+  * [Elevated Privileges](tutorials/common-configurations/elevated-privileges.md)
 
 ## Reference
 
