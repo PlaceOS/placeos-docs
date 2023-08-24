@@ -1,12 +1,15 @@
 ---
 title: PlacesOS Microsoft Graph API Driver
-description: Communicates with the Microsoft Graph API to share information with Microsoft services
+description: >-
+  Communicates with the Microsoft Graph API to share information with Microsoft
+  services
 ---
 
-# PlaceOS Microsoft Graph API Driver
+# Graph API
+
 * Type: Service Driver
 * Dependencies: None
-* Source: https://github.com/PlaceOS/drivers/blob/master/drivers/microsoft/graph_api.cr
+* Source: https://github.com/PlaceOS/drivers/blob/master/drivers/microsoft/graph\_api.cr
 
 ## Functions
 
@@ -15,104 +18,103 @@ description: Communicates with the Microsoft Graph API to share information with
 * Sends emails and notifies invited users
 * Creates email templates for specified responses
 
-
-
 ## Settings
 
-| Key | Type | Default value | Description |
-| --- | --- | --- | --- |
-|`calendar_service_account`| String | service_account@email.address | --- |
-|`calendar_config`| Object | {tenant: "", client_id: "", client_secret: "", conference_type: ""} | --- |
-|`rate_limit`| --- | 5 |  limits the number of API calls so it does not exceed limits set by Microsoft |
-|`mailer_from`| String | email_or_office_userPrincipalName |   |
-|`email_templates`| Object | {visitor: {checkin: {subject: "%{name} has arrived", text:    "for your meeting at %{time}", }}} |   |
-
-
+| Key                        | Type   | Default value                                                                                  | Description                                                                  |
+| -------------------------- | ------ | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `calendar_service_account` | String | service\_account@email.address                                                                 | ---                                                                          |
+| `calendar_config`          | Object | {tenant: "", client\_id: "", client\_secret: "", conference\_type: ""}                         | ---                                                                          |
+| `rate_limit`               | ---    | 5                                                                                              | limits the number of API calls so it does not exceed limits set by Microsoft |
+| `mailer_from`              | String | email\_or\_office\_userPrincipalName                                                           |                                                                              |
+| `email_templates`          | Object | {visitor: {checkin: {subject: "%{name} has arrived", text: "for your meeting at %{time}", \}}} |                                                                              |
 
 ## Status Variables
 
 ### `connected`
+
 Shows true if the driver is connected to the Microsoft Graph API and false if not
 
 #### Schema/Type
-Boolean 
+
+Boolean
 
 #### Examples
 
-##### 1. If connected to Microsoft Graph API
+**1. If connected to Microsoft Graph API**
+
 ```
 {
 "connected": true 
 }
 ```
 
-
-
-
-
-
-
 ## Commands
 
-
-
 ### `queue_size`
+
 Displays the number of API calls waiting in the queue to be sent to Microsoft Graph API
 
 #### Parameters
+
 | Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| None |  |  |  |  |
+| ---- | --------- | ---- | ------- | ----------- |
+| None |           |      |         |             |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If no calls waiting in the queue:
+
+**1. If no calls waiting in the queue:**
+
 ```
 0
 ```
 
-
 ### `in_flight_size`
+
 Displays the number of API calls to Microsoft Graph API currently in progress
 
 #### Parameters
+
 | Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| None |  |  |  |  |
+| ---- | --------- | ---- | ------- | ----------- |
+| None |           |      |         |             |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If no calls in progress:
+
+**1. If no calls in progress:**
+
 ```
 0
 ```
 
-
-
-
-
-
-
 ### `generate_svg_qrcode`
+
 Generates an SVG of a QR code which encodes the given text.
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| text | true | String | N/A | The text the user wishes to turn into a QR code |
+
+| Name | Required? | Type   | Default | Description                                     |
+| ---- | --------- | ------ | ------- | ----------------------------------------------- |
+| text | true      | String | N/A     | The text the user wishes to turn into a QR code |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. 
+
+**1.**
+
 ```
 <?xml version="1.0" standalone="yes"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="231" height="231" shape-rendering="crispEdges">
@@ -141,51 +143,58 @@ Generates an SVG of a QR code which encodes the given text.
 </svg>
 ```
 
-
-
 ### `generate_png_qrcode`
+
 Generates the code for a PNG version of a QR code which encodes the text provided at the specified size.
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| text | true | String | N/A | The text the user wishes to turn into a QR code |
-| size | false | Int32 | 128 | The size of the image the user wants to create |
+
+| Name | Required? | Type   | Default | Description                                     |
+| ---- | --------- | ------ | ------- | ----------------------------------------------- |
+| text | true      | String | N/A     | The text the user wishes to turn into a QR code |
+| size | false     | Int32  | 128     | The size of the image the user wants to create  |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. For the word "Test" at size 100:
+
+**1. For the word "Test" at size 100:**
+
 ```
 iVBORw0KGgoAAAANSUhEUgAAAGQAAABkEAYAAAAgckkXAAADrklEQVR4nO2TMZLkMAzE5v+fvqvaumSCpcfnpgl6gESJioJI9uuPiPzKa1pAhIwBESkwICIFBkSkwICIFBgQkQIDIlJgQEQKDIhIgQERKTAgIgUGRKTAgIgUGBCRAgMiUmBARAoMiEgBLiCvH/jnWf/u/jy1n9Pg1KYHdXWg3QuQ8qGdVHBq04O6OtDuBUj50E4qODVaA1M+Uwv21H7eBU6N1kADkoXmcwROjdZAA5KF5nMETi21AFML1v0uzb/bZxqc2vaBdr9L8+/2mQantn2g3e/S/Lt9psGpfdtAU54p/+39TINT+7aBpjxT/tv7mQan9m0DTXmm/Lf3Mw1ObftAaYu0vZ/T4NS2D5S2SNv7OQ1ObftAaYu0vZ/T4NRoDZxa1FSdp/bzLnBqtAYakCw0nyNwarQGGpAsNJ8jcGq/NZB2nvWn3aedVHBq04O6OtAt92knFZza9KCuDnTLfdpJBay2k+6F2bZg27G1YQzIs7C1YQzIs7C1/0gt8JTnU+9PA1a7FwPCvD8NWO1eDAjz/jQ4tbOLSlvsKf+pOlN9vgvcV6YWbLv/VJ2pPt8F7itTC7bdf6rOVJ/vYv1XphYv5TP1r+53Uz7TLFR+p3twqfvddVILmXo35TPNQuV3ugeXut9dJ7WQqXdTPtMsVP6M1EJOMeXzrUH4jQd95R0Dkn3XgDwMA5J914AspXtA3UFLLd6WBab5HAFW+wwDkq3TDc3nCLDaZxiQbJ1uaD5HgNV20h2olE/q3S3B/F8WKrMxIAZECgyIAWnlbMOnzu7/dtc/+273fSo45enFv7pIqf921z/7bvd9Kjjl6cW/ukip/3bXP/tu930qOGVaY1OL0V1nqn7qXSo4NVoDuxcvVWeqfupdKjg1WgO7Fy9VZ6p+6l0qOLUtizT131Qd2n0qOGUDYkBI4JQNiAEhgVN+akCmPKf8nwLuK92Lkaqf+le355T/U8B9pXsxUvVT/+r2nPJ/CrivdC9Gqn73v1L/TZHqc7dnGpxaaoFTA0oNtLtO9+Kl+tztmQanllrg1IBSA+2u0714qT53e6bBqdEaSFvs7oXsvr8N3FdoDTcgBgQFreEGxICgSC1A95n6V6oP3e92e1LBKXctdPpM/SvVh+53uz2p4JS7Fjp9pv6V6kP3u92eVBYqi9yHAREpMCAiBQZEpMCAiBQYEJECAyJSYEBECgyISIEBESkwICIFBkSkwICIFBgQkQIDIlJgQEQKDIhIgQERKTAgIgV/AVWCRjmiRazdAAAAAElFTkSuQmCC
 ```
 
-
-
-
 ### `send_mail`
-Sends an email to any email address NOTE - ONE of message_plaintext OR message_html IS required.
+
+Sends an email to any email address NOTE - ONE of message\_plaintext OR message\_html IS required.
+
+Security Level: Support
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| to | true | String OR Array(String) | N/A | the destation of the email |
-| subject | true | String | N/A | The subject line of the email |
-| message_plaintext | false | String | nil | The message body of the email |
-| message_html | false | String | nil | The message body of the email that will be displayed as HTML |
-| resource_attachments | false | Array(ResourceAttachment) | [] | Array of objects to be attached to the email |
-| cc | false | String OR Array(String) | [] | --- |
-| bcc | false | String OR Array(String) | [] | --- |
-| from | false | String Or Array(String) Or Nil | nil | --- |
+
+| Name                  | Required? | Type                           | Default | Description                                                  |
+| --------------------- | --------- | ------------------------------ | ------- | ------------------------------------------------------------ |
+| to                    | true      | String OR Array(String)        | N/A     | the destation of the email                                   |
+| subject               | true      | String                         | N/A     | The subject line of the email                                |
+| message\_plaintext    | false     | String                         | nil     | The message body of the email                                |
+| message\_html         | false     | String                         | nil     | The message body of the email that will be displayed as HTML |
+| resource\_attachments | false     | Array(ResourceAttachment)      | \[]     | Array of objects to be attached to the email                 |
+| cc                    | false     | String OR Array(String)        | \[]     | ---                                                          |
+| bcc                   | false     | String OR Array(String)        | \[]     | ---                                                          |
+| from                  | false     | String Or Array(String) Or Nil | nil     | ---                                                          |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If the email is not registered to a user
+
+**1. If the email is not registered to a user**
+
 ```
 {
     "error": "request failed",
@@ -214,22 +223,27 @@ Sends an email to any email address NOTE - ONE of message_plaintext OR message_h
 }
 ```
 
-
-
 ### `access_token`
+
 Generates an access token for an admin to log in to Microsoft services as a given user.
 
+Security Level: Admin
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| user_id | false | String | nil | email address of the user as registered in BackOffice |
+
+| Name     | Required? | Type   | Default | Description                                           |
+| -------- | --------- | ------ | ------- | ----------------------------------------------------- |
+| user\_id | false     | String | nil     | email address of the user as registered in BackOffice |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If user does not exist:
+
+**1. If user does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -255,7 +269,9 @@ Generates an access token for an admin to log in to Microsoft services as a give
     ]
 }
 ```
-##### 2. If user exists:
+
+**2. If user exists:**
+
 ```
 {
     "expires": "2023-03-09T12:51:24Z",
@@ -263,16 +279,20 @@ Generates an access token for an admin to log in to Microsoft services as a give
 }
 ```
 
-
 ### `get_groups`
+
 Shows all the groups a given user belongs to.
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| user_id | false | String | nil | email address of the user to search |
+
+| Name     | Required? | Type   | Default | Description                         |
+| -------- | --------- | ------ | ------- | ----------------------------------- |
+| user\_id | false     | String | nil     | email address of the user to search |
 
 #### Response Schema
+
 ```
 [
 {
@@ -283,7 +303,9 @@ Shows all the groups a given user belongs to.
 ```
 
 #### Example Responses
-##### 1. If the user exists and is a member of at least one group:
+
+**1. If the user exists and is a member of at least one group:**
+
 ```
 [
     {
@@ -292,7 +314,9 @@ Shows all the groups a given user belongs to.
     }
 ]
 ```
-##### 2. If user does not exist:
+
+**2. If user does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -318,25 +342,27 @@ Shows all the groups a given user belongs to.
 }
 ```
 
-
-
-
-
-
 ### `get_members`
+
 Shows all the members of a given group.
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| group_id | false | String | nil | The group ID - can be obtained by running get_groups on a known group member |
+
+| Name      | Required? | Type   | Default | Description                                                                   |
+| --------- | --------- | ------ | ------- | ----------------------------------------------------------------------------- |
+| group\_id | false     | String | nil     | The group ID - can be obtained by running get\_groups on a known group member |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 2. If group exisits:
+
+**2. If group exisits:**
+
 ```
 [
     {
@@ -352,7 +378,9 @@ Shows all the members of a given group.
         "username": "variant@company.com.au"
     }
 ```
-##### 1. If group does not exist:
+
+**1. If group does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -378,31 +406,28 @@ Shows all the members of a given group.
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
 ### `list_users`
+
 Lists all users if no paramaters are filled. Can be filtered by name.
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| query | false | String | nil | filters results whose "name" category contains the entered string |
-| limit | false | Int32 | nil | Limits the number of results to the number entered |
+
+| Name  | Required? | Type   | Default | Description                                                       |
+| ----- | --------- | ------ | ------- | ----------------------------------------------------------------- |
+| query | false     | String | nil     | filters results whose "name" category contains the entered string |
+| limit | false     | Int32  | nil     | Limits the number of results to the number entered                |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If group does not exist:
+
+**1. If group does not exist:**
+
 ```
 [
     {
@@ -427,22 +452,27 @@ Lists all users if no paramaters are filled. Can be filtered by name.
   ]
 ```
 
-
-
 ### `get_user`
-Searches for a user by their email. The user_id is considered their email - this is different from what is returned in the results under "id".
+
+Searches for a user by their email. The user\_id is considered their email - this is different from what is returned in the results under "id".
+
+Security Level: Support
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| user_id | true | String | N/A | The user email to search for |
+
+| Name     | Required? | Type   | Default | Description                  |
+| -------- | --------- | ------ | ------- | ---------------------------- |
+| user\_id | true      | String | N/A     | The user email to search for |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 2. If user exists:
+
+**2. If user exists:**
+
 ```
 {
     "id": "85348a34-1c88-4ed6-9efd-92gefgddb2daa",
@@ -451,7 +481,9 @@ Searches for a user by their email. The user_id is considered their email - this
     "username": "ACA.test@company.com.au"
 }
 ```
-##### 1. If user does not exist:
+
+**1. If user does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -478,23 +510,27 @@ Searches for a user by their email. The user_id is considered their email - this
 }
 ```
 
-
-
-
 ### `list_calendars`
+
 Lists the calendars that belong to a user, specified by their email as registered in BackOffice.
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| user_id | true | String | N/A | The email of the user, as shown in BackOffice |
+
+| Name     | Required? | Type   | Default | Description                                   |
+| -------- | --------- | ------ | ------- | --------------------------------------------- |
+| user\_id | true      | String | N/A     | The email of the user, as shown in BackOffice |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 2. If user exists:
+
+**2. If user exists:**
+
 ```
 [
     {
@@ -506,7 +542,9 @@ Lists the calendars that belong to a user, specified by their email as registere
     }
 ]
 ```
-##### 1. If user does not exist:
+
+**1. If user does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -532,27 +570,27 @@ Lists the calendars that belong to a user, specified by their email as registere
 }
 ```
 
-
-
-
-
-
-
-
 ### `get_user_manager`
+
 Gets the registered manager of a given user
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| user_id | true | String | N/A | The email of the user to search |
+
+| Name     | Required? | Type   | Default | Description                     |
+| -------- | --------- | ------ | ------- | ------------------------------- |
+| user\_id | true      | String | N/A     | The email of the user to search |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If user does not have a registered manager:
+
+**1. If user does not have a registered manager:**
+
 ```
 {
     "error": "request failed",
@@ -577,31 +615,27 @@ Gets the registered manager of a given user
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
 ### `list_groups`
+
 Lists all groups if no parameters entered.
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| query | false | String | nil | filters search results by whether the query appears in the "name" |
+
+| Name  | Required? | Type   | Default | Description                                                       |
+| ----- | --------- | ------ | ------- | ----------------------------------------------------------------- |
+| query | false     | String | nil     | filters search results by whether the query appears in the "name" |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. 
+
+**1.**
+
 ```
 [
     {
@@ -620,36 +654,36 @@ Lists all groups if no parameters entered.
 ]
 ```
 
-
-
-
-
-
-
-
-
-
 ### `get_group`
-Searches for a group by its group ID, as returned in the "id" section of list_groups UNLIKE with get_user
+
+Searches for a group by its group ID, as returned in the "id" section of list\_groups UNLIKE with get\_user
+
+Security Level: Support
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| group_id | true | String | N/A | The group ID to use in the search - can be found by using list_groups |
+
+| Name      | Required? | Type   | Default | Description                                                            |
+| --------- | --------- | ------ | ------- | ---------------------------------------------------------------------- |
+| group\_id | true      | String | N/A     | The group ID to use in the search - can be found by using list\_groups |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If id is correct:
+
+**1. If id is correct:**
+
 ```
 {
     "id": "0sfdf6063-7bd8-4e8sdfd-92d4-ea3sdfd38",
     "name": "LaptopUsers-Brisbane"
 }
 ```
-##### 2. If group does not exist:
+
+**2. If group does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -674,34 +708,38 @@ Searches for a group by its group ID, as returned in the "id" section of list_gr
 }
 ```
 
-
-
-
-
-
 ### `list_events`
+
 Searches for all events happening on a given calendar within a specified time frame.
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| calendar_id | true | String | N/A | The EMAIL of the user OR the EMAIL of the room whose calender you want to search |
-| period_start | true | Int64 | N/A | The start of the time period to search in Unix time |
-| period_end | true | Int64 | N/A | The end of the period to search in Unix time |
-| time_zone | false | String | nil | filters results by time zone - format: 2/3 letter timezone code e.g UTC, AU |
-| user_id | false | String | nil | filters results by user EMAIL (Only necessary if the calendar_id you are looking up belongs to a room) |
-| include_cancelled | false | Boolean | false | if true, includes cancelled events |
+
+| Name               | Required? | Type    | Default | Description                                                                                             |
+| ------------------ | --------- | ------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| calendar\_id       | true      | String  | N/A     | The EMAIL of the user OR the EMAIL of the room whose calender you want to search                        |
+| period\_start      | true      | Int64   | N/A     | The start of the time period to search in Unix time                                                     |
+| period\_end        | true      | Int64   | N/A     | The end of the period to search in Unix time                                                            |
+| time\_zone         | false     | String  | nil     | filters results by time zone - format: 2/3 letter timezone code e.g UTC, AU                             |
+| user\_id           | false     | String  | nil     | filters results by user EMAIL (Only necessary if the calendar\_id you are looking up belongs to a room) |
+| include\_cancelled | false     | Boolean | false   | if true, includes cancelled events                                                                      |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If the user or room has no events in the given time frame:
+
+**1. If the user or room has no events in the given time frame:**
+
 ```
 []
 ```
-##### 4. If the room or user has events within the given time frame:
+
+**4. If the room or user has events within the given time frame:**
+
 ```
 [
     {
@@ -783,7 +821,9 @@ Searches for all events happening on a given calendar within a specified time fr
         "online_meeting_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDZlZDdmMzUtNWYzYy00NGJkLWE2N2QtNmYyOTMyMGFjYjRl%40thread.v2/0?context=%7b%22Tid%22%3a%22e50f-a2fe-41c6-af48-4bd90ecc006e%22%7d"
     }
 ```
-##### 3. If calendar_id does not exist:
+
+**3. If calendar\_id does not exist:**
+
 ```
 {
     "error": "request failed",
@@ -809,31 +849,31 @@ Searches for all events happening on a given calendar within a specified time fr
 }
 ```
 
-
-
-
-
-
-
-
 ### `delete_event`
-Deletes an event from the calendar. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list_events
+
+Deletes an event from the calendar. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list\_events
+
+Security Level: Support
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| calendar_id | true | String | N/A | The user Email OR the room EMAIL |
-| event_id | true | String | N/A | The ID of the event as returned by list_events |
-| user_id | false | String | nil | IF the calendar_id is the email of a ROOM, this filters by the email of a user |
-| notify | false | Boolean | false | notifies attendees if set to true |
-| comment | false | String | nil | adds a comment to the cancellation notification |
+
+| Name         | Required? | Type    | Default | Description                                                                     |
+| ------------ | --------- | ------- | ------- | ------------------------------------------------------------------------------- |
+| calendar\_id | true      | String  | N/A     | The user Email OR the room EMAIL                                                |
+| event\_id    | true      | String  | N/A     | The ID of the event as returned by list\_events                                 |
+| user\_id     | false     | String  | nil     | IF the calendar\_id is the email of a ROOM, this filters by the email of a user |
+| notify       | false     | Boolean | false   | notifies attendees if set to true                                               |
+| comment      | false     | String  | nil     | adds a comment to the cancellation notification                                 |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+
+**1. If request fails:**
+
 ```
 {
     "error": "request failed",
@@ -866,29 +906,31 @@ Deletes an event from the calendar. Requires a calendar ID (the email of the roo
 }
 ```
 
-
-
-
-
-
 ### `decline_event`
-Declines an event from the calendar. Event is still shown but crossed out. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list_events
+
+Declines an event from the calendar. Event is still shown but crossed out. Requires a calendar ID (the email of the room OR a user) AND a meeting ID - a long set of numbers and letters as returned by list\_events
+
+Security Level: Support
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| calendar_id | true | String | N/A | The user Email OR the room EMAIL |
-| event_id | true | String | N/A | The ID of the event as returned by list_events |
-| user_id | false | String | nil | IF the calendar_id is the email of a ROOM, this filters by the email of a user |
-| notify | false | Boolean | false | notifies attendees if set to true |
-| comment | false | String | nil | adds a comment to the cancellation notification |
+
+| Name         | Required? | Type    | Default | Description                                                                     |
+| ------------ | --------- | ------- | ------- | ------------------------------------------------------------------------------- |
+| calendar\_id | true      | String  | N/A     | The user Email OR the room EMAIL                                                |
+| event\_id    | true      | String  | N/A     | The ID of the event as returned by list\_events                                 |
+| user\_id     | false     | String  | nil     | IF the calendar\_id is the email of a ROOM, this filters by the email of a user |
+| notify       | false     | Boolean | false   | notifies attendees if set to true                                               |
+| comment      | false     | String  | nil     | adds a comment to the cancellation notification                                 |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+
+**1. If request fails:**
+
 ```
 {
     "error": "request failed",
@@ -914,46 +956,39 @@ Declines an event from the calendar. Event is still shown but crossed out. Requi
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### `create_event`
+
 Creates an event
 
+Security Level: Support
+
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| title | true | String | N/A | The title of the event |
-| event_start | true | Int64 | N/A | Start time of the event in Unix time |
-| event_end | false | String | N/A | End time of the even in Unix time |
-| description | false | String | N/A | description of the event sent to the attendees |
-| attendees | false | String/Array(String) | nil | --- |
-| location | false | String | nil | Shown on the invitation, human-readable name |
-| timezone | false | String | nil | 2/3 letter timezone code - affects time meeting may appear for all users |
-| user_id | false | String | nil | The SERVER user to create the event AS |
-| calendar_id | false | String | nil | The EMAIL of the ROOM |
-| online_meeting_id | false | String | nil | Need to generate meeting with provider first, these details will be provided by then |
-| online_meeting_provider | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
-| online_meeting_url | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
-| online_meeting_sip | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
-| online_meeting_phones | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
-| online_meeting_pin | false | String | nil | Need to generate meeting with provider first, these details will be provided by them |
-#### Response Schema
-```
-```
+
+| Name                      | Required? | Type                 | Default | Description                                                                          |
+| ------------------------- | --------- | -------------------- | ------- | ------------------------------------------------------------------------------------ |
+| title                     | true      | String               | N/A     | The title of the event                                                               |
+| event\_start              | true      | Int64                | N/A     | Start time of the event in Unix time                                                 |
+| event\_end                | false     | String               | N/A     | End time of the even in Unix time                                                    |
+| description               | false     | String               | N/A     | description of the event sent to the attendees                                       |
+| attendees                 | false     | String/Array(String) | nil     | ---                                                                                  |
+| location                  | false     | String               | nil     | Shown on the invitation, human-readable name                                         |
+| timezone                  | false     | String               | nil     | 2/3 letter timezone code - affects time meeting may appear for all users             |
+| user\_id                  | false     | String               | nil     | The SERVER user to create the event AS                                               |
+| calendar\_id              | false     | String               | nil     | The EMAIL of the ROOM                                                                |
+| online\_meeting\_id       | false     | String               | nil     | Need to generate meeting with provider first, these details will be provided by then |
+| online\_meeting\_provider | false     | String               | nil     | Need to generate meeting with provider first, these details will be provided by them |
+| online\_meeting\_url      | false     | String               | nil     | Need to generate meeting with provider first, these details will be provided by them |
+| online\_meeting\_sip      | false     | String               | nil     | Need to generate meeting with provider first, these details will be provided by them |
+| online\_meeting\_phones   | false     | String               | nil     | Need to generate meeting with provider first, these details will be provided by them |
+| online\_meeting\_pin      | false     | String               | nil     | Need to generate meeting with provider first, these details will be provided by them |
+| #### Response Schema      |           |                      |         |                                                                                      |
+| \`\`\`                    |           |                      |         |                                                                                      |
+| \`\`\`                    |           |                      |         |                                                                                      |
 
 #### Example Responses
-##### 1. If request fails:
+
+**1. If request fails:**
+
 ```
 {
     "error": "request failed",
@@ -979,41 +1014,23 @@ Creates an event
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### `send_template`
+
 Send an email template you have created to given users to get specific responses back from them.
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| to | true | String | N/A | email to send the template to |
-| template | true | String | N/A | template to send |
-| args | true | String | N/A | --- |
-| resource_attachments | false | String/Array(string) | [] | --- |
-| attachments | false | String/Array(string) | [] | --- |
-| cc | false | String/Array(string) | [] | --- |
-| bcc | false | String/Array(string) | [] | --- |
-| from | false | String | null | optional email to use as sender |
 
-
+\| Name | Required? | Type | Default | Description | | to | true | String | N/A | email to send the template to | | template | true | String | N/A | template to send | | args | true | String | N/A | --- | | resource\_attachments | false | String/Array(string) | \[] | --- | | attachments | false | String/Array(string) | \[] | --- | | cc | false | String/Array(string) | \[] | --- | | bcc | false | String/Array(string) | \[] | --- | | from | false | String | null | optional email to use as sender |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+
+**1. If request fails:**
+
 ```
 {
     "error": "request failed",
@@ -1039,33 +1056,23 @@ Send an email template you have created to given users to get specific responses
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
 ### `build_template`
+
 Generates an email template to be used for questionaires/to generate specific responses
 
 #### Parameters
-| Name | Required? | Type | Default | Description |
-| string | true | String | N/A | --- |
-| args | true | String | N/A | --- |
 
-
+\| Name | Required? | Type | Default | Description | | string | true | String | N/A | --- | | args | true | String | N/A | --- |
 
 #### Response Schema
+
 ```
 ```
 
 #### Example Responses
-##### 1. If request fails:
+
+**1. If request fails:**
+
 ```
 {
     "error": "request failed",
