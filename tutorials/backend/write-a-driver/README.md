@@ -25,6 +25,18 @@ From a driver structure standpoint there is no difference between these types.
 
 For detailed automatically generated documentation please see the: [Driver API](https://placeos.github.io/driver/PlaceOS/Driver.html)
 
+1. All drivers should require placeos-driver before anything else.
+2. There should be a single class that inherits \`PlaceOS::Driver\`
+
+```crystal
+require "placeos-driver"
+require "..."
+
+class Place::Bookings < PlaceOS::Driver
+  ...
+end
+```
+
 ### Queue
 
 The queue is a list of potentially asynchronous tasks that should be performed in a sequence.
