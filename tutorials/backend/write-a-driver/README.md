@@ -32,7 +32,7 @@ For detailed automatically generated documentation please see the: [Driver API](
 require "placeos-driver"
 require "..."
 
-class Place::Bookings < PlaceOS::Driver
+class MyDriver < PlaceOS::Driver
   ...
 end
 ```
