@@ -405,6 +405,8 @@ Use the `Security` annotation to define the access level of the function. The op
 * Administrator `Level::Administrator`
 * Support `Level::Support`
 
+When a user initiates a function call, within a driver, you can access that users id via the `invoked_by_user_id` function, which returns a `String` if a user initiated the call.
+
 ### Interfaces
 
 Drivers can expose any methods that make sense for the device, service or logic they encapsulate. Across these there are often core sets of similar functionality. Interfaces provide a standard way of implementing and interacting with this.
