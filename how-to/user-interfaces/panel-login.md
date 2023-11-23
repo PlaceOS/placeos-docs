@@ -40,6 +40,6 @@ Most PlaceOS applications can be passed a the API Key as a query parameter, so a
 
 Would be [encoded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/encodeURIComponent) and configured as the continue param:
 
-/auth/login?continue=%2Fbooking-panel%2F%23%2F**panel**%2Fsys-F2u1l-oyxJ%3F**x-api-key**%3Dbe2aba8c8bd2be2a5c719339695b5a63.Edm7STXHDbacbsytz4RGvFc51PnBdQtcU9Yo7BSSVHw
+/auth/login?continue=%2Fbooking-panel%2F%23%2F%3F**panel**%2Fsys-F2u1l-oyxJ%3F**x-api-key**%3Dbe2aba8c8bd2be2a5c719339695b5a63.Edm7STXHDbacbsytz4RGvFc51PnBdQtcU9Yo7BSSVHw
 
 The application will use the API key for authentication and will display a bootstrap page for system selection, unless provided additional params that specify a system.
