@@ -48,3 +48,4 @@ Configure the `default_app` parameter to the folder for the workplace app, typic
 
 <figure><img src="https://images.tango.us/workflows/c6ab9ee6-6558-4856-8c44-4741d474640b/steps/8d0c3769-2375-4a64-a5c5-6fc6ed472a8f/1237d673-30fa-46d5-b7a8-e8f8b2e14d98.png?crop=focalpoint&#x26;fit=crop&#x26;fp-x=0.5550&#x26;fp-y=0.3032&#x26;fp-z=3.0426&#x26;w=1200&#x26;border=2%2CF4F2F7&#x26;border-radius=8%2C8%2C8%2C8&#x26;border-radius-inner=8%2C8%2C8%2C8&#x26;blend-align=bottom&#x26;blend-mode=normal&#x26;blend-x=0&#x26;blend-w=1200&#x26;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&#x26;mark-x=590&#x26;mark-y=300&#x26;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0yMCZoPTU3JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" alt=""><figcaption></figcaption></figure>
 
+***
