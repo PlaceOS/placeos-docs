@@ -27,7 +27,7 @@ See the [Docker Image](https://hub.docker.com/r/yobasystems/alpine-nginx) and [S
 Distributed key-value store used for PlaceOS service discovery and leader election.\
 See the [Docker Image](https://hub.docker.com/r/bitnami/etcd) and [Source on GitHub](https://github.com/etcd-io/etcd).
 
-#### `rethinkdb`
+#### `postgresql`
 
 Database for permanent storage of PlaceOS configuration. Configuration: Three node cluster in 3 different availability zones within same region for [HA](system-architecture.md#HADC).\
 See the [Docker Image](https://hub.docker.com/\_/rethinkdb) and [Source on GitHub](https://github.com/rethinkdb/rethinkdb).
@@ -57,11 +57,6 @@ See the [Docker Image](https://hub.docker.com/r/placeos/triggers) and [Source on
 Reverse proxy incoming communications from devices/services to PlaceOS core. This is required to handle protocols like SNMP - often not required.\
 See the [Docker Image](https://hub.docker.com/r/placeos/dispatch) and [Source on GitHub](https://github.com/PlaceOS/dispatch).
 
-#### `rubber-soul`
-
-Stream RethinkDB changes to Elasticsearch, which will index the documents for fast text searching.\
-See the [Docker Image](https://hub.docker.com/r/placeos/rubber-soul) and [Source on GitHub](https://github.com/PlaceOS/rubber-soul).
-
 ### High Availability and Distributed Control <a href="#hadc" id="hadc"></a>
 
 High availability works by distributing services through Availability Zones. For platforms like AWS Fargate, containers are initially automatically distributed. If a zone becomes unavailable, containers are re-launched in an alternative Availability Zone.
@@ -72,7 +67,7 @@ High availability works by distributing services through Availability Zones. For
 
 [**Modules**](overview/modules.md) are instances of a Driver, that represent a single real-world device/service. They are distributed among the instances of core and exist in memory of the PlaceOS core containers. Modules reflect their runtime state in Redis, making it available for other components of the system
 
-The PlaceOS Backoffice web application manages them both via PlaceOS REST-API. It updates module configuration via RethinkDB.
+The PlaceOS Backoffice web application manages them both via PlaceOS REST-API. It updates module configuration via PostgresQL.
 
 #### Service Discovery
 
