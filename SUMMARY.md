@@ -107,6 +107,7 @@
   * [Adding Drivers & Modules](tutorials/backoffice/adding-drivers-and-modules.md)
   * [Add Zone Structure](tutorials/backoffice/add-zone-structure.md)
 * [Common Configurations](tutorials/common-configurations/README.md)
+  * [Visitor Bookings (without room)](tutorials/common-configurations/visitor-bookings-without-room.md)
   * [Asset Manager](tutorials/common-configurations/asset-manager.md)
   * [Catering](how-to/user-interfaces/workplace-app/enabling-catering.md)
   * [Locker Booking](tutorials/common-configurations/locker-booking.md)
