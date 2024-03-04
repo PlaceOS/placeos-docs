@@ -35,3 +35,13 @@ To support booking multiple visitors, the room resource needs to allow conflicts
 
 To make the resource available, we need to add the new room resource as a system to PlaceOS so users can book the resource.
 
+The new system should be in the relevant ORG, BUILDING and LEVEL Zones and contain the Calendar and Bookings modules.
+
+## Configure Workplace App
+
+Once the system is created, we need to tell Workplace App which system to use for room bookings where no room is selected.
+
+1. Navigate to the appropriate Zone Metadata (typically the ORG Zone).
+2. Locate `workplace_app` metadata.
+3. Under the `events` property, add `no_space_resource` and provide it the System ID of the system created in the previous step, e.g. `"no_space_resource": "sys-GfcVon~oyd"`
+
