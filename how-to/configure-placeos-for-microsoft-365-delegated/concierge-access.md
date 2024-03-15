@@ -46,7 +46,7 @@ You can create a single Concierge security group, noting that all members of thi
 ### Delegate Room Resources
 
 1. In 365 Admin Centre select the Resources Blade -> Rooms & Equipment.\
-   ![](<../../.gitbook/assets/image (6) (3).png>)
+   ![](<../../.gitbook/assets/image (6) (3) (1).png>)
 2. Select the room you want to provide concierge access to.
 3. Select Edit Exchange Settings.
 4. Select mailbox delegation.

@@ -102,7 +102,7 @@ As an example, you may want hot and cold drinks available to your staff in all m
 
 #### 3. Check or Uncheck catering items in the list to make them available for that level
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Restrict Catering to Rooms
 
@@ -203,7 +203,7 @@ The Catering Dashboard is an interface that may be installed in the kitchen or o
 
 The catering dashboard can be accessed via Concierge or configured for [unattended access](../panel-login.md) using an API Key.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Managing Orders
 
@@ -213,10 +213,10 @@ You can simply click the order row to expand the order and show each individual 
 
 The items may be ticked off as they are prepared or delivered.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ### Order Status
 
 The order Status may be updated via the Catering Dashboard by clicking on the status dropdown and selecting the relevant status.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>

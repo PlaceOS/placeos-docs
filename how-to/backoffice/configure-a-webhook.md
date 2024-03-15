@@ -13,7 +13,7 @@ Webhooks are defined as a condition of a trigger. Add a new trigger that represe
 
 Once configured this trigger needs to be applied to a system before it's active.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Add a trigger to a system</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (3).png" alt=""><figcaption><p>Add a trigger to a system</p></figcaption></figure>
 
 Once you've added the trigger, you can obtain the webhook URL by clicking the link icon
 

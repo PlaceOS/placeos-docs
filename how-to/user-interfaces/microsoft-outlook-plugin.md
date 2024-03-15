@@ -145,7 +145,7 @@ Follow the same steps to access the Custom App under Integrated Apps in Exchange
 
 1. Select the Custom Room Booking app.
 2. Select Update App under Actions.\
-   ![](<../../.gitbook/assets/image (7) (1).png>)
+   ![](<../../.gitbook/assets/image (7) (1) (2).png>)
 3. Provide your `manifest.xml` URL Path.
 4. Click Update.
 5. Any changes in the `manifest.xml` will be applied and the plugin will be updated.

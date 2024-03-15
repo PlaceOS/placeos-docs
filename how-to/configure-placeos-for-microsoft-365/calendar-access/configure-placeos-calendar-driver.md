@@ -52,7 +52,7 @@ calendar_config:
 
 In order to test the Calendar Driver with Delegated Access for Microsoft 365 you will require at least 1 system configured with a room resource and the Microsoft Graph API Calendar Module and Bookings Module added to the system.
 
-![](<../../../.gitbook/assets/image (7).png>)
+![](<../../../.gitbook/assets/image (7) (1).png>)
 
 1. Navigate to a system configured with the correct modules and a valid room resource address.
 2. Under Modules, execute `poll_events` against the Bookings\_1 module.\

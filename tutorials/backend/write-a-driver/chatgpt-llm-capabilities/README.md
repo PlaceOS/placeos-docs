@@ -6,7 +6,7 @@ description: Using drivers to provide capabilities to large language models
 
 It's possible to create a custom LLM chat bot per system, providing the LLM with the ability to execute functions within the system.
 
-<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Example system configuration</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Example system configuration</p></figcaption></figure>
 
 For a system to work as a ChatGPT chat bot it requires the [PlaceOS LLM Interface driver](https://github.com/PlaceOS/drivers/blob/master/drivers/place/llm/llm.cr).\
 This driver is used to define the system prompt and the initial message to display to the user.
@@ -47,7 +47,7 @@ See the example [TODO driver](https://github.com/PlaceOS/drivers/blob/master/dri
 
 Either OpenAI or Azure APIs can be used to provide LLM model functionality. API keys can be defined for each domain in the internal settings.
 
-<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 #### Settings
 
