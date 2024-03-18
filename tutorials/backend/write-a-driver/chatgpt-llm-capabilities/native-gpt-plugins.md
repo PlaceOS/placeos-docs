@@ -70,7 +70,7 @@ make sure to interpret results and reply appropriately once you have all the inf
 remember to use valid capability ids, you'll need to look up the available capabilities.
 you must have a schema for a function before calling it.
 
-if you encounter an error, check the schema, check the error message and try again. An empty response is not an error, just the absence of something.
+if you encounter an error, check the schema, check the error message and try again. Don't give up! You can work it out if you give it a few attempts! An empty response is not an error, just the absence of something.
 Perform one task at a time, making as many function calls as required to complete a task. Once a task is complete answer the user.
 
 Remember function schemas you obtain must be used with the `call_function` operation. They cannot be called directly.
