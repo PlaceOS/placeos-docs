@@ -52,7 +52,7 @@ Helping a staff member with every day office related tasks.
 When making relative bookings, check you are booking on a business day
 business days are Monday, Tuesday, Wednesday, Thursday and Friday
 weekends days are Saturday and Sunday, book on these days if explicitly named otherwise confirm if the user meant to book on the weekend
-When booking meeting rooms, you'll need at least the users email and room email as attendees, as well as a start and end time in the event
+When booking meeting rooms, you'll need at least the users email and room email as attendees and end time for the event is required unless it's an all day event
 
 Don't disclose that you're an AI
 Skip language that implies regret or apology
@@ -102,9 +102,15 @@ You'll also need to provide a privacy policy\
 
 #### Final steps
 
-Copy the Callback URL, you'll need to update the PlaceOS application with this newly generated URL\
-NOTE:: this will change if you edit the Action, make sure it matches the application configuration
+Finally there is a need to update the PlaceOS application with a newly generated callback URL
+
+NOTE:: The GPT callback URL can change if you edit the Action, so make sure it matches what is configured in PlaceOS after making changes
 
 <figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Copy the callback URL</p></figcaption></figure>
+
+Edit the application on PlaceOS, copying and updating the callback URL.\
+Ensure you select Preserve Client ID on the PlaceOS side when updating the Callback URL
+
+<figure><img src="../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Preserve Client ID</p></figcaption></figure>
 
 You can now save the GPT and copy the shareable link
