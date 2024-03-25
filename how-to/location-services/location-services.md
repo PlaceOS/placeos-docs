@@ -64,6 +64,25 @@ Such as a desk
 }
 ```
 
+Desks highlight based on **desk** metadata stored against each level zone:
+
+```yaml
+[
+    {
+        "id": "table-07.001.status",
+        "name": "Desk 07.001",
+        "map_id": "table-07.001.status",
+        "bookable": true,
+        "features": ["standing"]
+    }
+    # ...
+]
+```
+
+Where bookable is false, desks highlight based on sensor data
+
+NOTE:: no metadata is required for **area** locations assuming there is a matching map\_id, in which case the highlighting is based on the used capacity (low, medium or high)
+
 #### Booking
 
 Such as an event in a meeting room
