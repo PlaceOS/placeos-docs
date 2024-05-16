@@ -89,6 +89,7 @@ If a driver for your device is not available, you can raise a request to have th
 
 * Gallagher
 * Lenel
+* Inner Range Integriti
 * Rhombus
 * AxiomXA
 
@@ -96,6 +97,7 @@ If a driver for your device is not available, you can raise a request to have th
 
 ### Energy
 
+* Igor
 * Leviton
 
 ### Video Conferencing / Unified Collaboration
@@ -105,6 +107,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Pexip Management API
 * Polycom RealPresence Group Series
 * Cisco Webex Instant Connect
+* Zoom Rooms API
 
 ### Displays
 
