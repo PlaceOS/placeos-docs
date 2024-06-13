@@ -13,7 +13,7 @@ High level network diagram of an implementation orchestrated via Kubernetes on A
 
 ### Microservices running in PlaceOS Kubernetes Cluster <a href="#microservices" id="microservices"></a>
 
-![Kubernetes diagram](https://github.com/PlaceOS/local/blob/master/images/service-graph.png?raw=true)
+![PlaceOS microservices](https://github.com/PlaceOS/local/blob/master/images/service-graph.png?raw=true)
 
 #### `ingress`
 
