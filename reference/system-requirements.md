@@ -47,7 +47,7 @@ See [PlaceOS Kubernetes Terraform](https://github.com/place-labs/k8s-terraform/)
   * 1x 20GB
   * 1x 100GB
 
-#### OR Linux VM based Deployment
+#### OR Linux VM based Deploymentm for development/testing purposes
 
 * `docker-compose`
 * Minimum node size:
