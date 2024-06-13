@@ -13,9 +13,7 @@ High level network diagram of an implementation orchestrated via Kubernetes on A
 
 ### Microservices running in PlaceOS Kubernetes Cluster <a href="#microservices" id="microservices"></a>
 
-PlaceOS service integrators and support partners manage these microservices. They work in different combinations to best suit the needs of each site.
-
-![Kubernetes diagram](assets/k8s-components.png)
+![Kubernetes diagram](https://github.com/PlaceOS/local/blob/master/images/service-graph.png?raw=true)
 
 #### `ingress`
 
