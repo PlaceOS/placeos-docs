@@ -32,7 +32,8 @@
     * `Group.Read.All`
     * `User.Read.All`
     * `offline_access`
-13. This completes the App Registration.
+13. Click 'Grant admin consent'
+14. This completes the App Registration.
 
 {% hint style="success" %}
 For more detailed information about the permissions required by PlaceOS, please reference the [Microsoft Azure Permissions Table.](../../../reference/microsoft-azure-permissions.md)
