@@ -32,6 +32,8 @@
     * `Group.Read.All`
     * `User.Read.All`
     * `offline_access`
+    * `openid`
+    * `profile`
 13. Click 'Grant admin consent'
 14. This completes the App Registration.
 
