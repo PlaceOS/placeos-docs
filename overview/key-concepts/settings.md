@@ -1,7 +1,7 @@
 ---
 title: Settings
-description: Settings can be configured at any level
 sidebar_position: 6
+description: Settings can be configured at any level
 ---
 
 # Settings
@@ -42,7 +42,25 @@ JSON is a common data-interchange format designed to be readable for humans, and
 
 Different layers define settings which then combine to produce the final configuration. This simplifies large deployments, standardizes systems and reduces management overhead.
 
-Systems inherit all the settings from each zone that they are in. Zones pass down their settings to all systems within them. Similarly, modules inherit all the settings from the driver that they instantiate.
+Systems inherit all the settings from each zone that they are in. Zones pass down their settings to all systems within them. Similarly, Modules inherit all the settings from the driver that they instantiate.
+
+Only Systems and Modules inherit Settings
+
+#### Systems
+
+Systems inherit settings from their Zones, in the order specified on their Zones tab (highest priority at top).
+
+&#x20;   Zone Settings (in the hierarchical order specified by the System) > System Settings
+
+#### Modules
+
+**Logic modules** inherit settings from both the Driver from which they are instantiated and the System in which they are added (including the settings that the System has inherited from it's Zones). System settings override Driver settings.
+
+&#x20;   Driver settings > Zone Settings (in the hierarchical order specified by the System) > System Settings > Logic Module Settings
+
+All **other Module types** (e.g. Device, Service) only inherit Settings from the Driver from which they are instantiated.
+
+&#x20;   Driver settings > Logic Module Settings
 
 ### Specific Overrules General
 

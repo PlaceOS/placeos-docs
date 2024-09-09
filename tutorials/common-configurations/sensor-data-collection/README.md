@@ -88,16 +88,8 @@ The following will enable the tabs if they are not available
 
 #### Sensor placement
 
-* Type: zones
-* URL: [https://editor.place.tech/sensor-map/#/editor?src=\{{map\_id\}}](https://editor.place.tech/sensor-map/#/editor?src=\{{map\_id\}}https://editor.place.tech/map-regions/#/editor?src=\{{map\_id\}})
-* Add Condition: `map_id` truthy
-
 ![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
 
 #### Region mapping
-
-* Type: zones
-* URL: [https://editor.place.tech/map-regions/#/editor?src=\{{map\_id\}}](https://editor.place.tech/sensor-map/#/editor?src=\{{map\_id\}}https://editor.place.tech/map-regions/#/editor?src=\{{map\_id\}})
-* Add Condition: `map_id` truthy
 
 ![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)

@@ -19,6 +19,10 @@ They serve two main purposes:
    * Systems of the same general concept. For example if you have customer-facing systems zoned separately to internal systems
 2. A point to define [settings](settings.md) that need to affect a set of systems in the same way
 
+### Settings Inheritance
+
+Zones do not inherit settings from the Parent zones.
+
 ### Guides
 
 * [Add Zone Structure to Backoffice](../../tutorials/backoffice/add-zone-structure.md)

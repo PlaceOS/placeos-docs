@@ -1,7 +1,7 @@
 ---
 title: Modules
-description: Modules are instances of drivers
 sidebar_position: 3
+description: Modules are instances of drivers
 ---
 
 # Modules
@@ -38,3 +38,19 @@ Modules must be a part of _at least_ one [system](systems.md), but can be part o
 * A lighting gateway
 * Centrally installed audio-visual equipment
 * A common service such as a chatbot integration
+
+#### Logic Modules
+
+Logic modules are different to all other types of Modules (e.g. Device/Service modules) as they do not communicate to external devices/services. They only have access to the other Modules within the same System and co-ordinate actions across then.
+
+As such, Logic Modules are strictly bound to the first System in which they are added, and should not be added to multiple Systems.
+
+#### Settings Inheritance
+
+Logic modules inherit settings from both the Driver from which they are instantiated and the System in which they are added (including the settings that the System has inherited from it's Zones). System settings override Driver settings.
+
+&#x20;   Driver settings > Zone Settings (in the hierarchical order specified by the System) > System Settings > Logic Module Settings
+
+All other Module types only inherit Settings from the Driver from which they are instantiated.
+
+&#x20;   Driver settings > Logic Module Settings

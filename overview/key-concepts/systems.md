@@ -1,7 +1,7 @@
 ---
 title: Systems
-description: Systems are collections of modules
 sidebar_position: 4
+description: Systems are collections of modules
 ---
 
 # Systems
@@ -21,3 +21,9 @@ Systems often represent physical spaces, such as meeting rooms. They can also re
 ### Systems and Zones
 
 [Zones](zones.md) are groups of systems which can reflect their physical or conceptual groupings. Systems can belong to zero or more zones.
+
+#### Settings Inheritance
+
+Systems inherit settings from their Zones, in the order specified on their Zones tab (highest priority at top).
+
+&#x20;   Zone Settings (in the hierarchical order specified by the System) > System Settings
