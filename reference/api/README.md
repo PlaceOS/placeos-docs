@@ -11,6 +11,6 @@ To generate an API Key you can follow the instructions to [generate an X-API Key
 
 PlaceOS has two main API, you can navigate to the API Swagger using the links in the left navigation menu or navigate directly:
 
-Rest API: [https://placeos.github.io/staff-api-swagger-ui/](https://placeos.github.io/staff-api-swagger-ui/)
+Rest API: [https://placeos.github.io/rest-api-swagger-ui/](https://placeos.github.io/rest-api-swagger-ui/)
 
-Staff API: [https://placeos.github.io/rest-api-swagger-ui/](https://placeos.github.io/rest-api-swagger-ui/)
+Staff API: [https://placeos.github.io/staff-api-swagger-ui/](https://placeos.github.io/staff-api-swagger-ui/)
