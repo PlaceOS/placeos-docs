@@ -119,6 +119,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Sharp (Displays)
 * Screen Technics (Screens/Lifts)
 * PJLink projectors
+* CommBox
 
 ### Video
 
