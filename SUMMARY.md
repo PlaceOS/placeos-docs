@@ -22,8 +22,6 @@
 
 ## How To
 
-* [Notifications](how-to/notifications/README.md)
-  * [Catering Orders](how-to/notifications/catering-orders.md)
 * [Configure PlaceOS for Microsoft 365](how-to/configure-placeos-for-microsoft-365/README.md)
   * [Step 1: Room Calendar Access](how-to/configure-placeos-for-microsoft-365/calendar-access/README.md)
     * [Create Azure App Registration (Application Permissions)](how-to/configure-placeos-for-microsoft-365/calendar-access/azure-app-registration.md)
@@ -85,6 +83,8 @@
   * [Locating Users on a Network](how-to/location-services/locating-users.md)
   * [People Finding with Cisco Meraki on PlaceOS](how-to/location-services/people-finding-with-meraki.md)
   * [People Finding with Juniper Mist on PlaceOS](how-to/location-services/people-finding-with-juniper-mist-on-placeos.md)
+* [Notifications](how-to/notifications/README.md)
+  * [Catering Orders](how-to/notifications/catering-orders.md)
 * [User Interfaces](how-to/user-interfaces/README.md)
   * [Booking Panel App](how-to/user-interfaces/booking-panel-app.md)
   * [Workplace App](how-to/user-interfaces/workplace-app/README.md)
