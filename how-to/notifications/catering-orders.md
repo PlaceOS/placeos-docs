@@ -1,19 +1,8 @@
----
-title: Catering Orders
-sidebar_position: 1
-description: Catering Order Notifications
----
-
 # Catering Orders
 
-Catering orders are linked bookings with a type of `catering-order`.
-Any driver that operates on bookings with a configurable `booking_type` can be used for catering bookings.
-
-
+Catering orders are linked bookings with a type of `catering-order`. Any driver that operates on bookings with a configurable `booking_type` can be used for catering bookings.
 
 ## Examples
-
-
 
 ### Booking Approver
 
@@ -26,8 +15,6 @@ approve_booking_types:
 approve_zones:
 	- building-zone-id
 ```
-
-
 
 ### Booking Notifier
 
@@ -48,4 +35,3 @@ notify:
 Setting `notify_booking_owner` to `true` will send the notifications to the booking creator.
 
 To send cancellation notifications a template must be created for the `bookings.cancelled_catering-order` trigger.
-

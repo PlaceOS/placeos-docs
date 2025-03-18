@@ -22,6 +22,8 @@
 
 ## How To
 
+* [Notifications](how-to/notifications/README.md)
+  * [Catering Orders](how-to/notifications/catering-orders.md)
 * [Configure PlaceOS for Microsoft 365](how-to/configure-placeos-for-microsoft-365/README.md)
   * [Step 1: Room Calendar Access](how-to/configure-placeos-for-microsoft-365/calendar-access/README.md)
     * [Create Azure App Registration (Application Permissions)](how-to/configure-placeos-for-microsoft-365/calendar-access/azure-app-registration.md)
@@ -79,7 +81,7 @@
 * [Location Services](how-to/location-services/README.md)
   * [Location Services](how-to/location-services/location-services.md)
   * [Area Management](how-to/location-services/area-management.md)
-  * [Discovering User Devices](how-to/location-services/capturing\_user\_devices.md)
+  * [Discovering User Devices](how-to/location-services/capturing_user_devices.md)
   * [Locating Users on a Network](how-to/location-services/locating-users.md)
   * [People Finding with Cisco Meraki on PlaceOS](how-to/location-services/people-finding-with-meraki.md)
   * [People Finding with Juniper Mist on PlaceOS](how-to/location-services/people-finding-with-juniper-mist-on-placeos.md)
@@ -128,7 +130,7 @@
 * [Drivers](reference/drivers/README.md)
   * [PlaceOS](reference/drivers/placeos/README.md)
     * [Bookings](reference/drivers/placeos/bookings.md)
-    * [Staff API](reference/drivers/placeos/staff\_api.md)
+    * [Staff API](reference/drivers/placeos/staff_api.md)
     * [Visitor Mailer](reference/drivers/placeos/visitor-mailer.md)
     * [Lockers](reference/drivers/placeos/lockers.md)
   * [Microsoft](reference/drivers/microsoft/README.md)
@@ -151,5 +153,5 @@
 * [Glossary](glossary.md)
 * [🎯 PlaceOS Roadmap](https://portal.productboard.com/placeos/1-placeos-roadmap)
 * [🆘 PlaceOS Support](https://support.place.technology)
-* [👩💻 PlaceOS Github](https://github.com/placeos)
+* [👩‍💻 PlaceOS Github](https://github.com/placeos)
 * [📝 PlaceOS Changelog](https://github.com/PlaceOS/PlaceOS/blob/nightly/CHANGELOG.md)
