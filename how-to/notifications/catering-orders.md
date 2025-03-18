@@ -1,3 +1,9 @@
+---
+title: Catering Orders
+sidebar_position: 1
+description: Catering Order Notifications
+---
+
 # Catering Orders
 
 Catering orders are linked bookings with a type of `catering-order`.
