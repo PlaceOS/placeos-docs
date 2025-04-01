@@ -17,7 +17,7 @@ From a driver structure standpoint there is no difference between these types.
 * The same driver works over a TCP, UDP or SSH transport
 * All drivers support HTTP methods (except logic modules)
   * for example a websocket driver or tcp driver will also be provided a default HTTP client at the base URI of the websocket and IP address of the tcp driver.
-  * this default client URL can be overwritten, for example where the [HTTP port](https://github.com/PlaceOS/drivers/blob/master/drivers/aver/cam520\_pro.cr#L43-L45) is different to the websocket port\
+  * this default client URL can be overwritten, for example where the [HTTP port](https://github.com/PlaceOS/drivers/blob/master/drivers/aver/cam520_pro.cr#L43-L45) is different to the websocket port\
     `transport.http_uri_override = URI.new`
 * All drivers have access to logic helpers when associated with a System
 
@@ -207,7 +207,9 @@ sys.count("Module") #=> 3
 sys.implementing(PlaceOS::Driver::Interface::Powerable) #=> ["Camera", "Display"]
 
 # Look at status on a remote module
-system[:Display][:power] #=> true
+system[:Display][:power] #=> true (JSON::Any)
+system[:Display].status(Bool, :power) #=> true (Bool)
+system[:Display].status?(Bool, :power) #=> true (Bool | Nil)
 
 # Access a different module index
 system[:Display_2][:power]
