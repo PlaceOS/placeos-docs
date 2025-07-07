@@ -3,8 +3,6 @@ title: PlaceOS Workmate Documentation
 description: Complete documentation for PlaceOS Workmate - the employee experience and workplace management solution
 ---
 
-# PlaceOS Workmate Documentation
-
 Welcome to the PlaceOS Workmate documentation! Workmate is our comprehensive employee experience and workplace management solution that helps organizations create engaging, efficient, and flexible workplace environments.
 
 ## Getting Started
@@ -33,7 +31,7 @@ Welcome to the PlaceOS Workmate documentation! Workmate is our comprehensive emp
 Coming soon - detailed documentation for:
 
 - **Getting Started** - Initial setup and configuration
-- **User Guide** - End-user workflows and features  
+- **User Guide** - End-user workflows and features
 - **Administrator Guide** - System configuration and management
 - **API Reference** - Integration and customization options
 - **Troubleshooting** - Common issues and solutions
