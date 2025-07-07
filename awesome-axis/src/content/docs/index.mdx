@@ -1,16 +1,16 @@
 ---
-title: Welcome to PlaceOS Docs
-description: The only integration platform that retrofits commercial building systems – without ripping anything out.
+title: PlaceOS Documentation Hub
+description: Access all PlaceOS product documentation from one central location
 template: splash
 hero:
-  tagline: This docs site provides comprehensive guides for configuring and using PlaceOS.
+  tagline: Welcome to the central hub for all PlaceOS product documentation
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: PlaceOS Overview
-      link: /overview
+    - text: PlaceOS Platform Docs
+      link: /placeos/
       icon: right-arrow
-    - text: Learn more about PlaceOS
+    - text: Visit PlaceOS.com
       link: https://placeos.com
       icon: external
       variant: minimal
@@ -18,48 +18,61 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-# PlaceOS Documentation
+## Available Documentation
 
-PlaceOS is a [software platform](https://placeos.com) which enriches interaction with physical space. It provides tools to design, build and iterate integrated digital experiences for physical environments. To do this, it merges any and all elements - from lighting and AV to entire BMS - without the legacy baggage.
+Select the documentation set you need:
 
-**Integration** of disparate systems, devices and services forms a seamless experience for your space.
+<CardGrid stagger>
+  <Card title="PlaceOS Platform" icon="rocket">
+    Complete documentation for the core PlaceOS platform including deployment, configuration, APIs, and integrations.
+    
+    [View PlaceOS Docs →](/placeos/)
+  </Card>
+  
+  <Card title="PlaceOS Workmate" icon="laptop">
+    Documentation for PlaceOS Workmate - the employee experience and workplace management solution.
+    
+    [View Workmate Docs →](/workmate/)
+  </Card>
+  
+  <Card title="PlaceOS Concierge" icon="user">
+    *Coming Soon*
+    
+    Documentation for PlaceOS Concierge - the visitor management and building services platform.
+  </Card>
+  
+  <Card title="PlaceOS Analytics" icon="chart">
+    *Coming Soon*
+    
+    Documentation for PlaceOS Analytics - workplace insights and reporting dashboards.
+  </Card>
+</CardGrid>
 
-**Automation** boosts workplace efficiency and ease of use for any space.
+## What's in PlaceOS Platform Documentation?
 
-**Iteration** lets your space constantly improve and grow with you and your needs.
+The PlaceOS Platform documentation covers:
 
-### Sections of this site <a href="sections" id="sections"></a>
+- **[Overview](/placeos/overview/)** - Platform architecture and core concepts
+- **[Tutorials](/placeos/tutorials/)** - Step-by-step learning guides  
+- **[How-To Guides](/placeos/how-to/)** - Task-oriented instructions
+- **[Reference](/placeos/reference/)** - API documentation and technical specifications
 
-The documentation for PlaceOS is split into 4 categories.
+## Support Resources
 
-See the [overview](overview) for high-level coverage of topic areas.
+<CardGrid>
+  <Card title="Get Help" icon="email">
+    **Support Email:** [support@placeos.com](mailto:support@placeos.com)
+    
+    **Support Portal:** [support.placeos.com](https://support.placeos.com)
+  </Card>
+  
+  <Card title="Community" icon="discord">
+    **Community Forum:** [community.placeos.com](https://community.placeos.com)
+    
+    **Emergency Support:** Available 24/7 for critical issues
+  </Card>
+</CardGrid>
 
-Try a [tutorial](tutorials) to learn in more detail about a process or feature.
+## Contributing
 
-Read a [how-to guide](how-to) for docs to help you with a specific task.
-
-See the [reference material ](reference)for detailed technical docs.
-
-### Videos and Demonstration Apps
-
-You can watch a [short](https://placeos.wistia.com/medias/bnz61a0wfw) or [in-depth](https://placeos.wistia.com/medias/vyn0rsm5vi) video demonstrating the functions of PlaceOS Backoffice.
-
-Take our [Workplace](https://templates.demo.place.tech/workplace/#/) or [Concierge](https://templates.demo.place.tech/concierge/#/) Demo Apps for a spin.
-
-
-{/* ## Next steps */}
-
-{/* <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Learn about our API" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid> */}
+Interested in contributing to our documentation? Check out our [contributing guidelines](https://github.com/PlaceOS/placeos-docs/blob/main/CONTRIBUTING.md).

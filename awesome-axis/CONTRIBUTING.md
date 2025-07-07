@@ -19,13 +19,24 @@ This interactive script will:
 
 If you prefer to add content manually, follow these steps:
 
-### 1. Create the Markdown File
+### 1. Choose Documentation Set and Create the Markdown File
 
-Create your file in the appropriate directory:
-- **Overview**: `src/content/docs/overview/`
-- **Tutorials**: `src/content/docs/tutorials/`
-- **How-To Guides**: `src/content/docs/how-to/`
-- **Reference**: `src/content/docs/reference/`
+First choose which documentation set you're adding to:
+- **PlaceOS Platform**: `src/content/docs/placeos/`
+- **PlaceOS Workmate**: `src/content/docs/workmate/`
+
+Then create your file in the appropriate directory:
+
+**PlaceOS Platform:**
+- **Overview**: `src/content/docs/placeos/overview/`
+- **Tutorials**: `src/content/docs/placeos/tutorials/`
+- **How-To Guides**: `src/content/docs/placeos/how-to/`
+- **Reference**: `src/content/docs/placeos/reference/`
+
+**PlaceOS Workmate:**
+- **Getting Started**: `src/content/docs/workmate/getting-started/`
+- **User Guide**: `src/content/docs/workmate/user-guide/`
+- **Administration**: `src/content/docs/workmate/administration/`
 
 ### 2. Add Frontmatter
 
@@ -52,17 +63,32 @@ If adding to a section that uses `autogenerate`, your file will appear automatic
 #### For Manual Sections
 Add an entry like this:
 ```javascript
-{ label: 'Your Page Title', slug: 'section/subsection/filename' },
+{ label: 'Your Page Title', slug: 'docset/section/subsection/filename' },
+```
+
+Examples:
+```javascript
+// PlaceOS Platform
+{ label: 'Custom Driver Guide', slug: 'placeos/tutorials/backend/custom-driver' },
+
+// Workmate
+{ label: 'User Permissions', slug: 'workmate/administration/user-permissions' },
 ```
 
 ## Directory Structure
 
 ```
 src/content/docs/
-├── overview/           # Core concepts, languages, protocols
-├── tutorials/          # Step-by-step learning guides
-├── how-to/            # Task-oriented guides
-└── reference/         # API docs, driver docs, system info
+├── index.mdx          # Documentation hub landing page
+├── placeos/           # PlaceOS Platform documentation
+│   ├── overview/      # Core concepts, languages, protocols
+│   ├── tutorials/     # Step-by-step learning guides
+│   ├── how-to/        # Task-oriented guides
+│   └── reference/     # API docs, driver docs, system info
+└── workmate/          # PlaceOS Workmate documentation
+    ├── getting-started/
+    ├── user-guide/
+    └── administration/
 ```
 
 ## Style Guidelines
@@ -134,9 +160,10 @@ title**: **title: Required
 
 ## Script Usage Examples
 
-### Adding a New How-To Guide
+### Adding a New PlaceOS How-To Guide
 ```bash
 npm run add-content
+# Choose: placeos
 # Choose: how-to
 # Choose: authentication
 # Title: Configure LDAP Authentication
@@ -144,14 +171,39 @@ npm run add-content
 # Filename: configure-ldap
 ```
 
-### Adding a New Tutorial Section
+### Adding a New Workmate User Guide
 ```bash
 npm run add-content
-# Choose: tutorials  
+# Choose: workmate
+# Choose: user-guide
+# Choose: booking
+# Title: Advanced Booking Features
+# Description: Using advanced booking options in Workmate
+# Filename: advanced-booking
+```
+
+### Adding a New Documentation Section
+```bash
+npm run add-content
+# Choose: workmate
 # Choose: new
-# New subsection: frontend
-# Title: Building Custom Interfaces
-# Filename: custom-interfaces
+# New section name: mobile-app
+# New section label: Mobile App
+# Choose: new
+# New subsection: setup
+# Title: Getting Started with Mobile App
+# Filename: getting-started
+```
+
+### Adding a New Subsection
+```bash
+npm run add-content
+# Choose: workmate
+# Choose: administration  
+# Choose: new
+# New subsection: reporting
+# Title: Custom Reports
+# Filename: custom-reports
 ```
 
 This creates the file and shows you exactly where to add the navigation entry!

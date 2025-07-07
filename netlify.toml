@@ -1,0 +1,14 @@
+[build]
+  command = "cd awesome-axis && npm install && npm run build"
+  publish = "awesome-axis/dist"
+
+# Redirect all 404s to index.html for SPA behavior (if needed)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Optional: Set Node.js version
+[build.environment]
+  NODE_VERSION = "18"
