@@ -171,6 +171,11 @@ export default defineConfig({
 					items: [
 						{ label: 'Workmate Home', slug: 'workmate' },
 						{
+							label: 'Onboarding',
+							collapsed: true,
+							autogenerate: { directory: 'workmate/onboarding' },
+						},
+						{
 							label: 'Mobile App',
 							collapsed: true,
 							autogenerate: { directory: 'workmate/mobile-app' },
