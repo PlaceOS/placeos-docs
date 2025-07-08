@@ -187,6 +187,14 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: 'PlaceOS Digital Signage',
+					collapsed: true,
+					autogenerate: { directory: 'signage' },
+					// items: [
+					// 	{ label: 'Signage Home', slug: 'signage' },
+					// ],
+				},
 			],
 		}),
 	],
