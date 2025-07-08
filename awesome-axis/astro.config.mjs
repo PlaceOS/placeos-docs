@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://placeosdocs.netlify.app',
 	integrations: [
 		starlight({
 			title: 'PlaceOS Documentation Hub',
@@ -13,6 +14,7 @@ export default defineConfig({
 				alt: 'PlaceOS Logo',
 				replacesTitle: true,
 			},
+			favicon: '/favicon.png',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/placeos' }],
 			sidebar: [
 				{ label: 'Documentation Hub', slug: '' },
