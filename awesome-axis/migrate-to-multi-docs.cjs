@@ -20,7 +20,7 @@ const itemsToMove = ['overview', 'tutorials', 'how-to', 'reference', 'SUMMARY.md
 itemsToMove.forEach(item => {
     const srcPath = path.join(srcDir, item);
     const destPath = path.join(placeosDir, item);
-    
+
     if (fs.existsSync(srcPath)) {
         console.log(`📦 Moving ${item} to placeos/${item}`);
         fs.renameSync(srcPath, destPath);
@@ -53,7 +53,7 @@ Welcome to the PlaceOS documentation! This comprehensive guide covers everything
 
 ---
 
-Need help? Check our [support resources](https://support.placeos.com) or [contact our team](mailto:support@placeos.com).
+Need help? Check our [support resources](https://support.place.technology) or [contact our team](mailto:support@placeos.com).
 `;
 
 fs.writeFileSync(path.join(placeosDir, 'index.md'), placeosIndexContent);
@@ -76,7 +76,7 @@ Complete documentation for the core PlaceOS platform including deployment, confi
 
 **Topics covered:**
 - Platform overview and architecture
-- Installation and deployment guides  
+- Installation and deployment guides
 - API reference and driver documentation
 - How-to guides for common configurations
 - Security and compliance information
@@ -88,7 +88,7 @@ Documentation for PlaceOS Workmate - the employee experience and workplace manag
 
 ---
 
-### PlaceOS Concierge *(Coming Soon)*  
+### PlaceOS Concierge *(Coming Soon)*
 Documentation for PlaceOS Concierge - the visitor management and building services platform.
 
 ---
@@ -101,7 +101,7 @@ Documentation for PlaceOS Analytics - workplace insights and reporting dashboard
 ## Support Resources
 
 - 📧 **Support Email:** [support@placeos.com](mailto:support@placeos.com)
-- 🌐 **Support Portal:** [support.placeos.com](https://support.placeos.com)
+- 🌐 **Support Portal:** [support.place.technology](https://support.place.technology)
 - 💬 **Community Forum:** [community.placeos.com](https://community.placeos.com)
 - 📞 **Emergency Support:** Available 24/7 for critical issues
 

@@ -28,4 +28,4 @@ Welcome to the PlaceOS Workmate documentation! Workmate is our comprehensive emp
 
 ---
 
-Need help? Check our [support resources](https://support.placeos.com) or [contact our team](mailto:support@placeos.com).
+Need help? Check our [support resources](https://support.place.technology) or [contact our team](mailto:support@placeos.com).

@@ -75,4 +75,4 @@ PlaceOS Digital Signage is a comprehensive content management system that enable
 
 ---
 
-Need help with Digital Signage? Check our [support resources](https://support.placeos.com) or [contact our team](mailto:support@placeos.com).
+Need help with Digital Signage? Check our [support resources](https://support.place.technology) or [contact our team](mailto:support@placeos.com).

@@ -18,4 +18,4 @@ Check out the guides below to get started with the mobile app.
 
 ---
 
-Need help with the mobile app? Check our [support resources](https://support.placeos.com) or [contact our team](mailto:support@placeos.com).
+Need help with the mobile app? Check our [support resources](https://support.place.technology) or [contact our team](mailto:support@placeos.com).
