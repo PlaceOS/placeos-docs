@@ -8,7 +8,8 @@ export default defineConfig({
 		starlight({
 			title: 'PlaceOS Documentation Hub',
 			logo: {
-				src: './public/logo.png',
+				light: './public/logo_light.png',
+				dark: './public/logo.png',
 				alt: 'PlaceOS Logo',
 				replacesTitle: true,
 			},
