@@ -176,19 +176,14 @@ export default defineConfig({
 							autogenerate: { directory: 'workmate/mobile-app' },
 						},
 						{
-							label: 'Getting Started',
+							label: 'Web App',
 							collapsed: true,
-							autogenerate: { directory: 'workmate/getting-started' },
+							autogenerate: { directory: 'workmate/web-app' },
 						},
 						{
-							label: 'User Guide',
+							label: 'Concierge App',
 							collapsed: true,
-							autogenerate: { directory: 'workmate/user-guide' },
-						},
-						{
-							label: 'Administration',
-							collapsed: true,
-							autogenerate: { directory: 'workmate/administration' },
+							autogenerate: { directory: 'workmate/concierge' },
 						},
 					],
 				},

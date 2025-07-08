@@ -8,9 +8,9 @@ Welcome to the PlaceOS Workmate documentation! Workmate is our comprehensive emp
 ## Getting Started
 
 - **[Overview](/workmate/overview/)** - Understanding Workmate architecture and features
-- **[Quick Start Guide](/workmate/getting-started/)** - Get up and running quickly
-- **[User Guide](/workmate/user-guide/)** - Complete guide for end users
-- **[Administration](/workmate/administration/)** - Administrative configuration and management
+- **[Mobile App](/workmate/mobile-app/)** - Guides for using our native iOS and Android Workmate App
+- **[Web App](/workmate/web-app/)** - Guides for using our web-based Workplace App
+- **[Concierge](/workmate/concierge/)** - Administrative configuration and management
 
 ## Key Features
 
@@ -25,16 +25,6 @@ Welcome to the PlaceOS Workmate documentation! Workmate is our comprehensive emp
 - **Resource Management** - Manage desks, rooms, and equipment
 - **Policy Enforcement** - Implement workplace policies and guidelines
 - **Integration Hub** - Connect with existing workplace tools
-
-## Documentation Sections
-
-Coming soon - detailed documentation for:
-
-- **Getting Started** - Initial setup and configuration
-- **User Guide** - End-user workflows and features
-- **Administrator Guide** - System configuration and management
-- **API Reference** - Integration and customization options
-- **Troubleshooting** - Common issues and solutions
 
 ---
 

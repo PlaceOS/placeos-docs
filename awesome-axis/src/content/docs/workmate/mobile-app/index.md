@@ -3,8 +3,6 @@ title: PlaceOS Workmate Mobile App
 description: Documentation for the PlaceOS Workmate mobile application
 ---
 
-# PlaceOS Workmate Mobile App
-
 The PlaceOS Workmate mobile app brings workplace management to your fingertips. Access all Workmate features on the go with our native mobile application.
 
 ## Key Features
