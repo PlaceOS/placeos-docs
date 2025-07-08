@@ -32,5 +32,5 @@ Configuring display orientation and zones can also be done from the Displays tab
 Ensure the system representing a display is added to relevant zones.
 Zones are useful for routing content to particular areas - making it simpler to present information to an organization, building, level or department.
 
-See [PlaceOS Zones](/tutorials/backoffice/add-zone-structure.md) for more information on configuring Zones in PlaceOS.
+See [PlaceOS Zones](/tutorials/backoffice/add-zone-structure/) for more information on configuring Zones in PlaceOS.
 ![alt text](image-2.png)

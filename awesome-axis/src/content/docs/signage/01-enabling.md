@@ -4,7 +4,7 @@ title: Enabling Digital Signage
 
 ## Cloud Storage
 
-Before gettig started, you must enable cloud storage on your PlaceOS Instance: [Configure cloud storage. ](/how-to/backoffice/backoffice-uploads.md)
+Before gettig started, you must enable cloud storage on your PlaceOS Instance: [Configure cloud storage. ](/how-to/backoffice/backoffice-uploads/)
 
 :::tip
 Currently supports AWS S3 and Azure Blob storage.
