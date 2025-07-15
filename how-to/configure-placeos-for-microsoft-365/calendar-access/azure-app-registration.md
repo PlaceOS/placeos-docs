@@ -28,14 +28,15 @@ After completion of this step, we will apply a policy restriction so the applica
 10. Click 'Application Permissions'.
 11. Add the following permissions:\
     \- `Calendars.ReadWrite`\
-    \- `Group.Read.All`\
     \- `User.Read.All`\
+    \- `GroupMember.Read.All`\
+    \- `Place.Read.All`\
     ![](https://lh4.googleusercontent.com/XDYxU9SORBoh9sbS-TLeu-RCd0zBGP-4xQjqr7PE2O4a1DQFLj4Az1OXRRVhTPoxLrxjDxrGEd36urvVQIRGmEopr7TAltvIrTsUnewaH8LJumCjrSrYFwb5zTO2FdLkvbqELAYLy8lzZz04Jw)
-12. Click 'Add permissions'.
-13. Click ‘Grant admin consent for xyz’.\
+13. Click 'Add permissions'.
+14. Click ‘Grant admin consent for xyz’.\
     <img src="../../../.gitbook/assets/image (11).png" alt="" data-size="original">
-14. Configuration of the Azure App is now complete.
-15. Supply PlaceOS or your integration partner with (be aware that supplying these credentials to PlaceOS prior to configuring the application policy in exchange will allow PlaceOS to see ALL calendars in your organisation):
+15. Configuration of the Azure App is now complete.
+16. Supply PlaceOS or your integration partner with (be aware that supplying these credentials to PlaceOS prior to configuring the application policy in exchange will allow PlaceOS to see ALL calendars in your organisation):
     * Application ID
     * Tenant ID
     * Secret
