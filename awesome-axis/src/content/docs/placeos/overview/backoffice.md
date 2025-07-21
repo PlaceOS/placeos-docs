@@ -1,6 +1,7 @@
 ---
 title: PlaceOS Backoffice
 description: Overview of PlaceOS Backoffice administration app
+sidebar_position: 3
 ---
 
 # PlaceOS Backoffice

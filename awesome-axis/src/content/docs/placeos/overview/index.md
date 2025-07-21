@@ -1,6 +1,7 @@
 ---
 title: Overview
 description: Overview of PlaceOS concepts, languages, and protocols
+sidebar_position: 1
 ---
 
 # PlaceOS Overview
