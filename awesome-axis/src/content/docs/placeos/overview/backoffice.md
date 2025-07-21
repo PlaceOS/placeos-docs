@@ -1,3 +1,9 @@
+---
+title: PlaceOS Backoffice
+description: Overview of PlaceOS Backoffice administration app
+sidebar_position: 3
+---
+
 # PlaceOS Backoffice
 
 PlaceOS Backoffice is the primary admin interface used to configure, manage and support PlaceOS deployments. It is accessible  at `/backoffice/` on your server. E.g.

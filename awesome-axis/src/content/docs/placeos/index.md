@@ -1,6 +1,7 @@
 ---
 title: PlaceOS Documentation
 description: Complete documentation for the PlaceOS platform
+sidebar_position: 1
 ---
 
 # PlaceOS Documentation
