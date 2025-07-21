@@ -12,6 +12,7 @@
   * [Systems](overview/key-concepts/systems.md)
   * [Triggers](overview/key-concepts/triggers.md)
   * [Zones](overview/key-concepts/zones.md)
+* [PlaceOS Backoffice](overview/backoffice/README.md)
 * [Languages](overview/languages/README.md)
   * [Crystal](overview/Languages/crystal.md)
   * [TypeScript](overview/languages/typescript.md)
