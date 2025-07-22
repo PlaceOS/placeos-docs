@@ -15,7 +15,7 @@ MQTT messages consist of a _header_ and a _payload_ and typically have low bandw
 
 Changes to module state propagate in real time. All change messages share the following topic structure:
 
-```markup
+```text
 placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 ```
 
@@ -50,7 +50,7 @@ The _payload_ is the value of the status variable paired with a timestamp
 
 Metadata is available for _building_, _level_, _area_, _system_ and _driver_ tiers. The format is this persistent topic:
 
-```markup
+```text
 placeos/<org>/metadata/<id>
 ```
 
@@ -76,25 +76,25 @@ Wildcards can replace any topic level to catch state information across differen
 
 All events within a building:
 
-```markup
+```text
 placeos/<org>/state/<bld>/# 
 ```
 
 Connected status of all devices:
 
-```markup
+```text
 placeos/<org>/state/+/+/+/+/+/+/+/connected 
 ```
 
 Power status for all displays:
 
-```markup
+```text
 placeos/<org>/state/+/+/+/+/+/Display/+/power
 ```
 
 Call status information for Cisco VC endpoints (`dep-123` is the driver ID for Cisco VC):
 
-```markup
+```text
 placeos/<org>/state/+/+/+/+/dep-123/+/+/call_status
 ```
 
