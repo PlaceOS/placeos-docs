@@ -1,6 +1,6 @@
 [build]
-  command = "cd awesome-axis && npm install && npm run build"
-  publish = "awesome-axis/dist"
+  command = "npm install && npm run build"
+  publish = "dist"
 
 # No redirects needed for static Starlight site
 
