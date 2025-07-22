@@ -43,42 +43,52 @@ All commands are run from the root of the project:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run add-content`     | Interactive helper to add new documentation      |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 
 ## ✍️ Contributing
 
-We welcome contributions to improve our documentation! 
+We welcome contributions to improve our documentation!
 
 ### Quick Start for Contributors
 
-1. **Use the helper script** for adding new content:
+1. **Create your markdown file** in the appropriate directory:
    ```bash
-   npm run add-content
+   # Example: Add a new how-to guide
+   touch src/content/docs/placeos/how-to/authentication/configure-ldap.md
    ```
 
-2. **Follow our guidelines** in [CONTRIBUTING.md](./CONTRIBUTING.md)
+2. **Add required frontmatter** with title and description:
+   ```markdown
+   ---
+   title: Configure LDAP Authentication
+   description: Set up LDAP authentication for PlaceOS
+   ---
+   ```
 
-3. **Test your changes** locally:
+3. **Navigation updates automatically** - no configuration needed!
+
+4. **Test your changes** locally:
    ```bash
    npm run dev
    ```
 
 ### Adding New Documentation
 
-The helper script will guide you through:
-- Choosing the right documentation set (PlaceOS Platform, Workmate, etc.)
-- Selecting the appropriate section
-- Creating files with proper frontmatter
-- Updating navigation configuration
+The simplified process:
+- **Choose the right directory** (PlaceOS Platform, Workmate, Signage)
+- **Create markdown files** with proper frontmatter
+- **Navigation generates automatically** from directory structure
+- **Use `_meta.yml` files** for custom section labels and ordering
 
 ## 🏗️ Architecture
 
 This documentation site uses:
 
 - **[Astro Starlight](https://starlight.astro.build/)** - Documentation framework
+- **[Starlight Auto Sidebar](https://starlight-auto-sidebar.netlify.app/)** - Automatic navigation generation
 - **Multi-documentation structure** - Separate navigation for each product
-- **Automatic content generation** - File-based routing with autogenerate
+- **File-based routing** - Navigation generated from directory structure
+- **_meta.yml customization** - Local configuration for sections and ordering
 - **Responsive design** - Works on desktop, tablet, and mobile
 - **Dark/light mode** - Theme switching with appropriate logos
 
