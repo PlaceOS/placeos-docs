@@ -16,41 +16,41 @@ All actions performed by backoffice at also available via the [PlaceOS REST API]
 
 **Prerequisite Reading:** [PlaceOS Key Concepts](/placeos/overview/key-concepts/drivers)
 
-# Domains
+## Domains
 
 Each PlaceOS deployment can handle multiple web domains where it can be accessed, and each domain may host multiple PlaceOS apps (typically web apps). Each User in PlaceOS exists in one domain only, and if single-sign-on (SSO) authentication is configured then the PlaceOS user will be automatically generated when the user SSOs for the first time.
 
 If there are multiple Domains configured on the same PlaceOS instance and a person signs into more then one of them with the same email address or unique identifier, then that person will appear as a different PlaceOS user object, once on each domain.
 
-## Authentication
+### Authentication
 Each domain can be configured with an authentication provider such as Microsoft or Google. For instructions, see [how-to/authentication]
 
-## Applications
+### Applications
 Each domain can host multiple apps, and each app must be added here with an OAuth Redirect URL
 
-// ### Adding an Application
+// #### Adding an Application
 
-## Users
+### Users
 This tab will list the Users that exist on this Domain.
 
-## Settings
-### Config
+### Settings
+#### Config
 JSON added to the config tab of the domain will be advertised publicly for apps to discover configuration relevant to this domain. This includes things like the unique ID of the PlaceOS Organization Zone which is the root/parent of all the PlaceOS Zones and Systems that are relevant to this Domain
 
 // ### Setting the Organization Zone ID
 // ### Setting the default web app for the domain
 
-### Internals
+#### Internals
 JSON added to the internals tab of the domain will be available to apps only after the user has successfully authenticated. This include things like system configurations
 
 
-# Repositories
+## Repositories
 PlaceOS uses cloud hosted Git repositories for management of both Drivers and Frontend Web apps. This Repositories tab is where PlaceOS admins can add new public or private Drivers or User Interface repository URLs (e.g. a Github url), select the branch and commit to use, and define which web path user interfaces will be accessible at under the domain.
 
 // ### Adding a new Driver Repository
 // ### Adding a new User Interface Repository
 
-# Drivers
+## Drivers
 Once Git repositories that contain PlaceOS Drivers have been added from the Repositories tab, Drivers can be added to PlaceOS from here. Added Drivers will be available for adding to any System (i.e. they are available across all Domains).
 
 // ## Adding a new Driver
@@ -58,24 +58,24 @@ Once Git repositories that contain PlaceOS Drivers have been added from the Repo
 // ## Changing Driver Settings
 // ## Deleting a Driver
 
-# Zones
+## Zones
 The Zones Section presents a searchable list of all defined Zones. Selecting a Zone will list that Zone’s Description, Settings, Metadata and Systems. New Zones can be added by clicking the + icon.
 
-## Tags
+### Tags
 PlaceOS apps are able to retrive Zones with specific tags, so tags such as "org", "region", "building", "level", are often used to determine the heirarchical structure of a physical environment in which the app is to provide functionality for. 
 
 
-## Settings
+### Settings
 Zone JSON Settings are inherited by all Systems in that Zone, and any Logic Modules in those Systems will also inherit the Settings. This makes Zone settings the ideal location to configure any logic modules.
 
 // ### Editing Zone Settings
 
-## Metadata
+### Metadata
 Metadata JSON is not inherited by Systems or Child Zones and is often where frontend apps will look to determine their configuration (enabling/disabling certain features and behaviours).
 
 
 
-# Systems
+## Systems
 
 Systems are a collection of Modules, and often represent a physical room/space. The Systems section (1), displays a list of all systems currently defined. This list can be filtered by using the search box (2).
 
@@ -87,11 +87,11 @@ Once a System is selected from the list, it’s details will be displayed in the
 - Metadata
 - Settings History
 
-## About Tab
+### About Tab
 This section will list the system’s Support URL, which should usually be set to the URL of the main Interface for controlling the system, Description and Settings. 
 The system description can be entered in Markdown format, and is a useful reference for other administrators of the System.
 
-## Modules Tab
+### Modules Tab
 The modules tab allows the creation of new modules (1) or the addition of existing modules to the current system (2). See [Adding Drivers and Modules](/placeos/tutorials/backoffice/adding-drivers-and-modules)
 
 ![](./assets/Systems-Modules.png "Systems > Modules")
@@ -104,13 +104,13 @@ Clicking a module's status dot (3) and selecting the View State option in the me
 
 
 
-## Zones Tab
+### Zones Tab
 This section lists the Zones that this system is a member of and allows Joining (1) and Leaving (4). See the Zones section under Key Concepts for more information on the effects of Zones on Systems. Zones are listed in order of hierarchy (highest (2) to lowest (3)) and can be re-ordered by dragging the handles on the left (5). Click the Zone name to edit the settings and properties for that Zone or to see the other systems that are part of that Zone.
 
-## Triggers Tab
+### Triggers Tab
 This tab will list the Triggers that have been added to this system. Click on the Trigger name to view or edit the Triggers actions and properties.
 
-## Configuring Room Booking
+### Configuring Room Booking
 When PlaceOS is integrated with a Directory service (e.g. Exchange Online, via MS Graph API), certain System settings will affect whether the PlaceOS Staff API will treat the system as a Bookable Room and with what kind of behavior. If your account has System Admin access, then the edit button (a pencil icon, at the top right of the system's page) will be available. Clicking this icon will show the above popup where the following details can be edited:
 
 - Name: The name of the system (room) that will be shown in PlaceOS apps like the room booking panel and staff app.
@@ -123,14 +123,14 @@ When PlaceOS is integrated with a Directory service (e.g. Exchange Online, via M
 Example: "extra_features": "vc skype mics window dinner coffee"
 
 
-# Modules
+## Modules
 
 The Modules section (1) will list all modules that have been added to PlaceOS. This list can be filtered (2) by Name, IP Address or online status (3).
 
 Clicking on a Module in the list will bring up that module’s details in the main section for viewing and editing.
 New modules can be added by clicking the Add icon (4).
 
-## Adding and Editing Modules
+### Adding and Editing Modules
 1. To Edit an existing module, click the pencil icon, to add a new module, click the '+' icon (4). This will display a popup window where the new Module details can be entered. Select the desired Dependency (1) (for more information on modules and dependencies, see Key Concepts) and System (2) to add the module to. Both drop down lists are text searchable.
 2. If applicable, enter the IP address (3) and TCP/UDP Port (4) of the hardware module being added. In most scenarios, the port value can be left blank (it will default to that dependency’s configured default).
 Note: For modules being controlled by RS-232, the IP address should be set to the IP address of the RS-232 gateway module (e.g. Globalcache) that will be connected to the module’s serial port. In these scenarios, the Port value should be changed to the correct value for the IP to RS-232 gateway module (e.g. 4999 for Globalcache iTach units).
@@ -147,14 +147,14 @@ The Notes section (10) is for any text-based metadata (for reference purposes). 
 6. The Custom Name field (12) is for defining a name that can be used to refer to this module in the System’s settings. For example, if there are multiple video switchers in the system, one can be referred to as ‘Table Front’ and another as ‘Table Rear’ and these names can be used to differentiate between them in the System’s settings.
 
 
-## Deleting Modules
+### Deleting Modules
 Modules can be deleted by clicking the Bin icon. Deleting a module will immediately remove it from any Systems that it has been added to. To remove a module from a System without deleting it, visit that System’s module tab instead and click ‘Remove’
 
 
-# Users
+## Users
 PlaceOS usually integrates with an external directory system (such as Azure Entra ID) for authentication.
 The Users Section lists all users who have signed in, their level of access and a History (log) of the Systems which were accessed (controlled from an Interface or viewed in Backoffice).
-## Permissions
+### Permissions
 When first logging on, a user will have no permissions assigned and will be denied access to Backoffice. A System Administrator should then look up the User from the list in the User’s Section of Backoffice and set their permissions:
 - Tech Support: Have access to view Backoffice and all objects but cannot create or edit Systems and Modules.
 - System Admin: Full write access to all objects
