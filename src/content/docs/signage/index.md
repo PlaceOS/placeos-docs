@@ -1,6 +1,8 @@
 ---
 title: Overview
 description: Complete documentation for the PlaceOS Digital Signage solution - web-based digital signage and content management
+sidebar:
+  order: 1
 ---
 
 # PlaceOS Digital Signage

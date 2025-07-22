@@ -32,8 +32,9 @@ After completion of this step, we will apply a policy restriction so the applica
 10. Click 'Application Permissions'.
 11. Add the following permissions:\
     \- `Calendars.ReadWrite`\
-    \- `Group.Read.All`\
     \- `User.Read.All`\
+    \- `GroupMember.Read.All`\
+    \- `Place.Read.All`\
     ![](https://lh4.googleusercontent.com/XDYxU9SORBoh9sbS-TLeu-RCd0zBGP-4xQjqr7PE2O4a1DQFLj4Az1OXRRVhTPoxLrxjDxrGEd36urvVQIRGmEopr7TAltvIrTsUnewaH8LJumCjrSrYFwb5zTO2FdLkvbqELAYLy8lzZz04Jw)
 12. Click 'Add permissions'.
 13. Click ‘Grant admin consent for xyz’.\

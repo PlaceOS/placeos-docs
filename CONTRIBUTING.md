@@ -1,44 +1,41 @@
 # Contributing to PlaceOS Documentation
 
-Thank you for contributing to the PlaceOS documentation! This guide will help you add new content and maintain the navigation structure.
+Thank you for contributing to the PlaceOS documentation! This guide will help you add new content using our simplified workflow.
 
 ## Quick Start: Adding New Content
 
-We've created a helper script to make adding new documentation easier:
+Adding new documentation is now simple and automatic:
 
-```bash
-npm run add-content
-```
+1. **Create your markdown file** in the appropriate directory
+2. **Add required frontmatter** with title and description
+3. **Navigation updates automatically** - no manual configuration needed!
 
-This interactive script will:
-1. Guide you through choosing the right section
-2. Create the markdown file with proper frontmatter
-3. Provide instructions for updating the navigation
+## Adding New Content
 
-## Manual Process
+### 1. Choose Your Directory
 
-If you prefer to add content manually, follow these steps:
+Choose the appropriate directory for your documentation:
 
-### 1. Choose Documentation Set and Create the Markdown File
+**PlaceOS Platform (`src/content/docs/placeos/`):**
+- **Overview**: Core concepts, languages, protocols
+- **Tutorials**: Step-by-step learning guides  
+- **How-To Guides**: Task-oriented instructions
+- **Reference**: API docs, drivers, compliance
 
-First choose which documentation set you're adding to:
-- **PlaceOS Platform**: `src/content/docs/placeos/`
-- **PlaceOS Workmate**: `src/content/docs/workmate/`
+**PlaceOS Workmate (`src/content/docs/workmate/`):**
+- **Onboarding**: Getting started guides
+- **Mobile App**: Mobile application documentation
+- **Web App**: Web application documentation
+- **Concierge**: Concierge application documentation
 
-Then create your file in the appropriate directory:
+**PlaceOS Digital Signage (`src/content/docs/signage/`):**
+- Digital signage setup and configuration
 
-**PlaceOS Platform:**
-- **Overview**: `src/content/docs/placeos/overview/`
-- **Tutorials**: `src/content/docs/placeos/tutorials/`
-- **How-To Guides**: `src/content/docs/placeos/how-to/`
-- **Reference**: `src/content/docs/placeos/reference/`
+### 2. Create Your Markdown File
 
-**PlaceOS Workmate:**
-- **Getting Started**: `src/content/docs/workmate/getting-started/`
-- **User Guide**: `src/content/docs/workmate/user-guide/`
-- **Administration**: `src/content/docs/workmate/administration/`
+Create a new `.md` file in your chosen directory with a descriptive filename (e.g., `configure-oauth.md`).
 
-### 2. Add Frontmatter
+### 3. Add Required Frontmatter
 
 Every markdown file must have frontmatter with a title:
 
@@ -53,27 +50,31 @@ description: Optional description of the page
 Content goes here...
 ```
 
-### 3. Update Navigation
+### 4. That's It! 
 
-Add your page to the sidebar in `astro.config.mjs`:
+Your new page will automatically appear in the navigation sidebar. The system will:
+- ✅ **Generate navigation** from your directory structure
+- ✅ **Use your frontmatter title** as the navigation label
+- ✅ **Organize pages** alphabetically within sections
+- ✅ **Apply proper styling** and responsive design
 
-#### For Auto-Generated Sections
-If adding to a section that uses `autogenerate`, your file will appear automatically.
+## Customizing Navigation (Optional)
 
-#### For Manual Sections
-Add an entry like this:
-```javascript
-{ label: 'Your Page Title', slug: 'docset/section/subsection/filename' },
+If you need to customize how a directory appears in the navigation, create a `_meta.yml` file in that directory:
+
+```yaml
+# Example: src/content/docs/placeos/how-to/authentication/_meta.yml
+label: Authentication
+collapsed: true
+order: 2
 ```
 
-Examples:
-```javascript
-// PlaceOS Platform
-{ label: 'Custom Driver Guide', slug: 'placeos/tutorials/backend/custom-driver' },
-
-// Workmate
-{ label: 'User Permissions', slug: 'workmate/administration/user-permissions' },
-```
+**Available options:**
+- `label`: Custom display name for the section
+- `collapsed`: Whether section starts collapsed (true/false)
+- `order`: Position in navigation (lower numbers appear first)
+- `sort`: Sorting method (`alphabetical` or `reverse-slug`)
+- `hidden`: Hide section from navigation (true/false)
 
 ## Directory Structure
 
@@ -85,10 +86,12 @@ src/content/docs/
 │   ├── tutorials/     # Step-by-step learning guides
 │   ├── how-to/        # Task-oriented guides
 │   └── reference/     # API docs, driver docs, system info
-└── workmate/          # PlaceOS Workmate documentation
-    ├── getting-started/
-    ├── user-guide/
-    └── administration/
+├── workmate/          # PlaceOS Workmate documentation
+│   ├── onboarding/    # Getting started guides
+│   ├── mobile-app/    # Mobile app documentation
+│   ├── web-app/       # Web app documentation
+│   └── concierge/     # Concierge app documentation
+└── signage/           # PlaceOS Digital Signage documentation
 ```
 
 ## Style Guidelines
@@ -99,37 +102,37 @@ src/content/docs/
 - ✅ **Use proper capitalization** in titles
 
 ### Navigation
-- ✅ **Use collapsed sections**: Add `collapsed: true`
-- ✅ **Proper capitalization**: "Analytics" not "analytics"
-- ✅ **Descriptive labels**: "Configure OAuth2 SSO" not "oauth2-sso"
+- ✅ **Automatic generation**: Navigation is created from directory structure
+- ✅ **Proper capitalization**: Use `_meta.yml` files for custom labels
+- ✅ **Descriptive filenames**: Use clear, descriptive file names
 
 ### Content
 - ✅ **No README.md files** - Use index.md instead
 - ✅ **Replace broken images** with `<!-- TODO: Add screenshot -->`
 - ✅ **Link to related content** using relative paths
 
-## Navigation Examples
+## Examples
 
-### Adding to Auto-Generated Section
-```javascript
-{
-  label: 'Authentication',
-  collapsed: true,
-  autogenerate: { directory: 'how-to/authentication' },
-},
+### Adding a New How-To Guide
+1. Create: `src/content/docs/placeos/how-to/authentication/configure-ldap.md`
+2. Add frontmatter:
+```markdown
+---
+title: Configure LDAP Authentication
+description: Set up LDAP authentication for PlaceOS
+---
 ```
+3. The page automatically appears under "Authentication" in the How-To Guides section
 
-### Adding Manual Items
-```javascript
-{
-  label: 'API Reference',
-  collapsed: true,
-  items: [
-    { label: 'Overview', slug: 'reference/api' },
-    { label: 'WebSocket API', slug: 'reference/api/websocket' },
-  ],
-},
+### Creating a New Section
+1. Create directory: `src/content/docs/placeos/how-to/integrations/`
+2. Add `_meta.yml` for custom labeling:
+```yaml
+label: Integrations
+collapsed: true
+order: 5
 ```
+3. Add content files to the directory - they'll appear automatically
 
 ## Testing Your Changes
 
@@ -149,61 +152,25 @@ title**: **title: Required
 ### Broken Images
 **Solution**: Replace with `<!-- TODO: Add screenshot -->`
 
-### Navigation Not Updating
-**Solution**: Check file path matches the slug in astro.config.mjs
+### Navigation Not Appearing
+**Solution**: Check that your file has proper frontmatter with a `title` field
+
+### Section Label Issues
+**Solution**: Create a `_meta.yml` file in the directory with a proper `label` field
 
 ## Need Help?
 
-- 🛠️ **Use the helper script**: `npm run add-content`
 - 📖 **Check existing files** for examples
-- 🔍 **Search astro.config.mjs** for similar patterns
+- 🔍 **Look at `_meta.yml` files** in similar directories for patterns
+- 📂 **Follow the directory structure** shown above
 
-## Script Usage Examples
+## Migration from Old Process
 
-### Adding a New PlaceOS How-To Guide
-```bash
-npm run add-content
-# Choose: placeos
-# Choose: how-to
-# Choose: authentication
-# Title: Configure LDAP Authentication
-# Description: Set up LDAP authentication for PlaceOS
-# Filename: configure-ldap
-```
+**Previous workflow using `npm run add-content` is no longer needed!**
 
-### Adding a New Workmate User Guide
-```bash
-npm run add-content
-# Choose: workmate
-# Choose: user-guide
-# Choose: booking
-# Title: Advanced Booking Features
-# Description: Using advanced booking options in Workmate
-# Filename: advanced-booking
-```
+The new process is much simpler:
+1. ~~Run helper script~~ → **Just create your markdown file**
+2. ~~Update astro.config.mjs~~ → **Navigation updates automatically**
+3. ~~Manual navigation configuration~~ → **Use `_meta.yml` for customization**
 
-### Adding a New Documentation Section
-```bash
-npm run add-content
-# Choose: workmate
-# Choose: new
-# New section name: mobile-app
-# New section label: Mobile App
-# Choose: new
-# New subsection: setup
-# Title: Getting Started with Mobile App
-# Filename: getting-started
-```
-
-### Adding a New Subsection
-```bash
-npm run add-content
-# Choose: workmate
-# Choose: administration  
-# Choose: new
-# New subsection: reporting
-# Title: Custom Reports
-# Filename: custom-reports
-```
-
-This creates the file and shows you exactly where to add the navigation entry!
+This streamlined approach makes contributing faster and reduces the chance of configuration errors.
