@@ -12,9 +12,9 @@ PlaceOS Backoffice is the primary admin interface used to configure, manage and 
 https://<My-PlaceOS-Instance>/backoffice/
 ```
 
-All actions performed by backoffice at also available via the [PlaceOS REST API](reference/api), which may be used to automate the configuration/management actions offered by Backoffice.
+All actions performed by backoffice at also available via the [PlaceOS REST API](/placeos/reference/api), which may be used to automate the configuration/management actions offered by Backoffice.
 
-**Prerequisite Reading:** [PlaceOS Key Concepts](overview/key-concepts/)
+**Prerequisite Reading:** [PlaceOS Key Concepts](/placeos/overview/key-concepts/)
 
 # Domains
 
@@ -92,7 +92,7 @@ This section will list the system’s Support URL, which should usually be set t
 The system description can be entered in Markdown format, and is a useful reference for other administrators of the System.
 
 ## Modules Tab
-The modules tab allows the creation of new modules (1) or the addition of existing modules to the current system (2). See [Adding Drivers and Modules](tutorials/backoffice/adding-drivers-and-modules.md)
+The modules tab allows the creation of new modules (1) or the addition of existing modules to the current system (2). See [Adding Drivers and Modules](/placeos/tutorials/backoffice/adding-drivers-and-modules.md)
 
 ![](./assets/Systems-Modules.png "Systems > Modules")
 
