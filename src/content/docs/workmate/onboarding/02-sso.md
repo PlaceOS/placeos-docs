@@ -9,7 +9,7 @@ The PlaceOS Platform can federate authentication into:
 - Auth0
 
 ## Microsoft 365
-Follow this guide to get started: [Configure PlaceOS for 365](/how-to/configure-placeos-for-microsoft-365/user-authentication/)
+Follow this guide to get started: [Configure PlaceOS for 365](../../../placeos/how-to/configure-placeos-for-microsoft-365/user-authentication/)
 
 Once complete, we will require the following information to complete the integration:
 - Tenant ID

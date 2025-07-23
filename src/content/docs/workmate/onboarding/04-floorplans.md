@@ -12,4 +12,4 @@ It is best to clearly mark the floor plans, if not already, with the following i
 
 You may provide all the above information annotated on a single floor plan or provide multiple copies of the same floor plan for each purpose.
 
-If resources are available, you can also draw your own floor plans by following [these instructions.](/how-to/user-interfaces/svg-map-creation)
+If resources are available, you can also draw your own floor plans by following [these instructions.](../../../placeos/how-to/user-interfaces/svg-map-creation)

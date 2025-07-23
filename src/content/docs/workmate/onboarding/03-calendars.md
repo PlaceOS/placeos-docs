@@ -9,7 +9,7 @@ PlaceOS Supports calendar integration for:
 - Google Workspace
 
 ## Microsoft 365
-To configure calendar access you can follow [these instructions](/how-to/configure-placeos-for-microsoft-365-delegated/), if you have already created an App Registration for PlaceOS you can use the same one.
+To configure calendar access you can follow [these instructions](../../../placeos/how-to/configure-placeos-for-microsoft-365/user-authentication/create-microsoft-azure-app-registration/), if you have already created an App Registration for PlaceOS you can use the same one.
 
 Once completed, provide the following information:
 - Tenant ID
@@ -17,7 +17,7 @@ Once completed, provide the following information:
 - Secret Value
 
 ## Google Workspace
-To configure calendar access you can follow [these instructions](/how-to/configure-placeos-for-google-workspace/), if you have already created a Google Cloud Project for PlaceOS integration you can use the same one.
+To configure calendar access you can follow [these instructions](../../../placeos/how-to/configure-placeos-for-google-workspace/google-configuration/google-workspace-service-user-rbac/), if you have already created a Google Cloud Project for PlaceOS integration you can use the same one.
 
 Once completed, provide the following information:
 - Domain
