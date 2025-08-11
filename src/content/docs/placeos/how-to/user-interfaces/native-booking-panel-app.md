@@ -7,9 +7,9 @@ description: >-
 
 # Native Booking Panel App
 
-The PlaceOS Native Booking Panel App may be deployed stand-alone from the public [Apple App Store](https://apps.apple.com/us/app/placeos-booking-panel/id6443821030) and [Google Play Store](https://play.google.com/store/apps/details?id=place.technology.booking_panel_app) or deployed to a fleet of devices via a Mobile Device Management platform.&#x20;
+The PlaceOS Native Booking Panel App may be deployed stand-alone from the public [Apple App Store](https://apps.apple.com/us/app/placeos-booking-panel/id6443821030) and [Google Play Store](https://play.google.com/store/apps/details?id=place.technology.booking_panel_app) or deployed to a fleet of devices via a Mobile Device Management platform.
 
-The Mobile Device Management platform will provide some added benefits of passing additional pre-configuration to each device to make the set up process easier. End users would need to refer to documentation specific to their MDM for these instructions.&#x20;
+The Mobile Device Management platform will provide some added benefits of passing additional pre-configuration to each device to make the set up process easier. End users would need to refer to documentation specific to their MDM for these instructions.
 
 ## Configuring The App
 
