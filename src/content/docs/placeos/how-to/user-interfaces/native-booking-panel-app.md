@@ -52,12 +52,17 @@ Once the data is received by the device, they will display the custom configurat
 
 The following dictionary is required for generating custom configuration:
 
-<table><thead><tr><th width="184">key</th><th width="96.33333333333331">type</th><th width="140">Required</th><th>example</th></tr></thead><tbody><tr><td><code>bundleId</code></td><td>String</td><td>iOS: Required<br>Android: Not Required</td><td>place.technology.bookingPanel</td></tr><tr><td><code>apiKey</code></td><td>String</td><td>Required</td><td><code>2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU</code></td></tr><tr><td><code>domainName</code></td><td>String</td><td>Required</td><td><a href="https://placeos-dev.aca.im">https://placeos-dev.aca.im</a></td></tr><tr><td><code>SystemId</code></td><td>String</td><td>Optional</td><td><code>sys-223fn20n</code></td></tr><tr><td><code>restartTime</code></td><td>Integer</td><td>Optional</td><td><code>"restartTime"="10"</code></td></tr><tr><td><code>skipInteractiveSetup</code></td><td>Bool</td><td>Optional</td><td><code>"skipInteractiveSetup"="true"</code></td></tr></tbody></table>
+<table><thead><tr><th width="184">key</th><th width="96.33333333333331">type</th><th width="140">Required</th><th>example</th></tr></thead><tbody><tr><td><code>bundleId</code></td><td>String</td><td>iOS: Required<br>Android: Not Required</td><td>place.technology.bookingPanel</td></tr><tr><td><code>apiKey</code></td><td>String</td><td>Required</td><td><code>2246a9570b1e821a337c47353c.cUm33sGOmjHlSCbf5M07v8y8vRa4_GBmCW7hFkU</code></td></tr><tr><td><code>domainName</code></td><td>String</td><td>Required</td><td><a href="https://placeos-dev.aca.im">https://placeos-dev.aca.im</a></td></tr><tr><td><code>SystemId</code></td><td>String</td><td>Optional</td><td><code>sys-223fn20n</code></td></tr>
+<tr><td><code>restartTime</code></td><td>Integer</td><td>Optional</td><td><code>"restartTime"="10"</code></td></tr>
+<tr><td><code>restartEnabled</code></td><td>Bool</td><td>Optional</td><td><code>"restartEnabled"="false"</code></td></tr>
+<tr><td><code>skipInteractiveSetup</code></td><td>Bool</td><td>Optional</td><td><code>"skipInteractiveSetup"="true"</code></td></tr>
+</tbody></table>
 
 Notes:
 - clientId/clientSecret: Required for ACA backend systems (isPlaceOs: false). Not needed for PlaceOS systems.
-- restartTime: 24-hour format (0-23). Schedules daily app restart (not device reboot). If omitted, defaults to midnight (0).
-- isPlaceOs: Set to false for ACA backend systems, true for PlaceOS systems.
+- `restartTime`: 24-hour format (0-23). Schedules daily app restart (not device reboot). If omitted, defaults to midnight (0).
+- `isPlaceOs`: Set to `false` for ACA backend systems, `true` for PlaceOS systems.
+- `restartEnabled`: This will be `true` unless set to `false`, as such, the restarts will execute where this parameter is `null`
 
 
 ```xml
