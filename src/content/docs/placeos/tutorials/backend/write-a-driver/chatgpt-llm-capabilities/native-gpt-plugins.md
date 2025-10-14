@@ -35,7 +35,7 @@ Before configuring the plugin you'll need to add a new application to Backoffice
 #### Microsoft Copilot
 
 1. Follow these instructions to create a GPT:\
-   [https://support.microsoft.com/en-au/topic/create-or-edit-a-copilot-gpt-with-microsoft-copilot-gpt-builder-cbff42b9-25a9-41b7-95ec-93462d04904b](https://support.microsoft.com/en-au/topic/create-or-edit-a-copilot-gpt-with-microsoft-copilot-gpt-builder-cbff42b9-25a9-41b7-95ec-93462d04904b)
+   [https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/gpt-builder](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/gpt-builder)
 2. Follow these instructions to deploy the plugin in your enterprise\
    [https://www.codetwo.com/admins-blog/microsoft-365-copilot/](https://www.codetwo.com/admins-blog/microsoft-365-copilot/)
 
