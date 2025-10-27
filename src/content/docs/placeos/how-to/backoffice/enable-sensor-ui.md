@@ -28,7 +28,7 @@ The first step is to enable the sensor extension.
 
 * Type: `zones`
 * Name: `Sensors`
-* URL: `https://editor.place.tech/sensor-map/#/editor/{{map_id}}`
+* URL: `https://editor.place.tech/sensor-map/#/editor?src={{map_id}}`
 
 1. Click Add Condition and add the following condition:
 
