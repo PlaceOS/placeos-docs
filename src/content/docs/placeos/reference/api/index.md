@@ -34,3 +34,9 @@ For real-time communication and live updates, PlaceOS provides a WebSocket API.
 All API requests require authentication using API keys:
 
 - [X-API Keys](../../how-to/authentication/x-api-keys) - Generate and manage API keys for authentication
+
+## Uploads
+
+File uploads (images, documents, videos etc)
+
+- [Resumable Uploads](uploads) - Direct to cloud uploads using signed requests
