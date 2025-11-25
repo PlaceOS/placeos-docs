@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightAutoSidebar from 'starlight-auto-sidebar';
+import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,7 +26,7 @@ export default defineConfig({
 					autogenerate: { directory: 'placeos' },
 				},
 				{
-					label: 'PlaceOS Workmate', 
+					label: 'PlaceOS Workmate',
 					autogenerate: { directory: 'workmate' },
 				},
 				{
@@ -34,5 +35,6 @@ export default defineConfig({
 				},
 			],
 		}),
+		mermaid()
 	],
 });
