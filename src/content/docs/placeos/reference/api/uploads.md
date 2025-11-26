@@ -216,6 +216,18 @@ responds with the blob store commit request
 
 `PUT /api/engine/v2/uploads/uploads-JUea_g-EeY`
 
+## Resuming an interrupted upload
+
+When performing the [Create the Upload Record](#create-the-upload-record) request it may return an existing upload with a part list.
+
+Use
+* To get the signature for the next part
+  `GET /api/engine/v2/uploads/<upload_id>/edit?part=3&file_id=ud/ZcwpsXKwPoxjHE7NwTQ==`
+* To get the final commit signature
+  `GET /api/engine/v2/uploads/<upload_id>/edit?part=finish`
+
+Then continue with the flow above, PATCHING when this part upload completes or committing the upload in PlaceOS
+
 ## Small file uploads
 
 These are uploads where the file size is 5MB or lower
