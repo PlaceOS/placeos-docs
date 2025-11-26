@@ -220,6 +220,32 @@ responds with the blob store commit request
 
 When performing the [Create the Upload Record](#create-the-upload-record) request it may return an existing upload with a part list.
 
+```yaml
+{
+  "type": "parts",
+  "signature": {
+    # signature for a request to get the list of parts on the blob store
+    # should not need to use this
+  },
+  "part_list": [
+    1,
+    2
+  ],
+  "part_data": [
+    {
+      "md5": "5ymJIxM7GVLfTbMS6YI1Bw==",
+      "part": 1
+    },
+    {
+      "md5": "Ay7Is29LPzk1e58V1V7cww==",
+      "part": 2
+    }
+  ],
+  "upload_id": "uploads-JUea_g-EeY",
+  "residence": "AzureStorage"
+}
+```
+
 Use
 * To get the signature for the next part
   `GET /api/engine/v2/uploads/<upload_id>/edit?part=3&file_id=ud/ZcwpsXKwPoxjHE7NwTQ==`
