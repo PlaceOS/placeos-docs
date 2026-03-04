@@ -47,8 +47,9 @@ Now choose either Option A or B below:
 
 #### Option A: Giving the group permissions to VIEW meeting room Events
 
-4. A) In the "Sharing and permissions" window, search for the Concierge Group and click "Share", then set permission level of that Group to __"Can view all details"__
 Choosing this option will allow Concierge app users to view the Host and Title of events in the meeting room calendar. They will not be able to change the rooms existing Accept/Decline response.
+
+4. A) In the "Sharing and permissions" window, search for the Concierge Group and click "Share", then set permission level of that Group to __"Can view all details"__
 
 #### Option B: Giving the group permissions to Accept/Decline and EDIT meeting room Events
 Choosing this option will allow Concierge app users to change the Accept/Decline response of the room for events.
