@@ -51,6 +51,9 @@ Choosing this option will allow Concierge app users to view the Host and Title o
 
 4. A) In the "Sharing and permissions" window, search for the Concierge Group and click "Share", then set permission level of that Group to __"Can view all details"__
 
+ Alternatively to using Outlook, your Exchange Online admin could user Powershell to apply the Concierge group's permissions to a list of rooms: [https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-mailboxfolderpermission?view=exchange-ps](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-mailboxfolderpermission?view=exchange-ps)
+
+
 #### Option B: Giving the group permissions to Accept/Decline and EDIT meeting room Events
 Choosing this option will allow Concierge app users to change the Accept/Decline response of the room for events.
 
