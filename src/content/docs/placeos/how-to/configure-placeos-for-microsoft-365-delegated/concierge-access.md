@@ -43,6 +43,8 @@ Your organization's Exchange Online or Azure administrator will be able to deter
 2. Add the Room calendar to your list of calendars by selecting Add Calendar > Add from Directory and searching for the target Room.
 3. Once the Room Calendar is added and appears in the list of calendars on the left sidebar, right click the room calendar and click "Sharing and Permissions". If this option is not listed in the right-click menu, then your Outlook user is not an administrator of the room, so cannot change its permissions.
 
+![Right click the Room Calendar](concierge_access_right_click_calendar.jpeg)
+
 Now choose either Option A or B below:
 
 #### Option A: Giving the group permissions to VIEW meeting room Events
