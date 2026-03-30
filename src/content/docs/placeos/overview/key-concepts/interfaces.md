@@ -5,12 +5,14 @@ sidebar_position: 8
 ---
 <!-- # Interfaces -->
 
-*Interfaces* are web pages that provide users with a direct method of interaction with PlaceOS.
+*Interfaces* are typically web pages that provide users with a direct method of interaction with PlaceOS.
 They are suitable for any experiences that lend themselves to screen-based interaction.
 Common examples of interfaces are:
 - A staff app
 - Meeting room control interfaces
 - A booking system
+
+PlaceOS also supports voice and chat based interfaces, such as ChatGPT, however these are typically embedded in web based interfaces versus being used standalone. Plugins into Microsoft Copilot for workplace tasks is one such example.
 
 <!-- Should this have a link to one of the demo sites with a staff app - or stills from it -->
 <!-- Stub. possibly either substantially expand on it, or roll into another section -->
