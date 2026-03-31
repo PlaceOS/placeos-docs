@@ -10,8 +10,8 @@ description: Systems are collections of modules
 
 A _system_ is the main logical building blocks within PlaceOS. They contain three components:
 
-* A collection of [modules](modules)
-* [Settings](settings) which will apply to the system and modules in it
+* A collection of [modules](/placeos/overview/key-concepts/modules)
+* [Settings](/placeos/overview/key-concepts/settings) which will apply to the system and modules in it
 * Basic metadata (name, description etc)
 
 ### Purpose
@@ -20,7 +20,7 @@ Systems often represent physical spaces, such as meeting rooms. They can also re
 
 ### Systems and Zones
 
-[Zones](zones) are groups of systems which can reflect their physical or conceptual groupings. Systems can belong to zero or more zones.
+[Zones](/placeos/overview/key-concepts/zones) are groups of systems which can reflect their physical or conceptual groupings. Systems can belong to zero or more zones.
 
 #### Settings Inheritance
 

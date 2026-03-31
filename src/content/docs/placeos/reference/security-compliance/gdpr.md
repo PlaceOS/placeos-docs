@@ -44,7 +44,7 @@ PlaceOS records personal information from end users to be used within our applic
 
 PlaceOS maintain hold of personal data, but the use of the data is decided by another organisation.
 
-Further information on how we store and encrypt this data is available in the [Securty section](security).
+Further information on how we store and encrypt this data is available in the [Securty section](/placeos/reference/security-compliance/security).
 
 #### Information we may collect
 

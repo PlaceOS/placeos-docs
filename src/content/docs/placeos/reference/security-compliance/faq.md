@@ -41,7 +41,7 @@ A: 256 bit AES using GCM ciphers are used to prevent tampering & environment var
 
 ### Security
 
-More detailed security information including information around ciphers and encryption can be found on the [Security page](security).
+More detailed security information including information around ciphers and encryption can be found on the [Security page](/placeos/reference/security-compliance/security).
 
 **Q: Can you please describe how PlaceOS adheres to common security principles?**
 
@@ -79,7 +79,7 @@ Infrastructure access is dictated by the customer.
 
 A: Standard SSL/TLS is used for data in-motion.
 
-[Further information is available in the Security section](security).
+[Further information is available in the Security section](/placeos/reference/security-compliance/security).
 
 **Q: What security measures are enforced internally upon staff with regards to customer information?**
 

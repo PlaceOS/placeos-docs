@@ -8,7 +8,7 @@ description: Modules are instances of drivers
 
 <!-- TODO: Replace with appropriate diagram showing module architecture -->
 
-_Modules_ are instances of [drivers](drivers). Each module represents either:
+_Modules_ are instances of [drivers](/placeos/overview/key-concepts/drivers). Each module represents either:
 
 * A specific physical device controlled by PlaceOS,
 * A specific digital platform, or
@@ -33,7 +33,7 @@ Each module can be individually started or stopped at any time. When started, th
 
 ### Modules and Systems
 
-Modules must be a part of _at least_ one [system](systems), but can be part of more than one system. Each system can use the same module instance everywhere it's required. Examples of modules used this way could be:
+Modules must be a part of _at least_ one [system](/placeos/overview/key-concepts/systems), but can be part of more than one system. Each system can use the same module instance everywhere it's required. Examples of modules used this way could be:
 
 * A lighting gateway
 * Centrally installed audio-visual equipment

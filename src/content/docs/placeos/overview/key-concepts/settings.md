@@ -6,7 +6,7 @@ description: Settings can be configured at any level
 
 # Settings
 
-_Settings_ are the configuration information that define how a deployment should behave. Any level can have defined settings, which are ultimately consumed by [modules](modules). [Zones](zones), [systems](systems), [drivers](drivers) or [modules](modules) can have settings defined on them. Together, these create a system configuration that is easier to manage at scale.
+_Settings_ are the configuration information that define how a deployment should behave. Any level can have defined settings, which are ultimately consumed by [modules](/placeos/overview/key-concepts/modules). [Zones](/placeos/overview/key-concepts/zones), [systems](/placeos/overview/key-concepts/systems), [drivers](/placeos/overview/key-concepts/drivers) or [modules](/placeos/overview/key-concepts/modules) can have settings defined on them. Together, these create a system configuration that is easier to manage at scale.
 
 Examples of some common uses for settings are:
 

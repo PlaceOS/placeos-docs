@@ -16,9 +16,9 @@ Once you have configured Staff API, PlaceOS can:
 * Update
 * Delete Calendar events in Microsoft 365 or Google Workspace.
 
-To show room status on floor maps, the [PlaceOS Calendar driver must also be configured](placeos-calendar).
+To show room status on floor maps, the [PlaceOS Calendar driver must also be configured](/placeos/how-to/backoffice/placeos-calendar).
 
-To enable room bookings, the [PlaceOS Bookings driver must be also configured](placeos-bookings).
+To enable room bookings, the [PlaceOS Bookings driver must be also configured](/placeos/how-to/backoffice/placeos-bookings).
 
 ## Prerequisites
 
@@ -241,7 +241,7 @@ To complete this step, you will need the following information:
 
 ### Test Staff API Configuration
 
-The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](placeos-calendar) or [Microsoft API Calendar Driver for 365 Delegation](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver).&#x20;
+The easiest way to test the Staff API Configuration is using the [PlaceOS Calendar Driver](/placeos/how-to/backoffice/placeos-calendar) or [Microsoft API Calendar Driver for 365 Delegation](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver).&#x20;
 
 The `staff-api` logs will show any errors in configuration.
 

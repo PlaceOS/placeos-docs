@@ -11,7 +11,7 @@ You may supply the `client_id` and `client_secret` to PlaceOS or your PlaceOS In
 ## Prerequisites
 
 * PlaceOS Backoffice Administrator Access
-* Microsoft Azure App Registration `client_id` and `client_secret` generated in the [Microsoft Azure App Registration](create-microsoft-azure-app-registration) steps.&#x20;
+* Microsoft Azure App Registration `client_id` and `client_secret` generated in the [Microsoft Azure App Registration](/placeos/how-to/configure-placeos-for-microsoft-365/user-authentication/create-microsoft-azure-app-registration) steps.&#x20;
 
 ## Procedure
 
