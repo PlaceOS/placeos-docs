@@ -13,7 +13,7 @@ A driver should not have any specific configuration attached, this will be done 
 
 <!-- TODO: Add diagram showing the relationship between drivers and modules -->
 
-For More Information you can read the key concepts of [Drivers](../../overview/key-concepts/drivers.md) and [Modules](../../overview/key-concepts/modules.md).
+For More Information you can read the key concepts of [Drivers](../../overview/key-concepts/drivers) and [Modules](../../overview/key-concepts/modules).
 
 ## How to add a Driver
 

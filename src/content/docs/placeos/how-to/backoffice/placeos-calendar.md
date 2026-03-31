@@ -7,12 +7,12 @@ description: How to Configure the Calendar Driver on PlaceOS
 
 The PlaceOS Calendar Driver connects to Microsoft Graph API (365) or Google Workspace.
 
-The Calendar Driver and the [Bookings Driver](placeos-bookings.md) work together to get resource calendar events.
+The Calendar Driver and the [Bookings Driver](placeos-bookings) work together to get resource calendar events.
 
 The Calendar Driver can also make ad-hoc bookings from kiosks or room booking panels.
 
 {% hint style="info" %}
-To configure and deploy the Calendar Driver for Microsoft 365 where Delegated Access has been used, please refer to this [page related to configuring PlaceOS Calendar Driver for 365.](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver.md)
+To configure and deploy the Calendar Driver for Microsoft 365 where Delegated Access has been used, please refer to this [page related to configuring PlaceOS Calendar Driver for 365.](../configure-placeos-for-microsoft-365/calendar-access/configure-placeos-calendar-driver)
 {% endhint %}
 
 ## Prerequisites

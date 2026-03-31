@@ -16,7 +16,7 @@ Once the Authentication Source is configured, we need to ensure PlaceOS Applicat
 2. Navigate to the Domains tab.
 3. Select the Domain for your organisation.
 4. Click on the Edit icon.
-5. Set the login URL to `/auth/login?provider=[AUTH-TYPE-HERE]&id=[AUTH-ID-HERE]&continue={{url}}`, replacing the \[AUTH-TYPE-HERE] with one of (adfs, oauth2, ldap) & the `[AUTH-ID-HERE]` with the authentication source ID created in '[Creating a PlaceOS Authentication Source](../../configure-placeos-for-google-workspace/user-authentication/create-a-placeos-authentication-source-for-google.md)' instructions, leaving the `{{url}}` as is.
+5. Set the login URL to `/auth/login?provider=[AUTH-TYPE-HERE]&id=[AUTH-ID-HERE]&continue={{url}}`, replacing the \[AUTH-TYPE-HERE] with one of (adfs, oauth2, ldap) & the `[AUTH-ID-HERE]` with the authentication source ID created in '[Creating a PlaceOS Authentication Source](../../configure-placeos-for-google-workspace/user-authentication/create-a-placeos-authentication-source-for-google)' instructions, leaving the `{{url}}` as is.
 6. Set the logout URL to `/auth/logout?continue=https://sso.org.com/logout` if they haven’t provided you a logout.\
    <!-- TODO: Add screenshot -  -->
 

@@ -5,13 +5,13 @@ title: Add Google Workplace Permissions
 # Add Google Workplace Permissions
 
 {% hint style="info" %}
-If you want to configure this application for use in a subset of the organisation, then ignore this step and follow the steps to [Create a marketplace application](create-google-marketplace-app-optional.md)
+If you want to configure this application for use in a subset of the organisation, then ignore this step and follow the steps to [Create a marketplace application](create-google-marketplace-app-optional)
 {% endhint %}
 
 ## Prerequisites
 
 * Google Workspace Administrator Access
-* JSON Service Account File generated in [Configure Google Service Account](configure-google-cloud-service-account.md) step
+* JSON Service Account File generated in [Configure Google Service Account](configure-google-cloud-service-account) step
 * The `client_id` from the JSON file\
   ![](https://lh6.googleusercontent.com/Nk-2YjdL51LA6LV4QEINzP7xNXIcMlHOH-pA5Ul6zbmuHpGquSFzsSjJbJ0oCNPMtnse3nBXqE9drTuSwmYObB\_KjOoC81LFyD\_oyI6g3XhxH1m6YzXhnnDoK\_GCY1Bg4VYhIVrDNXSyMZj8)
 

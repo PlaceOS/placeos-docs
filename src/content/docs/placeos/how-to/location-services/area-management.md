@@ -13,7 +13,7 @@ This driver provides the bindings for overlaying location data on a map. It expo
 3. Location data for the levels, wireless and desks
 4. List of known desks on the level, for simplified processing of real-time visualizations
 
-Each building needs one of these modules, and they rely on [Location Services](location-services.md) for collecting data.
+Each building needs one of these modules, and they rely on [Location Services](location-services) for collecting data.
 
 ## Configuration
 

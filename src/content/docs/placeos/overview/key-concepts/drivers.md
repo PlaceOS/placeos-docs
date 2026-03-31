@@ -25,7 +25,7 @@ _Drivers_ are the core components of the PlaceOS platform. They combine to help 
 
 ### Drivers and Modules
 
-[Modules](modules.md) are instances of drivers, letting the rest of PlaceOS access their specific functions.
+[Modules](modules) are instances of drivers, letting the rest of PlaceOS access their specific functions.
 
 ### Driver Map
 

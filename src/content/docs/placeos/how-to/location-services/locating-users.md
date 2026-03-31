@@ -92,7 +92,7 @@ If DHCP snooping is undesirable, **DHCP Gleaning** can be used instead.
 
 ## **Example PowerShell Scripts** <a href="#example-powershell-scripts" id="example-powershell-scripts"></a>
 
-This covers the basics of user discovery using a domain controller. A third-party machine can be configured to query server logs remotely - [see the detailed scripts](capturing\_user\_devices.md) for how this is achieved
+This covers the basics of user discovery using a domain controller. A third-party machine can be configured to query server logs remotely - [see the detailed scripts](capturing\_user\_devices) for how this is achieved
 
 It's possible to use additional events and modify scripts as required for security compliance.
 

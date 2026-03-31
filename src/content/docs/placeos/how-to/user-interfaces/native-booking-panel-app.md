@@ -15,7 +15,7 @@ The Mobile Device Management platform will provide some added benefits of passin
 
 Configuring the App requires three key pieces of information:
 
-- PlaceOS API Key: [Click here to learn how to generate an API Key.](../authentication/x-api-keys.md)
+- PlaceOS API Key: [Click here to learn how to generate an API Key.](../authentication/x-api-keys)
 - Your PlaceOS URL.
 - A Room Booking System configured.
 

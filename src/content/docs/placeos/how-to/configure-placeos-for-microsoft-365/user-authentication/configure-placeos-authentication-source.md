@@ -11,7 +11,7 @@ You may supply the `client_id` and `client_secret` to PlaceOS or your PlaceOS In
 ## Prerequisites
 
 * PlaceOS Backoffice Administrator Access
-* Microsoft Azure App Registration `client_id` and `client_secret` generated in the [Microsoft Azure App Registration](create-microsoft-azure-app-registration.md) steps.&#x20;
+* Microsoft Azure App Registration `client_id` and `client_secret` generated in the [Microsoft Azure App Registration](create-microsoft-azure-app-registration) steps.&#x20;
 
 ## Procedure
 
@@ -44,4 +44,4 @@ Details on how [Azure handles OAuth2](https://docs.microsoft.com/en-us/graph/aut
 
 Once you have completed the above steps, you will also need to create a StaffAPI Record for your domain.
 
-To create the Staff API Record follow [these instructions on configuring Staff API.](../../backoffice/configure-staff-api.md)
+To create the Staff API Record follow [these instructions on configuring Staff API.](../../backoffice/configure-staff-api)

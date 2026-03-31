@@ -43,5 +43,5 @@ title: "Create Azure App Registration (Delegated Permissions)"
 15. Securely send the Azure App Registration Tenant ID, Client ID, and Client Secret Value (from steps 5-7) to the PlaceOS Administrator who will be configuring the single-sign-on authentication integration.
 
 {% hint style="success" %}
-For more detailed information about the permissions required by PlaceOS, please reference the [Microsoft Azure Permissions Table.](../../../reference/microsoft-azure-permissions.md)
+For more detailed information about the permissions required by PlaceOS, please reference the [Microsoft Azure Permissions Table.](../../../reference/microsoft-azure-permissions)
 {% endhint %}

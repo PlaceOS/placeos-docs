@@ -35,7 +35,7 @@ If devices authenticate against the network using certificates, the username is 
 
 1. Username to IP address
    * You may have an established method for this process, which you may use
-   * One of the most reliable methods is parsing [Domain Controller authentication logs](locating-users.md#windows-domain-controller)
+   * One of the most reliable methods is parsing [Domain Controller authentication logs](locating-users#windows-domain-controller)
 2. IP address to MAC address mappings
    * Provided by the [Dashboard API](https://developer.cisco.com/meraki/api-v1/#!get-network-clients)
    * Regularly polled to learn who owns the devices on the network
@@ -57,7 +57,7 @@ If you use device certificates, you will need to have Step 1 in near-real-time t
 5. Cisco Meraki [**Dashboard API v1**](https://documentation.meraki.com/zGeneral\_Administration/Other\_Topics/The\_Cisco\_Meraki\_Dashboard\_API#Enable\_API\_access) or higher must be configured
    * Provide PlaceOS integrator with API Key
 6. PlaceOS integrator to provide a webhook for posting logs
-   * [Example script](capturing\_user\_devices.md)
+   * [Example script](capturing\_user\_devices)
 
 ## Wired
 
@@ -73,7 +73,7 @@ For locating users plugged into a wired network, possibly via a docking station.
 
 1. Username to IP address
    * You may have an established method for this process, which you may use
-   * One of the most reliable methods is parsing [Domain Controller authentication logs](locating-users.md#windows-domain-controller)
+   * One of the most reliable methods is parsing [Domain Controller authentication logs](locating-users#windows-domain-controller)
 2. IP address to MAC address mappings
    * Provided by the [Dashboard API](https://developer.cisco.com/meraki/api-v1/#!get-network-clients)
    * Regularly polled to learn who owns the devices on the network

@@ -5,7 +5,7 @@ description: Cisco Meraki wireless device tracking and camera sensors
 
 # Configuring Meraki
 
-Before going further, see the guide on configuring [desk bookings](../desk-booking.md) and follow all steps.\
+Before going further, see the guide on configuring [desk bookings](../desk-booking) and follow all steps.\
 This document covers
 
 * Client Prerequisites

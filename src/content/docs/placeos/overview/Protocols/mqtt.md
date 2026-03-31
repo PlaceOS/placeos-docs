@@ -16,11 +16,11 @@ MQTT allows for messaging between device-to-cloud and cloud-to-device. This simp
 
 ### MQTT in PlaceOS
 
-PlaceOS supports publishing [module](../key-concepts/modules.md) state information via MQTT. This provides environment information to external systems such as [Amazon MQTT Service](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
+PlaceOS supports publishing [module](../key-concepts/modules) state information via MQTT. This provides environment information to external systems such as [Amazon MQTT Service](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html)
 
 MQTT messages consist of a _header_ and a _payload_ and typically have low bandwidth usage. The header declares the topic of the message, and the payload carries data as key-value pairs.
 
-PlaceOS uses two types of message sent over MQTT: State Changes and Metadata. For further information on configuring MQTT for PlaceOS, see the guide on [MQTT Integration](../../how-to/analytics/mqtt-integration.md)
+PlaceOS uses two types of message sent over MQTT: State Changes and Metadata. For further information on configuring MQTT for PlaceOS, see the guide on [MQTT Integration](../../how-to/analytics/mqtt-integration)
 
 ### Resources
 

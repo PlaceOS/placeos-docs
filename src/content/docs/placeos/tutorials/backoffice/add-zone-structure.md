@@ -6,7 +6,7 @@ description: This document outlines creating zone structure in Backoffice
 
 # Add Zone Structure
 
-An important step in setting up PlaceOS is to create your organizations physical structure as [Zones](../../overview/key-concepts/zones.md).
+An important step in setting up PlaceOS is to create your organizations physical structure as [Zones](../../overview/key-concepts/zones).
 
 You can think of Zones as creating your digital twin of your physical organization structure.
 
@@ -35,7 +35,7 @@ In the following steps, we will walkthrough configuring your Zone structure incl
 ### Prerequisites
 
 * PlaceOS Backoffice Administrator Access
-* [SVG Floor Plans](../../how-to/user-interfaces/svg-map-creation.md) (optional)
+* [SVG Floor Plans](../../how-to/user-interfaces/svg-map-creation) (optional)
 
 ### Org Zone
 
@@ -101,7 +101,7 @@ The remaining fields are optional:
 * **Code**: Cost Center or Building Code
 * **Type**: Code category
 * **Capacity**: Primarily for defining floor/level capacity
-* **Map**: A relevant map file (see [How to Upload Files to Backoffice](../../how-to/backoffice/backoffice-uploads.md))
+* **Map**: A relevant map file (see [How to Upload Files to Backoffice](../../how-to/backoffice/backoffice-uploads))
 
 <!-- TODO: Add image showing the new building zone form -->
 
@@ -131,7 +131,7 @@ The frontend will use Level Zones (nested in building zones) to allow end users 
 * **Name**: The name of your Level zone (Typically this will be Level 1, Level 2 etc.)
 * **Display Name**: How you want the zone to appear to end users (optional)
 * **Tags**: Enter a single tag of `level`
-* **Map**: A relevant map file for the level (see [How to Upload Files to Backoffice](../../how-to/backoffice/backoffice-uploads.md))
+* **Map**: A relevant map file for the level (see [How to Upload Files to Backoffice](../../how-to/backoffice/backoffice-uploads))
 
 The remaining fields are optional:
 

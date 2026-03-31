@@ -24,9 +24,9 @@ All interaction is via Backoffice and encompasses effort to structure, integrate
 
 **PlaceOS Specific Knowledge**
 
-* Core platform concepts - [drivers](../overview/key-concepts/drivers.md), [modules](../overview/key-concepts/modules.md), [zones](../overview/key-concepts/zones.md), [systems](../overview/key-concepts/systems.md)
+* Core platform concepts - [drivers](../overview/key-concepts/drivers), [modules](../overview/key-concepts/modules), [zones](../overview/key-concepts/zones), [systems](../overview/key-concepts/systems)
 * Backoffice User Interface and how to configure the above concepts
-* [Triggers](../overview/key-concepts/triggers.md)
+* [Triggers](../overview/key-concepts/triggers)
 * Driver monitoring - comfort with and ability to watch a driver and debug connectivity or configuration issues
 
 ### Platform Deployment and Infrastructure
@@ -60,7 +60,7 @@ Further information can on driver development is in the [driver development tuto
 
 **PlaceOS Specific Knowledge:**
 
-* Core platform concepts - [drivers](../overview/key-concepts/drivers.md), [modules](../overview/key-concepts/modules.md), [zones](../overview/key-concepts/zones.md), [systems](../overview/key-concepts/systems.md)
+* Core platform concepts - [drivers](../overview/key-concepts/drivers), [modules](../overview/key-concepts/modules), [zones](../overview/key-concepts/zones), [systems](../overview/key-concepts/systems)
 * Driver monitoring - comfort with and ability to watch a driver and debug connectivity or configuration issues
 
 ### Interface Development
@@ -71,7 +71,7 @@ No PlaceOS specific tooling exists in this space, the platform does expose a [RE
 
 #### Browser-based Application Development
 
-For more information on development and tooling see the [TypeScript overview](../overview/languages/typescript.md).
+For more information on development and tooling see the [TypeScript overview](../overview/languages/typescript).
 
 **External knowledge:**
 

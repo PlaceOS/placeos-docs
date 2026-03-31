@@ -5,7 +5,7 @@ description: Cisco DNA Spaces location services configuration
 
 # Configuring DNA Spaces
 
-Before going further, see the guide on configuring [desk bookings](../desk-booking.md) and follow all steps.\
+Before going further, see the guide on configuring [desk bookings](../desk-booking) and follow all steps.\
 Then add the Cisco DNA Spaces module to your location services system.
 
 ### Configure Cisco DNA Spaces

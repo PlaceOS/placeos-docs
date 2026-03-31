@@ -105,7 +105,7 @@ Once the repository is cloned into the `repositories` folder it will be availabl
 Please see the following resources on driver development
 
 * [Writing a driver](backend/write-a-driver/)
-* [Writing a spec](backend/write-a-driver/testing-drivers.md)
+* [Writing a spec](backend/write-a-driver/testing-drivers)
 
 It's worth mentioning that drivers are applications in their own right and it's important to update dependencies.\
 Before starting your development, in the repository folder you are working on it's worth running\

@@ -5,7 +5,7 @@ title: "Create a PlaceOS Authentication Source"
 # Create a PlaceOS Authentication Source
 
 {% hint style="success" %}
-To complete this step, ensure you have already followed the [steps to add a domain to PlaceOS.](../../backoffice/add-domain.md)
+To complete this step, ensure you have already followed the [steps to add a domain to PlaceOS.](../../backoffice/add-domain)
 {% endhint %}
 
 {% hint style="success" %}

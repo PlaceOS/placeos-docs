@@ -202,7 +202,7 @@ Charge Codes belong to a building, noting each regional building may have a diff
 
 The Catering Dashboard is an interface that may be installed in the kitchen or other relevant areas to display catering orders and their status to function/event staff.&#x20;
 
-The catering dashboard can be accessed via Concierge or configured for [unattended access](../panel-login.md) using an API Key.
+The catering dashboard can be accessed via Concierge or configured for [unattended access](../panel-login) using an API Key.
 
 <!-- TODO: Add screenshot -  -->
 

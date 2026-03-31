@@ -30,7 +30,7 @@ When PlaceOS uses an external Identity Provider with unattended device login, it
 
 ### Step 2: Create an X-API-Key for panel authentication
 
-Follow the [X-API-Key guide](../authentication/x-api-keys.md), specifying the service account created in the previous step
+Follow the [X-API-Key guide](../authentication/x-api-keys), specifying the service account created in the previous step
 
 ### Step 3: Construct URL for Applications
 

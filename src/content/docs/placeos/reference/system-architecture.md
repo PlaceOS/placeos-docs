@@ -27,7 +27,7 @@ See the [Docker Image](https://hub.docker.com/r/bitnami/etcd) and [Source on Git
 
 #### `postgresql`
 
-Database for permanent storage of PlaceOS configuration. Configuration: Three node cluster in 3 different availability zones within same region for [HA](system-architecture.md#HADC).\
+Database for permanent storage of PlaceOS configuration. Configuration: Three node cluster in 3 different availability zones within same region for [HA](system-architecture#HADC).\
 See the [Docker Image](https://hub.docker.com/\_/rethinkdb) and [Source on GitHub](https://github.com/rethinkdb/rethinkdb).
 
 #### `core`
@@ -61,9 +61,9 @@ High availability works by distributing services through Availability Zones. For
 
 #### Components
 
-[**Drivers**](overview/drivers.md) exist as files inside the PlaceOS core containers. PlaceOS Core creates a separate process for each Driver in use. This will serve all the Modules (instances) of this Driver.
+[**Drivers**](overview/drivers) exist as files inside the PlaceOS core containers. PlaceOS Core creates a separate process for each Driver in use. This will serve all the Modules (instances) of this Driver.
 
-[**Modules**](overview/modules.md) are instances of a Driver, that represent a single real-world device/service. They are distributed among the instances of core and exist in memory of the PlaceOS core containers. Modules reflect their runtime state in Redis, making it available for other components of the system
+[**Modules**](overview/modules) are instances of a Driver, that represent a single real-world device/service. They are distributed among the instances of core and exist in memory of the PlaceOS core containers. Modules reflect their runtime state in Redis, making it available for other components of the system
 
 The PlaceOS Backoffice web application manages them both via PlaceOS REST-API. It updates module configuration via PostgresQL.
 

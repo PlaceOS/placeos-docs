@@ -96,9 +96,9 @@ This XML file contains the above information and can be fed into to some configu
 
 This process will vary by provider, see the below guides for common options:
 
-* [Azure AD](configure-saml/saml2-azure.md)
-* [AD FS](configure-saml/saml2-adfs.md)
-* [Auth0](configure-saml/saml2-auth0.md)
+* [Azure AD](configure-saml/saml2-azure)
+* [AD FS](configure-saml/saml2-adfs)
+* [Auth0](configure-saml/saml2-auth0)
 * [Google Workspace](saml2-google/)
 
 ## Step 3: Configure default redirects for the PlaceOS Domain

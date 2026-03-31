@@ -9,7 +9,7 @@ description: PlaceOS Provide a plugin for Microsoft Outlook to facilitate room b
 
 The Outlook Plugin is treated like a normal Frontend Repository in PlaceOS Backoffice.
 
-To add the plugin, you will require administrator access to PlaceOS. You can follow the instructions below or reference the [Deploy a Frontend Interface](deploy-frontend.md) document.
+To add the plugin, you will require administrator access to PlaceOS. You can follow the instructions below or reference the [Deploy a Frontend Interface](deploy-frontend) document.
 
 1. Navigate to the Repositories tab in Backoffice.
 2. Create a new Repository.

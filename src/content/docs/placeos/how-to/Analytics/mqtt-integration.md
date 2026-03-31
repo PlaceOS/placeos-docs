@@ -22,12 +22,12 @@ placeos/<org>/state/<bld>/<lvl>/<area>/<sys>/<drv>/<mod>/<idx>/<state>
 In this structure, each section is a unique identifying tag to represent part of the system.
 
 * `<org>`: Organization ID
-* `<bld>`: [Building](../../overview/key-concepts/zones.md) ID
-* `<lvl>`: [Level](../../overview/key-concepts/zones.md) ID
-* `<area>`: [Area](../../overview/key-concepts/zones.md) ID
-* `<sys>`: [System](../../overview/key-concepts/systems.md) ID
-* `<drv>`: [Driver](../../overview/key-concepts/drivers.md) ID
-* `<mod>`: [Module](../../overview/key-concepts/modules.md) ID
+* `<bld>`: [Building](../../overview/key-concepts/zones) ID
+* `<lvl>`: [Level](../../overview/key-concepts/zones) ID
+* `<area>`: [Area](../../overview/key-concepts/zones) ID
+* `<sys>`: [System](../../overview/key-concepts/systems) ID
+* `<drv>`: [Driver](../../overview/key-concepts/drivers) ID
+* `<mod>`: [Module](../../overview/key-concepts/modules) ID
 * `<idx>`: Module Index
 * `<state>`: State Key
 

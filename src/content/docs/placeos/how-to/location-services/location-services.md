@@ -141,4 +141,4 @@ Any lockers that are in use on the floor
 
 ### Configuring Cisco Meraki
 
-See the [Cisco Meraki Wireless Tracking](../../tutorials/common-configurations/sensor-data-collection/configuring-meraki.md) guide.
+See the [Cisco Meraki Wireless Tracking](../../tutorials/common-configurations/sensor-data-collection/configuring-meraki) guide.
