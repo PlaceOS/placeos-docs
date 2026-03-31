@@ -1,39 +1,112 @@
----
-title: PlaceOS Documentation
-slug: /
-description: >-
-  Explanations, how-to guides, tutorials and technical references for working
-  with and building on PlaceOS.
-hide_title: true
-hide_table_of_contents: true
-sidebar_label: What is PlaceOS?
-sidebar_position: 1
----
-
 # PlaceOS Documentation
 
-PlaceOS is a [software platform](https://place.technology/solutions/platform) which enriches interaction with physical space. It provides tools to design, build and iterate integrated digital experiences for physical environments. To do this, it merges any and all elements - from lighting and AV to entire BMS - without the legacy baggage.
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-**Integration** of disparate systems, devices and services forms a seamless experience for your space.
+Complete documentation hub for all PlaceOS products and services, built with Astro Starlight.
 
-**Automation** boosts workplace efficiency and ease of use for any space.
+## 📚 Documentation Sets
 
-**Iteration** lets your space constantly improve and grow with you and your needs.
+This repository contains documentation for multiple PlaceOS products:
 
-### Sections of this site <a href="sections" id="sections"></a>
+- **PlaceOS Platform** - Core platform documentation including deployment, APIs, and integrations
+- **PlaceOS Workmate** - Employee experience and workplace management solution
+- **PlaceOS Digital Signage** - Visual communication and display management solution
 
-The documentation for PlaceOS is split into 4 categories.
+## 🚀 Project Structure
 
-See the [overview](broken-reference) for high-level coverage of topic areas.
+```
+.
+├── public/                    # Static assets (logos, images)
+├── src/
+│   ├── content/
+│   │   └── docs/
+│   │       ├── index.mdx      # Documentation hub landing page
+│   │       ├── placeos/       # PlaceOS Platform docs
+│   │       ├── workmate/      # Workmate docs
+│   │       └── signage/       # Digital Signage docs
+│   └── content.config.ts
+├── scripts/
+│   └── add-to-nav.js         # Helper script for contributors
+├── astro.config.mjs          # Site configuration
+├── netlify.toml              # Deployment configuration
+├── CONTRIBUTING.md           # Contributor guidelines
+└── package.json
+```
 
-Try a [tutorial](broken-reference) to learn in more detail about a process or feature.
+## 🧞 Commands
 
-Read a [how-to guide](broken-reference) for docs to help you with a specific task.
+All commands are run from the root of the project:
 
-See the [reference material ](broken-reference)for detailed technical docs.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 
-### Videos and Demonstration Apps
+## ✍️ Contributing
 
-You can watch a [short](https://placeos.wistia.com/medias/bnz61a0wfw) or [in-depth](https://placeos.wistia.com/medias/vyn0rsm5vi) video demonstrating the functions of PlaceOS Backoffice.
+We welcome contributions to improve our documentation!
 
-Take our [Workplace](https://templates.demo.place.tech/workplace/#/) or [Concierge](https://templates.demo.place.tech/concierge/#/) Demo Apps for a spin.
+### Quick Start for Contributors
+
+1. **Create your markdown file** in the appropriate directory:
+   ```bash
+   # Example: Add a new how-to guide
+   touch src/content/docs/placeos/how-to/authentication/configure-ldap.md
+   ```
+
+2. **Add required frontmatter** with title and description:
+   ```markdown
+   ---
+   title: Configure LDAP Authentication
+   description: Set up LDAP authentication for PlaceOS
+   ---
+   ```
+
+3. **Navigation updates automatically** - no configuration needed!
+
+4. **Test your changes** locally:
+   ```bash
+   npm run dev
+   ```
+
+### Adding New Documentation
+
+The simplified process:
+- **Choose the right directory** (PlaceOS Platform, Workmate, Signage)
+- **Create markdown files** with proper frontmatter
+- **Navigation generates automatically** from directory structure
+- **Use `_meta.yml` files** for custom section labels and ordering
+
+## 🏗️ Architecture
+
+This documentation site uses:
+
+- **[Astro Starlight](https://starlight.astro.build/)** - Documentation framework
+- **[Starlight Auto Sidebar](https://starlight-auto-sidebar.netlify.app/)** - Automatic navigation generation
+- **Multi-documentation structure** - Separate navigation for each product
+- **File-based routing** - Navigation generated from directory structure
+- **_meta.yml customization** - Local configuration for sections and ordering
+- **Responsive design** - Works on desktop, tablet, and mobile
+- **Dark/light mode** - Theme switching with appropriate logos
+
+## 🌐 Deployment
+
+The site is automatically deployed to Netlify when changes are pushed to the main branch.
+
+- **Build command**: `npm install && npm run build`
+- **Publish directory**: `dist`
+- **Live URL**: [PlaceOS Documentation](https://placeosdocs.netlify.app)
+
+## 🔗 Links
+
+- [PlaceOS Website](https://placeos.com)
+- [Support Portal](https://support.place.technology)
+- [GitHub Repository](https://github.com/PlaceOS/placeos-docs)
+- [Starlight Documentation](https://starlight.astro.build/)
+
+## 📄 License
+
+This documentation is maintained by PlaceOS. For questions or support, contact [support@placeos.com](mailto:support@placeos.com).

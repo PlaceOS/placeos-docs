@@ -1,0 +1,84 @@
+---
+title: PlaceOS Documentation Hub
+description: Access all PlaceOS product documentation from one central location
+template: splash
+hero:
+  tagline: Welcome to the central hub for all PlaceOS product documentation
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: PlaceOS Platform Docs
+      link: /placeos/
+      icon: right-arrow
+    - text: Visit PlaceOS.com
+      link: https://placeos.com
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Available Documentation
+
+Select the documentation set you need:
+
+<CardGrid stagger>
+  <Card title="PlaceOS Platform" icon="rocket">
+    Complete documentation for the core PlaceOS platform including deployment, configuration, APIs, and integrations.
+
+    [View PlaceOS Docs →](/placeos/)
+  </Card>
+
+  <Card title="PlaceOS Workmate" icon="laptop">
+    Documentation for PlaceOS Workmate - the employee experience and workplace management solution.
+
+    [View Workmate Docs →](/workmate/)
+  </Card>
+
+  <Card title="PlaceOS Digital Signage" icon="document">
+    Documentation for PlaceOS Digital Signage - the visual communication and display management solution.
+
+    [View Digital Signage Docs →](/signage/)
+  </Card>
+
+  <Card title="PlaceOS Rest API" icon="setting">
+    PlaceOS Rest API Swagger.
+
+    [View Swagger →](https://placeos.github.io/rest-api-swagger-ui/)
+  </Card>
+
+  <Card title="PlaceOS Staff API" icon="puzzle">
+    PlaceOS Staff API Swagger.
+
+    [View Swagger →](https://placeos.github.io/staff-api-swagger-ui/)
+  </Card>
+</CardGrid>
+
+## What's in PlaceOS Platform Documentation?
+
+The PlaceOS Platform documentation covers:
+
+- **[Overview](/placeos/overview/)** - Platform architecture and core concepts
+- **[Tutorials](/placeos/tutorials/)** - Step-by-step learning guides
+- **[How-To Guides](/placeos/how-to/)** - Task-oriented instructions
+- **[Reference](/placeos/reference/)** - API documentation and technical specifications
+
+## Support Resources
+
+<CardGrid>
+  <Card title="Get Help" icon="email">
+    **Support Email:** [support@placeos.com](mailto:support@placeos.com)
+
+    **Support Portal:** [support.place.technology](https://support.place.technology)
+  </Card>
+
+  {/* <Card title="Community" icon="discord">
+    **Community Forum:** [community.placeos.com](https://community.placeos.com)
+
+    **Emergency Support:** Available 24/7 for critical issues
+  </Card> */}
+</CardGrid>
+
+## Contributing
+
+Interested in contributing to our documentation? Check out our [contributing guidelines](https://github.com/PlaceOS/placeos-docs/blob/main/CONTRIBUTING.md).

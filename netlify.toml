@@ -1,0 +1,9 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+# No redirects needed for static Starlight site
+
+# Optional: Set Node.js version
+[build.environment]
+  NODE_VERSION = "18"
