@@ -33,11 +33,6 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 * Errors raised in modules may prevent some execute requests from functioning properly
 * Execute APIs and cross driver communication will be effected as module metadata will be unavailable
 
-#### Elasticsearch failure
-
-* API index / listing / searching requests will fail - this will be mostly apparent when using Backoffice
-* All other aspects of the system will continue functioning
-
 #### Driver compilation issue / crash
 
 * Executes directed at a module running on the driver will fail
@@ -47,8 +42,6 @@ Redis holds the runtime state of the cluster, such as module metadata and module
 In the event of a failure, being able to isolate which aspect of the system is not functioning is key to a quick recovery.
 
 * Can you log-in? If not it's probably a _RethinkDB Failure_ or load balancer issue (check if requests are hitting the services)
-* Does Backoffice list the systems? If not it's probably an _Elasticsearch failure_
-
 If you can login and see systems:
 
 * Select a system you can safely use for testing
