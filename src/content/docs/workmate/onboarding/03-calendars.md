@@ -11,6 +11,8 @@ PlaceOS Supports calendar integration for:
 ## Microsoft 365
 To configure calendar access you can follow [these instructions](../../../placeos/how-to/configure-placeos-for-microsoft-365/user-authentication/create-microsoft-azure-app-registration/), if you have already created an App Registration for PlaceOS you can use the same one.
 
+If PlaceOS was connected with the [One-Click Azure Integration](../../../placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration), calendar access is already configured and you do not need to provide the information below.
+
 Once completed, provide the following information:
 - Tenant ID
 - Client ID

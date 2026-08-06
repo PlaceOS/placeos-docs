@@ -4,6 +4,10 @@ title: "Create Azure App Registration (Delegated Permissions)"
 
 # Create Azure App Registration (Delegated Permissions)
 
+:::tip
+The [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration) creates this App Registration and grants its permissions automatically.
+:::
+
 ## Prerequisites
 
 * OAuth2 Callback URL from PlaceOS Authentication Source

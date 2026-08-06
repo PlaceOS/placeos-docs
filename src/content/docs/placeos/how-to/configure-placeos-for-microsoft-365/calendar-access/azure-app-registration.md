@@ -4,6 +4,10 @@ title: "Create Azure App Registration (Application Permissions)"
 
 # Create Azure App Registration (Application Permissions)
 
+:::tip
+The [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration) creates this App Registration automatically.
+:::
+
 ## Prerequisites
 
 * Microsoft Azure Administrator Access or Permission to Create App Registrations

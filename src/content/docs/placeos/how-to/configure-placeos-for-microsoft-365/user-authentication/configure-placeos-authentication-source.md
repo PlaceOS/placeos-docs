@@ -4,6 +4,10 @@ title: "Configure PlaceOS Authentication Source"
 
 # Configure PlaceOS Authentication Source
 
+:::tip
+The [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration) fills in these authentication source details automatically.
+:::
+
 {% hint style="success" %}
 You may supply the `client_id` and `client_secret` to PlaceOS or your PlaceOS Integration Partner to complete these steps.
 {% endhint %}

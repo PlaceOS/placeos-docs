@@ -4,6 +4,10 @@ title: "Create a PlaceOS Authentication Source"
 
 # Create a PlaceOS Authentication Source
 
+:::tip
+The [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration) creates this authentication source automatically.
+:::
+
 {% hint style="success" %}
 To complete this step, ensure you have already followed the [steps to add a domain to PlaceOS.](../../backoffice/add-domain)
 {% endhint %}

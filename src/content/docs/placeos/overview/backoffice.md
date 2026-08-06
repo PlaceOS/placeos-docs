@@ -21,7 +21,7 @@ Each PlaceOS deployment can handle multiple web domains where it can be accessed
 If there are multiple Domains configured on the same PlaceOS instance and a person signs into more then one of them with the same email address or unique identifier, then that person will appear as a different PlaceOS user object, once on each domain.
 
 ### Authentication
-Each domain can be configured with an authentication provider such as Microsoft or Google. For instructions, see [how-to/authentication]
+Each domain can be configured with an authentication provider such as Microsoft or Google. For instructions, see [Authentication](/placeos/how-to/authentication/). Microsoft 365 domains can be set up automatically, see [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration)
 
 ### Applications
 Each domain can host multiple apps, and each app must be added here with an OAuth Redirect URL

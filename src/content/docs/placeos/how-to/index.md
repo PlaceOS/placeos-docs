@@ -55,4 +55,5 @@ This section contains detailed guides for configuring and using various aspects 
 ## Platform Integrations
 - [Configure PlaceOS for Google Workspace](configure-placeos-for-google-workspace/)
 - [Configure PlaceOS for Microsoft 365](configure-placeos-for-microsoft-365/)
-- [Configure PlaceOS for Microsoft 365 Delegated](configure-placeos-for-microsoft-365-delegated/)
+- [Configure PlaceOS for Microsoft 365 Delegated](/placeos/how-to/configure-placeos-for-microsoft-365-delegated/concierge-access)
+- [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration)

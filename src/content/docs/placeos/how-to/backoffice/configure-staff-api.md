@@ -33,6 +33,10 @@ Instructions for Microsoft 365 and Google Workspace are below.
 
 ## Microsoft Azure (365)
 
+:::tip
+The [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration) creates the App Registration and the tenant record automatically.
+:::
+
 To use Staff API with 365 you will need to create an Application in App Registration.
 
 You may have already completed this step if you have configured [PlaceOS for Microsoft 365 User Authentication.](../configure-placeos-for-microsoft-365/)

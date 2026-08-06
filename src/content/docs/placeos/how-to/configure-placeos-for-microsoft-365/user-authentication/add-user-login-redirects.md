@@ -6,6 +6,10 @@ title: "Add User Login Redirects"
 
 Once the Authentication Source is configured, we need to ensure PlaceOS Applications redirect the user to the authentication provider to login.&#x20;
 
+:::tip
+If the domain was integrated with the [One-Click Azure Integration](/placeos/how-to/configure-placeos-for-microsoft-365/one-click-azure-integration), the login redirects are already configured.
+:::
+
 ## Prerequisites
 
 * PlaceOS Backoffice Administrator Access
