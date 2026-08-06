@@ -1,6 +1,8 @@
 ---
 title: Enable Sensor UI
 description: How to enable the Sensor management UI
+sidebar:
+  order: 5
 ---
 # Enable Sensor UI
 

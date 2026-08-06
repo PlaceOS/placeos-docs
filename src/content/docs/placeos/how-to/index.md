@@ -22,6 +22,7 @@ This section contains detailed guides for configuring and using various aspects 
 - [Enable Sensor UI](backoffice/enable-sensor-ui)
 - [PlaceOS Bookings](backoffice/placeos-bookings)
 - [PlaceOS Calendar](backoffice/placeos-calendar)
+- [Delete Zones and Domains](/placeos/how-to/backoffice/delete-zones-and-domains)
 
 ## Analytics
 - [MQTT Integration](analytics/mqtt-integration)

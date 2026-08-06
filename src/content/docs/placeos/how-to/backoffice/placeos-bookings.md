@@ -1,6 +1,8 @@
 ---
 title: Bookings Driver
 description: How to Configure the Bookings Driver on PlaceOS
+sidebar:
+  order: 6
 ---
 
 # Bookings Driver

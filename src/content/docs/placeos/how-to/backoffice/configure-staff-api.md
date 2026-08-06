@@ -1,6 +1,8 @@
 ---
 title: Configure Staff API
 description: How to Configure the Staff API on PlaceOS
+sidebar:
+  order: 4
 ---
 
 # Configure Staff API

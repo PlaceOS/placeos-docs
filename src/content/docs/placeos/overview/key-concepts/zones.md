@@ -26,3 +26,4 @@ Zones do not inherit settings from the Parent zones.
 ### Guides
 
 * [Add Zone Structure to Backoffice](../../tutorials/backoffice/add-zone-structure)
+* [Delete Zones and Domains](/placeos/how-to/backoffice/delete-zones-and-domains)

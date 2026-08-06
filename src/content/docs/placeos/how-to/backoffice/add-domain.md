@@ -2,6 +2,8 @@
 title: Add a Domain to PlaceOS
 description: Steps required for adding a domain to PlaceOS
 sidebar_position: 10
+sidebar:
+  order: 1
 ---
 
 # Add a Domain to PlaceOS
@@ -61,3 +63,5 @@ You must create a domain before adding authentication sources (such as [SAML](..
 ![Add Domain](../assets/add\_user.png)
 
 You can now login with this new user on the domain created.
+
+To remove a domain and the resources associated with it, see [Delete Zones and Domains](/placeos/how-to/backoffice/delete-zones-and-domains).

@@ -1,6 +1,8 @@
 ---
 title: Backoffice File Upload
 description: Upload files to Backoffice
+sidebar:
+  order: 2
 ---
 
 # Backoffice File Upload

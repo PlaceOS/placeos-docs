@@ -1,6 +1,8 @@
 ---
 title: Configure a Webhook
 description: How to configure a webhook for a trigger or a module that can accept a webhook
+sidebar:
+  order: 3
 ---
 
 # Configure a webhook

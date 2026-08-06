@@ -41,6 +41,9 @@ JSON added to the config tab of the domain will be advertised publicly for apps 
 #### Internals
 JSON added to the internals tab of the domain will be available to apps only after the user has successfully authenticated. This include things like system configurations
 
+### Deleting a Domain
+Domains can be deleted from the three-dot menu on the domain's page, optionally removing the OAuth applications, Staff API tenant and, when no other domain shares it, the org zone tree associated with it. See [Delete Zones and Domains](/placeos/how-to/backoffice/delete-zones-and-domains)
+
 
 ## Repositories
 PlaceOS uses cloud hosted Git repositories for management of both Drivers and Frontend Web apps. This Repositories tab is where PlaceOS admins can add new public or private Drivers or User Interface repository URLs (e.g. a Github url), select the branch and commit to use, and define which web path user interfaces will be accessible at under the domain.
@@ -70,6 +73,9 @@ Zone JSON Settings are inherited by all Systems in that Zone, and any Logic Modu
 
 ### Metadata
 Metadata JSON is not inherited by Systems or Child Zones and is often where frontend apps will look to determine their configuration (enabling/disabling certain features and behaviours).
+
+### Deleting a Zone
+Zones can be deleted from the three-dot menu on the zone's page, optionally removing the systems that would be left without a zone. See [Delete Zones and Domains](/placeos/how-to/backoffice/delete-zones-and-domains)
 
 
 
