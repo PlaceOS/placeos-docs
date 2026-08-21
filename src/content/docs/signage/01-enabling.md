@@ -18,7 +18,7 @@ The following UIs are required to be configured
 1. signage manager:
    * folder: `signage-manager`
    * git: `https://github.com/placeos/user-interfaces`
-   * barnch: `build/signage-manager`
+   * branch: `build/signage-manager`
 2. signage player:
    * folder: `signage`
    * git: `https://github.com/placeos/user-interfaces`
