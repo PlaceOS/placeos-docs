@@ -2,10 +2,10 @@
 title: Uploading Content
 ---
 
-Select the media tab in the concierge UI.
+Select the media tab in the signage manager UI.
 
 You can now drag and drop images and videos for presentation.
-![alt text](image-3.png)
+![media library](media-library.png)
 
 ## Supported Formats
 The following media formats are supported.
@@ -41,4 +41,4 @@ The following media formats are supported.
 ## Preview Content
 
 You can preview uploaded content in the media library.
-![alt text](image-4.png)
+![preview uploads](preview-item.png)

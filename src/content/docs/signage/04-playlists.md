@@ -3,7 +3,7 @@ title: Creating Playlists
 ---
 
 From the media tab, you can see the list of playlists and add new playlists.
-![alt text](image-5.png)
+![new playlists](manage-playlists.png)
 
 When creating a playlist you can define things like:
 - Playlist shuffled: randomizes the playlist items at playback time, Select this if order doesn’t matter.
@@ -12,13 +12,17 @@ When creating a playlist you can define things like:
 - Animation: this is the default animation between items in the playlist
 - Valid from, Valid until: Dates to start presenting and stop presenting this playlist. Good for time limited promotions / campaigns.
 
+If you prefer to seperately schedule each media item you can configure a distribution playlist.
+- each media item will have its own schedule (versus the playlist having a schedule and all the content sharing that schedule)
+- the playlist defines which zones or displays the media will be presented on.
+
 ## Adding Content
 
-From the `All Media` tab, click and drag the media item to the playlist:
-![alt text](image-6.png)
+From the `Media` tab, click and drag the media item to the playlist:
+![drag to playlist](media-drag-playlist.png)
 
-Or you can search for the playlist to add the media to:
-![alt text](image-7.png)
+Or you can select multiple items and use the bulk action bar:
+![bulk actions](media-bulk-actions.png)
 
 ## Editing Playlists
 

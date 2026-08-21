@@ -13,8 +13,17 @@ This can be configured in backoffice at: Manage Instance -> Data Stores
 
 ## Enable Signage Feature
 
-The digital signage feature is enabled by concierge, you will require access to your concierge interface to continue:
-1. Locate the ORG zone
-2. Select the metadata tab
-3. Expand the concierge metadata
-4. Find the features key and ensure it lists signage
+The following UIs are required to be configured
+
+1. signage manager:
+   * folder: `signage-manager`
+   * git: `https://github.com/placeos/user-interfaces`
+   * barnch: `build/signage-manager`
+2. signage player:
+   * folder: `signage`
+   * git: `https://github.com/placeos/user-interfaces`
+   * branch: `build/signage`
+2. signage plugins:
+   * folder: `place-sign-plugins`
+   * git: `https://github.com/place-labs/signage-plugin-templates`
+   * branch: `trunk`
