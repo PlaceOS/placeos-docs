@@ -18,6 +18,7 @@ PlaceOS Digital Signage is a comprehensive content management system that enable
 4. **[Create Playlists](/signage/04-playlists/)** - Organize content into targeted playlists
 5. **[Assign to Displays](/signage/05-display-playlists/)** - Deploy playlists to specific displays
 6. **[Deploy Hardware](/signage/06-deployment/)** - Set up playback devices and kiosk mode
+7. **[Make Artwork with AI](/signage/07-ai-images/)** - Generate and change poster artwork from a written brief
 
 ## Key Features
 
