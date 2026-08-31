@@ -30,26 +30,36 @@ rather than shown as broken.
 
 ### Adding a provider
 
-1. Go to **Manage instance → Signage AI**.
-2. Choose the domain from the selector, or leave it on **All domains** to add a
-   shared fallback that any domain without its own provider will use.
-3. Select **Add provider** and fill in:
+1. Go to **Manage instance → Signage AI**. The page manages providers for the
+   domain this Backoffice is served from. Another domain's providers are not
+   listed and cannot be reached from here, so administering a second domain
+   means opening its own Backoffice.
+2. Select **Add provider** and fill in:
    - **Name** - how it appears in this list
    - **Vendor** - which of the three above
    - **Credentials** - the fields change to suit the vendor
    - **Default model** - `gpt-image-2` for OpenAI and Azure,
      `gemini-3.1-flash-image` for Google
+   - **Region** - required for Google Vertex, ignored by the others
    - **Endpoint** - leave empty unless the traffic goes through a gateway
    - **Quotas** - images per person per day, and per domain per month
-4. Save, then select the **Test credentials** button on the row. It asks the
+3. Save, then select the **Test credentials** button on the row. It asks the
    vendor for one small image and reports how long it took. A wrong key is
-   caught here rather than by a user halfway through a poster.
+   caught here rather than by a user halfway through a poster. That image is
+   billed, so the button asks before it spends.
 
 ### Credentials are never shown again
 
 Credentials are encrypted and are never returned by the API, so the boxes are
 empty when you edit a provider. Leaving them empty keeps what is stored;
 filling them in replaces it.
+
+### The shared fallback row
+
+A provider with no domain is used by any domain that has none of its own. It
+cannot be created or changed through Backoffice, deliberately: it belongs to
+the deployment rather than to a customer, so it is set up directly against the
+database by whoever runs the platform.
 
 ### Usage
 
