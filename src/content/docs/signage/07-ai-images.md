@@ -19,17 +19,14 @@ Choose the shape (16:9 for a landscape screen, 9:16 for a portrait one) and how
 many options you want, then **Generate**. The options come back in a few
 seconds. Pick the one you like.
 
-Behind the scenes the brief is combined with your organisation's brand kit, so
-the colours and tone match the rest of your signage without you having to
-describe them each time.
+The brief is combined with your organisation's brand kit, so the colours and
+tone match the rest of your signage without you describing them each time.
 
-### Why the image comes back with no words on it
+### Words are added over the picture, not drawn into it
 
 By default the picture is generated as a background with a clear area at the
-top, and you type the headline over it afterwards. No image model spells
-reliably at small sizes, and a logo a model has drawn is a redrawing rather
-than your actual logo. Typing the words yourself keeps them sharp, correct and
-editable later.
+top, and you type the headline over it afterwards, so the words stay sharp and
+stay editable.
 
 If you would rather the model rendered the words, turn off **Add the words
 myself afterwards** before generating.

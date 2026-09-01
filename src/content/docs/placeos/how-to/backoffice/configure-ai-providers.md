@@ -11,8 +11,7 @@ sidebar:
 
 Signage Manager can generate poster artwork from a written brief. The images are
 made by an external vendor using **your** account, so nothing is generated until
-a provider is configured here. Until then the feature is hidden from users
-rather than shown as broken.
+a provider is configured here. Until then the feature is hidden from users.
 
 ### Prerequisites
 
@@ -31,9 +30,8 @@ rather than shown as broken.
 ### Adding a provider
 
 1. Go to **Manage instance → Signage AI**. The page manages providers for the
-   domain this Backoffice is served from. Another domain's providers are not
-   listed and cannot be reached from here, so administering a second domain
-   means opening its own Backoffice.
+   domain this Backoffice is served from. Administering a second domain means
+   opening its own Backoffice.
 2. Select **Add provider** and fill in:
    - **Name** - how it appears in this list
    - **Vendor** - which of the three above
@@ -44,8 +42,7 @@ rather than shown as broken.
    - **Endpoint** - leave empty unless the traffic goes through a gateway
    - **Quotas** - images per person per day, and per domain per month
 3. Save, then select the **Test credentials** button on the row. It asks the
-   vendor for one small image and reports how long it took. A wrong key is
-   caught here rather than by a user halfway through a poster. That image is
+   vendor for one small image and reports how long it took. That image is
    billed, so the button asks before it spends.
 
 ### Credentials are never shown again
@@ -57,9 +54,8 @@ filling them in replaces it.
 ### The shared fallback row
 
 A provider with no domain is used by any domain that has none of its own. It
-cannot be created or changed through Backoffice, deliberately: it belongs to
-the deployment rather than to a customer, so it is set up directly against the
-database by whoever runs the platform.
+cannot be created or changed through Backoffice. It belongs to the deployment
+rather than a customer, and is set up directly against the database.
 
 ### Usage
 
