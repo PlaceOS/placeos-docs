@@ -1,51 +1,106 @@
 ---
-title: Native GPT Plugins
-description: For use with OpenAI or Microsoft Copilot
+title: AI Assistant Connectors
+description: Connect Claude, ChatGPT or Microsoft Copilot to PlaceOS using MCP
 ---
 
-# Native GPT Plugins
+# AI Assistant Connectors
 
-This allows you to access PlaceOS LLM systems from your preferred chat application.\
-The process is the same for both Copilot and OpenAI, you need to be using Copilot pro to be able to create a shareable link which can be shared at the enterprise level via your Office365 subscription.
+PlaceOS is an [MCP](https://modelcontextprotocol.io) (Model Context Protocol) server,
+so you can use it from your preferred AI assistant: Claude, ChatGPT or Microsoft Copilot.
+The assistant acts as the signed in user, with their permissions.
+
+There are two MCP URLs. Pick the one that suits the people using it:
+
+| URL | What the assistant can do |
+|---|---|
+| `https://<your-placeos-domain>/api/engine/v2/chatgpt/plugin/<system-id>/mcp` | Use the [LLM capabilities](../driver-capabilities/) of one system, such as booking desks and rooms or controlling a meeting room. Best for staff. |
+| `https://<your-placeos-domain>/api/engine/v2/mcp` | Use the PlaceOS REST API: systems, zones, modules, users, bookings and more. Best for administrators and support staff. |
+
+For example: `https://placeos-dev.aca.im/api/engine/v2/chatgpt/plugin/sys-ELNF3KjDuK/mcp`
 
 ### Prerequisites
 
-Before configuring the plugin you'll need to add a new application to Backoffice that will be used to authenticate users on behalf of the chat application.
+* **An LLM system:** for the system URL, the system needs an `LLM` module and the
+  capability drivers you want to offer. See [driver capabilities](../driver-capabilities/).
+* **No application to create:** sign in is configured automatically. The assistant
+  discovers the PlaceOS sign in page from the MCP URL and registers itself, and each
+  user approves the connection the first time they sign in.
 
-1.  Browse to applications in Backoffice and add a New Application
+Administrators can restrict the assistants that may connect, using these PlaceOS auth
+service settings:
 
-    <!-- TODO: Add image showing how to add a new application -->
-2.  Configure a temporary redirect URL (this will be provided once the plugin is configured)
+* `MCP_CLIENT_ID_HOSTS`: the hosts allowed to identify assistants, e.g. `claude.ai,chatgpt.com`.
+* `MCP_REGISTRATION_LIMIT`: new assistant registrations allowed per hour.
 
-    <!-- TODO: Add image showing how to configure a new application -->
-3.  Make note of the Client ID and Secret for the newly created application, you'll need this when configuring the plugin\
+### Claude
 
+1. Open **Settings** → **Connectors**.
+2. Click **Add** → **Add custom connector**.
 
-    <!-- TODO: Add image showing where to copy the Client ID and Secret -->
+   ![Adding a custom connector in Claude](./claude-add-connector.png)
 
-### Creating a new plugin
+3. Enter a name, such as `PlaceOS`, and the MCP URL, then click **Add**.
+4. Click **Connect** and sign in to PlaceOS.
 
-#### OpenAI ChatGPT
+On Team and Enterprise plans, an owner may need to add the connector in the
+organisation settings before members can connect to it.
 
-1. Browse to: [https://chat.openai.com/gpts/mine](https://chat.openai.com/gpts/mine)
-2. Create a GPT
+To give Claude the [agent instructions](#agent-instructions), create a project and paste
+them into the project's instructions.
 
-<!-- TODO: Add image of OpenAI GPT creation page -->
+### ChatGPT
 
-#### Microsoft Copilot
+1. Open **Plugins** and select the **Personal** tab.
+2. Click **Add** → **Create custom MCP server**.
 
-1. Follow these instructions to create a GPT:\
-   [https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/gpt-builder](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/gpt-builder)
-2. Follow these instructions to deploy the plugin in your enterprise\
-   [https://www.codetwo.com/admins-blog/microsoft-365-copilot/](https://www.codetwo.com/admins-blog/microsoft-365-copilot/)
+   ![Creating a custom MCP server in ChatGPT](./chatgpt-add-mcp-server.png)
 
-### Configuring the Plugin
+3. Enter a name, such as `PlaceOS`, and the MCP URL, and choose **OAuth** authentication.
+4. Create the server and sign in to PlaceOS when prompted.
 
-Switch to the configure tab
+To give ChatGPT the [agent instructions](#agent-instructions), paste them into a project's
+instructions.
 
-<!-- TODO: Add image of GPT Configuration interface -->
+### Microsoft Copilot
 
-Paste the following instructions, you can customise the first paragraph
+Copilot agents are built in Copilot Studio, which needs a Dataverse database in the
+environment you'll use.
+
+#### Add Dataverse to the environment
+
+1. Browse to the Power Platform admin center:
+   [https://admin.powerplatform.microsoft.com/manage/environments](https://admin.powerplatform.microsoft.com/manage/environments)
+2. Select the environment for the agent.
+3. Click **Add Dataverse** and wait for it to be provisioned.
+
+#### Create the agent
+
+1. Browse to Copilot Studio: [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
+   and make sure the environment you added Dataverse to is selected.
+2. Open **Agents** and create a new agent, such as `PlaceOS`.
+3. Paste the [agent instructions](#agent-instructions) into **Instructions**.
+
+   ![Configuring the agent in Copilot Studio](./copilot-studio-agent.png)
+
+#### Add the PlaceOS MCP server
+
+1. Next to **Tools**, click **+** and add a new **Model Context Protocol** tool.
+2. Configure the server:
+   * **Server name:** `PlaceOS`
+   * **Server description:** what it's for, such as `PlaceOS workplace helper`
+   * **Server URL:** the MCP URL
+   * **Authentication:** OAuth 2.0
+   * **Configuration type:** Dynamic (with discovery)
+
+   ![Adding the PlaceOS MCP server in Copilot Studio](./copilot-studio-add-mcp-server.png)
+
+3. Click **Add**, then create the connection and sign in to PlaceOS.
+4. Test the agent in **Preview**, then **Publish** it and add it to the channels your
+   users need, such as Microsoft Teams and Microsoft 365 Copilot.
+
+### Agent instructions
+
+Paste the following instructions into your assistant, you can customise the first paragraph
 
 ```
 You are an AI assistant in a smart building.
@@ -94,38 +149,16 @@ Remember function schemas you obtain must be used with the `call_function` opera
 To use the call_function operation you need to provide the capability id and the function name in the URI
 ```
 
-#### Create new action
+These instructions are written for the system URL. The system's MCP server also tells the
+assistant to call `capabilities` first, then `function_schema` and `call_function`.
 
-Configure Authentication <!-- TODO: Add authentication configuration image --> this is where we'll configure the SSO
+### Troubleshooting
 
-<!-- TODO: Add image showing authentication configuration -->
-
-Configure the following:
-
-* Authentication Type: OAuth
-* Client ID, Secret that you created earlier
-* Authorization URL: https://\<your-placeos-domain>/auth/oauth/authorize
-* Token URL: https://\<your-placeos-domain>/auth/oauth/token
-* Scope: plugin
-* Token Exchange Method: POST
-
-Click `Save` and then configure the following Schema: (make sure to update the system\_ids and host)\
-[https://github.com/PlaceOS/rest-api/blob/master/GPT.yml](https://github.com/PlaceOS/rest-api/blob/master/GPT.yml)
-
-You'll also need to provide a privacy policy\
-[https://www.placeos.com/privacy-policy](https://www.placeos.com/privacy-policy)
-
-#### Final steps
-
-Finally there is a need to update the PlaceOS application with a newly generated callback URL
-
-NOTE:: The GPT callback URL can change if you edit the Action, so make sure it matches what is configured in PlaceOS after making changes
-
-<!-- TODO: Add image showing where to copy the callback URL -->
-
-Edit the application on PlaceOS, copying and updating the callback URL.\
-Ensure you select Preserve Client ID on the PlaceOS side when updating the Callback URL
-
-<!-- TODO: Add image showing how to preserve Client ID when updating -->
-
-You can now save the GPT and copy the shareable link
+* **Sign in fails with `unauthorized_client`:** the assistant's registration was refused.
+  Check `MCP_CLIENT_ID_HOSTS` includes the assistant's host, or that
+  `MCP_REGISTRATION_LIMIT` hasn't been reached.
+* **Tools are missing after opening a toolbox** (REST API URL): some assistants don't
+  refresh their tool list, they use the `call_read_only` and `call_tool` tools instead.
+  This is expected.
+* **`Forbidden` errors:** the user signed in, but doesn't have access to that resource
+  or function in PlaceOS.
