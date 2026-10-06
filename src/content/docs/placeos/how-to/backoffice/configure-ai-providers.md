@@ -36,7 +36,8 @@ a provider is configured here. Until then the feature is hidden from users.
    - **Name** - how it appears in this list
    - **Vendor** - which of the three above
    - **Credentials** - the fields change to suit the vendor
-   - **Default model** - `gpt-image-2` for OpenAI and Azure,
+   - **Default model** - `gpt-image-2.5-sunburst` for OpenAI and Azure
+     (`gpt-image-2.5-flare` is the faster option, `gpt-image-2` still works),
      `gemini-3.1-flash-image` for Google
    - **Region** - required for Google Vertex, ignored by the others
    - **Endpoint** - leave empty unless the traffic goes through a gateway
