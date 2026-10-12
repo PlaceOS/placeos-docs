@@ -9,14 +9,28 @@ PlaceOS is an [MCP](https://modelcontextprotocol.io) (Model Context Protocol) se
 so you can use it from your preferred AI assistant: Claude, ChatGPT or Microsoft Copilot.
 The assistant acts as the signed in user, with their permissions.
 
-There are two MCP URLs. Pick the one that suits the people using it:
+There are three MCP URLs. Pick the one that suits the people using it:
 
 | URL | What the assistant can do |
 |---|---|
 | `https://<your-placeos-domain>/api/engine/v2/chatgpt/plugin/<system-id>/mcp` | Use the [LLM capabilities](../driver-capabilities/) of one system, such as booking desks and rooms or controlling a meeting room. Best for staff. |
+| `https://<your-placeos-domain>/api/staff/v1/mcp` | Use the Staff API: book desks, meeting rooms and meetings, check bookings and calendars, find colleagues and register visitors. Best for staff. |
 | `https://<your-placeos-domain>/api/engine/v2/mcp` | Use the PlaceOS REST API: systems, zones, modules, users, bookings and more. Best for administrators and support staff. |
 
 For example: `https://placeos-dev.aca.im/api/engine/v2/chatgpt/plugin/sys-ELNF3KjDuK/mcp`
+
+#### The Staff API
+
+The Staff API URL needs no system to be set up. Besides its tools it offers:
+
+* **Prompts**, guided tasks the user can pick in their assistant: *Book a desk*,
+  *Book a meeting room*, *My bookings* and *My meetings*.
+* **Interactive cards**, for assistants that support MCP Apps: a space shows its
+  photos, level map and day with a booking form, and bookings, meetings and people show
+  their details with buttons to change or cancel them, or book a meeting or nearby desk.
+
+It finds desks the way the workplace apps do (the `_DESKS_` asset type), and uses the
+level maps to find free desks near a colleague.
 
 ### Prerequisites
 
@@ -150,14 +164,16 @@ To use the call_function operation you need to provide the capability id and the
 ```
 
 These instructions are written for the system URL. The system's MCP server also tells the
-assistant to call `capabilities` first, then `function_schema` and `call_function`.
+assistant to call `capabilities` first, then `function_schema` and `call_function`. The
+Staff API and REST API servers give the assistant their own instructions, so leave out the
+parts about capabilities, function schemas and `call_function` when using them.
 
 ### Troubleshooting
 
 * **Sign in fails with `unauthorized_client`:** the assistant's registration was refused.
   Check `MCP_CLIENT_ID_HOSTS` includes the assistant's host, or that
   `MCP_REGISTRATION_LIMIT` hasn't been reached.
-* **Tools are missing after opening a toolbox** (REST API URL): some assistants don't
+* **Tools are missing after opening a toolbox** (Staff API and REST API URLs): some assistants don't
   refresh their tool list, they use the `call_read_only` and `call_tool` tools instead.
   This is expected.
 * **`Forbidden` errors:** the user signed in, but doesn't have access to that resource
