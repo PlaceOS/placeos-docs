@@ -17,11 +17,15 @@ The main PlaceOS REST API provides access to all core functionality including sy
 
 **[REST API Documentation →](https://placeos.github.io/rest-api-swagger-ui/)**
 
+**MCP server:** `/api/engine/v2/mcp`, the REST API as tools for AI assistants such as Claude, ChatGPT and Copilot. See [connecting via MCP](../../tutorials/backend/write-a-driver/chatgpt-llm-capabilities/native-gpt-plugins).
+
 ## Staff API
 
 The Staff API provides specialized endpoints for staff directory integration and calendar access.
 
 **[Staff API Documentation →](https://placeos.github.io/staff-api-swagger-ui/)**
+
+**MCP server:** `/api/staff/v1/mcp`, the Staff API as tools for AI assistants such as Claude, ChatGPT and Copilot: booking desks, rooms and meetings, with interactive cards and guided prompts. See [connecting via MCP](../../tutorials/backend/write-a-driver/chatgpt-llm-capabilities/native-gpt-plugins).
 
 ## WebSocket API
 
