@@ -38,6 +38,12 @@ The following media formats are supported.
     - Opus
     - Vorbis
 
+### Document Formats
+Documents are exported as images when uploaded, so each page or slide is presented as an image.
+
+- PDF (image export)
+- PowerPoint (image export)
+
 ## Preview Content
 
 You can preview uploaded content in the media library.
